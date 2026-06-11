@@ -242,12 +242,34 @@ a:hover {
 
 .dynasty-intro-toggle {
     margin-bottom: 20px;
-    position: relative;
-    transition: background 0.35s ease;
     border-radius: 0 4px 4px 0;
 }
 
-.dynasty-intro-toggle::before {
+.dynasty-label {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--teal);
+    letter-spacing: 8px;
+    padding-bottom: 14px;
+    padding-left: 12px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    transition: color 0.25s ease, background 0.35s ease;
+    position: relative;
+    border-radius: 0 4px 4px 0;
+}
+
+.dynasty-label::-webkit-details-marker {
+    display: none;
+}
+
+.dynasty-label::before {
     content: "";
     position: absolute;
     left: 0;
@@ -259,37 +281,7 @@ a:hover {
     border-radius: 0 1px 1px 0;
 }
 
-.dynasty-intro-toggle:hover::before {
-    height: 100%;
-}
-
-.dynasty-intro-toggle:hover {
-    background: var(--teal-light);
-}
-
-/* summary = 朝代标签，可点击展开/收起 */
-.dynasty-label {
-    font-family: var(--font-serif);
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--teal);
-    letter-spacing: 8px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--border-light);
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    cursor: pointer;
-    user-select: none;
-    list-style: none;
-    transition: color 0.25s ease;
-}
-
-.dynasty-label::-webkit-details-marker {
-    display: none;
-}
-
-.dynasty-label::before {
+.dynasty-label::after {
     content: "▸";
     display: inline-block;
     font-size: 14px;
@@ -298,12 +290,16 @@ a:hover {
     flex-shrink: 0;
 }
 
-.dynasty-intro-toggle[open] > .dynasty-label::before {
+.dynasty-intro-toggle[open] > .dynasty-label::after {
     transform: rotate(90deg);
 }
 
+.dynasty-label:hover::before {
+    height: 100%;
+}
+
 .dynasty-label:hover {
-    color: var(--accent);
+    background: var(--teal-light);
 }
 
 .dynasty-name {
@@ -315,7 +311,8 @@ a:hover {
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 2px;
-    color: var(--text-faint);
+    color: var(--teal);
+    opacity: 0.75;
 }
 
 /* 导言正文（JS 控制动画） */
