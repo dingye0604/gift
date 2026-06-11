@@ -237,11 +237,11 @@ a:hover {
 }
 
 .dynasty-section {
-    margin-bottom: 48px;
+    margin-bottom: 56px;
 }
 
-.dynasty-section[open] {
-    margin-bottom: 56px;
+.dynasty-intro-toggle {
+    margin-bottom: 20px;
 }
 
 /* summary = 朝代标签，可点击展开/收起 */
@@ -275,7 +275,7 @@ a:hover {
     flex-shrink: 0;
 }
 
-.dynasty-section[open] > .dynasty-label::before {
+.dynasty-intro-toggle[open] > .dynasty-label::before {
     transform: rotate(90deg);
 }
 
