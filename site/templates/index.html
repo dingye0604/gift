@@ -13,22 +13,24 @@
     {% for dynasty in dynasty_order %}
     {% set poems = poems_by_dynasty.get(dynasty, []) %}
     {% if poems %}
-    <details class="dynasty-section"{% if loop.first and dynasty_intros.get(dynasty) %} open{% endif %}>
-        <summary class="dynasty-label">
-            <span class="dynasty-name">{{ dynasty }}</span>
-            {% if dynasty_summaries.get(dynasty) %}
-            <span class="dynasty-summary">{{ dynasty_summaries[dynasty] }}</span>
+    <div class="dynasty-section">
+        <details class="dynasty-intro-toggle"{% if loop.first and dynasty_intros.get(dynasty) %} open{% endif %}>
+            <summary class="dynasty-label">
+                <span class="dynasty-name">{{ dynasty }}</span>
+                {% if dynasty_summaries.get(dynasty) %}
+                <span class="dynasty-summary">{{ dynasty_summaries[dynasty] }}</span>
+                {% endif %}
+            </summary>
+            {% if dynasty_intros.get(dynasty) %}
+            <div class="dynasty-intro">
+                {% for para in dynasty_intros[dynasty].split('\n') %}
+                {% if para.strip() %}
+                <p>{{ para }}</p>
+                {% endif %}
+                {% endfor %}
+            </div>
             {% endif %}
-        </summary>
-        {% if dynasty_intros.get(dynasty) %}
-        <div class="dynasty-intro">
-            {% for para in dynasty_intros[dynasty].split('\n') %}
-            {% if para.strip() %}
-            <p>{{ para }}</p>
-            {% endif %}
-            {% endfor %}
-        </div>
-        {% endif %}
+        </details>
         <div class="poem-grid">
             {% for poem in poems %}
             <a href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html" class="poem-card">
@@ -37,7 +39,7 @@
             </a>
             {% endfor %}
         </div>
-    </details>
+    </div>
     {% endif %}
     {% endfor %}
 </section>
