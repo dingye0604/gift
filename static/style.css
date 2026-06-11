@@ -259,14 +259,9 @@ a:hover {
     gap: 8px;
     cursor: pointer;
     user-select: none;
-    list-style: none;
     transition: color 0.25s ease, background 0.35s ease;
     position: relative;
     border-radius: 0 4px 4px 0;
-}
-
-.dynasty-label::-webkit-details-marker {
-    display: none;
 }
 
 .dynasty-label::before {
@@ -290,7 +285,7 @@ a:hover {
     flex-shrink: 0;
 }
 
-.dynasty-intro-toggle[open] > .dynasty-label::after {
+.dynasty-intro-toggle.open > .dynasty-label::after {
     transform: rotate(90deg);
 }
 
