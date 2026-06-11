@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}目录{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1 class="hero-title">诗三百</h1>
+    <p class="hero-desc">给妹妹的中国古代诗歌赏析</p>
+    <p class="hero-quote">"温柔敦厚，诗教也"</p>
+</section>
+
+<section class="dynasty-list">
+    {% for dynasty in dynasty_order %}
+    {% set poems = poems_by_dynasty.get(dynasty, []) %}
+    {% if poems %}
+    <div class="dynasty-section">
+        <h2 class="dynasty-label">{{ dynasty }}</h2>
+        {% if dynasty_intros.get(dynasty) and dynasty_summaries.get(dynasty) %}
+        <details class="dynasty-intro">
+            <summary>{{ dynasty_summaries[dynasty] }}</summary>
+            {% for para in dynasty_intros[dynasty].split('\n') %}
+            {% if para.strip() %}
+            <p>{{ para }}</p>
+            {% endif %}
+            {% endfor %}
+        </details>
+        {% elif dynasty_intros.get(dynasty) %}
+        <div class="dynasty-intro">
+            {% for para in dynasty_intros[dynasty].split('\n') %}
+            {% if para.strip() %}
+            <p>{{ para }}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+        <div class="poem-grid">
+            {% for poem in poems %}
+            <a href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html" class="poem-card">
+                <span class="poem-card-title">{{ poem.meta.title }}</span>
+                <span class="poem-card-author">{{ poem.meta.author }}</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</section>
+{% endblock %}

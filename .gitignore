@@ -1,0 +1,23 @@
+# Build outputs
+output/
+site/output/
+book/main_generated.*
+book/*.aux
+book/*.log
+book/*.out
+book/*.toc
+book/*.fdb_latexmk
+book/*.fls
+book/*.xdv
+book/*.synctex.gz
+
+# Python
+__pycache__/
+*.pyc
+
+# Conda
+.conda/
+
+# OS
+.DS_Store
+Thumbs.db

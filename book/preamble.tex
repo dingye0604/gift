@@ -1,0 +1,95 @@
+% ── Gift 诗歌赏析书：宏包与自定义环境 ──
+
+\usepackage{geometry}
+\geometry{a5paper, margin=2.5cm, bottom=2cm}
+
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+% ── 颜色 ──────────────────────────
+\definecolor{accent}{HTML}{9e4a3e}
+\definecolor{textgray}{HTML}{333333}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+}
+
+% ── 页码风格 ──────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% ── 章节标题格式 ──────────────────
+\titleformat{\chapter}[display]
+    {\centering\Huge\kaishu}
+    {}
+    {0pt}
+    {\vspace*{-2em}}
+    []
+\titlespacing{\chapter}{0pt}{40pt}{30pt}
+
+% 带编号的 section（备用）
+\titleformat{\section}[block]
+    {\centering\Large\kaishu}
+    {\thesection}
+    {0.5em}
+    {}
+\titlespacing{\section}{0pt}{20pt}{8pt}
+
+% 无编号 section（诗歌标题用）
+\titleformat{name=\section,numberless}[block]
+    {\centering\Large\kaishu}
+    {}
+    {0pt}
+    {}
+\titlespacing*{name=\section,numberless}{0pt}{20pt}{8pt}
+
+% ── 诗歌环境 ──────────────────────
+% 居中，宋体，字号略小于正文，行距 2 倍
+\newenvironment{poem}
+    {\par\addvspace{1.5em}
+     \begingroup
+     \centering
+     \songti\normalsize
+     \setlength{\baselineskip}{2em}
+     \obeylines}
+    {\endgroup
+     \par\addvspace{1.5em}}
+
+% ── 赏析环境 ──────────────────────
+% 宋体，字号 11bp（略小于正文），行距 1.6 倍，首行缩进
+\newenvironment{appreciation}
+    {\par\addvspace{0.5em}
+     \songti\zihao{5}
+     \setlength{\baselineskip}{1.75em}
+     \setlength{\parindent}{2em}
+     \setlength{\parskip}{0.5em}}
+    {\par\addvspace{0.5em}}
+
+% ── 朝代导言环境 ──────────────────
+% 宋体，正常字号，首行缩进，用于每章开篇介绍
+\newenvironment{intro}
+    {\par\addvspace{0.5em}
+     \songti\normalsize
+     \setlength{\baselineskip}{1.75em}
+     \setlength{\parindent}{2em}
+     \setlength{\parskip}{0.5em}}
+    {\par\addvspace{0.5em}}
+
+% ── 元信息标记 ────────────────────
+% 每首诗前自动显示标题、作者、朝代（无序号，居中，加入目录）
+\newcommand{\poemheading}[3]{%
+    \section*{#1}%
+    \addcontentsline{toc}{section}{#1}%
+    \begin{center}
+    \small\kaishu #3 · #2
+    \end{center}
+    \vspace{-0.5em}
+}

@@ -1,0 +1,671 @@
+/* ═══════════════════════════════════════════════════
+   诗三百 — 墨韵纸香
+   基于「迟到了的碎碎念」视觉体系
+   ═══════════════════════════════════════════════════ */
+
+/* ── 变量 ────────────────────────────────────────── */
+:root {
+    --bg:           #faf8f5;
+    --bg-warm:      #f5f2ed;
+    --bg-card:      #ffffff;
+    --text:         #2c2c2c;
+    --text-light:   #5a5a5a;
+    --text-faint:   #999999;
+    --title:        #1a1a1a;
+    --accent:       #9e4a3e;
+    --accent-deep:  #7a3a30;
+    --accent-light: #c07a6e;
+    --accent-ghost: rgba(158, 74, 62, 0.06);
+    --border:       #e0ddd8;
+    --border-light: #f0ede8;
+
+    /* 新增配色 — 靛青（次要强调）、琥珀（诗歌底色微光） */
+    --teal:         #4a7c7c;
+    --teal-light:   rgba(74, 124, 124, 0.08);
+    --amber:        #c79a5e;
+    --amber-ghost:  rgba(199, 154, 94, 0.05);
+
+    --shadow-soft:  0 2px 12px rgba(0,0,0,0.04);
+    --shadow-medium:0 4px 24px rgba(0,0,0,0.06);
+
+    --max-width:    1020px;
+    --content-width:780px;
+    --side-padding: 40px;
+
+    --font-serif:
+        "LXGW WenKai", "Noto Serif CJK SC", "Source Han Serif SC",
+        "STSong", "SimSun", "Songti SC",
+        "PingFang SC", "Microsoft YaHei",
+        serif;
+    --font-sans:
+        "LXGW WenKai", "Noto Sans SC", "PingFang SC",
+        "Microsoft YaHei", "Hiragino Sans GB",
+        sans-serif;
+}
+
+/* ── 重置 ────────────────────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: var(--accent-ghost);
+    color: var(--accent-deep);
+}
+
+body {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--text);
+    background: var(--bg);
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* ── 页面载入动画 ────────────────────────────────── */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.site-main {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* ── 导航 ────────────────────────────────────────── */
+.site-header {
+    background: rgba(250, 248, 245, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: box-shadow 0.3s ease;
+}
+
+.site-nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--side-padding);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-logo {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    color: var(--title);
+    position: relative;
+}
+
+.site-logo::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-logo:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.site-logo:hover {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    position: relative;
+    padding: 4px 0;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1.5px;
+    background: var(--accent);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ── 主内容区 ────────────────────────────────────── */
+.site-main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--side-padding);
+    min-height: calc(100vh - 180px);
+}
+
+/* ── Hero ─────────────────────────────────────────── */
+.hero {
+    padding: 100px 0 64px;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: var(--accent);
+    margin: 28px auto 0;
+    border-radius: 1px;
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 16px;
+    color: var(--title);
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.hero-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-family: var(--font-sans);
+}
+
+.hero-quote {
+    font-size: 14px;
+    color: var(--text-faint);
+    font-style: italic;
+    letter-spacing: 2px;
+    font-family: var(--font-serif);
+}
+
+/* ── 朝代目录 ────────────────────────────────────── */
+.dynasty-list {
+    padding: 24px 0 80px;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.dynasty-section {
+    margin-bottom: 56px;
+}
+
+.dynasty-label {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--teal);
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dynasty-label::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 2px;
+    background: var(--teal);
+    border-radius: 1px;
+}
+
+.dynasty-intro {
+    margin-bottom: 28px;
+    padding: 16px 24px;
+    background: var(--bg-card);
+    border-radius: 4px;
+    border-left: 2.5px solid var(--teal);
+}
+
+.dynasty-intro summary {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    cursor: pointer;
+    user-select: none;
+    padding: 4px 0;
+    list-style: none;
+}
+
+.dynasty-intro summary::-webkit-details-marker {
+    display: none;
+}
+
+.dynasty-intro summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 12px;
+    transition: transform 0.25s ease;
+    color: var(--teal);
+}
+
+.dynasty-intro[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.dynasty-intro summary:hover {
+    color: var(--accent);
+}
+
+.dynasty-intro p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 0.8em;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    text-indent: 2em;
+    margin-top: 12px;
+}
+
+.dynasty-intro p:first-of-type {
+    text-indent: 0;
+}
+
+.dynasty-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.poem-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.poem-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: var(--font-serif);
+}
+
+.poem-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.5px;
+    height: 0;
+    background: var(--accent);
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0 1px 1px 0;
+}
+
+.poem-card:hover::before {
+    height: 100%;
+}
+
+.poem-card:hover {
+    background: var(--accent-ghost);
+}
+
+.poem-card-title {
+    font-size: 18px;
+    color: var(--title);
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.poem-card:hover .poem-card-title {
+    color: var(--accent);
+}
+
+.poem-card-author {
+    font-size: 13px;
+    color: var(--text-faint);
+    letter-spacing: 1px;
+    font-family: var(--font-sans);
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+/* ── 诗歌详情页 ──────────────────────────────────── */
+.poem-page {
+    padding: 48px 0 80px;
+}
+
+.poem-header {
+    text-align: center;
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.poem-page-title {
+    font-family: var(--font-sans);
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--title);
+    line-height: 1.35;
+    margin-bottom: 14px;
+    letter-spacing: 4px;
+}
+
+.poem-page-meta {
+    font-size: 13px;
+    color: var(--text-faint);
+    font-family: var(--font-sans);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    letter-spacing: 1px;
+}
+
+.meta-sep {
+    color: var(--border);
+}
+
+/* ── 诗歌正文显示 ────────────────────────────────── */
+.poem-text {
+    max-width: 560px;
+    margin: 0 auto 52px;
+    padding: 48px 40px;
+    text-align: center;
+}
+
+.poem-text p {
+    font-size: 20px;
+    line-height: 2.2;
+    color: #6b4c3b;
+    margin: 0;
+    letter-spacing: 1px;
+    font-family: var(--font-serif);
+}
+
+.poem-stanza-break {
+    height: 1em;
+}
+
+/* ── 赏析正文 ────────────────────────────────────── */
+.appreciation-text {
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.appreciation-text p {
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--text);
+    margin-bottom: 1.5em;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    text-indent: 2em;
+}
+
+.appreciation-text p:first-child {
+    text-indent: 0;
+}
+
+.appreciation-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* ── 诗歌页导航 ──────────────────────────────────── */
+.poem-nav {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-light);
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-back,
+.nav-next {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--text-faint);
+    letter-spacing: 1px;
+    padding: 6px 0;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-back:hover,
+.nav-next:hover {
+    color: var(--accent);
+}
+
+.nav-back::after,
+.nav-next::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-back::after {
+    left: 0;
+    width: 0;
+}
+
+.nav-next::after {
+    right: 0;
+    width: 0;
+}
+
+.nav-back:hover::after,
+.nav-next:hover::after {
+    width: 100%;
+}
+
+/* ── 关于页 ──────────────────────────────────────── */
+.about-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-page p {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    color: var(--text-light);
+    letter-spacing: 2px;
+}
+
+/* ── 页脚 ────────────────────────────────────────── */
+.site-footer {
+    border-top: 1px solid var(--border-light);
+    padding: 40px var(--side-padding);
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-faint);
+    font-family: var(--font-sans);
+    letter-spacing: 1px;
+}
+
+/* ── 滚动条美化 ──────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-light);
+}
+
+/* ── 响应式 ──────────────────────────────────────── */
+@media (max-width: 768px) {
+    :root {
+        --side-padding: 24px;
+        --content-width: 100%;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .site-nav {
+        height: 56px;
+    }
+
+    .site-logo {
+        font-size: 16px;
+        letter-spacing: 4px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 64px 0 44px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        letter-spacing: 10px;
+    }
+
+    .hero-desc {
+        font-size: 12px;
+    }
+
+    .dynasty-label {
+        letter-spacing: 5px;
+        font-size: 18px;
+    }
+
+    .dynasty-intro {
+        padding: 14px 18px;
+    }
+
+    .dynasty-intro p {
+        font-size: 14px;
+    }
+
+    .poem-card {
+        flex-direction: column;
+        gap: 4px;
+        padding: 14px 8px;
+    }
+
+    .poem-card-title {
+        font-size: 17px;
+    }
+
+    .poem-card-author {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .poem-page-title {
+        font-size: 24px;
+    }
+
+    .poem-text {
+        padding: 32px 20px;
+    }
+
+    .poem-text p {
+        font-size: 18px;
+        line-height: 2;
+    }
+
+    .appreciation-text {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .appreciation-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --side-padding: 28px;
+    }
+
+    .poem-text {
+        padding: 28px 16px;
+    }
+
+    .poem-text p {
+        font-size: 17px;
+    }
+}

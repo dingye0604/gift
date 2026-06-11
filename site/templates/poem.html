@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}{{ poem.meta.title }}{% endblock %}
+
+{% block content %}
+<article class="poem-page">
+    <header class="poem-header">
+        <h1 class="poem-page-title">{{ poem.meta.title }}</h1>
+        <div class="poem-page-meta">
+            <span>{{ poem.meta.author }}</span>
+            <span class="meta-sep">·</span>
+            <span>{{ poem.meta.dynasty }}</span>
+            {% if poem.meta.genre %}
+            <span class="meta-sep">·</span>
+            <span>{{ poem.meta.genre }}</span>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="poem-text">
+        {% for line in poem.poem_clean.split('\n') %}
+        {% if line.strip() %}
+        <p>{{ line }}</p>
+        {% else %}
+        <div class="poem-stanza-break"></div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="appreciation-text">
+        {% for para in poem.appreciation_clean.split('\n') %}
+        {% if para.strip() %}
+        <p>{{ para }}</p>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <nav class="poem-nav">
+        <a href="{{ base_url }}/" class="nav-back">← 返回目录</a>
+        {% if next_poem %}
+        <a href="{{ base_url }}/{{ next_poem.url }}" class="nav-next">下一首 →</a>
+        {% endif %}
+    </nav>
+</article>
+{% endblock %}

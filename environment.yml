@@ -1,0 +1,10 @@
+name: gift
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - jinja2
+  - pip
+  - pip:
+    - pyyaml

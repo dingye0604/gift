@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} — 诗三百</title>
+    <link rel="stylesheet" href="{{ base_url }}/static/style.css">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="{{ base_url }}/" class="site-logo">诗三百</a>
+            <div class="nav-links">
+                <a href="{{ base_url }}/">目录</a>
+                <a href="{{ base_url }}/about.html">关于</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>给妹妹的诗 · 中国古代诗歌赏析</p>
+    </footer>
+</body>
+</html>
