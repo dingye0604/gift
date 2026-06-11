@@ -14,13 +14,13 @@
     {% set poems = poems_by_dynasty.get(dynasty, []) %}
     {% if poems %}
     <div class="dynasty-section">
-        <details class="dynasty-intro-toggle">
-            <summary class="dynasty-label">
+        <div class="dynasty-intro-toggle">
+            <div class="dynasty-label" role="button" tabindex="0">
                 <span class="dynasty-name">{{ dynasty }}</span>
                 {% if dynasty_summaries.get(dynasty) %}
                 <span class="dynasty-summary">{{ dynasty_summaries[dynasty] }}</span>
                 {% endif %}
-            </summary>
+            </div>
             {% if dynasty_intros.get(dynasty) %}
             <div class="dynasty-intro">
                 {% for para in dynasty_intros[dynasty].split('\n') %}
@@ -30,7 +30,7 @@
                 {% endfor %}
             </div>
             {% endif %}
-        </details>
+        </div>
         <div class="poem-grid">
             {% for poem in poems %}
             <a href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html" class="poem-card">
