@@ -240,11 +240,6 @@ a:hover {
     margin-bottom: 56px;
 }
 
-.dynasty-intro-toggle {
-    margin-bottom: 20px;
-    border-radius: 0 4px 4px 0;
-}
-
 .dynasty-label {
     font-family: var(--font-serif);
     font-size: 22px;
@@ -257,14 +252,14 @@ a:hover {
     display: flex;
     align-items: baseline;
     gap: 8px;
-    cursor: pointer;
-    user-select: none;
-    transition: color 0.25s ease, background 0.35s ease;
     position: relative;
+    transition: background 0.35s ease;
     border-radius: 0 4px 4px 0;
+    margin-bottom: 16px;
 }
 
-.dynasty-line {
+.dynasty-label::before {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -275,19 +270,7 @@ a:hover {
     border-radius: 0 1px 1px 0;
 }
 
-.dynasty-arrow {
-    display: inline-block;
-    font-size: 14px;
-    transition: transform 0.25s ease;
-    color: var(--teal);
-    flex-shrink: 0;
-}
-
-.dynasty-intro-toggle.open .dynasty-arrow {
-    transform: rotate(90deg);
-}
-
-.dynasty-label:hover .dynasty-line {
+.dynasty-label:hover::before {
     height: 100%;
 }
 
@@ -306,37 +289,6 @@ a:hover {
     letter-spacing: 2px;
     color: var(--teal);
     opacity: 0.75;
-}
-
-/* 导言正文（JS 控制动画，margin/padding 初始为 0 避免折叠时占位） */
-.dynasty-intro {
-    margin: 0;
-    padding: 0 24px;
-    background: var(--bg-card);
-    border-radius: 4px;
-    border-left: 2.5px solid var(--teal);
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.45s ease, opacity 0.35s ease, margin 0.45s ease, padding 0.45s ease;
-}
-
-.dynasty-intro p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: var(--text-light);
-    margin-bottom: 0.8em;
-    text-align: justify;
-    text-justify: inter-ideograph;
-    text-indent: 2em;
-}
-
-.dynasty-intro p:first-of-type {
-    text-indent: 0;
-}
-
-.dynasty-intro p:last-child {
-    margin-bottom: 0;
 }
 
 .poem-grid {
@@ -629,14 +581,6 @@ a:hover {
 
     .dynasty-summary {
         font-size: 11px;
-    }
-
-    .dynasty-intro {
-        padding: 14px 18px;
-    }
-
-    .dynasty-intro p {
-        font-size: 14px;
     }
 
     .poem-card {
