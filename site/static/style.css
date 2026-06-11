@@ -318,23 +318,17 @@ a:hover {
     color: var(--text-faint);
 }
 
-/* 导言正文（展开后显示，初始折叠） */
+/* 导言正文（JS 控制动画） */
 .dynasty-intro {
-    margin: 0;
-    padding: 0 24px;
+    padding: 16px 24px;
+    margin: 20px 0;
     background: var(--bg-card);
     border-radius: 4px;
     border-left: 2.5px solid var(--teal);
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-}
-
-.dynasty-intro-toggle[open] > .dynasty-intro {
-    margin: 20px 0;
-    padding: 16px 24px;
-    max-height: none;
-    opacity: 1;
+    transition: max-height 0.45s ease, opacity 0.35s ease;
 }
 
 .dynasty-intro p {
