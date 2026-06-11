@@ -295,13 +295,23 @@ a:hover {
     color: var(--text-faint);
 }
 
-/* 导言正文（展开后显示） */
+/* 导言正文（展开后显示，初始折叠） */
 .dynasty-intro {
-    margin: 24px 0 28px;
-    padding: 16px 24px;
+    margin: 0;
+    padding: 0 24px;
     background: var(--bg-card);
     border-radius: 4px;
     border-left: 2.5px solid var(--teal);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.dynasty-intro-toggle[open] > .dynasty-intro {
+    margin: 20px 0;
+    padding: 16px 24px;
+    max-height: none;
+    opacity: 1;
 }
 
 .dynasty-intro p {
