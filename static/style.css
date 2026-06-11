@@ -114,10 +114,10 @@ a:hover {
 }
 
 .site-logo {
-    font-family: var(--font-sans);
+    font-family: var(--font-serif);
     font-size: 18px;
     font-weight: 500;
-    letter-spacing: 6px;
+    letter-spacing: 8px;
     color: var(--title);
     position: relative;
 }
