@@ -308,17 +308,17 @@ a:hover {
     opacity: 0.75;
 }
 
-/* 导言正文（JS 控制动画） */
+/* 导言正文（JS 控制动画，margin/padding 初始为 0 避免折叠时占位） */
 .dynasty-intro {
-    padding: 16px 24px;
-    margin: 20px 0;
+    margin: 0;
+    padding: 0 24px;
     background: var(--bg-card);
     border-radius: 4px;
     border-left: 2.5px solid var(--teal);
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.45s ease, opacity 0.35s ease;
+    transition: max-height 0.45s ease, opacity 0.35s ease, margin 0.45s ease, padding 0.45s ease;
 }
 
 .dynasty-intro p {
