@@ -264,8 +264,7 @@ a:hover {
     border-radius: 0 4px 4px 0;
 }
 
-.dynasty-label::before {
-    content: "";
+.dynasty-line {
     position: absolute;
     left: 0;
     top: 0;
@@ -288,7 +287,7 @@ a:hover {
     transform: rotate(90deg);
 }
 
-.dynasty-label:hover::before {
+.dynasty-label:hover .dynasty-line {
     height: 100%;
 }
 
