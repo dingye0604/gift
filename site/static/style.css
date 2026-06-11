@@ -242,6 +242,29 @@ a:hover {
 
 .dynasty-intro-toggle {
     margin-bottom: 20px;
+    position: relative;
+    transition: background 0.35s ease;
+    border-radius: 0 4px 4px 0;
+}
+
+.dynasty-intro-toggle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.5px;
+    height: 0;
+    background: var(--teal);
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0 1px 1px 0;
+}
+
+.dynasty-intro-toggle:hover::before {
+    height: 100%;
+}
+
+.dynasty-intro-toggle:hover {
+    background: var(--teal-light);
 }
 
 /* summary = 朝代标签，可点击展开/收起 */
