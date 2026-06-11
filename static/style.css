@@ -283,8 +283,8 @@ a:hover {
 }
 
 .dynasty-summary {
-    font-family: var(--font-sans);
-    font-size: 22px;
+    font-family: var(--font-serif);
+    font-size: 20px;
     font-weight: 400;
     letter-spacing: 2px;
     color: var(--teal);
@@ -580,7 +580,7 @@ a:hover {
     }
 
     .dynasty-summary {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .poem-card {
