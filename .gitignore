@@ -15,6 +15,9 @@ book/*.synctex.gz
 __pycache__/
 *.pyc
 
+# Claude
+.claude/
+
 # Conda
 .conda/
 
