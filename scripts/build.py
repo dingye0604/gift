@@ -13,6 +13,12 @@ from jinja2 import Environment, FileSystemLoader
 # ── 路径配置 ────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = ROOT / "content"
+
+# 部署目标
+#   "github" → dingye0604.github.io/gift（子目录，BASE_URL = "/gift"）
+#   "local"   → 本地预览（根路径，BASE_URL = ""）
+TARGET = "github"
+BASE_URL = "/gift" if TARGET == "github" else ""
 BOOK_DIR = ROOT / "book"
 SITE_DIR = ROOT / "site"
 OUTPUT_DIR = ROOT / "output"
@@ -228,7 +234,7 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
         dynasty_order=dynasty_order,
         dynasty_intros=dynasty_intros,
         dynasty_summaries=dynasty_summaries,
-        base_url="",
+        base_url=BASE_URL,
     )
     (SITE_OUTPUT / "index.html").write_text(idx_html, encoding="utf-8")
 
@@ -242,14 +248,14 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
                 "title": nxt["meta"]["title"],
                 "url": f"{nxt['dynasty_dir']}/{nxt['slug']}.html",
             }
-        html = poem_tpl.render(poem=p, next_poem=next_poem, base_url="")
+        html = poem_tpl.render(poem=p, next_poem=next_poem, base_url=BASE_URL)
         out = SITE_OUTPUT / p["dynasty_dir"] / f"{p['slug']}.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding="utf-8")
 
     # 关于页
     about_tpl = env.get_template("about.html")
-    about_html = about_tpl.render(base_url="")
+    about_html = about_tpl.render(base_url=BASE_URL)
     (SITE_OUTPUT / "about.html").write_text(about_html, encoding="utf-8")
 
     print(f"Site built -> {SITE_OUTPUT}")
