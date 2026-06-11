@@ -14,7 +14,7 @@
     {% set poems = poems_by_dynasty.get(dynasty, []) %}
     {% if poems %}
     <div class="dynasty-section">
-        <details class="dynasty-intro-toggle"{% if loop.first and dynasty_intros.get(dynasty) %} open{% endif %}>
+        <details class="dynasty-intro-toggle">
             <summary class="dynasty-label">
                 <span class="dynasty-name">{{ dynasty }}</span>
                 {% if dynasty_summaries.get(dynasty) %}
