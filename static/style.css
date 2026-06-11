@@ -237,70 +237,71 @@ a:hover {
 }
 
 .dynasty-section {
+    margin-bottom: 48px;
+}
+
+.dynasty-section[open] {
     margin-bottom: 56px;
 }
 
+/* summary = 朝代标签，可点击展开/收起 */
 .dynasty-label {
     font-family: var(--font-serif);
     font-size: 22px;
     font-weight: 500;
     color: var(--teal);
     letter-spacing: 8px;
-    margin-bottom: 20px;
     padding-bottom: 14px;
     border-bottom: 1px solid var(--border-light);
     display: flex;
-    align-items: center;
-    gap: 12px;
+    align-items: baseline;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    transition: color 0.25s ease;
+}
+
+.dynasty-label::-webkit-details-marker {
+    display: none;
 }
 
 .dynasty-label::before {
-    content: "";
-    display: block;
-    width: 36px;
-    height: 2px;
-    background: var(--teal);
-    border-radius: 1px;
+    content: "▸";
+    display: inline-block;
+    font-size: 14px;
+    transition: transform 0.25s ease;
+    color: var(--teal);
+    flex-shrink: 0;
 }
 
+.dynasty-section[open] > .dynasty-label::before {
+    transform: rotate(90deg);
+}
+
+.dynasty-label:hover {
+    color: var(--accent);
+}
+
+.dynasty-name {
+    font-family: var(--font-serif);
+}
+
+.dynasty-summary {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--text-faint);
+}
+
+/* 导言正文（展开后显示） */
 .dynasty-intro {
-    margin-bottom: 28px;
+    margin: 24px 0 28px;
     padding: 16px 24px;
     background: var(--bg-card);
     border-radius: 4px;
     border-left: 2.5px solid var(--teal);
-}
-
-.dynasty-intro summary {
-    font-family: var(--font-serif);
-    font-size: 14px;
-    color: var(--text-light);
-    letter-spacing: 2px;
-    cursor: pointer;
-    user-select: none;
-    padding: 4px 0;
-    list-style: none;
-}
-
-.dynasty-intro summary::-webkit-details-marker {
-    display: none;
-}
-
-.dynasty-intro summary::before {
-    content: "▸";
-    display: inline-block;
-    margin-right: 8px;
-    font-size: 12px;
-    transition: transform 0.25s ease;
-    color: var(--teal);
-}
-
-.dynasty-intro[open] summary::before {
-    transform: rotate(90deg);
-}
-
-.dynasty-intro summary:hover {
-    color: var(--accent);
 }
 
 .dynasty-intro p {
@@ -311,7 +312,6 @@ a:hover {
     text-align: justify;
     text-justify: inter-ideograph;
     text-indent: 2em;
-    margin-top: 12px;
 }
 
 .dynasty-intro p:first-of-type {
@@ -608,6 +608,10 @@ a:hover {
     .dynasty-label {
         letter-spacing: 5px;
         font-size: 18px;
+    }
+
+    .dynasty-summary {
+        font-size: 11px;
     }
 
     .dynasty-intro {
