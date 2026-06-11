@@ -1,11 +1,13 @@
 # Gift — 给妹妹的中国古代诗歌赏析书
 
 ## 项目目标
+
 - 一本书：LaTeX 排版的中国古代诗歌赏析集，面向青少年读者
 - 一个站：静态网站展示同样内容，方便在线阅读
 - 单一数据源：诗歌原文和赏析文字只用 LaTeX（.tex）编写，网站内容从 .tex 提取
 
 ## 技术栈
+
 - **内容源**：.tex 文件（LaTeX 正文 + 注释行元信息），UTF-8 编码
 - **书**：XeLaTeX + ctexbook 文档类 → PDF
 - **站**：Python 3 + Jinja2 生成静态 HTML，纯 CSS
@@ -13,6 +15,7 @@
 - **环境**：conda 隔离环境，依赖写入 environment.yml
 
 ## 目录结构
+
 ```
 /
 ├── content/                # 单一数据源：诗歌 .tex 文件
@@ -50,6 +53,7 @@
 ## 内容格式约定
 
 ### .tex 内容文件模板
+
 每首诗一个 .tex 文件，只包含元信息注释和两个环境，不包含 \documentclass 等头部：
 
 ```latex
@@ -116,6 +120,7 @@ build.py 扫描 content/poems/ 下各朝代目录，按 ORDER 排序，在 `GENE
 build.py 解析 .tex 文件时，用正则提取注释行元信息和 `\poem{}`、`\appreciation{}` 的大括号内容，转为 Python 数据结构，再通过 Jinja2 渲染为 HTML。
 
 解析规则：
+
 - `^% !(\w+)\s+(.+)$` 提取元信息
 - `\\begin\{poem\}([\s\S]*?)\\end\{poem\}` 提取诗歌正文
 - `\\begin\{appreciation\}([\s\S]*?)\\end\{appreciation\}` 提取赏析
@@ -131,12 +136,14 @@ python scripts/build.py --site   # 仅网站
 ```
 
 ### build.py 职责
+
 1. 扫描 content/poems/ 下所有 .tex 文件，解析元信息
 2. 按朝代 → ORDER 排序，将 `\chapter{}` 和 `\input{}` 插入 main.tex 的 GENERATED 标记区间
 3. 调用 latexmk -xelatex 编译 PDF，输出到 output/book.pdf
 4. 从 .tex 提取纯文本，通过 Jinja2 生成 HTML 到 site/output/
 
 ## LaTeX 约定
+
 - 引擎：XeLaTeX（通过 latexmk 调用，配置文件 latexmkrc）
 - 中文：ctexbook 文档类
 - 自定义环境：在 preamble.tex 中定义 `\poem` 和 `\appreciation` 宏，控制诗歌和赏析的字体、行距、边距等
@@ -144,6 +151,7 @@ python scripts/build.py --site   # 仅网站
 - 图片：统一放 book/assets/，用相对路径引用
 
 ## 网站约定
+
 - 静态 HTML，无 JS
 - 响应式布局，适配手机阅读
 - 导航：首页（朝代目录）→ 朝代诗单 → 单首赏析
@@ -151,6 +159,7 @@ python scripts/build.py --site   # 仅网站
 - 字体优先系统自带中文字体
 
 ## 开发纪律
+
 - 先写好 2-3 篇示例 .tex 内容，再搭构建脚本
 - **内容文件和构建逻辑分离**：改赏析改 .tex 文件，改排版改 preamble.tex，改样式改 CSS，互不污染
 - main.tex 主体手动维护但章节部分由 build.py 自动生成，不要手动编辑 GENERATED 标记之间的内容
@@ -159,6 +168,7 @@ python scripts/build.py --site   # 仅网站
 - `\poem{}` 和 `\appreciation{}` 内部尽量保持纯文本，复杂排版通过 preamble.tex 中的宏定义实现，不写在内容文件里
 
 ## 设计原则
-- 单篇赏析 300-600 字，语言通俗但有深度，适合中学生阅读
+
+- 单篇赏析 300-600 字，语言通俗但有深度，适合小学生阅读
 - 每首诗配简短背景介绍（诗人、创作背景），不默认读者知道
 - 赏析重点：意象分析、情感表达、语言妙处，避免学术术语堆砌
