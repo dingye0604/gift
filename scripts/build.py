@@ -238,6 +238,28 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
     )
     (SITE_OUTPUT / "index.html").write_text(idx_html, encoding="utf-8")
 
+    # 朝代导言页
+    intro_tpl = env.get_template("intro.html")
+    for dynasty_name, dynasty_dir in DYNASTIES:
+        if dynasty_name not in dynasty_intros:
+            continue
+        poems = poems_by_dynasty.get(dynasty_name, [])
+        next_poem = None
+        if poems:
+            p = poems[0]
+            next_poem = {
+                "url": f"{dynasty_dir}/{p['slug']}.html",
+            }
+        html = intro_tpl.render(
+            dynasty=dynasty_name,
+            intro_text=dynasty_intros[dynasty_name],
+            next_poem=next_poem,
+            base_url=BASE_URL,
+        )
+        out = SITE_OUTPUT / dynasty_dir / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(html, encoding="utf-8")
+
     # 每首诗独立页面
     poem_tpl = env.get_template("poem.html")
     for i, p in enumerate(all_poems):

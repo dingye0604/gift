@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{{ dynasty }} · 概览{% endblock %}
+
+{% block content %}
+<article class="poem-page">
+    <header class="poem-header">
+        <h1 class="poem-page-title">{{ dynasty }}</h1>
+    </header>
+
+    <div class="appreciation-text">
+        {% for para in intro_text.split('\n') %}
+        {% if para.strip() %}
+        <p>{{ para }}</p>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <nav class="poem-nav">
+        <a href="{{ base_url }}/" class="nav-back">← 返回目录</a>
+        {% if next_poem %}
+        <a href="{{ base_url }}/{{ next_poem.url }}" class="nav-next">下一首 →</a>
+        {% endif %}
+    </nav>
+</article>
+{% endblock %}
