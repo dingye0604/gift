@@ -93,7 +93,7 @@ a:hover {
 
 /* ── 导航 ────────────────────────────────────────── */
 .site-header {
-    background: rgba(250, 248, 245, 0.92);
+    background: rgba(250, 248, 245, 0.72);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-light);
@@ -101,6 +101,7 @@ a:hover {
     top: 0;
     z-index: 100;
     transition: box-shadow 0.3s ease;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.02);
 }
 
 .site-nav {
@@ -607,19 +608,20 @@ a:hover {
 }
 
 .river-hero-quote {
-    font-size: 14px;
+    font-size: 18px;
     color: var(--text-faint);
     font-style: italic;
     letter-spacing: 2px;
     font-family: var(--font-serif);
+    margin-top: 20px;
 }
 
 .river-timeline {
     position: relative;
-    min-height: 1760px;
+    min-height: 1260px;
     max-width: 1040px;
     margin: 0 auto 0;
-    padding: 0 0 60px;
+    padding: 0 0 20px;
     overflow: hidden;
     isolation: isolate;
 }
@@ -639,24 +641,14 @@ a:hover {
     pointer-events: none;
 }
 
-.river-timeline::before {
-    content: "";
-    position: absolute;
-    inset: 2% 0 0;
-    background:
-        radial-gradient(ellipse at 22% 12%, rgba(199, 154, 94, 0.06), transparent 24%),
-        radial-gradient(ellipse at 74% 55%, rgba(158, 74, 62, 0.04), transparent 28%),
-        linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.15), rgba(255,255,255,0));
-    pointer-events: none;
-    z-index: -1;
-}
+
 
 .river-svg {
     position: absolute;
     left: 50%;
-    top: 8px;
+    top: 0;
     width: 78%;
-    height: calc(100% - 40px);
+    height: 100%;
     opacity: 0.96;
     pointer-events: none;
     z-index: 0;
@@ -670,47 +662,68 @@ a:hover {
 
 .river-bank {
     fill: none;
-    stroke: rgba(74, 124, 124, 0.18);
+    stroke: url(#bankGrad);
     stroke-width: 1.2;
     stroke-dasharray: 1 10;
 }
 
 .river-flow {
-    animation: flowDrift 18s linear infinite;
     stroke-linecap: round;
+    will-change: transform, opacity, stroke-dashoffset;
 }
 
-.river-flow--1 { animation-delay: 0s; }
-.river-flow--2 { animation-delay: -6s; animation-duration: 24s; }
-.river-flow--3 { animation-delay: -12s; animation-duration: 30s; }
-
-@keyframes flowDrift {
-    to { stroke-dashoffset: -56; }
+.river-flow--1 {
+    animation: 
+        flowDrift1 26s linear infinite,
+        flowSway1 9s ease-in-out infinite,
+        flowPulse1 7s ease-in-out infinite;
+}
+.river-flow--2 {
+    animation: 
+        flowDrift2 34s linear infinite,
+        flowSway2 12s ease-in-out infinite,
+        flowPulse2 10s ease-in-out infinite;
+    animation-delay: -6s;
+}
+.river-flow--3 {
+    animation: 
+        flowDrift3 42s linear infinite,
+        flowSway3 15s ease-in-out infinite,
+        flowPulse3 13s ease-in-out infinite;
+    animation-delay: -12s;
 }
 
-/* 河流源头：书法字形，自然过渡到河流 */
-.river-source-glyphs {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding-top: 6px;
-    margin-bottom: -18px;
-    pointer-events: none;
+@keyframes flowDrift1 { to { stroke-dashoffset: -145; } }
+@keyframes flowDrift2 { to { stroke-dashoffset: -164; } }
+@keyframes flowDrift3 { to { stroke-dashoffset: -106; } }
+
+@keyframes flowSway1 {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-3px); }
+}
+@keyframes flowSway2 {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+}
+@keyframes flowSway3 {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-2px); }
 }
 
-.source-char {
-    font-family: "KaiTi", "楷体", "STKaiti", "FangSong", "仿宋", serif;
-    font-size: 44px;
-    color: #4a7c7c;
-    opacity: 0.48;
-    line-height: 1;
+@keyframes flowPulse1 {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.95; }
+}
+@keyframes flowPulse2 {
+    0%, 100% { opacity: 0.25; }
+    50% { opacity: 0.85; }
+}
+@keyframes flowPulse3 {
+    0%, 100% { opacity: 0.45; }
+    50% { opacity: 0.95; }
 }
 
-.source-gap {
-    margin-left: 20px;
-}
+
 
 
 .river-nodes {
@@ -745,7 +758,7 @@ a:hover {
     position: absolute;
     left: 6px;
     top: 50%;
-    width: 50px;
+    width: 20px;
     height: 1px;
     background: linear-gradient(90deg, rgba(74,124,124,0.35), rgba(74,124,124,0));
     transform: translateY(-50%);
@@ -754,7 +767,7 @@ a:hover {
 }
 
 .river-node:hover::before {
-    width: 64px;
+    width: 28px;
 }
 
 .river-node:nth-child(even)::before {
@@ -764,7 +777,7 @@ a:hover {
 }
 
 .river-node:nth-child(even):hover::before {
-    width: 64px;
+    width: 28px;
 }
 
 .river-dot {
@@ -814,7 +827,7 @@ a:hover {
 }
 
 .river-node:hover .river-card {
-    background: var(--teal-light);
+    background: linear-gradient(90deg, var(--teal-light) 0%, rgba(74, 124, 124, 0.01) 100%);
 }
 
 .river-dynasty {
@@ -856,6 +869,11 @@ a:hover {
     border-right: 2.5px solid transparent;
     padding: 10px 18px 10px 0;
     text-align: right;
+    background: transparent;
+}
+
+.river-node:nth-child(even):hover .river-card {
+    background: linear-gradient(270deg, var(--teal-light) 0%, rgba(74, 124, 124, 0.01) 100%);
 }
 
 .river-node:nth-child(even) .river-card::after {
@@ -864,16 +882,16 @@ a:hover {
     background: var(--teal);
 }
 
-.river-port--1 { --x: 31%; --y: 6%; }
-.river-port--2 { --x: 66%; --y: 16%; }
-.river-port--3 { --x: 28%; --y: 27%; }
-.river-port--4 { --x: 72%; --y: 37%; }
-.river-port--5 { --x: 29%; --y: 49%; }
-.river-port--6 { --x: 70%; --y: 58%; }
-.river-port--7 { --x: 25%; --y: 68%; }
-.river-port--8 { --x: 69%; --y: 77%; }
-.river-port--9 { --x: 31%; --y: 86%; }
-.river-port--10 { --x: 76%; --y: 94%; }
+.river-port--1 { --x: 32%; --y: 8.5%; }
+.river-port--2 { --x: 70%; --y: 17.5%; }
+.river-port--3 { --x: 26%; --y: 26.5%; }
+.river-port--4 { --x: 80%; --y: 35.5%; }
+.river-port--5 { --x: 26%; --y: 45.5%; }
+.river-port--6 { --x: 74%; --y: 54.5%; }
+.river-port--7 { --x: 24%; --y: 63.5%; }
+.river-port--8 { --x: 71%; --y: 72.5%; }
+.river-port--9 { --x: 34%; --y: 81.5%; }
+.river-port--10 { --x: 83%; --y: 90.0%; }
 
 /* ── 朝代目录页 ──────────────────────────────────── */
 .dynasty-page {
@@ -1065,7 +1083,7 @@ a:hover {
     }
 
     .river-timeline {
-        min-height: 1480px;
+        min-height: 1020px;
         padding-bottom: 24px;
     }
 
@@ -1091,7 +1109,7 @@ a:hover {
     .river-node:nth-child(even)::before {
         left: 6px;
         right: auto;
-        width: 30px;
+        width: 20px;
         background: linear-gradient(90deg, rgba(74,124,124,0.35), rgba(74,124,124,0));
     }
 
@@ -1103,21 +1121,15 @@ a:hover {
         text-align: left;
     }
 
+    .river-node:nth-child(even):hover .river-card,
+    .river-node:hover .river-card {
+        background: linear-gradient(90deg, var(--teal-light) 0%, rgba(74, 124, 124, 0.01) 100%);
+    }
+
     .river-node:nth-child(even) .river-card::after {
         left: 0;
         right: auto;
     }
-
-    .river-port--1 { --y: 6%; }
-    .river-port--2 { --y: 16%; }
-    .river-port--3 { --y: 27%; }
-    .river-port--4 { --y: 38%; }
-    .river-port--5 { --y: 49%; }
-    .river-port--6 { --y: 59%; }
-    .river-port--7 { --y: 69%; }
-    .river-port--8 { --y: 78%; }
-    .river-port--9 { --y: 87%; }
-    .river-port--10 { --y: 95%; }
 
     .river-dynasty {
         font-size: 19px;
