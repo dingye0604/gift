@@ -3,33 +3,62 @@
 {% block title %}目录{% endblock %}
 
 {% block content %}
-<section class="hero">
-    <h1 class="hero-title">诗三百</h1>
-    <p class="hero-desc">给妹妹的中国古代诗歌赏析</p>
-    <p class="hero-quote">"温柔敦厚，诗教也"</p>
+<section class="river-hero">
+    <h1 class="river-hero-title">诗三百</h1>
+    <p class="river-hero-desc">给妹妹的中国古代诗歌赏析</p>
+    <p class="river-hero-quote">"温柔敦厚，诗教也"</p>
 </section>
 
-<section class="dynasty-list">
-    {% for dynasty in dynasty_order %}
-    {% set poems = poems_by_dynasty.get(dynasty, []) %}
-    {% if poems %}
-    <div class="dynasty-section">
-        <a href="{{ base_url }}/{{ poems[0].dynasty_dir }}/" class="dynasty-label">
-            <span class="dynasty-name">{{ dynasty }}</span>
-            {% if dynasty_summaries.get(dynasty) %}
-            <span class="dynasty-summary">{{ dynasty_summaries[dynasty] }}</span>
-            {% endif %}
-        </a>
-        <div class="poem-grid">
-            {% for poem in poems %}
-            <a href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html" class="poem-card">
-                <span class="poem-card-title">{{ poem.meta.title }}</span>
-                <span class="poem-card-author">{{ poem.meta.author }}</span>
-            </a>
-            {% endfor %}
-        </div>
+<section class="river-timeline">
+    <!-- 河流 SVG -->
+    <svg class="river-svg" viewBox="0 0 800 1800" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#7a9e9e" stop-opacity="0.25"/>
+                <stop offset="50%" stop-color="#4a7c7c" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#3a6a6a" stop-opacity="0.45"/>
+            </linearGradient>
+        </defs>
+        <!-- 主河道 -->
+        <path class="river-path" d="M 420 0 Q 380 120 400 200 Q 430 300 390 400 Q 350 520 410 620 Q 470 720 400 820 Q 330 920 390 1020 Q 450 1120 380 1220 Q 320 1340 400 1440 Q 470 1540 390 1640 Q 360 1720 400 1800"/>
+        <!-- 水纹装饰 -->
+        <path class="river-ripple" d="M 420 0 Q 380 120 400 200 Q 430 300 390 400"/>
+        <path class="river-ripple" d="M 390 400 Q 350 520 410 620 Q 470 720 400 820"/>
+        <path class="river-ripple" d="M 400 820 Q 330 920 390 1020 Q 450 1120 380 1220"/>
+        <path class="river-ripple" d="M 380 1220 Q 320 1340 400 1440 Q 470 1540 390 1640"/>
+    </svg>
+
+    <!-- 源头 -->
+    <div class="river-source">
+        <span class="source-label">源</span>
+        <span class="source-sub">诗经 · 楚辞</span>
     </div>
-    {% endif %}
-    {% endfor %}
+
+    <!-- 朝代节点 -->
+    <div class="river-nodes">
+        {% for dynasty in dynasty_order %}
+        {% set poems = poems_by_dynasty.get(dynasty, []) %}
+        {% if poems %}
+        {% set idx = loop.index0 %}
+        <a href="{{ base_url }}/{{ poems[0].dynasty_dir }}/" class="river-node river-node--{{ 'left' if idx % 2 == 0 else 'right' }}">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-bridge" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">{{ dynasty }}</span>
+                {% if dynasty_summaries.get(dynasty) %}
+                <span class="river-summary">{{ dynasty_summaries[dynasty] }}</span>
+                {% endif %}
+                <span class="river-count">{{ poems|length }} 首</span>
+            </span>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <!-- 入海 -->
+    <div class="river-mouth">
+        <span class="mouth-label">海</span>
+        <span class="mouth-sub">诗不尽，河不竭</span>
+    </div>
 </section>
 {% endblock %}
