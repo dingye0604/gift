@@ -63,10 +63,21 @@ def parse_tex(filepath: Path) -> dict | None:
     if am:
         appreciation = am.group(1).strip()
 
+    annotations = []
+    nm = re.search(
+        r"\\begin\{annotations\}\s*\n(.*?)\\end\{annotations\}",
+        text,
+        re.DOTALL,
+    )
+    if nm:
+        for m in re.finditer(r"\\notetext\{(\d+)\}\{([^}]*)\}", nm.group(1)):
+            annotations.append({"num": m.group(1), "text": m.group(2).strip()})
+
     return {
         "meta": meta,
         "poem": poem,
         "appreciation": appreciation,
+        "annotations": annotations,
         "path": filepath,
         "dynasty_dir": filepath.parent.name,
         "slug": filepath.stem,
@@ -172,9 +183,15 @@ def build_book(poems_by_dynasty: dict[str, list[dict]]) -> None:
 # ── 文本清理 ───────────────────────────────────────
 def clean_latex(text: str) -> str:
     """移除基本 LaTeX 命令，返回纯文本。"""
-    # 去掉简单命令 \xxx{...}
     text = re.sub(r"\\\w+\{([^}]*)\}", r"\1", text)
-    # 去掉裸反斜线
+    text = re.sub(r"\\(?!\n)", "", text)
+    return text.strip()
+
+
+def clean_poem_text(text: str) -> str:
+    """清理诗歌文本，将 \textsuperscript{N} 转为 <sup>N</sup>，移除其余 LaTeX 命令。"""
+    text = re.sub(r"\\textsuperscript\{(\d+)\}", r"<sup>\1</sup>", text)
+    text = re.sub(r"\\\w+\{([^}]*)\}", r"\1", text)
     text = re.sub(r"\\(?!\n)", "", text)
     return text.strip()
 
@@ -222,7 +239,7 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
         for p in poems:
             p["dynasty"] = dynasty_name
             p["dynasty_dir"] = dynasty_dir
-            p["poem_clean"] = clean_latex(p["poem"])
+            p["poem_clean"] = clean_poem_text(p["poem"])
             p["appreciation_clean"] = clean_latex(p["appreciation"])
             all_poems.append(p)
 

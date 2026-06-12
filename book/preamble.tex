@@ -13,6 +13,8 @@
 % ── 颜色 ──────────────────────────
 \definecolor{accent}{HTML}{9e4a3e}
 \definecolor{textgray}{HTML}{333333}
+\definecolor{warmbrown}{HTML}{6b4c3b}
+\definecolor{teal}{HTML}{4a7c7c}
 
 \hypersetup{
     colorlinks=true,
@@ -57,6 +59,7 @@
     {\par\addvspace{1.5em}
      \begingroup
      \centering
+     \color{warmbrown}
      \songti\normalsize
      \setlength{\baselineskip}{2em}
      \obeylines}
@@ -82,6 +85,19 @@
      \setlength{\parindent}{2em}
      \setlength{\parskip}{0.5em}}
     {\par\addvspace{0.5em}}
+
+% ── 注释环境 ──────────────────────
+% 字号更小（\footnotesize），楷体，靛青色，用于诗歌正文后的注释块
+\newenvironment{annotations}
+    {\par\addvspace{1em}
+     \color{teal}
+     \footnotesize\kaishu
+     \setlength{\parindent}{0em}
+     \setlength{\parskip}{0.3em}}
+    {\par\addvspace{1em}}
+
+\newcommand{\notetext}[2]{%
+    \noindent #1.\enspace #2\par}
 
 % ── 元信息标记 ────────────────────
 % 每首诗前自动显示标题、作者、朝代（无序号，居中，加入目录）

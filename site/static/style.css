@@ -410,6 +410,28 @@ a:hover {
     height: 1em;
 }
 
+/* ── 诗歌注释 ────────────────────────────────────── */
+.poem-annotations {
+    max-width: var(--content-width);
+    margin: 0 auto 48px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.poem-annotations p {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--teal);
+    margin-bottom: 0.5em;
+    text-align: left;
+    font-family: "KaiTi", "STKaiti", "AR PL UKai CN", var(--font-serif);
+}
+
+.poem-annotations p:last-child {
+    margin-bottom: 0;
+}
+
 /* ── 赏析正文 ────────────────────────────────────── */
 .appreciation-text {
     max-width: var(--content-width);

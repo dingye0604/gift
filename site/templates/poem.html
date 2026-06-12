@@ -20,12 +20,20 @@
     <div class="poem-text">
         {% for line in poem.poem_clean.split('\n') %}
         {% if line.strip() %}
-        <p>{{ line }}</p>
+        <p>{{ line | safe }}</p>
         {% else %}
         <div class="poem-stanza-break"></div>
         {% endif %}
         {% endfor %}
     </div>
+
+    {% if poem.annotations %}
+    <div class="poem-annotations">
+        {% for ann in poem.annotations %}
+        <p><span class="ann-num">{{ ann.num }}.</span> {{ ann.text }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
 
     <div class="appreciation-text">
         {% for para in poem.appreciation_clean.split('\n') %}
