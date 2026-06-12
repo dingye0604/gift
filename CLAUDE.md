@@ -68,6 +68,10 @@
 举头望明月，低头思故乡。
 \end{poem}
 
+\begin{annotations}
+\notetext{1}{疑：怀疑、恍惚以为是。……}
+\end{annotations}
+
 \begin{appreciation}
 赏析文字……
 \end{appreciation}
@@ -77,7 +81,9 @@
 - 注释行的元信息必须包含：`!TITLE`、`!AUTHOR`、`!DYNASTY`、`!ORDER`。`!GENRE` 可选
 - `!DYNASTY` 必须是以下九个值之一：先秦、两汉、魏晋、南北朝、唐、两宋、元、明清、近代
 - `!ORDER` 为整数，决定同一朝代内部排序
-- `\begin{poem}...\end{poem}` 包含诗歌原文，`\begin{appreciation}...\end{appreciation}` 包含赏析
+- `\begin{poem}...\end{poem}` 包含诗歌原文，`\begin{annotations}...\end{annotations}` 包含注释
+- `\begin{appreciation}...\end{appreciation}` 包含赏析（可选，由用户自行撰写）
+- Claude 新增诗歌时，只需写诗歌正文和注释，**不要写赏析**——赏析由用户自己完成
 - 文件尾部不写空行或多余标记
 
 ### 书的拼装
