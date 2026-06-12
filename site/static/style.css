@@ -365,8 +365,8 @@ a:hover {
 }
 
 .poem-page-title {
-    font-family: var(--font-sans);
-    font-size: 32px;
+    font-family: "KaiTi", "楷体", "STKaiti", "华文楷体", var(--font-serif), serif;
+    font-size: 34px;
     font-weight: 400;
     color: var(--title);
     line-height: 1.35;
@@ -375,9 +375,9 @@ a:hover {
 }
 
 .poem-page-meta {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text-faint);
-    font-family: var(--font-sans);
+    font-family: "KaiTi", "楷体", "STKaiti", "华文楷体", var(--font-serif), serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -398,7 +398,7 @@ a:hover {
 }
 
 .poem-text p {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 2.2;
     color: #6b4c3b;
     margin: 0;
@@ -420,12 +420,12 @@ a:hover {
 }
 
 .poem-annotations p {
-    font-size: 13px;
+    font-size: 17px;
     line-height: 1.85;
     color: var(--teal);
     margin-bottom: 0.5em;
-    text-align: left;
-    font-family: "KaiTi", "STKaiti", "AR PL UKai CN", var(--font-serif);
+    text-align: center;
+    font-family: "KaiTi", "楷体", "STKaiti", "华文楷体", "AR PL UKai CN", "LXGW WenKai", var(--font-serif), serif;
 }
 
 .poem-annotations p:last-child {
@@ -439,7 +439,7 @@ a:hover {
 }
 
 .appreciation-text p {
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.85;
     color: var(--text);
     margin-bottom: 1.5em;
@@ -472,7 +472,7 @@ a:hover {
 .nav-back,
 .nav-next {
     font-family: var(--font-sans);
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text-faint);
     letter-spacing: 1px;
     padding: 6px 0;
@@ -621,7 +621,7 @@ a:hover {
     }
 
     .poem-page-title {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .poem-text {
@@ -629,7 +629,7 @@ a:hover {
     }
 
     .poem-text p {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 2;
     }
 
@@ -639,7 +639,7 @@ a:hover {
     }
 
     .appreciation-text p {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -653,6 +653,6 @@ a:hover {
     }
 
     .poem-text p {
-        font-size: 17px;
+        font-size: 19px;
     }
 }
