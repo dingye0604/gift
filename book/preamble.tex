@@ -102,6 +102,7 @@
 % ── 元信息标记 ────────────────────
 % 每首诗前自动显示标题、作者、朝代（无序号，居中，加入目录）
 \newcommand{\poemheading}[3]{%
+    \phantomsection
     \section*{#1}%
     \addcontentsline{toc}{section}{#1}%
     \begin{center}
