@@ -9,40 +9,74 @@
     <p class="river-hero-quote">"温柔敦厚，诗教也"</p>
 </section>
 
-<section class="river-timeline">
-    <!-- 河流 SVG -->
-    <svg class="river-svg" viewBox="0 0 800 1800" preserveAspectRatio="none" aria-hidden="true">
+<section class="river-timeline" aria-label="诗歌之河 · 朝代目录">
+    <svg class="river-svg" viewBox="0 0 900 2100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs>
-            <linearGradient id="riverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#7a9e9e" stop-opacity="0.25"/>
-                <stop offset="50%" stop-color="#4a7c7c" stop-opacity="0.35"/>
-                <stop offset="100%" stop-color="#3a6a6a" stop-opacity="0.45"/>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0.10"/>
+                <stop offset="28%" stop-color="#6c8c85" stop-opacity="0.30"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.42"/>
+                <stop offset="100%" stop-color="#385f65" stop-opacity="0.55"/>
             </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
         </defs>
-        <!-- 主河道 -->
-        <path class="river-path" d="M 420 0 Q 380 120 400 200 Q 430 300 390 400 Q 350 520 410 620 Q 470 720 400 820 Q 330 920 390 1020 Q 450 1120 380 1220 Q 320 1340 400 1440 Q 470 1540 390 1640 Q 360 1720 400 1800"/>
-        <!-- 水纹装饰 -->
-        <path class="river-ripple" d="M 420 0 Q 380 120 400 200 Q 430 300 390 400"/>
-        <path class="river-ripple" d="M 390 400 Q 350 520 410 620 Q 470 720 400 820"/>
-        <path class="river-ripple" d="M 400 820 Q 330 920 390 1020 Q 450 1120 380 1220"/>
-        <path class="river-ripple" d="M 380 1220 Q 320 1340 400 1440 Q 470 1540 390 1640"/>
+
+
+        <path class="river-body"
+            d="M 445 0
+               C 430 60, 400 160, 410 280
+               C 370 480, 528 660, 506 828
+               C 486 980, 336 1098, 385 1266
+               C 444 1468, 618 1538, 555 1738
+               C 518 1850, 568 1985, 630 2100
+               L 850 2100
+               C 740 1970, 766 1850, 702 1724
+               C 618 1560, 490 1478, 524 1318
+               C 560 1150, 706 1018, 653 832
+               C 608 672, 472 574, 524 388
+               C 560 240, 480 100, 458 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 445 0 C 430 60, 400 160, 410 280 C 370 480, 528 660, 506 828 C 486 980, 336 1098, 385 1266 C 444 1468, 618 1538, 555 1738 C 518 1850, 568 1985, 630 2100" />
+        <path class="river-bank" d="M 458 0 C 480 100, 560 240, 524 388 C 472 574, 608 672, 653 832 C 706 1018, 560 1150, 524 1318 C 490 1478, 618 1560, 702 1724 C 766 1850, 740 1970, 850 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 460 40 C 422 180, 490 284, 462 420 C 430 594, 580 684, 554 840 C 526 1010, 406 1130, 448 1290 C 504 1502, 646 1574, 606 1764 C 588 1880, 630 1984, 702 2080"
+            fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="3" stroke-dasharray="14 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 500 18 C 472 158, 540 256, 496 396 C 448 560, 616 694, 596 848 C 578 1006, 440 1140, 478 1308 C 524 1500, 690 1578, 644 1750 C 616 1864, 678 1972, 756 2094"
+            fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="5" stroke-dasharray="8 36"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 430 100 C 378 246, 486 356, 434 504 C 396 620, 512 754, 490 896 C 466 1046, 348 1164, 406 1312 C 474 1478, 586 1592, 564 1752 C 546 1880, 592 1994, 660 2078"
+            fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-dasharray="3 22"/>
     </svg>
 
-    <!-- 源头 -->
-    <div class="river-source">
-        <span class="source-label">源</span>
-        <span class="source-sub">诗经 · 楚辞</span>
+    <!-- 河流源头：诗经 · 楚辞 -->
+    <div class="river-source-glyphs" aria-hidden="true">
+        <span class="source-char">诗</span>
+        <span class="source-char">经</span>
+        <span class="source-char source-gap">楚</span>
+        <span class="source-char">辞</span>
     </div>
 
-    <!-- 朝代节点 -->
-    <div class="river-nodes">
+    <nav class="river-nodes">
         {% for dynasty in dynasty_order %}
         {% set poems = poems_by_dynasty.get(dynasty, []) %}
         {% if poems %}
-        {% set idx = loop.index0 %}
-        <a href="{{ base_url }}/{{ poems[0].dynasty_dir }}/" class="river-node river-node--{{ 'left' if idx % 2 == 0 else 'right' }}">
+        <a href="{{ base_url }}/{{ poems[0].dynasty_dir }}/"
+           class="river-node river-port--{{ loop.index }}"
+           aria-label="{{ dynasty }} · {{ poems|length }}首">
             <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-bridge" aria-hidden="true"></span>
             <span class="river-card">
                 <span class="river-dynasty">{{ dynasty }}</span>
                 {% if dynasty_summaries.get(dynasty) %}
@@ -53,12 +87,12 @@
         </a>
         {% endif %}
         {% endfor %}
-    </div>
+    </nav>
 
-    <!-- 入海 -->
-    <div class="river-mouth">
-        <span class="mouth-label">海</span>
-        <span class="mouth-sub">诗不尽，河不竭</span>
-    </div>
+    <footer class="river-footer">
+        <p>给妹妹的诗 · 中国古代诗歌赏析</p>
+    </footer>
 </section>
 {% endblock %}
+
+{% block footer %}{% endblock %}

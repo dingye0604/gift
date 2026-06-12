@@ -1,26 +1,45 @@
 {% extends "base.html" %}
 
-{% block title %}{{ dynasty }} · 概览{% endblock %}
+{% block title %}{{ dynasty }} · 诗歌目录{% endblock %}
 
 {% block content %}
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">{{ dynasty }}</h1>
+<article class="dynasty-page">
+    <header class="dynasty-header">
+        <a href="{{ base_url }}/" class="dynasty-breadcrumb">诗歌之河</a>
+        <h1 class="dynasty-title">{{ dynasty }}</h1>
+        {% if dynasty_summary %}
+        <p class="dynasty-subtitle">{{ dynasty_summary }}</p>
+        {% endif %}
     </header>
 
-    <div class="appreciation-text">
+    {% if intro_text %}
+    <section class="dynasty-intro">
         {% for para in intro_text.split('\n') %}
         {% if para.strip() %}
         <p>{{ para }}</p>
         {% endif %}
         {% endfor %}
-    </div>
+    </section>
+    {% endif %}
+
+    <section class="dynasty-directory">
+        <div class="directory-heading">
+            <h2>目录</h2>
+            <span>{{ poems|length }} 首</span>
+        </div>
+
+        <div class="directory-poems">
+            {% for poem in poems %}
+            <a href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html" class="directory-poem">
+                <span class="dir-poem-title">{{ poem.meta.title }}</span>
+                <span class="dir-poem-meta">{{ poem.meta.author }}{% if poem.meta.genre %} · {{ poem.meta.genre }}{% endif %}</span>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
 
     <nav class="poem-nav">
-        <a href="{{ base_url }}/" class="nav-back">← 返回目录</a>
-        {% if next_poem %}
-        <a href="{{ base_url }}/{{ next_poem.url }}" class="nav-next">下一首 →</a>
-        {% endif %}
+        <a href="{{ base_url }}/" class="nav-back">← 返回总目录</a>
     </nav>
 </article>
 {% endblock %}

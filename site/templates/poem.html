@@ -44,7 +44,7 @@
     </div>
 
     <nav class="poem-nav">
-        <a href="{{ base_url }}/" class="nav-back">← 返回目录</a>
+        <a href="{{ base_url }}/{{ poem.dynasty_dir }}/" class="nav-back">← 返回{{ poem.dynasty }}目录</a>
         {% if next_poem %}
         <a href="{{ base_url }}/{{ next_poem.url }}" class="nav-next">下一首 →</a>
         {% endif %}

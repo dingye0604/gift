@@ -30,6 +30,7 @@ DYNASTIES = [
     ("魏晋", "wei-jin"),
     ("南北朝", "nan-bei-chao"),
     ("唐", "tang"),
+    ("五代十国", "wudai-shiguo"),
     ("两宋", "liang-song"),
     ("元", "yuan"),
     ("明清", "ming-qing"),
@@ -255,22 +256,17 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
     )
     (SITE_OUTPUT / "index.html").write_text(idx_html, encoding="utf-8")
 
-    # 朝代导言页
+    # 朝代目录页
     intro_tpl = env.get_template("intro.html")
     for dynasty_name, dynasty_dir in DYNASTIES:
-        if dynasty_name not in dynasty_intros:
-            continue
         poems = poems_by_dynasty.get(dynasty_name, [])
-        next_poem = None
-        if poems:
-            p = poems[0]
-            next_poem = {
-                "url": f"{dynasty_dir}/{p['slug']}.html",
-            }
+        if not poems:
+            continue
         html = intro_tpl.render(
             dynasty=dynasty_name,
-            intro_text=dynasty_intros[dynasty_name],
-            next_poem=next_poem,
+            dynasty_summary=dynasty_summaries.get(dynasty_name, ""),
+            intro_text=dynasty_intros.get(dynasty_name, ""),
+            poems=poems,
             base_url=BASE_URL,
         )
         out = SITE_OUTPUT / dynasty_dir / "index.html"
