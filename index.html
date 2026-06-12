@@ -20,50 +20,243 @@
 
     <main class="site-main">
         
-<section class="hero">
-    <h1 class="hero-title">诗三百</h1>
-    <p class="hero-desc">给妹妹的中国古代诗歌赏析</p>
-    <p class="hero-quote">"温柔敦厚，诗教也"</p>
+<section class="river-hero">
+    <h1 class="river-hero-title">诗三百</h1>
+    <p class="river-hero-desc">给妹妹的中国古代诗歌赏析</p>
+    <p class="river-hero-quote">"温柔敦厚，诗教也"</p>
 </section>
 
-<section class="dynasty-list">
-    
-    
-    
-    <div class="dynasty-section">
-        <a href="/gift/xian-qin/" class="dynasty-label">
-            <span class="dynasty-name">先秦</span>
-            
-            <span class="dynasty-summary">—— 一切的开始</span>
-            
-        </a>
-        <div class="poem-grid">
-            
-            <a href="/gift/xian-qin/guan-ju.html" class="poem-card">
-                <span class="poem-card-title">诗经·周南·关雎</span>
-                <span class="poem-card-author">无名氏</span>
-            </a>
-            
-            <a href="/gift/xian-qin/lu-ming.html" class="poem-card">
-                <span class="poem-card-title">诗经·小雅·鹿鸣</span>
-                <span class="poem-card-author">无名氏</span>
-            </a>
-            
-            <a href="/gift/xian-qin/xi-ao.html" class="poem-card">
-                <span class="poem-card-title">诗经·卫风·淇奥</span>
-                <span class="poem-card-author">无名氏</span>
-            </a>
-            
-        </div>
+<section class="river-timeline" aria-label="诗歌之河 · 朝代目录">
+    <svg class="river-svg" viewBox="0 0 900 2100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0.10"/>
+                <stop offset="28%" stop-color="#6c8c85" stop-opacity="0.30"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.42"/>
+                <stop offset="100%" stop-color="#385f65" stop-opacity="0.55"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+
+        <path class="river-body"
+            d="M 445 0
+               C 430 60, 400 160, 410 280
+               C 370 480, 528 660, 506 828
+               C 486 980, 336 1098, 385 1266
+               C 444 1468, 618 1538, 555 1738
+               C 518 1850, 568 1985, 630 2100
+               L 850 2100
+               C 740 1970, 766 1850, 702 1724
+               C 618 1560, 490 1478, 524 1318
+               C 560 1150, 706 1018, 653 832
+               C 608 672, 472 574, 524 388
+               C 560 240, 480 100, 458 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 445 0 C 430 60, 400 160, 410 280 C 370 480, 528 660, 506 828 C 486 980, 336 1098, 385 1266 C 444 1468, 618 1538, 555 1738 C 518 1850, 568 1985, 630 2100" />
+        <path class="river-bank" d="M 458 0 C 480 100, 560 240, 524 388 C 472 574, 608 672, 653 832 C 706 1018, 560 1150, 524 1318 C 490 1478, 618 1560, 702 1724 C 766 1850, 740 1970, 850 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 460 40 C 422 180, 490 284, 462 420 C 430 594, 580 684, 554 840 C 526 1010, 406 1130, 448 1290 C 504 1502, 646 1574, 606 1764 C 588 1880, 630 1984, 702 2080"
+            fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="3" stroke-dasharray="14 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 500 18 C 472 158, 540 256, 496 396 C 448 560, 616 694, 596 848 C 578 1006, 440 1140, 478 1308 C 524 1500, 690 1578, 644 1750 C 616 1864, 678 1972, 756 2094"
+            fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="5" stroke-dasharray="8 36"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 430 100 C 378 246, 486 356, 434 504 C 396 620, 512 754, 490 896 C 466 1046, 348 1164, 406 1312 C 474 1478, 586 1592, 564 1752 C 546 1880, 592 1994, 660 2078"
+            fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-dasharray="3 22"/>
+    </svg>
+
+    <!-- 河流源头：诗经 · 楚辞 -->
+    <div class="river-source-glyphs" aria-hidden="true">
+        <span class="source-char">诗</span>
+        <span class="source-char">经</span>
+        <span class="source-char source-gap">楚</span>
+        <span class="source-char">辞</span>
     </div>
-    
-    
+
+    <nav class="river-nodes">
+        
+        
+        
+        <a href="/gift/xian-qin/"
+           class="river-node river-port--1"
+           aria-label="先秦 · 8首">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">先秦</span>
+                
+                <span class="river-summary">一切的开始</span>
+                
+                <span class="river-count">8 首</span>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="/gift/liang-han/"
+           class="river-node river-port--2"
+           aria-label="两汉 · 6首">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">两汉</span>
+                
+                <span class="river-summary">乐府与古诗的交响</span>
+                
+                <span class="river-count">6 首</span>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="/gift/wei-jin/"
+           class="river-node river-port--3"
+           aria-label="魏晋 · 8首">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">魏晋</span>
+                
+                <span class="river-summary">文学的自觉时代</span>
+                
+                <span class="river-count">8 首</span>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="/gift/nan-bei-chao/"
+           class="river-node river-port--4"
+           aria-label="南北朝 · 4首">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">南北朝</span>
+                
+                <span class="river-summary">声律的孕育与南北交融</span>
+                
+                <span class="river-count">4 首</span>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="/gift/tang/"
+           class="river-node river-port--5"
+           aria-label="唐 · 55首">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">唐</span>
+                
+                <span class="river-summary">中国诗歌的黄金时代</span>
+                
+                <span class="river-count">55 首</span>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="/gift/wudai-shiguo/"
+           class="river-node river-port--6"
+           aria-label="五代十国 · 7首">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">五代十国</span>
+                
+                <span class="river-summary">乱世中的词心</span>
+                
+                <span class="river-count">7 首</span>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="/gift/liang-song/"
+           class="river-node river-port--7"
+           aria-label="两宋 · 19首">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">两宋</span>
+                
+                <span class="river-summary">词与诗并峙的巅峰</span>
+                
+                <span class="river-count">19 首</span>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="/gift/yuan/"
+           class="river-node river-port--8"
+           aria-label="元 · 5首">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">元</span>
+                
+                <span class="river-summary">俗文学的崛起</span>
+                
+                <span class="river-count">5 首</span>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="/gift/ming-qing/"
+           class="river-node river-port--9"
+           aria-label="明清 · 9首">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">明清</span>
+                
+                <span class="river-summary">复古与革新的张力</span>
+                
+                <span class="river-count">9 首</span>
+            </span>
+        </a>
+        
+        
+        
+        
+        <a href="/gift/jin-dai/"
+           class="river-node river-port--10"
+           aria-label="近代 · 4首">
+            <span class="river-dot" aria-hidden="true"></span>
+            <span class="river-card">
+                <span class="river-dynasty">近代</span>
+                
+                <span class="river-summary">旧诗新命</span>
+                
+                <span class="river-count">4 首</span>
+            </span>
+        </a>
+        
+        
+    </nav>
+
+    <footer class="river-footer">
+        <p>给妹妹的诗 · 中国古代诗歌赏析</p>
+    </footer>
 </section>
 
     </main>
 
-    <footer class="site-footer">
-        <p>给妹妹的诗 · 中国古代诗歌赏析</p>
-    </footer>
+    
 </body>
 </html>
