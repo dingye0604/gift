@@ -1127,13 +1127,13 @@ a:hover {
     .river-port--9 { animation-delay: 0.61s; --x-mobile: 22%; }
     .river-port--10 { animation-delay: 0.68s; --x-mobile: 24%; }
 
-    /* 桥接线：从左侧蜿蜒圆点拉伸至右侧 30% 的对齐卡片 */
+    /* 桥接线：从左侧蜿蜒圆点拉伸至动态起伏的卡片，固定桥接长度 */
     .river-node::before {
         content: "";
         position: absolute;
         left: calc(var(--x-mobile) + 4px);
         top: 50%;
-        width: calc(30% - (var(--x-mobile) + 4px) - 6px);
+        width: 18px;
         height: 1px;
         background: linear-gradient(90deg, rgba(74,124,124,0.45), rgba(74,124,124,0.05));
         transform: translateY(-50%);
@@ -1142,18 +1142,19 @@ a:hover {
     }
 
     .river-node:hover::before {
-        width: calc(30% - (var(--x-mobile) + 4px) - 2px); /* 悬停线段拉长 */
+        width: 26px; /* 悬停线段拉长 */
     }
 
     /* 强制覆盖桌面端偶数节点连接线的 left: auto 和 right 定位，统一到左侧 */
     .river-node:nth-child(even)::before {
         left: calc(var(--x-mobile) + 4px) !important;
         right: auto !important;
+        width: 18px !important;
         background: linear-gradient(90deg, rgba(74,124,124,0.45), rgba(74,124,124,0.05)) !important;
     }
 
     .river-node:nth-child(even):hover::before {
-        width: calc(30% - (var(--x-mobile) + 4px) - 2px) !important;
+        width: 26px !important;
     }
 
     /* 圆点在左侧跟随河道波动 */
@@ -1192,11 +1193,11 @@ a:hover {
     .river-port--9 .river-dot::after { animation-delay: 2.9s; }
     .river-port--10 .river-dot::after { animation-delay: 1.0s; }
 
-    /* 卡片在右侧 30% 处严格对齐，形成一列 */
+    /* 卡片随河流波动，动态计算 left */
     .river-card {
         position: absolute;
-        left: 30% !important;
-        width: 66% !important;
+        left: calc(var(--x-mobile) + 28px) !important;
+        width: calc(100% - (var(--x-mobile) + 28px) - 16px) !important;
         top: 50%;
         transform: translateY(-50%);
         border-left: 2.5px solid transparent !important;
