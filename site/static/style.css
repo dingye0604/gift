@@ -647,7 +647,7 @@ a:hover {
     position: absolute;
     left: 50%;
     top: 0;
-    width: 90%;
+    width: 78%;
     height: 100%;
     opacity: 0.96;
     pointer-events: none;
@@ -1101,8 +1101,8 @@ a:hover {
     .river-node:nth-child(odd) {
         left: 0;
         right: auto;
-        width: 32%;
-        padding-right: 16px;
+        width: 36%;
+        padding-right: 8px;
         transform: translateY(-50%);
         flex-direction: row-reverse;
     }
@@ -1110,8 +1110,8 @@ a:hover {
     .river-node:nth-child(even) {
         left: auto;
         right: 0;
-        width: 32%;
-        padding-left: 16px;
+        width: 36%;
+        padding-left: 8px;
         transform: translateY(-50%);
         flex-direction: row;
     }
@@ -1120,24 +1120,24 @@ a:hover {
     .river-node:nth-child(odd)::before {
         left: auto;
         right: 4px;
-        width: 28px;
+        width: 44px;
         background: linear-gradient(270deg, rgba(74,124,124,0.4), rgba(74,124,124,0));
     }
 
     .river-node:nth-child(odd):hover::before {
-        width: 38px;
+        width: 56px;
     }
 
     /* 偶数：连接线从圆点向左延伸至河流 */
     .river-node:nth-child(even)::before {
         left: 4px;
         right: auto;
-        width: 28px;
+        width: 44px;
         background: linear-gradient(90deg, rgba(74,124,124,0.4), rgba(74,124,124,0));
     }
 
     .river-node:nth-child(even):hover::before {
-        width: 38px;
+        width: 56px;
     }
 
     /* 卡片样式恢复左右区分 */
@@ -1261,12 +1261,12 @@ a:hover {
     .river-port--9::before {
         left: 4px;
         right: auto;
-        width: 28px;
+        width: 44px;
         background: linear-gradient(90deg, rgba(74,124,124,0.4), rgba(74,124,124,0));
     }
 
     .river-port--9:hover::before {
-        width: 38px;
+        width: 56px;
     }
 
     .river-port--9 .river-card {
