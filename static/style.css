@@ -1089,7 +1089,7 @@ a:hover {
 
     .river-svg {
         left: 50%;
-        width: 51%;
+        width: 75%;
         transform: translateX(-50%);
     }
 
@@ -1101,43 +1101,45 @@ a:hover {
     .river-node:nth-child(odd) {
         left: 0;
         right: auto;
-        width: 36%;
+        width: 48%;
         padding-right: 8px;
         transform: translateY(-50%);
         flex-direction: row-reverse;
+        gap: 16px;
     }
 
     .river-node:nth-child(even) {
         left: auto;
         right: 0;
-        width: 36%;
+        width: 48%;
         padding-left: 8px;
         transform: translateY(-50%);
         flex-direction: row;
+        gap: 16px;
     }
 
     /* 奇数：连接线从圆点向右延伸至河流 */
     .river-node:nth-child(odd)::before {
         left: auto;
         right: 4px;
-        width: 44px;
+        width: 54px;
         background: linear-gradient(270deg, rgba(74,124,124,0.4), rgba(74,124,124,0));
     }
 
     .river-node:nth-child(odd):hover::before {
-        width: 56px;
+        width: 64px;
     }
 
     /* 偶数：连接线从圆点向左延伸至河流 */
     .river-node:nth-child(even)::before {
         left: 4px;
         right: auto;
-        width: 44px;
+        width: 54px;
         background: linear-gradient(90deg, rgba(74,124,124,0.4), rgba(74,124,124,0));
     }
 
     .river-node:nth-child(even):hover::before {
-        width: 56px;
+        width: 64px;
     }
 
     /* 卡片样式恢复左右区分 */
