@@ -1327,5 +1327,38 @@ a:hover {
         font-size: 18px;
     }
 
-    /* 移除特定端口的移动端特定偏移，全部由统一的 34% 定位线对齐 */
+    /* 移动端去除 Hover 动画，避免触屏交互粘滞；仅保留点击时的浮起反馈 */
+    .river-node:hover {
+        transform: translate(0, -50%) !important;
+    }
+
+    .river-node:hover::before,
+    .river-node:nth-child(even):hover::before {
+        width: 18px !important;
+    }
+
+    .river-node:hover .river-dot {
+        background: rgba(74, 124, 124, 0.3) !important;
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+
+    .river-node:hover .river-card,
+    .river-node:nth-child(even):hover .river-card {
+        background: transparent !important;
+    }
+
+    .river-node:hover .river-card::after,
+    .river-node:nth-child(even):hover .river-card::after {
+        height: 0 !important;
+    }
+
+    .river-node:hover .river-dynasty {
+        color: #3a6565 !important;
+    }
+
+    /* 点击激活时的浮起交互反馈 */
+    .river-node:active {
+        transform: translate(0, calc(-50% - 4px)) !important;
+        transition: transform 0.1s ease !important;
+    }
 }
