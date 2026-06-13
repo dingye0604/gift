@@ -1090,7 +1090,7 @@ a:hover {
     .river-svg {
         left: 50%;
         width: 60%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scaleX(1.8);
     }
 
     .river-nodes {
@@ -1099,19 +1099,19 @@ a:hover {
 
     /* 奇数卡片在左，偶数卡片在右，靠近河流 */
     .river-node:nth-child(odd) {
-        left: 3%;
+        left: 2%;
         right: auto;
-        width: 42%;
-        padding-right: 28px;
+        width: 38%;
+        padding-right: 24px;
         transform: translateY(-50%);
         flex-direction: row-reverse;
     }
 
     .river-node:nth-child(even) {
         left: auto;
-        right: 3%;
-        width: 42%;
-        padding-left: 28px;
+        right: 2%;
+        width: 38%;
+        padding-left: 24px;
         transform: translateY(-50%);
         flex-direction: row;
     }
