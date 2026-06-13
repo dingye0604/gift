@@ -1088,7 +1088,7 @@ a:hover {
 
     .river-svg {
         left: 50%;
-        width: 38%;
+        width: 100%;
         transform: translateX(-50%);
     }
 
