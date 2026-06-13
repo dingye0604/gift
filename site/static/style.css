@@ -1090,7 +1090,6 @@ a:hover {
     .river-svg {
         left: 50%;
         width: 38%;
-        bottom: 50px;
         transform: translateX(-50%);
     }
 
