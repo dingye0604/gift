@@ -1105,6 +1105,13 @@ a:hover {
         flex-direction: row !important;
         opacity: 0;
         animation: mobileNodeEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+    }
+
+    .river-node:focus,
+    .river-node:active {
+        outline: none;
     }
 
     .river-node:nth-child(even) {
