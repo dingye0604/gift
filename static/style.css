@@ -1072,7 +1072,7 @@ a:hover {
     .river-ideogram-ghost { animation: none; }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .river-hero {
         padding: 56px 0 28px;
     }
@@ -1089,7 +1089,7 @@ a:hover {
 
     .river-svg {
         left: 50%;
-        width: 70%;
+        width: 85%;
         transform: translateX(-50%);
     }
 
@@ -1097,104 +1097,37 @@ a:hover {
         inset: 50px 0 30px;
     }
 
-    /* 展宽容器，消除原本的 X 轴平移，圆点精准靠 absolute 定位居中 */
+    /* 恢复默认的 --x 定位，让圆点精准对齐弯曲的河流 */
     .river-node {
-        left: 0;
-        right: 0;
-        width: auto;
-        transform: translateY(-50%);
-        display: block;
-        height: 0;
+        width: max-content;
+        max-width: 44vw;
+        gap: 8px; /* 卡片更靠近河流 */
     }
 
-    .river-node:hover {
-        transform: translateY(-50%);
-    }
-
-    /* 圆点精准锁死在 50% 中轴线 */
-    .river-dot {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translate(-50%, -50%);
-    }
-
-    /* 奇数卡片：定位在左半侧，文字右对齐 */
-    .river-node:nth-child(odd) .river-card {
-        position: absolute;
-        right: calc(50% + 18px);
-        left: 8px;
-        top: 0;
-        transform: translateY(-50%);
-        border-left: 0;
-        border-right: 2.5px solid transparent;
-        padding: 10px 18px 10px 0;
-        text-align: right;
-        background: transparent;
-    }
-
-    .river-node:nth-child(odd):hover .river-card {
-        background: linear-gradient(270deg, var(--teal-light) 0%, rgba(74, 124, 124, 0.01) 100%);
-    }
-
-    .river-node:nth-child(odd) .river-card::after {
-        left: auto;
-        right: 0;
-        background: var(--teal);
-    }
-
-    /* 偶数卡片：定位在右半侧，文字左对齐 */
-    .river-node:nth-child(even) .river-card {
-        position: absolute;
-        left: calc(50% + 18px);
-        right: 8px;
-        top: 0;
-        transform: translateY(-50%);
-        border-left: 2.5px solid transparent;
-        border-right: 0;
-        padding: 10px 0 10px 18px;
-        text-align: left;
-        background: transparent;
-    }
-
-    .river-node:nth-child(even):hover .river-card {
-        background: linear-gradient(90deg, var(--teal-light) 0%, rgba(74, 124, 124, 0.01) 100%);
-    }
-
-    .river-node:nth-child(even) .river-card::after {
-        left: 0;
-        right: auto;
-        background: var(--teal);
-    }
-
-    /* 奇数连接线：从圆点向左延伸连接左侧卡片，不起过圆点 */
-    .river-node:nth-child(odd)::before {
-        position: absolute;
-        left: auto;
-        right: calc(50% + 4px);
-        top: 0;
+    /* 调整连接线长度和位置 */
+    .river-node::before {
         width: 14px;
-        background: linear-gradient(270deg, rgba(74,124,124,0.35), rgba(74,124,124,0));
-        transform: translateY(-50%);
+        left: 4px;
     }
-
-    .river-node:nth-child(odd):hover::before {
+    .river-node:hover::before {
         width: 20px;
     }
 
-    /* 偶数连接线：从圆点向右延伸连接右侧卡片，不起过圆点 */
     .river-node:nth-child(even)::before {
-        position: absolute;
-        left: calc(50% + 4px);
-        right: auto;
-        top: 0;
+        left: auto;
+        right: 4px;
         width: 14px;
-        background: linear-gradient(90deg, rgba(74,124,124,0.35), rgba(74,124,124,0));
-        transform: translateY(-50%);
     }
-
     .river-node:nth-child(even):hover::before {
         width: 20px;
+    }
+
+    .river-card {
+        padding: 8px 0 8px 12px;
+    }
+
+    .river-node:nth-child(even) .river-card {
+        padding: 8px 12px 8px 0;
     }
 
     .river-dynasty {
@@ -1264,6 +1197,4 @@ a:hover {
     .appreciation-text p {
         font-size: 18px;
     }
-
 }
-
