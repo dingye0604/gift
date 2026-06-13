@@ -647,7 +647,7 @@ a:hover {
     position: absolute;
     left: 50%;
     top: 0;
-    width: 78%;
+    width: 90%;
     height: 100%;
     opacity: 0.96;
     pointer-events: none;
@@ -1089,7 +1089,7 @@ a:hover {
 
     .river-svg {
         left: 50%;
-        width: 44%;
+        width: 51%;
         transform: translateX(-50%);
     }
 
