@@ -1242,4 +1242,47 @@ a:hover {
     .appreciation-text p {
         font-size: 18px;
     }
+
+    /* 南北朝卡片更靠右 */
+    .river-port--4 {
+        width: 26%;
+    }
+
+    /* 明清卡片从左侧移到右侧 */
+    .river-port--9 {
+        left: auto;
+        right: 0;
+        width: 28%;
+        padding-left: 16px;
+        padding-right: 0;
+        flex-direction: row;
+    }
+
+    .river-port--9::before {
+        left: 4px;
+        right: auto;
+        width: 28px;
+        background: linear-gradient(90deg, rgba(74,124,124,0.4), rgba(74,124,124,0));
+    }
+
+    .river-port--9:hover::before {
+        width: 38px;
+    }
+
+    .river-port--9 .river-card {
+        border-left: 2.5px solid transparent;
+        border-right: 0;
+        padding: 10px 0 10px 14px;
+        text-align: left;
+        background: transparent;
+    }
+
+    .river-port--9:hover .river-card {
+        background: linear-gradient(90deg, var(--teal-light) 0%, rgba(74, 124, 124, 0.01) 100%);
+    }
+
+    .river-port--9 .river-card::after {
+        left: 0;
+        right: auto;
+    }
 }
