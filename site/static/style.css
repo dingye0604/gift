@@ -1088,19 +1088,19 @@ a:hover {
     }
 
     .river-svg {
-        left: 40%;
-        width: 96%;
+        left: 0;
+        width: 30%;
     }
 
     .river-nodes {
-        inset: 80px 0 130px;
+        inset: 50px 0 30px;
     }
 
     .river-node,
     .river-node:nth-child(even) {
-        left: auto;
-        right: 4%;
-        width: 56%;
+        left: 34%;
+        right: auto;
+        width: 64%;
         transform: translateY(-50%);
         flex-direction: row;
     }
