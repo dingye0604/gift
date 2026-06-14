@@ -456,10 +456,6 @@ a:hover {
     text-indent: 2em;
 }
 
-.appreciation-text p:first-child {
-    text-indent: 0;
-}
-
 .appreciation-text p:last-child {
     margin-bottom: 0;
 }
