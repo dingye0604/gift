@@ -895,6 +895,90 @@ a:hover {
 .river-port--9 { --x: 34%; --y: 81.5%; }
 .river-port--10 { --x: 83%; --y: 90.0%; }
 
+/* ═══════════════════════════════════════
+   河流局部放大 — 内容页左侧 sidebar
+   全高展示河流片段，viewBox 控制放大倍数
+   ═══════════════════════════════════════ */
+.river-sidebar {
+    position: fixed;
+    left: 0;
+    top: 64px;
+    bottom: 0;
+    width: 280px;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    animation: riverSidebarEnter 1.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.river-sidebar .river-svg {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    display: block;
+    width: auto;
+    height: 100%;
+    max-width: none;
+    margin: 0 auto;
+    opacity: 1;
+    overflow: visible;
+    z-index: auto;
+}
+
+/* 入口动画 — 从左滑入 + 微缩放，模拟"放大"感 */
+@keyframes riverSidebarEnter {
+    0% {
+        opacity: 0;
+        transform: translateX(-36px) scale(0.88);
+    }
+    55% {
+        opacity: 0.65;
+        transform: translateX(-6px) scale(0.97);
+    }
+    100% {
+        opacity: 0.50;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* 诗歌页 — 更深 zoom，透明度再降 */
+.river-sidebar--poem {
+    width: 220px;
+    animation-name: riverSidebarPoem;
+    animation-duration: 1.6s;
+}
+
+@keyframes riverSidebarPoem {
+    0% {
+        opacity: 0;
+        transform: translateX(-36px) scale(0.82);
+    }
+    55% {
+        opacity: 0.50;
+        transform: translateX(-6px) scale(0.95);
+    }
+    100% {
+        opacity: 0.35;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* 有 sidebar 时主内容区左移腾出空间 */
+.site-main--with-river {
+    margin-left: 280px;
+}
+
+@media (max-width: 1340px) {
+    .site-main--with-river {
+        margin-left: 0;
+    }
+    .river-sidebar {
+        display: none;
+    }
+}
+
 /* ── 朝代目录页 ──────────────────────────────────── */
 .dynasty-page {
     max-width: var(--content-width);
@@ -1070,7 +1154,10 @@ a:hover {
 
 @media (prefers-reduced-motion: reduce) {
     .river-flow,
-    .river-ideogram-ghost { animation: none; }
+    .river-ideogram-ghost,
+    .river-sidebar { animation: none; }
+    .river-sidebar { opacity: 0.50; }
+    .river-sidebar--poem { opacity: 0.35; }
 }
 
 @media (max-width: 1024px) {

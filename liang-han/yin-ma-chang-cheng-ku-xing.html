@@ -18,7 +18,73 @@
         </nav>
     </header>
 
-    <main class="site-main">
+    
+<div class="river-sidebar river-sidebar--poem">
+<svg class="river-svg" viewBox="0 247 960 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs>
+        <linearGradient id="riverGradS" x1="0%" x2="0%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+            <stop offset="12%" stop-color="#6c8c85" stop-opacity="0.28"/>
+            <stop offset="50%" stop-color="#4f7a78" stop-opacity="0.40"/>
+            <stop offset="88%" stop-color="#4f7a78" stop-opacity="0.26"/>
+            <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="bankGradS" x1="0%" x2="0%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+            <stop offset="12%" stop-color="#4a7c7c" stop-opacity="0.14"/>
+            <stop offset="88%" stop-color="#4a7c7c" stop-opacity="0.14"/>
+            <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="whiteFlowGradS" x1="0%" x2="0%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+            <stop offset="12%" stop-color="#ffffff" stop-opacity="0.14"/>
+            <stop offset="88%" stop-color="#ffffff" stop-opacity="0.14"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="riverGlowS">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <path class="river-body"
+        d="M 300 0
+           C 290 80, 330 180, 350 280
+           C 300 480, 478 660, 446 828
+           C 426 980, 276 1098, 325 1266
+           C 384 1468, 578 1538, 495 1738
+           C 458 1850, 580 1970, 770 2100
+           L 940 2100
+           C 800 1960, 800 1850, 702 1724
+           C 640 1560, 560 1478, 584 1318
+           C 610 1150, 756 1018, 693 832
+           C 668 672, 522 574, 584 388
+           C 620 240, 590 100, 590 0 Z"
+        fill="url(#riverGradS)"
+        filter="url(#riverGlowS)"/>
+
+    <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+    <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+    <path class="river-flow river-flow--1"
+        d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+        fill="none" stroke="url(#whiteFlowGradS)" stroke-width="1.2" stroke-dasharray="14 32 4 45 22 28"/>
+
+    <path class="river-flow river-flow--2"
+        d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+        fill="none" stroke="url(#whiteFlowGradS)" stroke-width="1.6" stroke-dasharray="8 48 16 32 5 55"/>
+
+    <path class="river-flow river-flow--3"
+        d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+        fill="none" stroke="url(#whiteFlowGradS)" stroke-width="1.0" stroke-dasharray="3 22 11 28 2 40"/>
+</svg>
+</div>
+
+
+    <main class="site-main site-main--with-river">
         
 <article class="poem-page">
     <header class="poem-header">
