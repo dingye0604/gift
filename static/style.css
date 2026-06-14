@@ -5,8 +5,8 @@
 
 /* ── 变量 ────────────────────────────────────────── */
 :root {
-    --bg:           #faf8f5;
-    --bg-warm:      #f5f2ed;
+    --bg:           #f9f4ef;
+    --bg-warm:      #f2ece5;
     --bg-card:      #ffffff;
     --text:         #2c2c2c;
     --text-light:   #5a5a5a;
@@ -100,7 +100,7 @@ a:hover {
 
 /* ── 导航 ────────────────────────────────────────── */
 .site-header {
-    background: rgba(250, 248, 245, 0.72);
+    background: rgba(249, 244, 239, 0.72);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-light);
