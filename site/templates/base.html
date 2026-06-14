@@ -18,7 +18,9 @@
         </nav>
     </header>
 
-    <main class="site-main">
+    {% block river_sidebar %}{% endblock %}
+
+    <main class="site-main{% if river_viewbox %} site-main--with-river{% endif %}">
         {% block content %}{% endblock %}
     </main>
 
