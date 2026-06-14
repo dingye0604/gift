@@ -951,11 +951,10 @@ a:hover {
     font-size: 18px;
     line-height: 1.9;
     text-align: justify;
-    text-indent: 2em;
 }
 
-.dynasty-intro p:first-child {
-    text-indent: 0;
+.dynasty-intro p:last-child {
+    margin-bottom: 0;
 }
 
 .dynasty-directory {
