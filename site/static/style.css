@@ -970,7 +970,7 @@ a:hover {
     margin-left: 280px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1340px) {
     .site-main--with-river {
         margin-left: 0;
     }
