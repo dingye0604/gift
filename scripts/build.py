@@ -37,30 +37,6 @@ DYNASTIES = [
     ("近代", "jin-dai"),
 ]
 
-# 首页河流 SVG 尺寸（匹配 CSS 中的 viewBox）
-RIVER_W = 960
-RIVER_H = 2100
-# 朝代在河流上的 Y 位置百分比，对应 CSS .river-port--N 的 --y 值
-DYNASTY_Y_PCT = [8.5, 17.5, 26.5, 35.5, 45.5, 54.5, 63.5, 72.5, 81.5, 90.0]
-
-
-def get_river_zoom(poems_by_dynasty: dict) -> dict[str, dict]:
-    """为每个有诗歌的朝代计算河流局部放大 viewBox。
-    返回 { 朝代名: { "dynasty": viewBox_str, "poem": viewBox_str } }
-    - dynasty: 480px 高，显示约 23% 的河流段落
-    - poem: 240px 高，显示约 11%（更紧的 zoom）
-    """
-    zoom = {}
-    for idx, (name, _dir) in enumerate(DYNASTIES):
-        if name not in poems_by_dynasty or not poems_by_dynasty[name]:
-            continue
-        y_px = DYNASTY_Y_PCT[idx] / 100 * RIVER_H
-        zoom[name] = {
-            "dynasty": f"0 {max(0, int(y_px - 240))} {RIVER_W} 480",
-            "poem": f"0 {max(0, int(y_px - 120))} {RIVER_W} 240",
-        }
-    return zoom
-
 
 # ── .tex 解析 ───────────────────────────────────────
 def parse_tex(filepath: Path) -> dict | None:
@@ -268,9 +244,6 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
             p["appreciation_clean"] = clean_latex(p["appreciation"])
             all_poems.append(p)
 
-    # 河流 zoom 数据
-    river_zoom = get_river_zoom(poems_by_dynasty)
-
     # 首页
     idx_tpl = env.get_template("index.html")
     dynasty_order = [d for d, _ in DYNASTIES if poems_by_dynasty.get(d)]
@@ -289,15 +262,12 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
         poems = poems_by_dynasty.get(dynasty_name, [])
         if not poems:
             continue
-        zv = river_zoom.get(dynasty_name, {})
         html = intro_tpl.render(
             dynasty=dynasty_name,
             dynasty_summary=dynasty_summaries.get(dynasty_name, ""),
             intro_text=dynasty_intros.get(dynasty_name, ""),
             poems=poems,
             base_url=BASE_URL,
-            river_viewbox=zv.get("dynasty", "0 0 960 2100"),
-            river_zoom_level="dynasty",
         )
         out = SITE_OUTPUT / dynasty_dir / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -306,7 +276,6 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
     # 每首诗独立页面
     poem_tpl = env.get_template("poem.html")
     for i, p in enumerate(all_poems):
-        zv = river_zoom.get(p["dynasty"], {})
         next_poem = None
         if i + 1 < len(all_poems):
             nxt = all_poems[i + 1]
@@ -314,13 +283,7 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
                 "title": nxt["meta"]["title"],
                 "url": f"{nxt['dynasty_dir']}/{nxt['slug']}.html",
             }
-        html = poem_tpl.render(
-            poem=p,
-            next_poem=next_poem,
-            base_url=BASE_URL,
-            river_viewbox=zv.get("poem", "0 0 960 2100"),
-            river_zoom_level="poem",
-        )
+        html = poem_tpl.render(poem=p, next_poem=next_poem, base_url=BASE_URL)
         out = SITE_OUTPUT / p["dynasty_dir"] / f"{p['slug']}.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding="utf-8")
