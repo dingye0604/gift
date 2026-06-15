@@ -908,8 +908,8 @@ a:hover {
     overflow: hidden;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.50;
-    animation: riverSidebarEnter 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
+    opacity: 0;
+    animation: riverSidebarEnter 1.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 .river-sidebar .river-svg {
@@ -946,7 +946,6 @@ a:hover {
 /* 诗歌页 — 更深 zoom，透明度再降 */
 .river-sidebar--poem {
     width: 220px;
-    opacity: 0.35;
     animation-name: riverSidebarPoem;
     animation-duration: 1.6s;
 }
