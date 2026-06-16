@@ -17,7 +17,7 @@ CONTENT_DIR = ROOT / "content"
 # 部署目标
 #   "github" → dingye0604.github.io/gift（子目录，BASE_URL = "/gift"）
 #   "local"   → 本地预览（根路径，BASE_URL = ""）
-TARGET = "local"
+TARGET = "github"
 BASE_URL = "/gift" if TARGET == "github" else ""
 BOOK_DIR = ROOT / "book"
 SITE_DIR = ROOT / "site"
