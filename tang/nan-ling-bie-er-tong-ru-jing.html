@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,106 +20,178 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">南陵别儿童入京</h1>
-        <div class="poem-page-meta">
-            <span>李白</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">南陵别儿童入京</h1>
+                <div class="poem-page-meta">
+                    <span>李白</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>白酒新熟山中归，黄鸡啄黍<sup>1</sup>秋正肥。</p>
+                
+                
+                
+                <p>呼童烹鸡酌白酒，儿女嬉笑牵人衣。</p>
+                
+                
+                
+                <p>高歌取醉欲自慰，起舞落日争光辉。</p>
+                
+                
+                
+                <p>游说万乘<sup>2</sup>苦不早，著鞭跨马涉远道。</p>
+                
+                
+                
+                <p>会稽愚妇轻买臣<sup>3</sup>，余亦辞家西入秦<sup>4</sup>。</p>
+                
+                
+                
+                <p>仰天大笑出门去，我辈岂是蓬蒿人<sup>5</sup>。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 黍：黄米，一种谷物。秋天黄鸡啄食黍米，长得正肥。写农家丰收的景象。</p>
+                
+                <p><span class="ann-num">2.</span> 游说万乘：游说（shuì），向君主进言献策；万乘（shèng），一万辆兵车，代指皇帝。李白遗憾没能早点去游说皇帝。</p>
+                
+                <p><span class="ann-num">3.</span> 会稽愚妇轻买臣：西汉朱买臣家贫好读书，妻子嫌他穷而离去，后来朱买臣做了会稽太守。李白借用此典暗讽那些看不起自己的人。</p>
+                
+                <p><span class="ann-num">4.</span> 西入秦：向西进入秦地（长安在陕西，春秋战国属秦）。李白接到皇帝诏书，辞家西去长安。</p>
+                
+                <p><span class="ann-num">5.</span> 蓬蒿人：住在蓬草和蒿草之间的草野之人，指平民百姓。我辈岂是普通人！</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>白酒新熟山中归，黄鸡啄黍<sup>1</sup>秋正肥。</p>
-        
-        
-        
-        <p>呼童烹鸡酌白酒，儿女嬉笑牵人衣。</p>
-        
-        
-        
-        <p>高歌取醉欲自慰，起舞落日争光辉。</p>
-        
-        
-        
-        <p>游说万乘<sup>2</sup>苦不早，著鞭跨马涉远道。</p>
-        
-        
-        
-        <p>会稽愚妇轻买臣<sup>3</sup>，余亦辞家西入秦<sup>4</sup>。</p>
-        
-        
-        
-        <p>仰天大笑出门去，我辈岂是蓬蒿人<sup>5</sup>。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这首诗写于天宝元年（742年），李白四十二岁，终于等到了唐玄宗召他入京的诏书。从青年时代的大鹏之志，到中年的一事无成，这条路他走了将近二十年。</p>
+                
+                
+                
+                
+                
+                <p>白酒新熟山中归，黄鸡啄黍秋正肥——诗从日常场景写起：白酒刚刚酿好，黄鸡正肥，秋天是个收获的季节。呼童烹鸡酌白酒，儿女嬉笑牵人衣——叫童子杀鸡斟酒，儿女们笑着拉着他的衣裳。这是一个普通的农家傍晚，却因为一个消息而变得不普通：皇帝的诏书到了。</p>
+                
+                
+                
+                
+                
+                <p>高歌取醉欲自慰，起舞落日争光辉——他高歌、饮酒、起舞，在落日中旋转。这个起字的姿态，后来成为李白最经典的形象之一。但请注意欲自慰三个字：他想要自我安慰，说明在此之前，他的内心是需要安慰的。二十年的漫游，二十年的求谒，二十年的失意——这些不是可以一笔勾销的。</p>
+                
+                
+                
+                
+                
+                <p>会稽愚妇轻买臣，余亦辞家西入秦——这里用了一个典故。西汉朱买臣家贫好读书，妻子嫌弃他而离去，后来朱买臣做了会稽太守。李白借此暗喻：那些看不起我的人，终将后悔。这种心理，与其说是自信，不如说是一种积压已久的委屈终于找到了出口。</p>
+                
+                
+                
+                
+                
+                <p>仰天大笑出门去，我辈岂是蓬蒿人——这是全诗最响亮的一句，也是李白最著名的一句诗。他仰天大笑，走出门去——这个动作里有太多的东西：得意、宣泄、扬眉吐气、对过去的告别。蓬蒿人就是草野之人。他说我不是普通人，我是要被朝廷重用的人。这个信念，他坚持了二十年，如今终于要实现了。</p>
+                
+                
+                
+                
+                
+                <p>但历史总是比诗歌更残酷。李白入京后，唐玄宗虽然赏识他的才华，却只让他做一个供奉翰林，写写歌词、陪侍宴游。三年后，他被赐金放还。仰天大笑出门去时的豪情，终究没有换来他期望中的功业。但正是这份豪情，让这首诗超越了一个具体的历史事件，成为所有怀才不遇者在终于等到机会时的心声。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/xing-lu-nan.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 黍：黄米，一种谷物。秋天黄鸡啄食黍米，长得正肥。写农家丰收的景象。</p>
-        
-        <p><span class="ann-num">2.</span> 游说万乘：游说（shuì），向君主进言献策；万乘（shèng），一万辆兵车，代指皇帝。李白遗憾没能早点去游说皇帝。</p>
-        
-        <p><span class="ann-num">3.</span> 会稽愚妇轻买臣：西汉朱买臣家贫好读书，妻子嫌他穷而离去，后来朱买臣做了会稽太守。李白借用此典暗讽那些看不起自己的人。</p>
-        
-        <p><span class="ann-num">4.</span> 西入秦：向西进入秦地（长安在陕西，春秋战国属秦）。李白接到皇帝诏书，辞家西去长安。</p>
-        
-        <p><span class="ann-num">5.</span> 蓬蒿人：住在蓬草和蒿草之间的草野之人，指平民百姓。我辈岂是普通人！</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这首诗写于天宝元年（742年），李白四十二岁，终于等到了唐玄宗召他入京的诏书。从青年时代的大鹏之志，到中年的一事无成，这条路他走了将近二十年。</p>
-        
-        
-        
-        
-        
-        <p>白酒新熟山中归，黄鸡啄黍秋正肥——诗从日常场景写起：白酒刚刚酿好，黄鸡正肥，秋天是个收获的季节。呼童烹鸡酌白酒，儿女嬉笑牵人衣——叫童子杀鸡斟酒，儿女们笑着拉着他的衣裳。这是一个普通的农家傍晚，却因为一个消息而变得不普通：皇帝的诏书到了。</p>
-        
-        
-        
-        
-        
-        <p>高歌取醉欲自慰，起舞落日争光辉——他高歌、饮酒、起舞，在落日中旋转。这个起字的姿态，后来成为李白最经典的形象之一。但请注意欲自慰三个字：他想要自我安慰，说明在此之前，他的内心是需要安慰的。二十年的漫游，二十年的求谒，二十年的失意——这些不是可以一笔勾销的。</p>
-        
-        
-        
-        
-        
-        <p>会稽愚妇轻买臣，余亦辞家西入秦——这里用了一个典故。西汉朱买臣家贫好读书，妻子嫌弃他而离去，后来朱买臣做了会稽太守。李白借此暗喻：那些看不起我的人，终将后悔。这种心理，与其说是自信，不如说是一种积压已久的委屈终于找到了出口。</p>
-        
-        
-        
-        
-        
-        <p>仰天大笑出门去，我辈岂是蓬蒿人——这是全诗最响亮的一句，也是李白最著名的一句诗。他仰天大笑，走出门去——这个动作里有太多的东西：得意、宣泄、扬眉吐气、对过去的告别。蓬蒿人就是草野之人。他说我不是普通人，我是要被朝廷重用的人。这个信念，他坚持了二十年，如今终于要实现了。</p>
-        
-        
-        
-        
-        
-        <p>但历史总是比诗歌更残酷。李白入京后，唐玄宗虽然赏识他的才华，却只让他做一个供奉翰林，写写歌词、陪侍宴游。三年后，他被赐金放还。仰天大笑出门去时的豪情，终究没有换来他期望中的功业。但正是这份豪情，让这首诗超越了一个具体的历史事件，成为所有怀才不遇者在终于等到机会时的心声。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/xing-lu-nan.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

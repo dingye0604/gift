@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,76 +20,148 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">静夜思</h1>
-        <div class="poem-page-meta">
-            <span>李白</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">静夜思</h1>
+                <div class="poem-page-meta">
+                    <span>李白</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>床前明月光，疑<sup>1</sup>是地上霜。</p>
+                
+                
+                
+                <p>举头望明月，低头思故乡。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 疑：怀疑、恍惚以为是。月光照在地上，恍惚间以为是白霜。&#34;疑&#34;字写出人在半梦半醒之间感官的模糊。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>床前明月光，疑<sup>1</sup>是地上霜。</p>
-        
-        
-        
-        <p>举头望明月，低头思故乡。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这是李白最著名的一首诗，也可能是中国流传最广的一首诗。全诗二十个字，没有一个生僻字，没有一个典故，却写出了人类最普遍的情感。</p>
+                
+                
+                
+                
+                
+                <p>关于这首诗，有一个小小的争议：床字究竟指什么？有人说是睡床，有人说是井栏，还有人说是胡床（一种坐具）。其实不必过于纠结。无论床是什么，那个场景都是清晰的：一个夜晚，一个人，一束月光。</p>
+                
+                
+                
+                
+                
+                <p>床前明月光，疑是地上霜——月光照在床前，恍惚间以为是地上的白霜。疑字是全诗的关键。不是看见，而是怀疑；不是确认，而是恍惚。人在半梦半醒之间，感官是模糊的，而正是这种模糊，让月光有了一种不真实的美丽。霜是冷的，月光也是冷的；霜是白的，月光也是白的。诗人用霜来比喻月光，不只是因为颜色相似，更是因为那种清冷的感觉——孤独的人，在清冷的月光中，更容易想起远方。</p>
+                
+                
+                
+                
+                
+                <p>举头望明月，低头思故乡——两个动作，一仰一俯，完成了一个完整的情感循环。抬头看月，是因为月照着他；低头沉思，是因为月也照着故乡。明月是连接两地的桥梁，是古往今来的信使。李白不是第一个用月亮写思乡的人，但他写得最自然、最直接。没有铺垫，没有渲染，只是抬头、低头，思念便如潮水般涌来。</p>
+                
+                
+                
+                
+                
+                <p>这首诗的伟大，在于它的朴素。它不依赖任何文化背景，不借助任何修辞技巧，一个中国农村的老太太和一个哈佛的文学教授，读到它时感受到的东西是一样的。这就是诗歌的最高境界：用最简单的语言，说出最普遍的情感。李白写这首诗时，或许只是在一个普通的夜晚，被月光惊醒，随手记下了心中的感受。但他不知道，这一随手，就写出了千年。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/huang-he-lou-song-meng-hao-ran-zhi-guang-ling.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 疑：怀疑、恍惚以为是。月光照在地上，恍惚间以为是白霜。&#34;疑&#34;字写出人在半梦半醒之间感官的模糊。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这是李白最著名的一首诗，也可能是中国流传最广的一首诗。全诗二十个字，没有一个生僻字，没有一个典故，却写出了人类最普遍的情感。</p>
-        
-        
-        
-        
-        
-        <p>关于这首诗，有一个小小的争议：床字究竟指什么？有人说是睡床，有人说是井栏，还有人说是胡床（一种坐具）。其实不必过于纠结。无论床是什么，那个场景都是清晰的：一个夜晚，一个人，一束月光。</p>
-        
-        
-        
-        
-        
-        <p>床前明月光，疑是地上霜——月光照在床前，恍惚间以为是地上的白霜。疑字是全诗的关键。不是看见，而是怀疑；不是确认，而是恍惚。人在半梦半醒之间，感官是模糊的，而正是这种模糊，让月光有了一种不真实的美丽。霜是冷的，月光也是冷的；霜是白的，月光也是白的。诗人用霜来比喻月光，不只是因为颜色相似，更是因为那种清冷的感觉——孤独的人，在清冷的月光中，更容易想起远方。</p>
-        
-        
-        
-        
-        
-        <p>举头望明月，低头思故乡——两个动作，一仰一俯，完成了一个完整的情感循环。抬头看月，是因为月照着他；低头沉思，是因为月也照着故乡。明月是连接两地的桥梁，是古往今来的信使。李白不是第一个用月亮写思乡的人，但他写得最自然、最直接。没有铺垫，没有渲染，只是抬头、低头，思念便如潮水般涌来。</p>
-        
-        
-        
-        
-        
-        <p>这首诗的伟大，在于它的朴素。它不依赖任何文化背景，不借助任何修辞技巧，一个中国农村的老太太和一个哈佛的文学教授，读到它时感受到的东西是一样的。这就是诗歌的最高境界：用最简单的语言，说出最普遍的情感。李白写这首诗时，或许只是在一个普通的夜晚，被月光惊醒，随手记下了心中的感受。但他不知道，这一随手，就写出了千年。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/huang-he-lou-song-meng-hao-ran-zhi-guang-ling.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

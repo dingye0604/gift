@@ -574,6 +574,144 @@ a:hover {
     }
 }
 
+/* ── 河流 Sidebar（朝代页 / 诗词页左侧） ─────────── */
+
+/* 有 sidebar 的页面：加宽主容器 */
+body.has-sidebar .site-main {
+    max-width: 1160px;
+}
+
+body.has-sidebar .site-nav {
+    max-width: 1160px;
+}
+
+/* flex 布局容器 */
+.page-with-sidebar {
+    display: flex;
+    gap: 0;
+    min-height: calc(100vh - 64px);
+}
+
+/* 侧边栏 */
+.river-sidebar {
+    width: 160px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 64px;
+    height: calc(100vh - 64px);
+    overflow: hidden;
+    pointer-events: none;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+/* 侧边栏 SVG */
+.river-svg-side {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 侧边栏内河岸 */
+.river-sidebar .river-bank {
+    fill: none;
+    stroke: url(#bankGrad);
+    stroke-width: 1.2;
+    stroke-dasharray: 1 10;
+}
+
+/* 侧边栏内水流动画（复用首页关键帧） */
+.river-sidebar .river-flow {
+    stroke-linecap: round;
+}
+
+.river-sidebar .river-flow--1 {
+    animation:
+        flowDrift1 26s linear infinite,
+        flowSway1 9s ease-in-out infinite,
+        flowPulse1 7s ease-in-out infinite;
+}
+.river-sidebar .river-flow--2 {
+    animation:
+        flowDrift2 34s linear infinite,
+        flowSway2 12s ease-in-out infinite,
+        flowPulse2 10s ease-in-out infinite;
+    animation-delay: -6s;
+}
+.river-sidebar .river-flow--3 {
+    animation:
+        flowDrift3 42s linear infinite,
+        flowSway3 15s ease-in-out infinite,
+        flowPulse3 13s ease-in-out infinite;
+    animation-delay: -12s;
+}
+
+/* 入场动画 — 朝代页：柔和淡入 + 微缩放 */
+@keyframes riverZoomDynasty {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 入场动画 — 诗词页：更深的缩放感 */
+@keyframes riverZoomPoem {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.river-zoom-dynasty .river-svg-side {
+    animation:
+        riverZoomDynasty 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.river-zoom-poem .river-svg-side {
+    animation:
+        riverZoomPoem 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 主内容区占据剩余宽度 */
+.page-content {
+    flex: 1;
+    min-width: 0;
+    padding: 0 var(--side-padding);
+}
+
+/* 移动端 / 窄屏隐藏 sidebar */
+@media (max-width: 900px) {
+    body.has-sidebar .site-main {
+        max-width: var(--max-width);
+    }
+    body.has-sidebar .site-nav {
+        max-width: var(--max-width);
+    }
+    .river-sidebar {
+        display: none;
+    }
+    .page-with-sidebar {
+        display: block;
+    }
+    .page-content {
+        padding: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .river-sidebar .river-flow { animation: none; }
+    .river-zoom-dynasty .river-svg-side,
+    .river-zoom-poem .river-svg-side { animation: none; opacity: 1; }
+}
+
 /* ── 首页河流：自然河道与朝代渡口 ───────────────────────── */
 .river-hero {
     padding: 72px 0 34px;

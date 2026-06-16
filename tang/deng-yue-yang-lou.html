@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,92 +20,164 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">登岳阳楼</h1>
-        <div class="poem-page-meta">
-            <span>杜甫</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">登岳阳楼</h1>
+                <div class="poem-page-meta">
+                    <span>杜甫</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>昔闻洞庭水，今上岳阳楼。</p>
+                
+                
+                
+                <p>吴楚东南坼<sup>1</sup>，乾坤日夜浮<sup>2</sup>。</p>
+                
+                
+                
+                <p>亲朋无一字<sup>3</sup>，老病有孤舟。</p>
+                
+                
+                
+                <p>戎马关山北<sup>4</sup>，凭轩涕泗流<sup>5</sup>。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 吴楚东南坼：吴地和楚地被洞庭湖从中间分裂开来。坼（chè），裂开。洞庭湖之阔，像在地理上切割开了大地。</p>
+                
+                <p><span class="ann-num">2.</span> 乾坤日夜浮：日月星辰日夜在湖水中浮动。乾坤，天地。极言湖面的浩瀚。</p>
+                
+                <p><span class="ann-num">3.</span> 无一字：没有一封信。战乱中音讯断绝，&#34;无一字&#34;比&#34;无音讯&#34;更具体。</p>
+                
+                <p><span class="ann-num">4.</span> 戎马关山北：北方关山还在打仗（当时吐蕃入侵，长安戒严）。即使身处困境，杜甫依然心系国事。</p>
+                
+                <p><span class="ann-num">5.</span> 凭轩涕泗流：倚着栏杆，眼泪鼻涕一起流下来。涕（tì），眼泪；泗（sì），鼻涕。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>昔闻洞庭水，今上岳阳楼。</p>
-        
-        
-        
-        <p>吴楚东南坼<sup>1</sup>，乾坤日夜浮<sup>2</sup>。</p>
-        
-        
-        
-        <p>亲朋无一字<sup>3</sup>，老病有孤舟。</p>
-        
-        
-        
-        <p>戎马关山北<sup>4</sup>，凭轩涕泗流<sup>5</sup>。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这是杜甫晚年最重要的诗作之一，写于大历三年（768年）。那一年他五十七岁，身患多种疾病，乘一叶孤舟漂泊到岳阳，终于登上了闻名一生的岳阳楼。</p>
+                
+                
+                
+                
+                
+                <p>昔闻洞庭水，今上岳阳楼——从前听说洞庭湖的水，今天终于登上了岳阳楼。昔闻和今上之间，隔着多少岁月。年轻时的杜甫，一定无数次想象过洞庭湖的壮阔；但当他真正站在这里时，已经是一个老病交加的暮年之人。这种时空的落差，让眼前的风景带上了一层苍凉。</p>
+                
+                
+                
+                
+                
+                <p>吴楚东南坼，乾坤日夜浮——吴地和楚地被洞庭湖从中分开，天地日月仿佛都在湖水中漂浮。坼（chè）是分裂的意思。洞庭湖如此之大，大到可以割裂大地，大到可以承载天地。这是何等的气魄！但写出这种气魄的人，却是一个躺在孤舟上的老人。壮丽的自然与渺小的人身，形成了最强烈的对比。</p>
+                
+                
+                
+                
+                
+                <p>亲朋无一字，老病有孤舟——亲戚朋友没有一封信来，年老多病，只有一只孤舟为伴。这两句从壮阔的景物忽然转到了个人的处境，像从云端跌落到地面。无一字不是没有人关心，是在战乱中音讯断绝。有孤舟不是说喜欢舟居，是说除了这只船，什么都没有了。</p>
+                
+                
+                
+                
+                
+                <p>戎马关山北，凭轩涕泗流——北方的关山上还在打仗，倚着栏杆，眼泪鼻涕一起流了下来。即使在这样的身体状态下，杜甫关心的依然不是自己的病痛，而是国家的战事。关山北指的是当时吐蕃入侵，长安戒严。凭轩涕泗流——这个老人，站在岳阳楼上，面对着洞庭湖，眼泪止不住地流。这是杜甫最后一次在诗中提到国家大事，也是他一生中最后的悲痛之一。一年后，他就去世了。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/deng-gao.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 吴楚东南坼：吴地和楚地被洞庭湖从中间分裂开来。坼（chè），裂开。洞庭湖之阔，像在地理上切割开了大地。</p>
-        
-        <p><span class="ann-num">2.</span> 乾坤日夜浮：日月星辰日夜在湖水中浮动。乾坤，天地。极言湖面的浩瀚。</p>
-        
-        <p><span class="ann-num">3.</span> 无一字：没有一封信。战乱中音讯断绝，&#34;无一字&#34;比&#34;无音讯&#34;更具体。</p>
-        
-        <p><span class="ann-num">4.</span> 戎马关山北：北方关山还在打仗（当时吐蕃入侵，长安戒严）。即使身处困境，杜甫依然心系国事。</p>
-        
-        <p><span class="ann-num">5.</span> 凭轩涕泗流：倚着栏杆，眼泪鼻涕一起流下来。涕（tì），眼泪；泗（sì），鼻涕。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这是杜甫晚年最重要的诗作之一，写于大历三年（768年）。那一年他五十七岁，身患多种疾病，乘一叶孤舟漂泊到岳阳，终于登上了闻名一生的岳阳楼。</p>
-        
-        
-        
-        
-        
-        <p>昔闻洞庭水，今上岳阳楼——从前听说洞庭湖的水，今天终于登上了岳阳楼。昔闻和今上之间，隔着多少岁月。年轻时的杜甫，一定无数次想象过洞庭湖的壮阔；但当他真正站在这里时，已经是一个老病交加的暮年之人。这种时空的落差，让眼前的风景带上了一层苍凉。</p>
-        
-        
-        
-        
-        
-        <p>吴楚东南坼，乾坤日夜浮——吴地和楚地被洞庭湖从中分开，天地日月仿佛都在湖水中漂浮。坼（chè）是分裂的意思。洞庭湖如此之大，大到可以割裂大地，大到可以承载天地。这是何等的气魄！但写出这种气魄的人，却是一个躺在孤舟上的老人。壮丽的自然与渺小的人身，形成了最强烈的对比。</p>
-        
-        
-        
-        
-        
-        <p>亲朋无一字，老病有孤舟——亲戚朋友没有一封信来，年老多病，只有一只孤舟为伴。这两句从壮阔的景物忽然转到了个人的处境，像从云端跌落到地面。无一字不是没有人关心，是在战乱中音讯断绝。有孤舟不是说喜欢舟居，是说除了这只船，什么都没有了。</p>
-        
-        
-        
-        
-        
-        <p>戎马关山北，凭轩涕泗流——北方的关山上还在打仗，倚着栏杆，眼泪鼻涕一起流了下来。即使在这样的身体状态下，杜甫关心的依然不是自己的病痛，而是国家的战事。关山北指的是当时吐蕃入侵，长安戒严。凭轩涕泗流——这个老人，站在岳阳楼上，面对着洞庭湖，眼泪止不住地流。这是杜甫最后一次在诗中提到国家大事，也是他一生中最后的悲痛之一。一年后，他就去世了。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/deng-gao.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

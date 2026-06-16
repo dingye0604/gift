@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,81 +20,153 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">相思</h1>
-        <div class="poem-page-meta">
-            <span>王维</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
-            
-            <span class="meta-sep">·</span>
-            <span>五言绝句</span>
-            
-        </div>
-    </header>
-
-    <div class="poem-text">
-        
-        
-        <p>红豆<sup>1</sup>生南国，春来发几枝。</p>
-        
-        
-        
-        <p>愿君多采撷<sup>2</sup>，此物最相思。</p>
-        
-        
-    </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 红豆：红豆树的种子，又名&#34;相思子&#34;，色红，古代用作爱情和友谊的信物。传说古时有人死于边塞，妻子在树下哭死化为红豆。</p>
-        
-        <p><span class="ann-num">2.</span> 采撷：采摘。撷（xié），摘下。希望你多采一些红豆，看到它就会想起我。</p>
-        
-    </div>
+<div class="page-with-sidebar">
     
 
-    <div class="appreciation-text">
-        
-        
-        <p>这首诗据说是王维写给李龟年的。李龟年是唐代著名的音乐家，安史之乱后流落江南，王维以此诗寄赠。但诗一旦写成，便不再属于作者。千百年来，无数人用这首诗表达思念，它早已超越了具体的对象，成为相思本身的代名词。</p>
-        
-        
-        
-        
-        
-        <p>红豆生南国，春来发几枝——红豆生长在南方，春天来了，又发出几枝新芽。红豆又名相思子，相传古时有人死于边塞，他的妻子在树下哭泣而死，化为红豆。所以红豆从诞生之日起，就带着悲伤的基因。发几枝，是一个问句，也是一个叹息：春天又来了，你还好吗？</p>
-        
-        
-        
-        
-        
-        <p>愿君多采撷，此物最相思——希望你多采摘一些，这东西最能代表相思。采撷（cǎi xié）就是采摘。多采撷，不是要你吃，是要你看见。王维不说我想你，他说这豆子最相思。把情感投射到一个物件上，让物件替自己说话，这是中国诗歌最含蓄也最动人的方式。</p>
-        
-        
-        
-        
-        
-        <p>这首诗只有二十个字，却写尽了人类最普遍的情感。它不依赖任何背景知识，不需要知道李龟年是谁，不需要知道红豆的传说。你只要知道：有一种红色的豆子，长在南方，春天发芽，看到它的人会想起远方的人。这就够了。</p>
-        
-        
-        
-        
-        
-        <p>王维的诗常常如此：用最简单的语言，说最深沉的情感。他不渲染，不铺陈，只是轻轻一点，便让读者自己去填补那无限的空白。春来发几枝，问的是红豆，念的是人；愿君多采撷，说的是豆子，藏的是心事。这种含蓄，是中国诗歌独有的美。</p>
-        
-        
-    </div>
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
 
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/niao-ming-jian.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">相思</h1>
+                <div class="poem-page-meta">
+                    <span>王维</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                    <span class="meta-sep">·</span>
+                    <span>五言绝句</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>红豆<sup>1</sup>生南国，春来发几枝。</p>
+                
+                
+                
+                <p>愿君多采撷<sup>2</sup>，此物最相思。</p>
+                
+                
+            </div>
+
+            
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 红豆：红豆树的种子，又名&#34;相思子&#34;，色红，古代用作爱情和友谊的信物。传说古时有人死于边塞，妻子在树下哭死化为红豆。</p>
+                
+                <p><span class="ann-num">2.</span> 采撷：采摘。撷（xié），摘下。希望你多采一些红豆，看到它就会想起我。</p>
+                
+            </div>
+            
+
+            <div class="appreciation-text">
+                
+                
+                <p>这首诗据说是王维写给李龟年的。李龟年是唐代著名的音乐家，安史之乱后流落江南，王维以此诗寄赠。但诗一旦写成，便不再属于作者。千百年来，无数人用这首诗表达思念，它早已超越了具体的对象，成为相思本身的代名词。</p>
+                
+                
+                
+                
+                
+                <p>红豆生南国，春来发几枝——红豆生长在南方，春天来了，又发出几枝新芽。红豆又名相思子，相传古时有人死于边塞，他的妻子在树下哭泣而死，化为红豆。所以红豆从诞生之日起，就带着悲伤的基因。发几枝，是一个问句，也是一个叹息：春天又来了，你还好吗？</p>
+                
+                
+                
+                
+                
+                <p>愿君多采撷，此物最相思——希望你多采摘一些，这东西最能代表相思。采撷（cǎi xié）就是采摘。多采撷，不是要你吃，是要你看见。王维不说我想你，他说这豆子最相思。把情感投射到一个物件上，让物件替自己说话，这是中国诗歌最含蓄也最动人的方式。</p>
+                
+                
+                
+                
+                
+                <p>这首诗只有二十个字，却写尽了人类最普遍的情感。它不依赖任何背景知识，不需要知道李龟年是谁，不需要知道红豆的传说。你只要知道：有一种红色的豆子，长在南方，春天发芽，看到它的人会想起远方的人。这就够了。</p>
+                
+                
+                
+                
+                
+                <p>王维的诗常常如此：用最简单的语言，说最深沉的情感。他不渲染，不铺陈，只是轻轻一点，便让读者自己去填补那无限的空白。春来发几枝，问的是红豆，念的是人；愿君多采撷，说的是豆子，藏的是心事。这种含蓄，是中国诗歌独有的美。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/niao-ming-jian.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
+    </div>
+</div>
 
     </main>
 

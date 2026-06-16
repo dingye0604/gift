@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,84 +20,156 @@
 
     <main class="site-main">
         
-<article class="dynasty-page">
-    <header class="dynasty-header">
-        <a href="/gift/" class="dynasty-breadcrumb">诗歌之河</a>
-        <h1 class="dynasty-title">近代</h1>
-        
-        <p class="dynasty-subtitle">旧诗新命</p>
-        
-    </header>
-
-    
-    <section class="dynasty-intro">
-        
-        
-        <p>近代中国，内忧外患交加，古老的诗歌传统面临着前所未有的挑战。</p>
-        
-        
-        
-        
-        
-        <p>鸦片战争打开了中国的国门，也打破了士大夫&#34;天朝上国&#34;的迷梦。甲午战败、庚子事变、辛亥革命——每一次巨变都在诗歌中留下了深深的烙印。龚自珍的&#34;我劝天公重抖擞，不拘一格降人才&#34;，写的是一个先知先觉者对时代沉疴的焦虑；谭嗣同的&#34;我自横刀向天笑，去留肝胆两昆仑&#34;，写的是一个改革者面对死亡的从容；秋瑾的&#34;一腔热血勤珍重，洒去犹能化碧涛&#34;，写的是一个女革命家以身许国的决绝。</p>
-        
-        
-        
-        
-        
-        <p>这一时期的诗歌，形式上仍然是旧体，精神上却已经是新的了。诗人们不再满足于个人的离愁别绪，而是把国家命运、民族危亡纳入了诗歌的视野。梁启超提出&#34;诗界革命&#34;，主张以旧风格写新意境；黄遵宪主张&#34;我手写我口&#34;，力求打破古典诗歌的程式化表达。这些尝试虽然还没有达到成熟，却为后来新诗的诞生埋下了伏笔。</p>
-        
-        
-        
-        
-        
-        <p>王国维是一个特殊的例子。他的《人间词话》以西方美学观念重新审视中国古典诗词，提出了&#34;境界说&#34;，成为二十世纪中国文艺理论的重要起点。&#34;昨夜西风凋碧树，独上高楼，望尽天涯路&#34;——他用三句宋词概括了做学问的三个境界，这种打通中西、融会古今的尝试，正是近代知识分子精神的真实写照。</p>
-        
-        
-        
-        
-        
-        <p>旧诗在近代没有死去，它只是换了一种方式继续活着：更沉重，更焦灼，更与时代同呼吸。</p>
-        
-        
-    </section>
+<div class="page-with-sidebar">
     
 
-    <section class="dynasty-directory">
-        <div class="directory-heading">
-            <h2>目录</h2>
-            <span>4 首</span>
-        </div>
+<aside class="river-sidebar river-zoom-dynasty">
+    <svg class="river-svg-side" viewBox="450 1620 480 480" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
 
-        <div class="directory-poems">
-            
-            <a href="/gift/jin-dai/ji-hai-za-shi.html" class="directory-poem">
-                <span class="dir-poem-title">己亥杂诗·其五</span>
-                <span class="dir-poem-meta">龚自珍 · 七言绝句</span>
-            </a>
-            
-            <a href="/gift/jin-dai/yu-zhong-ti-bi.html" class="directory-poem">
-                <span class="dir-poem-title">狱中题壁</span>
-                <span class="dir-poem-meta">谭嗣同 · 七言绝句</span>
-            </a>
-            
-            <a href="/gift/jin-dai/huang-hai-zhou-zhong.html" class="directory-poem">
-                <span class="dir-poem-title">黄海舟中日人索句并见日俄战争地图</span>
-                <span class="dir-poem-meta">秋瑾 · 七言律诗</span>
-            </a>
-            
-            <a href="/gift/jin-dai/qin-yuan-chun-chang-sha.html" class="directory-poem">
-                <span class="dir-poem-title">沁园春·长沙</span>
-                <span class="dir-poem-meta">毛泽东 · 词</span>
-            </a>
-            
-        </div>
-    </section>
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
 
-    <nav class="poem-nav">
-        <a href="/gift/" class="nav-back">← 返回总目录</a>
-    </nav>
-</article>
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="dynasty-page">
+            <header class="dynasty-header">
+                <a href="/gift/" class="dynasty-breadcrumb">诗歌之河</a>
+                <h1 class="dynasty-title">近代</h1>
+                
+                <p class="dynasty-subtitle">旧诗新命</p>
+                
+            </header>
+
+            
+            <section class="dynasty-intro">
+                
+                
+                <p>近代中国，内忧外患交加，古老的诗歌传统面临着前所未有的挑战。</p>
+                
+                
+                
+                
+                
+                <p>鸦片战争打开了中国的国门，也打破了士大夫&#34;天朝上国&#34;的迷梦。甲午战败、庚子事变、辛亥革命——每一次巨变都在诗歌中留下了深深的烙印。龚自珍的&#34;我劝天公重抖擞，不拘一格降人才&#34;，写的是一个先知先觉者对时代沉疴的焦虑；谭嗣同的&#34;我自横刀向天笑，去留肝胆两昆仑&#34;，写的是一个改革者面对死亡的从容；秋瑾的&#34;一腔热血勤珍重，洒去犹能化碧涛&#34;，写的是一个女革命家以身许国的决绝。</p>
+                
+                
+                
+                
+                
+                <p>这一时期的诗歌，形式上仍然是旧体，精神上却已经是新的了。诗人们不再满足于个人的离愁别绪，而是把国家命运、民族危亡纳入了诗歌的视野。梁启超提出&#34;诗界革命&#34;，主张以旧风格写新意境；黄遵宪主张&#34;我手写我口&#34;，力求打破古典诗歌的程式化表达。这些尝试虽然还没有达到成熟，却为后来新诗的诞生埋下了伏笔。</p>
+                
+                
+                
+                
+                
+                <p>王国维是一个特殊的例子。他的《人间词话》以西方美学观念重新审视中国古典诗词，提出了&#34;境界说&#34;，成为二十世纪中国文艺理论的重要起点。&#34;昨夜西风凋碧树，独上高楼，望尽天涯路&#34;——他用三句宋词概括了做学问的三个境界，这种打通中西、融会古今的尝试，正是近代知识分子精神的真实写照。</p>
+                
+                
+                
+                
+                
+                <p>旧诗在近代没有死去，它只是换了一种方式继续活着：更沉重，更焦灼，更与时代同呼吸。</p>
+                
+                
+            </section>
+            
+
+            <section class="dynasty-directory">
+                <div class="directory-heading">
+                    <h2>目录</h2>
+                    <span>4 首</span>
+                </div>
+
+                <div class="directory-poems">
+                    
+                    <a href="/gift/jin-dai/ji-hai-za-shi.html" class="directory-poem">
+                        <span class="dir-poem-title">己亥杂诗·其五</span>
+                        <span class="dir-poem-meta">龚自珍 · 七言绝句</span>
+                    </a>
+                    
+                    <a href="/gift/jin-dai/yu-zhong-ti-bi.html" class="directory-poem">
+                        <span class="dir-poem-title">狱中题壁</span>
+                        <span class="dir-poem-meta">谭嗣同 · 七言绝句</span>
+                    </a>
+                    
+                    <a href="/gift/jin-dai/huang-hai-zhou-zhong.html" class="directory-poem">
+                        <span class="dir-poem-title">黄海舟中日人索句并见日俄战争地图</span>
+                        <span class="dir-poem-meta">秋瑾 · 七言律诗</span>
+                    </a>
+                    
+                    <a href="/gift/jin-dai/qin-yuan-chun-chang-sha.html" class="directory-poem">
+                        <span class="dir-poem-title">沁园春·长沙</span>
+                        <span class="dir-poem-meta">毛泽东 · 词</span>
+                    </a>
+                    
+                </div>
+            </section>
+
+            <nav class="poem-nav">
+                <a href="/gift/" class="nav-back">← 返回总目录</a>
+            </nav>
+        </article>
+    </div>
+</div>
 
     </main>
 

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,100 +20,172 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">上李邕</h1>
-        <div class="poem-page-meta">
-            <span>李白</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">上李邕</h1>
+                <div class="poem-page-meta">
+                    <span>李白</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>大鹏<sup>1</sup>一日同风起，扶摇<sup>2</sup>直上九万里。</p>
+                
+                
+                
+                <p>假令风歇时下来，犹能簸却<sup>3</sup>沧溟<sup>4</sup>水。</p>
+                
+                
+                
+                <p>世人见我恒殊调<sup>5</sup>，闻余大言皆冷笑。</p>
+                
+                
+                
+                <p>宣父<sup>6</sup>犹能畏后生，丈夫未可轻年少。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 大鹏：传说中的巨鸟，出自《庄子·逍遥游》。大鹏的翅膀像天边的云，乘风飞上九万里高空。李白一生最爱以大鹏自喻。</p>
+                
+                <p><span class="ann-num">2.</span> 扶摇：盘旋而上的暴风。大鹏乘着扶摇旋风直上高空。</p>
+                
+                <p><span class="ann-num">3.</span> 簸却：摇动、掀翻。即便风停落下来，大鹏也能搅动大海的水。簸（bǒ），颠簸摇动。</p>
+                
+                <p><span class="ann-num">4.</span> 沧溟：大海。</p>
+                
+                <p><span class="ann-num">5.</span> 殊调：与众不同的格调、言论。世人看我总是格调怪异，听到我的豪言壮语都冷笑。</p>
+                
+                <p><span class="ann-num">6.</span> 宣父：指孔子。孔子曾说过&#34;后生可畏&#34;——年少的人值得敬畏。李白抬出孔子来为自己辩护，说大丈夫不该轻视少年。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>大鹏<sup>1</sup>一日同风起，扶摇<sup>2</sup>直上九万里。</p>
-        
-        
-        
-        <p>假令风歇时下来，犹能簸却<sup>3</sup>沧溟<sup>4</sup>水。</p>
-        
-        
-        
-        <p>世人见我恒殊调<sup>5</sup>，闻余大言皆冷笑。</p>
-        
-        
-        
-        <p>宣父<sup>6</sup>犹能畏后生，丈夫未可轻年少。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这是李白青年时代的作品，写于他出蜀漫游、求谒名士李邕之时。那一年他大约二十五岁，羽翼初丰，志气正盛。</p>
+                
+                
+                
+                
+                
+                <p>李邕是盛唐著名的书法家和文学家，官至北海太守，以爱才养士闻名。年轻的李白慕名前去拜访，却因言辞放诞、不拘礼法而惹恼了这位前辈。李邕拂袖而去，李白则写下了这首诗作为回应——不是道歉，而是宣言。</p>
+                
+                
+                
+                
+                
+                <p>大鹏一日同风起，扶摇直上九万里——开篇就是《庄子·逍遥游》中的意象。大鹏是李白一生最钟爱的自喻，从青年到暮年，这个意象贯穿了他的全部诗作。但值得注意的是，青年李白笔下的大鹏，是一种确定无疑的飞翔：风至则起，直上九万里，没有任何犹豫。这种自信近乎狂傲，却也是盛唐气象在个体身上的投射：一个年轻人相信，只要时机到来，他必然能够一飞冲天。</p>
+                
+                
+                
+                
+                
+                <p>假令风歇时下来，犹能簸却沧溟水——即便风停了，大鹏落下来，也能搅动沧海之水。这是何等的自我期许。李白不是在说自己一定能成功，他是在说：即便失败，我的失败也必将惊天动地。这种姿态，后来的人学不来，因为那是一种时代赋予的底气。</p>
+                
+                
+                
+                
+                
+                <p>世人见我恒殊调，闻余大言皆冷笑——世人看我总是格调奇异，听到我的豪言壮语都冷笑。宣父犹能畏后生，丈夫未可轻年少——孔子尚且敬畏年轻人，大丈夫不可轻视少年。宣父是孔子的尊称。李白抬出孔子来压李邕，这不是狡辩，是一种骨子里的不服输：你可以不欣赏我，但你不能否定我的未来。</p>
+                
+                
+                
+                
+                
+                <p>这首诗里的李白，和后来我们所熟知的那个醉卧长安、放逐夜郎的李白，是同一个人，又不是同一个人。他还没有经历人生的跌宕，还没有写出天生我材必有用时的那种在绝望中硬撑的豪迈。这里的大鹏，是未经风雨的大鹏，是确信自己必将高飞的大鹏。这种确信本身，就是青春最珍贵的东西。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/du-jing-men-song-bie.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 大鹏：传说中的巨鸟，出自《庄子·逍遥游》。大鹏的翅膀像天边的云，乘风飞上九万里高空。李白一生最爱以大鹏自喻。</p>
-        
-        <p><span class="ann-num">2.</span> 扶摇：盘旋而上的暴风。大鹏乘着扶摇旋风直上高空。</p>
-        
-        <p><span class="ann-num">3.</span> 簸却：摇动、掀翻。即便风停落下来，大鹏也能搅动大海的水。簸（bǒ），颠簸摇动。</p>
-        
-        <p><span class="ann-num">4.</span> 沧溟：大海。</p>
-        
-        <p><span class="ann-num">5.</span> 殊调：与众不同的格调、言论。世人看我总是格调怪异，听到我的豪言壮语都冷笑。</p>
-        
-        <p><span class="ann-num">6.</span> 宣父：指孔子。孔子曾说过&#34;后生可畏&#34;——年少的人值得敬畏。李白抬出孔子来为自己辩护，说大丈夫不该轻视少年。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这是李白青年时代的作品，写于他出蜀漫游、求谒名士李邕之时。那一年他大约二十五岁，羽翼初丰，志气正盛。</p>
-        
-        
-        
-        
-        
-        <p>李邕是盛唐著名的书法家和文学家，官至北海太守，以爱才养士闻名。年轻的李白慕名前去拜访，却因言辞放诞、不拘礼法而惹恼了这位前辈。李邕拂袖而去，李白则写下了这首诗作为回应——不是道歉，而是宣言。</p>
-        
-        
-        
-        
-        
-        <p>大鹏一日同风起，扶摇直上九万里——开篇就是《庄子·逍遥游》中的意象。大鹏是李白一生最钟爱的自喻，从青年到暮年，这个意象贯穿了他的全部诗作。但值得注意的是，青年李白笔下的大鹏，是一种确定无疑的飞翔：风至则起，直上九万里，没有任何犹豫。这种自信近乎狂傲，却也是盛唐气象在个体身上的投射：一个年轻人相信，只要时机到来，他必然能够一飞冲天。</p>
-        
-        
-        
-        
-        
-        <p>假令风歇时下来，犹能簸却沧溟水——即便风停了，大鹏落下来，也能搅动沧海之水。这是何等的自我期许。李白不是在说自己一定能成功，他是在说：即便失败，我的失败也必将惊天动地。这种姿态，后来的人学不来，因为那是一种时代赋予的底气。</p>
-        
-        
-        
-        
-        
-        <p>世人见我恒殊调，闻余大言皆冷笑——世人看我总是格调奇异，听到我的豪言壮语都冷笑。宣父犹能畏后生，丈夫未可轻年少——孔子尚且敬畏年轻人，大丈夫不可轻视少年。宣父是孔子的尊称。李白抬出孔子来压李邕，这不是狡辩，是一种骨子里的不服输：你可以不欣赏我，但你不能否定我的未来。</p>
-        
-        
-        
-        
-        
-        <p>这首诗里的李白，和后来我们所熟知的那个醉卧长安、放逐夜郎的李白，是同一个人，又不是同一个人。他还没有经历人生的跌宕，还没有写出天生我材必有用时的那种在绝望中硬撑的豪迈。这里的大鹏，是未经风雨的大鹏，是确信自己必将高飞的大鹏。这种确信本身，就是青春最珍贵的东西。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/du-jing-men-song-bie.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

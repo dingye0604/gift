@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,94 +20,166 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">临路歌</h1>
-        <div class="poem-page-meta">
-            <span>李白</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">临路歌</h1>
+                <div class="poem-page-meta">
+                    <span>李白</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>大鹏飞兮振八裔<sup>1</sup>，中天摧兮力不济<sup>2</sup>。</p>
+                
+                
+                
+                <p>余风激兮万世<sup>3</sup>，游扶桑兮挂石袂<sup>4</sup>。</p>
+                
+                
+                
+                <p>后人得之传此，仲尼亡兮谁为出涕<sup>5</sup>。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 八裔：八个方向的荒远之地，即八方极远处。大鹏展翅振动了八方。</p>
+                
+                <p><span class="ann-num">2.</span> 中天摧兮力不济：在半空中翅膀被摧折，力气接不上了。李白以此自况一生的壮志未酬。</p>
+                
+                <p><span class="ann-num">3.</span> 余风激兮万世：大鹏余下的风力依然能激荡万世。即使失败了，影响还会留存。</p>
+                
+                <p><span class="ann-num">4.</span> 扶桑：神话中太阳升起处的神树。石袂：左袖。大鹏曾在扶桑树上栖息，左袖挂在树枝上。</p>
+                
+                <p><span class="ann-num">5.</span> 仲尼亡兮谁为出涕：孔子（字仲尼）已经死了，谁还能为大鹏的坠落流泪？典故：鲁人捕获麒麟，孔子见之而泣。李白以麒麟自比，感慨世上再无知音。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>大鹏飞兮振八裔<sup>1</sup>，中天摧兮力不济<sup>2</sup>。</p>
-        
-        
-        
-        <p>余风激兮万世<sup>3</sup>，游扶桑兮挂石袂<sup>4</sup>。</p>
-        
-        
-        
-        <p>后人得之传此，仲尼亡兮谁为出涕<sup>5</sup>。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这是李白临终前的绝笔，也是他一生大鹏意象的最后一次出现。写这首诗时，他已经六十二岁，贫病交加，寄宿在族叔李阳冰家中，不久便撒手人寰。</p>
+                
+                
+                
+                
+                
+                <p>李白一生以大鹏自喻。二十五岁上李邕时，他写大鹏一日同风起，扶摇直上九万里——那是一只意气风发、坚信自己必将高飞的大鹏。近四十年后，他又一次写到了大鹏，但这一次，风停了，翅膀折了。</p>
+                
+                
+                
+                
+                
+                <p>大鹏飞兮振八裔，中天摧兮力不济——大鹏展翅飞翔，振动了八方荒远之地；但在半空中，翅膀被摧折，力量不济了。八裔就是八方荒远之地。李白用这句诗概括了自己的一生：他曾经振翅高飞，名动天下，但最终在中途跌落，没能到达他期望的高度。这不是谦虚，是事实。</p>
+                
+                
+                
+                
+                
+                <p>余风激兮万世，游扶桑兮挂石袂——但大鹏余下的风力，依然可以激荡万世；它曾在扶桑树上栖息，挂住了左袖。扶桑是古代神话中太阳升起的地方，石袂指左袖。这两句是在安慰自己：即便失败了，我的影响还会留存；即便没有到达终点，我曾经接近过最高的地方。</p>
+                
+                
+                
+                
+                
+                <p>后人得之传此，仲尼亡兮谁为出涕——后人得到这首诗，会把它传下去；但孔子已经死了，谁会为这只受伤的大鹏流泪呢？这里用了一个典故：传说鲁国人猎获了一只麒麟，孔子看到之后哭泣，因为麒麟是祥瑞之兽，却在乱世中被猎杀。李白自比麒麟，感慨世上再没有孔子那样能够理解他的人。</p>
+                
+                
+                
+                
+                
+                <p>这首诗的悲怆，不在于死亡本身，而在于一个天才意识到自己终究无法完成理想的痛苦。李白一生都在飞，但风终究没有把他送到九万里之上。中天摧兮力不济——这七个字，是一个诗人对自己一生的最终判决。但即便如此，他依然没有后悔。余风激兮万世——他相信，那些失败后的余波，依然会在后世激起回响。这种自信，这种不甘，这种在绝望中依然保持的尊严，就是李白之所以为李白的原因。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/wang-yue.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 八裔：八个方向的荒远之地，即八方极远处。大鹏展翅振动了八方。</p>
-        
-        <p><span class="ann-num">2.</span> 中天摧兮力不济：在半空中翅膀被摧折，力气接不上了。李白以此自况一生的壮志未酬。</p>
-        
-        <p><span class="ann-num">3.</span> 余风激兮万世：大鹏余下的风力依然能激荡万世。即使失败了，影响还会留存。</p>
-        
-        <p><span class="ann-num">4.</span> 扶桑：神话中太阳升起处的神树。石袂：左袖。大鹏曾在扶桑树上栖息，左袖挂在树枝上。</p>
-        
-        <p><span class="ann-num">5.</span> 仲尼亡兮谁为出涕：孔子（字仲尼）已经死了，谁还能为大鹏的坠落流泪？典故：鲁人捕获麒麟，孔子见之而泣。李白以麒麟自比，感慨世上再无知音。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这是李白临终前的绝笔，也是他一生大鹏意象的最后一次出现。写这首诗时，他已经六十二岁，贫病交加，寄宿在族叔李阳冰家中，不久便撒手人寰。</p>
-        
-        
-        
-        
-        
-        <p>李白一生以大鹏自喻。二十五岁上李邕时，他写大鹏一日同风起，扶摇直上九万里——那是一只意气风发、坚信自己必将高飞的大鹏。近四十年后，他又一次写到了大鹏，但这一次，风停了，翅膀折了。</p>
-        
-        
-        
-        
-        
-        <p>大鹏飞兮振八裔，中天摧兮力不济——大鹏展翅飞翔，振动了八方荒远之地；但在半空中，翅膀被摧折，力量不济了。八裔就是八方荒远之地。李白用这句诗概括了自己的一生：他曾经振翅高飞，名动天下，但最终在中途跌落，没能到达他期望的高度。这不是谦虚，是事实。</p>
-        
-        
-        
-        
-        
-        <p>余风激兮万世，游扶桑兮挂石袂——但大鹏余下的风力，依然可以激荡万世；它曾在扶桑树上栖息，挂住了左袖。扶桑是古代神话中太阳升起的地方，石袂指左袖。这两句是在安慰自己：即便失败了，我的影响还会留存；即便没有到达终点，我曾经接近过最高的地方。</p>
-        
-        
-        
-        
-        
-        <p>后人得之传此，仲尼亡兮谁为出涕——后人得到这首诗，会把它传下去；但孔子已经死了，谁会为这只受伤的大鹏流泪呢？这里用了一个典故：传说鲁国人猎获了一只麒麟，孔子看到之后哭泣，因为麒麟是祥瑞之兽，却在乱世中被猎杀。李白自比麒麟，感慨世上再没有孔子那样能够理解他的人。</p>
-        
-        
-        
-        
-        
-        <p>这首诗的悲怆，不在于死亡本身，而在于一个天才意识到自己终究无法完成理想的痛苦。李白一生都在飞，但风终究没有把他送到九万里之上。中天摧兮力不济——这七个字，是一个诗人对自己一生的最终判决。但即便如此，他依然没有后悔。余风激兮万世——他相信，那些失败后的余波，依然会在后世激起回响。这种自信，这种不甘，这种在绝望中依然保持的尊严，就是李白之所以为李白的原因。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/wang-yue.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,103 +20,175 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">长相思·其一</h1>
-        <div class="poem-page-meta">
-            <span>李白</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
-            
-            <span class="meta-sep">·</span>
-            <span>乐府诗</span>
-            
-        </div>
-    </header>
-
-    <div class="poem-text">
-        
-        
-        <p>长相思，在长安。</p>
-        
-        
-        
-        <p>络纬<sup>1</sup>秋啼金井阑<sup>2</sup>，微霜凄凄簟色寒<sup>3</sup>。</p>
-        
-        
-        
-        <p>孤灯不明思欲绝，卷帷望月空长叹。</p>
-        
-        
-        
-        <p>美人如花隔云端。</p>
-        
-        
-        
-        <p>上有青冥<sup>4</sup>之长天，下有渌水<sup>5</sup>之波澜。</p>
-        
-        
-        
-        <p>天长路远魂飞苦，梦魂不到关山难<sup>6</sup>。</p>
-        
-        
-        
-        <p>长相思，摧心肝。</p>
-        
-        
-    </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 络纬：纺织娘，一种秋虫，叫声像织布声。秋天的纺织娘在井栏边啼叫。</p>
-        
-        <p><span class="ann-num">2.</span> 金井阑：井边的栏杆。&#34;金&#34;是修饰词，形容栏杆的精美。</p>
-        
-        <p><span class="ann-num">3.</span> 簟色寒：竹席的颜色透着寒意。簟（diàn），竹席。微霜和簟寒一起写秋夜的清冷。</p>
-        
-        <p><span class="ann-num">4.</span> 青冥：青天、高空。冥（míng），深远。</p>
-        
-        <p><span class="ann-num">5.</span> 渌水：清澈的水。渌（lù），水清。</p>
-        
-        <p><span class="ann-num">6.</span> 关山难：关隘和山岭的阻隔，难以跨越。路太远，连梦魂都飞不过去。</p>
-        
-    </div>
+<div class="page-with-sidebar">
     
 
-    <div class="appreciation-text">
-        
-        
-        <p>这是李白《长相思》两首中的第一首，写一个男子对远方女子的思念。但细读起来，那女子似乎不只是一个人，更像是一个象征——象征着理想、故乡，或者那个永远回不去的过去。</p>
-        
-        
-        
-        
-        
-        <p>长相思，在长安——相思的对象在长安。李白此时已经离开长安，所以这是一个追忆的姿态。络纬秋啼金井阑，微霜凄凄簟色寒——秋虫在金井栏边啼叫，薄霜让竹席变得冰冷。这是深秋的夜晚，一个人的夜晚。孤灯不明思欲绝，卷帷望月空长叹——孤灯昏暗，思念到了极点；卷起窗帘望月，只能空自长叹。</p>
-        
-        
-        
-        
-        
-        <p>美人如花隔云端——她像花一样美丽，却隔着云端。这个隔字，写出了距离的无情。上有青冥之长天，下有渌水之波澜——上面是高高的青天，下面是绿水的波澜。天地如此辽阔，却容不下两个人相见。天长路远魂飞苦，梦魂不到关山难——路太远，连梦魂都飞不过去。关山难，不只是地理的阻隔，更是命运的阻隔。</p>
-        
-        
-        
-        
-        
-        <p>长相思，摧心肝——结尾回到了题目，但加重了语气。相思不是甜蜜的，是摧心裂肝的痛苦。李白写这首诗时，正值安史之乱爆发，他已经离开了长安，而那个曾经让他仰天大笑出门去的都城，此刻正在战火中颤抖。所以这首诗里的美人，或许也是他对盛唐的追念——那个美好的时代，像花一样美丽，却像云一样遥不可及了。</p>
-        
-        
-    </div>
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
 
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/chang-xiang-si-qi-er.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">长相思·其一</h1>
+                <div class="poem-page-meta">
+                    <span>李白</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                    <span class="meta-sep">·</span>
+                    <span>乐府诗</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>长相思，在长安。</p>
+                
+                
+                
+                <p>络纬<sup>1</sup>秋啼金井阑<sup>2</sup>，微霜凄凄簟色寒<sup>3</sup>。</p>
+                
+                
+                
+                <p>孤灯不明思欲绝，卷帷望月空长叹。</p>
+                
+                
+                
+                <p>美人如花隔云端。</p>
+                
+                
+                
+                <p>上有青冥<sup>4</sup>之长天，下有渌水<sup>5</sup>之波澜。</p>
+                
+                
+                
+                <p>天长路远魂飞苦，梦魂不到关山难<sup>6</sup>。</p>
+                
+                
+                
+                <p>长相思，摧心肝。</p>
+                
+                
+            </div>
+
+            
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 络纬：纺织娘，一种秋虫，叫声像织布声。秋天的纺织娘在井栏边啼叫。</p>
+                
+                <p><span class="ann-num">2.</span> 金井阑：井边的栏杆。&#34;金&#34;是修饰词，形容栏杆的精美。</p>
+                
+                <p><span class="ann-num">3.</span> 簟色寒：竹席的颜色透着寒意。簟（diàn），竹席。微霜和簟寒一起写秋夜的清冷。</p>
+                
+                <p><span class="ann-num">4.</span> 青冥：青天、高空。冥（míng），深远。</p>
+                
+                <p><span class="ann-num">5.</span> 渌水：清澈的水。渌（lù），水清。</p>
+                
+                <p><span class="ann-num">6.</span> 关山难：关隘和山岭的阻隔，难以跨越。路太远，连梦魂都飞不过去。</p>
+                
+            </div>
+            
+
+            <div class="appreciation-text">
+                
+                
+                <p>这是李白《长相思》两首中的第一首，写一个男子对远方女子的思念。但细读起来，那女子似乎不只是一个人，更像是一个象征——象征着理想、故乡，或者那个永远回不去的过去。</p>
+                
+                
+                
+                
+                
+                <p>长相思，在长安——相思的对象在长安。李白此时已经离开长安，所以这是一个追忆的姿态。络纬秋啼金井阑，微霜凄凄簟色寒——秋虫在金井栏边啼叫，薄霜让竹席变得冰冷。这是深秋的夜晚，一个人的夜晚。孤灯不明思欲绝，卷帷望月空长叹——孤灯昏暗，思念到了极点；卷起窗帘望月，只能空自长叹。</p>
+                
+                
+                
+                
+                
+                <p>美人如花隔云端——她像花一样美丽，却隔着云端。这个隔字，写出了距离的无情。上有青冥之长天，下有渌水之波澜——上面是高高的青天，下面是绿水的波澜。天地如此辽阔，却容不下两个人相见。天长路远魂飞苦，梦魂不到关山难——路太远，连梦魂都飞不过去。关山难，不只是地理的阻隔，更是命运的阻隔。</p>
+                
+                
+                
+                
+                
+                <p>长相思，摧心肝——结尾回到了题目，但加重了语气。相思不是甜蜜的，是摧心裂肝的痛苦。李白写这首诗时，正值安史之乱爆发，他已经离开了长安，而那个曾经让他仰天大笑出门去的都城，此刻正在战火中颤抖。所以这首诗里的美人，或许也是他对盛唐的追念——那个美好的时代，像花一样美丽，却像云一样遥不可及了。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/chang-xiang-si-qi-er.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
+    </div>
+</div>
 
     </main>
 

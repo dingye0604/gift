@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,99 +20,171 @@
 
     <main class="site-main">
         
-<article class="dynasty-page">
-    <header class="dynasty-header">
-        <a href="/gift/" class="dynasty-breadcrumb">诗歌之河</a>
-        <h1 class="dynasty-title">五代十国</h1>
-        
-        <p class="dynasty-subtitle">乱世中的词心</p>
-        
-    </header>
-
-    
-    <section class="dynasty-intro">
-        
-        
-        <p>五代十国是一个乱世。唐王朝灭亡之后，中原相继出现五个短命朝廷，南方则有十个割据政权，你方唱罢我登场，平均一个朝代活不过二十年。</p>
-        
-        
-        
-        
-        
-        <p>但文学的命运常常和历史本身的命运背道而驰。正是在这短短五六十年的动荡之中，一种新的文学样式——词——完成了一次深刻的蜕变。词在唐代已经出现了，盛唐有李白写过《菩萨蛮》和《忆秦娥》，晚唐有温庭筠把词写得浓艳绮丽。但那时候的词毕竟是&#34;诗余&#34;，是文人在正经的诗之外，偶尔为之的小品。到了五代，词才开始获得了独立的文学地位。这主要归功于两个人：一个是李煜，一个是冯延巳。</p>
-        
-        
-        
-        
-        
-        <p>李煜是南唐后主，他的词可以清晰地分为两个时期。前半生他是帝王，住在金陵的深宫里，写的词也带着帝王才有的富贵气——但这种富贵气里却有一种少有的真诚。他的《玉楼春》写夜宴的奢华，却以一句&#34;待踏马蹄清夜月&#34;收束，那种对美的迷恋不只是感官的享受，更是一种对生活的深情。后半生他成了亡国之君，被押送到汴京，做了赵宋的俘虏。也正是这一巨变，让他的词发生了质变——从此他写的词不再是帝王的悠闲自适，而是亡国奴的血泪悲歌。&#34;问君能有几多愁，恰似一江春水向东流&#34;——这样的句子，没有亡国的经历是写不出来的。</p>
-        
-        
-        
-        
-        
-        <p>冯延巳是南唐宰相，但他的词与身份无关，只与心有关。&#34;独立小桥风满袖，平林新月人归后&#34;——他写的是每一个普通人都会感受到的惆怅。他的词里没有具体的人、具体的场景，只有一片弥漫的愁绪。这种愁绪不是因某事而起，也不因某事而消，它就是人生的底色。</p>
-        
-        
-        
-        
-        
-        <p>从李煜到冯延巳，词完成了从描写外部世界到探索内心世界的转变。这一转变，为宋代的晏殊、欧阳修、苏轼们铺好了路。没有五代的铺垫，就没有宋词的辉煌。</p>
-        
-        
-    </section>
+<div class="page-with-sidebar">
     
 
-    <section class="dynasty-directory">
-        <div class="directory-heading">
-            <h2>目录</h2>
-            <span>7 首</span>
-        </div>
+<aside class="river-sidebar river-zoom-dynasty">
+    <svg class="river-svg-side" viewBox="238 904 480 480" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
 
-        <div class="directory-poems">
-            
-            <a href="/gift/wudai-shiguo/li-yu-huan-xi-sha.html" class="directory-poem">
-                <span class="dir-poem-title">浣溪沙·红日已高三丈透</span>
-                <span class="dir-poem-meta">李煜 · 词</span>
-            </a>
-            
-            <a href="/gift/wudai-shiguo/li-yu-yu-lou-chun.html" class="directory-poem">
-                <span class="dir-poem-title">玉楼春·晚妆初了明肌雪</span>
-                <span class="dir-poem-meta">李煜 · 词</span>
-            </a>
-            
-            <a href="/gift/wudai-shiguo/li-yu-po-zhen-zi.html" class="directory-poem">
-                <span class="dir-poem-title">破阵子·四十年来家国</span>
-                <span class="dir-poem-meta">李煜 · 词</span>
-            </a>
-            
-            <a href="/gift/wudai-shiguo/li-yu-yu-mei-ren.html" class="directory-poem">
-                <span class="dir-poem-title">虞美人·春花秋月何时了</span>
-                <span class="dir-poem-meta">李煜 · 词</span>
-            </a>
-            
-            <a href="/gift/wudai-shiguo/li-yu-lang-tao-sha.html" class="directory-poem">
-                <span class="dir-poem-title">浪淘沙·帘外雨潺潺</span>
-                <span class="dir-poem-meta">李煜 · 词</span>
-            </a>
-            
-            <a href="/gift/wudai-shiguo/li-yu-xiang-jian-huan.html" class="directory-poem">
-                <span class="dir-poem-title">相见欢·无言独上西楼</span>
-                <span class="dir-poem-meta">李煜 · 词</span>
-            </a>
-            
-            <a href="/gift/wudai-shiguo/feng-yan-si-que-ta-zhi.html" class="directory-poem">
-                <span class="dir-poem-title">鹊踏枝·谁道闲情抛掷久</span>
-                <span class="dir-poem-meta">冯延巳 · 词</span>
-            </a>
-            
-        </div>
-    </section>
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
 
-    <nav class="poem-nav">
-        <a href="/gift/" class="nav-back">← 返回总目录</a>
-    </nav>
-</article>
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="dynasty-page">
+            <header class="dynasty-header">
+                <a href="/gift/" class="dynasty-breadcrumb">诗歌之河</a>
+                <h1 class="dynasty-title">五代十国</h1>
+                
+                <p class="dynasty-subtitle">乱世中的词心</p>
+                
+            </header>
+
+            
+            <section class="dynasty-intro">
+                
+                
+                <p>五代十国是一个乱世。唐王朝灭亡之后，中原相继出现五个短命朝廷，南方则有十个割据政权，你方唱罢我登场，平均一个朝代活不过二十年。</p>
+                
+                
+                
+                
+                
+                <p>但文学的命运常常和历史本身的命运背道而驰。正是在这短短五六十年的动荡之中，一种新的文学样式——词——完成了一次深刻的蜕变。词在唐代已经出现了，盛唐有李白写过《菩萨蛮》和《忆秦娥》，晚唐有温庭筠把词写得浓艳绮丽。但那时候的词毕竟是&#34;诗余&#34;，是文人在正经的诗之外，偶尔为之的小品。到了五代，词才开始获得了独立的文学地位。这主要归功于两个人：一个是李煜，一个是冯延巳。</p>
+                
+                
+                
+                
+                
+                <p>李煜是南唐后主，他的词可以清晰地分为两个时期。前半生他是帝王，住在金陵的深宫里，写的词也带着帝王才有的富贵气——但这种富贵气里却有一种少有的真诚。他的《玉楼春》写夜宴的奢华，却以一句&#34;待踏马蹄清夜月&#34;收束，那种对美的迷恋不只是感官的享受，更是一种对生活的深情。后半生他成了亡国之君，被押送到汴京，做了赵宋的俘虏。也正是这一巨变，让他的词发生了质变——从此他写的词不再是帝王的悠闲自适，而是亡国奴的血泪悲歌。&#34;问君能有几多愁，恰似一江春水向东流&#34;——这样的句子，没有亡国的经历是写不出来的。</p>
+                
+                
+                
+                
+                
+                <p>冯延巳是南唐宰相，但他的词与身份无关，只与心有关。&#34;独立小桥风满袖，平林新月人归后&#34;——他写的是每一个普通人都会感受到的惆怅。他的词里没有具体的人、具体的场景，只有一片弥漫的愁绪。这种愁绪不是因某事而起，也不因某事而消，它就是人生的底色。</p>
+                
+                
+                
+                
+                
+                <p>从李煜到冯延巳，词完成了从描写外部世界到探索内心世界的转变。这一转变，为宋代的晏殊、欧阳修、苏轼们铺好了路。没有五代的铺垫，就没有宋词的辉煌。</p>
+                
+                
+            </section>
+            
+
+            <section class="dynasty-directory">
+                <div class="directory-heading">
+                    <h2>目录</h2>
+                    <span>7 首</span>
+                </div>
+
+                <div class="directory-poems">
+                    
+                    <a href="/gift/wudai-shiguo/li-yu-huan-xi-sha.html" class="directory-poem">
+                        <span class="dir-poem-title">浣溪沙·红日已高三丈透</span>
+                        <span class="dir-poem-meta">李煜 · 词</span>
+                    </a>
+                    
+                    <a href="/gift/wudai-shiguo/li-yu-yu-lou-chun.html" class="directory-poem">
+                        <span class="dir-poem-title">玉楼春·晚妆初了明肌雪</span>
+                        <span class="dir-poem-meta">李煜 · 词</span>
+                    </a>
+                    
+                    <a href="/gift/wudai-shiguo/li-yu-po-zhen-zi.html" class="directory-poem">
+                        <span class="dir-poem-title">破阵子·四十年来家国</span>
+                        <span class="dir-poem-meta">李煜 · 词</span>
+                    </a>
+                    
+                    <a href="/gift/wudai-shiguo/li-yu-yu-mei-ren.html" class="directory-poem">
+                        <span class="dir-poem-title">虞美人·春花秋月何时了</span>
+                        <span class="dir-poem-meta">李煜 · 词</span>
+                    </a>
+                    
+                    <a href="/gift/wudai-shiguo/li-yu-lang-tao-sha.html" class="directory-poem">
+                        <span class="dir-poem-title">浪淘沙·帘外雨潺潺</span>
+                        <span class="dir-poem-meta">李煜 · 词</span>
+                    </a>
+                    
+                    <a href="/gift/wudai-shiguo/li-yu-xiang-jian-huan.html" class="directory-poem">
+                        <span class="dir-poem-title">相见欢·无言独上西楼</span>
+                        <span class="dir-poem-meta">李煜 · 词</span>
+                    </a>
+                    
+                    <a href="/gift/wudai-shiguo/feng-yan-si-que-ta-zhi.html" class="directory-poem">
+                        <span class="dir-poem-title">鹊踏枝·谁道闲情抛掷久</span>
+                        <span class="dir-poem-meta">冯延巳 · 词</span>
+                    </a>
+                    
+                </div>
+            </section>
+
+            <nav class="poem-nav">
+                <a href="/gift/" class="nav-back">← 返回总目录</a>
+            </nav>
+        </article>
+    </div>
+</div>
 
     </main>
 

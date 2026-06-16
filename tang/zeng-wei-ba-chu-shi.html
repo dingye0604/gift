@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,148 +20,220 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">赠卫八处士</h1>
-        <div class="poem-page-meta">
-            <span>杜甫</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">赠卫八处士</h1>
+                <div class="poem-page-meta">
+                    <span>杜甫</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>人生不相见，动如参与商<sup>1</sup>。</p>
+                
+                
+                
+                <p>今夕复何夕<sup>2</sup>，共此灯烛光。</p>
+                
+                
+                
+                <p>少壮能几时？鬓发各已苍<sup>3</sup>！</p>
+                
+                
+                
+                <p>访旧半为鬼<sup>4</sup>，惊呼热中肠<sup>5</sup>。</p>
+                
+                
+                
+                <p>焉知二十载，重上君子堂。</p>
+                
+                
+                
+                <p>昔别君未婚，儿女忽成行<sup>6</sup>。</p>
+                
+                
+                
+                <p>怡然敬父执<sup>7</sup>，问我来何方。</p>
+                
+                
+                
+                <p>问答乃未已，驱儿罗酒浆<sup>8</sup>。</p>
+                
+                
+                
+                <p>夜雨剪春韭，新炊间黄粱<sup>9</sup>。</p>
+                
+                
+                
+                <p>主称会面难，一举累十觞<sup>10</sup>。</p>
+                
+                
+                
+                <p>十觞亦不醉，感子故意长<sup>11</sup>。</p>
+                
+                
+                
+                <p>明日隔山岳，世事两茫茫。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 参与商：参星（shēn）和商星，一颗在东，一颗在西，永不同时出现在天空。比喻人与人的离别——有些人一别就再也见不到了。</p>
+                
+                <p><span class="ann-num">2.</span> 今夕复何夕：今夜是什么夜晚啊（竟能与你相聚）。&#34;复何夕&#34;是感叹语——这样美好的夜晚人生能有几次？</p>
+                
+                <p><span class="ann-num">3.</span> 苍：灰白色。两人鬓发都已花白——从少年变成了老年。</p>
+                
+                <p><span class="ann-num">4.</span> 访旧半为鬼：打听旧友的下落，一半已经去世了。</p>
+                
+                <p><span class="ann-num">5.</span> 热中肠：心中火辣辣地痛。形容听到噩耗时的震撼感受。</p>
+                
+                <p><span class="ann-num">6.</span> 成行：排成行列。当年分别时还没结婚，现在孩子已经成排成行了——写时间流逝之快。</p>
+                
+                <p><span class="ann-num">7.</span> 父执：父亲的朋友。孩子们恭敬地称呼父亲的老朋友。</p>
+                
+                <p><span class="ann-num">8.</span> 罗酒浆：摆上酒和菜。罗，排列、摆出。</p>
+                
+                <p><span class="ann-num">9.</span> 间黄粱：饭里掺着黄粱（小米的一种）。夜雨中剪了春韭，新煮了黄粱饭——普通人家的家常饭菜。</p>
+                
+                <p><span class="ann-num">10.</span> 一举累十觞：一举杯就喝了十杯。累，累积；觞（shāng），酒杯。</p>
+                
+                <p><span class="ann-num">11.</span> 故意长：旧日的情意深长。不是酒不醉人，是感情比酒更浓。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>人生不相见，动如参与商<sup>1</sup>。</p>
-        
-        
-        
-        <p>今夕复何夕<sup>2</sup>，共此灯烛光。</p>
-        
-        
-        
-        <p>少壮能几时？鬓发各已苍<sup>3</sup>！</p>
-        
-        
-        
-        <p>访旧半为鬼<sup>4</sup>，惊呼热中肠<sup>5</sup>。</p>
-        
-        
-        
-        <p>焉知二十载，重上君子堂。</p>
-        
-        
-        
-        <p>昔别君未婚，儿女忽成行<sup>6</sup>。</p>
-        
-        
-        
-        <p>怡然敬父执<sup>7</sup>，问我来何方。</p>
-        
-        
-        
-        <p>问答乃未已，驱儿罗酒浆<sup>8</sup>。</p>
-        
-        
-        
-        <p>夜雨剪春韭，新炊间黄粱<sup>9</sup>。</p>
-        
-        
-        
-        <p>主称会面难，一举累十觞<sup>10</sup>。</p>
-        
-        
-        
-        <p>十觞亦不醉，感子故意长<sup>11</sup>。</p>
-        
-        
-        
-        <p>明日隔山岳，世事两茫茫。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这首诗写于乾元二年（759年），杜甫被贬为华州司功参军，赴任途中拜访了少年时代的朋友卫八。二十年不见，重逢之夜，两人灯下对饮，说了许多话。</p>
+                
+                
+                
+                
+                
+                <p>人生不相见，动如参与商——人生在世，常常不能相见，就像参星和商星一样，此出彼没，永不相见。参商是两颗星，一颗在东，一颗在西，永远不会同时出现在天空中。这个比喻把人生的离别写得像天文学一样确定：有些人一旦分别，就真的再也见不到了。</p>
+                
+                
+                
+                
+                
+                <p>今夕复何夕，共此灯烛光——今夜是什么夜晚啊，能和你一起在这烛光下相聚。复何夕是一个感叹：这样的夜晚，人生能有几次？少壮能几时？鬓发各已苍——年轻时能有多少时光？如今我们鬓发都已花白。苍是灰白色。二十年不见，两人从少年变成了老年。</p>
+                
+                
+                
+                
+                
+                <p>访旧半为鬼，惊呼热中肠——问起旧日的朋友，一半已经去世了；惊叫出声，心中热辣辣地疼痛。热中肠是最真实的生理感受：听到噩耗时的那种心口发烫的感觉。焉知二十载，重上君子堂——谁能想到二十年后，我还能重新走进你的厅堂？</p>
+                
+                
+                
+                
+                
+                <p>昔别君未婚，儿女忽成行——当年分别时你还没有结婚，如今儿女已经成行。忽字写得好：时间不知不觉就过去了，孩子不知不觉就长大了。怡然敬父执，问我来何方——孩子们恭敬地称呼我父亲的朋友，问我从哪里来。父执就是父亲的朋友。这个场景温馨而略带伤感：孩子们不知道眼前这个老人是谁，但他们知道要尊敬他。</p>
+                
+                
+                
+                
+                
+                <p>夜雨剪春韭，新炊间黄粱——在夜雨中剪下春天的韭菜，新煮的饭里掺着黄粱。这是普通人家的饭菜，但在久别重逢的夜晚，却显得格外珍贵。主称会面难，一举累十觞——主人说见面太难，一举杯就是十杯酒。十觞亦不醉，感子故意长——喝了十杯也不醉，因为你的情意太深长了。不是酒不醉人，是情太浓，浓过了酒。</p>
+                
+                
+                
+                
+                
+                <p>明日隔山岳，世事两茫茫——明天又要被山岳隔开，未来的世事一片渺茫。这个结尾收得干净而沉重。前面所有的温暖——烛光、春韭、黄粱、十觞——都在这一句面前显得脆弱。人生就是这样：刚刚重逢，又要离别；刚刚温暖，又要面对寒冷。杜甫没有哭喊，他只是平静地说出了这个事实。但正是这种平静，让读者更加心碎。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/chun-ye-xi-yu.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 参与商：参星（shēn）和商星，一颗在东，一颗在西，永不同时出现在天空。比喻人与人的离别——有些人一别就再也见不到了。</p>
-        
-        <p><span class="ann-num">2.</span> 今夕复何夕：今夜是什么夜晚啊（竟能与你相聚）。&#34;复何夕&#34;是感叹语——这样美好的夜晚人生能有几次？</p>
-        
-        <p><span class="ann-num">3.</span> 苍：灰白色。两人鬓发都已花白——从少年变成了老年。</p>
-        
-        <p><span class="ann-num">4.</span> 访旧半为鬼：打听旧友的下落，一半已经去世了。</p>
-        
-        <p><span class="ann-num">5.</span> 热中肠：心中火辣辣地痛。形容听到噩耗时的震撼感受。</p>
-        
-        <p><span class="ann-num">6.</span> 成行：排成行列。当年分别时还没结婚，现在孩子已经成排成行了——写时间流逝之快。</p>
-        
-        <p><span class="ann-num">7.</span> 父执：父亲的朋友。孩子们恭敬地称呼父亲的老朋友。</p>
-        
-        <p><span class="ann-num">8.</span> 罗酒浆：摆上酒和菜。罗，排列、摆出。</p>
-        
-        <p><span class="ann-num">9.</span> 间黄粱：饭里掺着黄粱（小米的一种）。夜雨中剪了春韭，新煮了黄粱饭——普通人家的家常饭菜。</p>
-        
-        <p><span class="ann-num">10.</span> 一举累十觞：一举杯就喝了十杯。累，累积；觞（shāng），酒杯。</p>
-        
-        <p><span class="ann-num">11.</span> 故意长：旧日的情意深长。不是酒不醉人，是感情比酒更浓。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这首诗写于乾元二年（759年），杜甫被贬为华州司功参军，赴任途中拜访了少年时代的朋友卫八。二十年不见，重逢之夜，两人灯下对饮，说了许多话。</p>
-        
-        
-        
-        
-        
-        <p>人生不相见，动如参与商——人生在世，常常不能相见，就像参星和商星一样，此出彼没，永不相见。参商是两颗星，一颗在东，一颗在西，永远不会同时出现在天空中。这个比喻把人生的离别写得像天文学一样确定：有些人一旦分别，就真的再也见不到了。</p>
-        
-        
-        
-        
-        
-        <p>今夕复何夕，共此灯烛光——今夜是什么夜晚啊，能和你一起在这烛光下相聚。复何夕是一个感叹：这样的夜晚，人生能有几次？少壮能几时？鬓发各已苍——年轻时能有多少时光？如今我们鬓发都已花白。苍是灰白色。二十年不见，两人从少年变成了老年。</p>
-        
-        
-        
-        
-        
-        <p>访旧半为鬼，惊呼热中肠——问起旧日的朋友，一半已经去世了；惊叫出声，心中热辣辣地疼痛。热中肠是最真实的生理感受：听到噩耗时的那种心口发烫的感觉。焉知二十载，重上君子堂——谁能想到二十年后，我还能重新走进你的厅堂？</p>
-        
-        
-        
-        
-        
-        <p>昔别君未婚，儿女忽成行——当年分别时你还没有结婚，如今儿女已经成行。忽字写得好：时间不知不觉就过去了，孩子不知不觉就长大了。怡然敬父执，问我来何方——孩子们恭敬地称呼我父亲的朋友，问我从哪里来。父执就是父亲的朋友。这个场景温馨而略带伤感：孩子们不知道眼前这个老人是谁，但他们知道要尊敬他。</p>
-        
-        
-        
-        
-        
-        <p>夜雨剪春韭，新炊间黄粱——在夜雨中剪下春天的韭菜，新煮的饭里掺着黄粱。这是普通人家的饭菜，但在久别重逢的夜晚，却显得格外珍贵。主称会面难，一举累十觞——主人说见面太难，一举杯就是十杯酒。十觞亦不醉，感子故意长——喝了十杯也不醉，因为你的情意太深长了。不是酒不醉人，是情太浓，浓过了酒。</p>
-        
-        
-        
-        
-        
-        <p>明日隔山岳，世事两茫茫——明天又要被山岳隔开，未来的世事一片渺茫。这个结尾收得干净而沉重。前面所有的温暖——烛光、春韭、黄粱、十觞——都在这一句面前显得脆弱。人生就是这样：刚刚重逢，又要离别；刚刚温暖，又要面对寒冷。杜甫没有哭喊，他只是平静地说出了这个事实。但正是这种平静，让读者更加心碎。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/chun-ye-xi-yu.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

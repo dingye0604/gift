@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,92 +20,164 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">闻官军收河南河北</h1>
-        <div class="poem-page-meta">
-            <span>杜甫</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">闻官军收河南河北</h1>
+                <div class="poem-page-meta">
+                    <span>杜甫</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>剑外忽传收蓟北<sup>1</sup>，初闻涕泪满衣裳。</p>
+                
+                
+                
+                <p>却看妻子愁何在，漫卷诗书喜欲狂<sup>2</sup>。</p>
+                
+                
+                
+                <p>白日放歌须纵酒，青春作伴好还乡<sup>3</sup>。</p>
+                
+                
+                
+                <p>即从巴峡穿巫峡<sup>4</sup>，便下襄阳向洛阳<sup>5</sup>。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 剑外忽传收蓟北：剑门关外忽然传来收复蓟北的消息。剑外，剑门关以南（今四川）；蓟北（jì），今河北北部，安史之乱叛军的根据地。</p>
+                
+                <p><span class="ann-num">2.</span> 漫卷诗书喜欲狂：胡乱地卷起诗书，高兴得快要发狂了。平日珍贵的诗书此刻也顾不上了。</p>
+                
+                <p><span class="ann-num">3.</span> 青春作伴好还乡：趁着春天的好时光，回到家乡去。青春，明媚的春光。</p>
+                
+                <p><span class="ann-num">4.</span> 巴峡穿巫峡：从巴峡穿过巫峡，沿着长江三峡顺流而下。</p>
+                
+                <p><span class="ann-num">5.</span> 襄阳向洛阳：襄阳在今湖北，洛阳在今河南。四个地名串联成归乡的路线图。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>剑外忽传收蓟北<sup>1</sup>，初闻涕泪满衣裳。</p>
-        
-        
-        
-        <p>却看妻子愁何在，漫卷诗书喜欲狂<sup>2</sup>。</p>
-        
-        
-        
-        <p>白日放歌须纵酒，青春作伴好还乡<sup>3</sup>。</p>
-        
-        
-        
-        <p>即从巴峡穿巫峡<sup>4</sup>，便下襄阳向洛阳<sup>5</sup>。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这是杜甫最快乐的一首诗，写于广德元年（763年）。那一年，延续了八年的安史之乱终于平定，消息传到杜甫所在的梓州，他激动得涕泪横流。</p>
+                
+                
+                
+                
+                
+                <p>剑外忽传收蓟北，初闻涕泪满衣裳——剑门关外忽然传来收复蓟北的消息，刚一听到，眼泪就洒满了衣裳。剑外就是剑门关以南，杜甫当时流落在四川。蓟北是叛军的根据地。忽传说明了消息的突然，初闻说明了反应的真实。杜甫不是喜极而泣，是悲极而泣——八年的战乱，太多的苦难，在这一刻终于找到了一个出口。</p>
+                
+                
+                
+                
+                
+                <p>却看妻子愁何在，漫卷诗书喜欲狂——回头看看妻子，往日的忧愁哪里去了？胡乱地卷起诗书，高兴得快要发狂。却看是一个回头的动作，漫卷是胡乱卷起的意思。平日珍贵的诗书，此刻也顾不上了。喜欲狂三个字，把压抑已久的情感全部释放出来。杜甫的诗中很少出现这样直接的快乐，因为他一生都在经历苦难。但这一次，苦难终于有了尽头。</p>
+                
+                
+                
+                
+                
+                <p>白日放歌须纵酒，青春作伴好还乡——白天要放声高歌，要尽情饮酒；趁着春光正好，回到家乡去。青春在这里指春天，也暗指人生的青春——虽然杜甫已经五十二岁了，但在和平的消息面前，他觉得自己重新年轻了起来。</p>
+                
+                
+                
+                
+                
+                <p>即从巴峡穿巫峡，便下襄阳向洛阳——立即从巴峡穿过巫峡，然后顺流而下到襄阳，再向洛阳进发。这四句用了四个地名，像一连串的快镜头，把归乡的路线一口气说完。从巴峡到巫峡，从襄阳到洛阳，空间在诗句中飞速转换，像诗人已经迫不及待地踏上了归途。这首诗的快感，不仅在于内容，也在于这种节奏：一连串的地名，一连串的动词，像鼓点一样密集，让读者也感受到了那种归心似箭的心情。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/lv-ye-shu-huai.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 剑外忽传收蓟北：剑门关外忽然传来收复蓟北的消息。剑外，剑门关以南（今四川）；蓟北（jì），今河北北部，安史之乱叛军的根据地。</p>
-        
-        <p><span class="ann-num">2.</span> 漫卷诗书喜欲狂：胡乱地卷起诗书，高兴得快要发狂了。平日珍贵的诗书此刻也顾不上了。</p>
-        
-        <p><span class="ann-num">3.</span> 青春作伴好还乡：趁着春天的好时光，回到家乡去。青春，明媚的春光。</p>
-        
-        <p><span class="ann-num">4.</span> 巴峡穿巫峡：从巴峡穿过巫峡，沿着长江三峡顺流而下。</p>
-        
-        <p><span class="ann-num">5.</span> 襄阳向洛阳：襄阳在今湖北，洛阳在今河南。四个地名串联成归乡的路线图。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这是杜甫最快乐的一首诗，写于广德元年（763年）。那一年，延续了八年的安史之乱终于平定，消息传到杜甫所在的梓州，他激动得涕泪横流。</p>
-        
-        
-        
-        
-        
-        <p>剑外忽传收蓟北，初闻涕泪满衣裳——剑门关外忽然传来收复蓟北的消息，刚一听到，眼泪就洒满了衣裳。剑外就是剑门关以南，杜甫当时流落在四川。蓟北是叛军的根据地。忽传说明了消息的突然，初闻说明了反应的真实。杜甫不是喜极而泣，是悲极而泣——八年的战乱，太多的苦难，在这一刻终于找到了一个出口。</p>
-        
-        
-        
-        
-        
-        <p>却看妻子愁何在，漫卷诗书喜欲狂——回头看看妻子，往日的忧愁哪里去了？胡乱地卷起诗书，高兴得快要发狂。却看是一个回头的动作，漫卷是胡乱卷起的意思。平日珍贵的诗书，此刻也顾不上了。喜欲狂三个字，把压抑已久的情感全部释放出来。杜甫的诗中很少出现这样直接的快乐，因为他一生都在经历苦难。但这一次，苦难终于有了尽头。</p>
-        
-        
-        
-        
-        
-        <p>白日放歌须纵酒，青春作伴好还乡——白天要放声高歌，要尽情饮酒；趁着春光正好，回到家乡去。青春在这里指春天，也暗指人生的青春——虽然杜甫已经五十二岁了，但在和平的消息面前，他觉得自己重新年轻了起来。</p>
-        
-        
-        
-        
-        
-        <p>即从巴峡穿巫峡，便下襄阳向洛阳——立即从巴峡穿过巫峡，然后顺流而下到襄阳，再向洛阳进发。这四句用了四个地名，像一连串的快镜头，把归乡的路线一口气说完。从巴峡到巫峡，从襄阳到洛阳，空间在诗句中飞速转换，像诗人已经迫不及待地踏上了归途。这首诗的快感，不仅在于内容，也在于这种节奏：一连串的地名，一连串的动词，像鼓点一样密集，让读者也感受到了那种归心似箭的心情。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/lv-ye-shu-huai.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

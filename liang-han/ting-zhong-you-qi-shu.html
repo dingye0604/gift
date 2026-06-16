@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,97 +20,169 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">庭中有奇树</h1>
-        <div class="poem-page-meta">
-            <span>无名氏</span>
-            <span class="meta-sep">·</span>
-            <span>两汉</span>
-            
-            <span class="meta-sep">·</span>
-            <span>五言古诗</span>
-            
-        </div>
-    </header>
-
-    <div class="poem-text">
-        
-        
-        <p>庭中有奇树，绿叶发华滋<sup>1</sup>。</p>
-        
-        
-        
-        <p>攀条折其荣<sup>2</sup>，将以遗<sup>3</sup>所思。</p>
-        
-        
-        
-        <p>馨香<sup>4</sup>盈怀袖，路远莫致<sup>5</sup>之。</p>
-        
-        
-        
-        <p>此物何足贵？但感别经时<sup>6</sup>。</p>
-        
-        
-    </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 发华滋：花叶生长茂盛。发，开放。华，同“花”。滋，繁多、繁茂。</p>
-        
-        <p><span class="ann-num">2.</span> 荣：花。这里特指树上盛开的花朵。</p>
-        
-        <p><span class="ann-num">3.</span> 遗：遗（wèi），赠送。</p>
-        
-        <p><span class="ann-num">4.</span> 馨香：浓郁的香气。</p>
-        
-        <p><span class="ann-num">5.</span> 致：送到。莫致之，即因为路途遥远而无法送到。</p>
-        
-        <p><span class="ann-num">6.</span> 别经时：分别已经过了很长时间。经时，表示时光流逝、别离良久。</p>
-        
-    </div>
+<div class="page-with-sidebar">
     
 
-    <div class="appreciation-text">
-        
-        
-        <p>这是古诗十九首中最短的一首，却写出了一个完整的情感故事。</p>
-        
-        
-        
-        
-        
-        <p>&#34;庭中有奇树，绿叶发华滋&#34;——院子里有一棵奇特的树，绿叶繁茂，花儿盛开。&#34;奇树&#34;不一定是名贵之树，只是在思念者眼中显得特别。花开的季节，本是美好的，但对于孤独的人来说，美景反而加重了寂寞。&#34;攀条折其荣，将以遗所思&#34;——攀下枝条，折下鲜花，想送给思念的人。这是最朴素的行为：看到美好的东西，就想和心爱的人分享。</p>
-        
-        
-        
-        
-        
-        <p>&#34;馨香盈怀袖&#34;——花香充满了衣袖。她折了花，拿在手里，花香四溢。但&#34;路远莫致之&#34;——路途太远，送不到他手里。这是全诗的转折：从希望到失望，从行动到无奈。花还在，香还在，但人不在。美好的事物在孤独的容器里，反而成了一种负担。</p>
-        
-        
-        
-        
-        
-        <p>&#34;此物何足贵？但感别经时&#34;——这花有什么珍贵呢？只是感慨分别已经太久了。最后这一句，把前面的所有动作都收束到了情感的核心。折花、闻香、想送人——这些都不是因为花本身有多美，而是因为离别太久，思念太深。花只是一个媒介，真正珍贵的是那份无法传达的情意。</p>
-        
-        
-        
-        
-        
-        <p>这首诗的结构非常精巧。前两句写景，中两句叙事，后两句抒情。从&#34;庭中有奇树&#34;到&#34;但感别经时&#34;，空间上从庭院到远方，时间上从花开到别离，情感上从希望到失望。短短八句，却容纳了一个完整的情感世界。这就是古诗十九首的魅力——用最经济的语言，写出最丰富的内容。</p>
-        
-        
-    </div>
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="322 252 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
 
-    <nav class="poem-nav">
-        <a href="/gift/liang-han/" class="nav-back">← 返回两汉目录</a>
-        
-        <a href="/gift/liang-han/she-jiang-cai-fu-rong.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">庭中有奇树</h1>
+                <div class="poem-page-meta">
+                    <span>无名氏</span>
+                    <span class="meta-sep">·</span>
+                    <span>两汉</span>
+                    
+                    <span class="meta-sep">·</span>
+                    <span>五言古诗</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>庭中有奇树，绿叶发华滋<sup>1</sup>。</p>
+                
+                
+                
+                <p>攀条折其荣<sup>2</sup>，将以遗<sup>3</sup>所思。</p>
+                
+                
+                
+                <p>馨香<sup>4</sup>盈怀袖，路远莫致<sup>5</sup>之。</p>
+                
+                
+                
+                <p>此物何足贵？但感别经时<sup>6</sup>。</p>
+                
+                
+            </div>
+
+            
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 发华滋：花叶生长茂盛。发，开放。华，同“花”。滋，繁多、繁茂。</p>
+                
+                <p><span class="ann-num">2.</span> 荣：花。这里特指树上盛开的花朵。</p>
+                
+                <p><span class="ann-num">3.</span> 遗：遗（wèi），赠送。</p>
+                
+                <p><span class="ann-num">4.</span> 馨香：浓郁的香气。</p>
+                
+                <p><span class="ann-num">5.</span> 致：送到。莫致之，即因为路途遥远而无法送到。</p>
+                
+                <p><span class="ann-num">6.</span> 别经时：分别已经过了很长时间。经时，表示时光流逝、别离良久。</p>
+                
+            </div>
+            
+
+            <div class="appreciation-text">
+                
+                
+                <p>这是古诗十九首中最短的一首，却写出了一个完整的情感故事。</p>
+                
+                
+                
+                
+                
+                <p>&#34;庭中有奇树，绿叶发华滋&#34;——院子里有一棵奇特的树，绿叶繁茂，花儿盛开。&#34;奇树&#34;不一定是名贵之树，只是在思念者眼中显得特别。花开的季节，本是美好的，但对于孤独的人来说，美景反而加重了寂寞。&#34;攀条折其荣，将以遗所思&#34;——攀下枝条，折下鲜花，想送给思念的人。这是最朴素的行为：看到美好的东西，就想和心爱的人分享。</p>
+                
+                
+                
+                
+                
+                <p>&#34;馨香盈怀袖&#34;——花香充满了衣袖。她折了花，拿在手里，花香四溢。但&#34;路远莫致之&#34;——路途太远，送不到他手里。这是全诗的转折：从希望到失望，从行动到无奈。花还在，香还在，但人不在。美好的事物在孤独的容器里，反而成了一种负担。</p>
+                
+                
+                
+                
+                
+                <p>&#34;此物何足贵？但感别经时&#34;——这花有什么珍贵呢？只是感慨分别已经太久了。最后这一句，把前面的所有动作都收束到了情感的核心。折花、闻香、想送人——这些都不是因为花本身有多美，而是因为离别太久，思念太深。花只是一个媒介，真正珍贵的是那份无法传达的情意。</p>
+                
+                
+                
+                
+                
+                <p>这首诗的结构非常精巧。前两句写景，中两句叙事，后两句抒情。从&#34;庭中有奇树&#34;到&#34;但感别经时&#34;，空间上从庭院到远方，时间上从花开到别离，情感上从希望到失望。短短八句，却容纳了一个完整的情感世界。这就是古诗十九首的魅力——用最经济的语言，写出最丰富的内容。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/liang-han/" class="nav-back">← 返回两汉目录</a>
+                
+                <a href="/gift/liang-han/she-jiang-cai-fu-rong.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
+    </div>
+</div>
 
     </main>
 

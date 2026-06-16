@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,86 +20,158 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">早发白帝城</h1>
-        <div class="poem-page-meta">
-            <span>李白</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">早发白帝城</h1>
+                <div class="poem-page-meta">
+                    <span>李白</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>朝辞白帝彩云间<sup>1</sup>，千里江陵<sup>2</sup>一日还。</p>
+                
+                
+                
+                <p>两岸猿声啼不住<sup>3</sup>，轻舟已过万重山。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 白帝：白帝城，在今重庆奉节，长江三峡的起点。城在高山上，云雾缭绕，故称&#34;彩云间&#34;。</p>
+                
+                <p><span class="ann-num">2.</span> 江陵：今湖北江陵，距白帝城约一千二百里。顺江而下水流极快，所以&#34;一日还&#34;虽是夸张，但也有现实依据。</p>
+                
+                <p><span class="ann-num">3.</span> 啼不住：叫个不停。郦道元《水经注》说&#34;巴东三峡巫峡长，猿鸣三声泪沾裳&#34;，猿声本为悲音，但李白此时遇赦东归，猿声成了轻舟疾驰的背景音。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>朝辞白帝彩云间<sup>1</sup>，千里江陵<sup>2</sup>一日还。</p>
-        
-        
-        
-        <p>两岸猿声啼不住<sup>3</sup>，轻舟已过万重山。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这是李白晚年最轻快的诗，写于他流放夜郎途中遇赦之后。那一年他五十八岁，刚刚从死亡的边缘被拉回。</p>
+                
+                
+                
+                
+                
+                <p>天宝十四载（755年），安史之乱爆发。两年后，永王李璘起兵东下，李白应邀入幕。但李璘很快被定性为叛乱，兵败被杀，李白也因此获罪，被流放夜郎（今贵州桐梓）。这对于一个年近六旬的老人来说，几乎是死刑。他拖着病体，沿着长江向西南走去，一路上写了不少沉痛的诗。</p>
+                
+                
+                
+                
+                
+                <p>但走到白帝城时，忽然传来了赦免的消息。唐肃宗因为旱灾大赦天下，李白在流放途中被赦免。这个消息对于他已经绝望的心，不啻一声春雷。于是他立刻掉头东归，写下了这首诗。</p>
+                
+                
+                
+                
+                
+                <p>朝辞白帝彩云间，千里江陵一日还——早上从白帝城出发，彩云缭绕在城边；千里之外的江陵，一天就可以到达。彩云间三个字，把白帝城写得如仙境一般。但这不是写景，是写心情——当一个人重获自由时，他眼中的世界也会变得更加美好。千里江陵一日还，用了夸张的手法，但这不是吹牛，是归心似箭的真实感受。</p>
+                
+                
+                
+                
+                
+                <p>两岸猿声啼不住，轻舟已过万重山——两岸的猿猴啼叫个不停，但轻舟已经穿过了万重山峦。猿声在古诗中常常是悲凉的象征，郦道元《水经注》里说巴东三峡巫峡长，猿鸣三声泪沾裳。但李白笔下的猿声，不再是催人泪下的悲鸣，而是他疾驰而过的背景音。啼不住说明猿声一直在持续，但轻舟已过说明诗人已经不再为之停留。他的速度比猿声更快，比山峦更高——这是一种精神上的飞翔。</p>
+                
+                
+                
+                
+                
+                <p>这首诗的轻快感，和李白其他诗作的豪放不同。它不是天生我材必有用的自我激励，也不是仰天大笑出门去的意气风发，而是一个老人在经历了生死大劫之后的释然。万重山就是他人生的艰难险阻，而轻舟已过就是他终于走出来了。这种轻松，比年轻时的豪情更珍贵，因为它来之不易。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/lin-lu-ge.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 白帝：白帝城，在今重庆奉节，长江三峡的起点。城在高山上，云雾缭绕，故称&#34;彩云间&#34;。</p>
-        
-        <p><span class="ann-num">2.</span> 江陵：今湖北江陵，距白帝城约一千二百里。顺江而下水流极快，所以&#34;一日还&#34;虽是夸张，但也有现实依据。</p>
-        
-        <p><span class="ann-num">3.</span> 啼不住：叫个不停。郦道元《水经注》说&#34;巴东三峡巫峡长，猿鸣三声泪沾裳&#34;，猿声本为悲音，但李白此时遇赦东归，猿声成了轻舟疾驰的背景音。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这是李白晚年最轻快的诗，写于他流放夜郎途中遇赦之后。那一年他五十八岁，刚刚从死亡的边缘被拉回。</p>
-        
-        
-        
-        
-        
-        <p>天宝十四载（755年），安史之乱爆发。两年后，永王李璘起兵东下，李白应邀入幕。但李璘很快被定性为叛乱，兵败被杀，李白也因此获罪，被流放夜郎（今贵州桐梓）。这对于一个年近六旬的老人来说，几乎是死刑。他拖着病体，沿着长江向西南走去，一路上写了不少沉痛的诗。</p>
-        
-        
-        
-        
-        
-        <p>但走到白帝城时，忽然传来了赦免的消息。唐肃宗因为旱灾大赦天下，李白在流放途中被赦免。这个消息对于他已经绝望的心，不啻一声春雷。于是他立刻掉头东归，写下了这首诗。</p>
-        
-        
-        
-        
-        
-        <p>朝辞白帝彩云间，千里江陵一日还——早上从白帝城出发，彩云缭绕在城边；千里之外的江陵，一天就可以到达。彩云间三个字，把白帝城写得如仙境一般。但这不是写景，是写心情——当一个人重获自由时，他眼中的世界也会变得更加美好。千里江陵一日还，用了夸张的手法，但这不是吹牛，是归心似箭的真实感受。</p>
-        
-        
-        
-        
-        
-        <p>两岸猿声啼不住，轻舟已过万重山——两岸的猿猴啼叫个不停，但轻舟已经穿过了万重山峦。猿声在古诗中常常是悲凉的象征，郦道元《水经注》里说巴东三峡巫峡长，猿鸣三声泪沾裳。但李白笔下的猿声，不再是催人泪下的悲鸣，而是他疾驰而过的背景音。啼不住说明猿声一直在持续，但轻舟已过说明诗人已经不再为之停留。他的速度比猿声更快，比山峦更高——这是一种精神上的飞翔。</p>
-        
-        
-        
-        
-        
-        <p>这首诗的轻快感，和李白其他诗作的豪放不同。它不是天生我材必有用的自我激励，也不是仰天大笑出门去的意气风发，而是一个老人在经历了生死大劫之后的释然。万重山就是他人生的艰难险阻，而轻舟已过就是他终于走出来了。这种轻松，比年轻时的豪情更珍贵，因为它来之不易。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/lin-lu-ge.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

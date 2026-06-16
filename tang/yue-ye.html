@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,96 +20,168 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">月夜</h1>
-        <div class="poem-page-meta">
-            <span>杜甫</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">月夜</h1>
+                <div class="poem-page-meta">
+                    <span>杜甫</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>今夜鄜州<sup>1</sup>月，闺中<sup>2</sup>只独看。</p>
+                
+                
+                
+                <p>遥怜小儿女，未解忆长安<sup>3</sup>。</p>
+                
+                
+                
+                <p>香雾云鬟湿<sup>4</sup>，清辉玉臂寒<sup>5</sup>。</p>
+                
+                
+                
+                <p>何时倚虚幌<sup>6</sup>，双照泪痕干<sup>7</sup>。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 鄜州：今陕西富县。鄜（fū），地名。杜甫把家人安顿在鄜州，自己却被困在长安。</p>
+                
+                <p><span class="ann-num">2.</span> 闺中：女子的居室。指妻子在闺房中独自望月。</p>
+                
+                <p><span class="ann-num">3.</span> 未解忆长安：还不懂得思念在长安的父亲。杜甫的小儿女还太小，不知道什么是想念。</p>
+                
+                <p><span class="ann-num">4.</span> 香雾云鬟湿：月夜的雾气打湿了她的发髻。云鬟（huán），古代女子盘起的发髻。杜甫想象妻子在月下站了太久。</p>
+                
+                <p><span class="ann-num">5.</span> 玉臂寒：月光照射，手臂感到寒凉。玉臂是杜甫对妻子手臂的美称。</p>
+                
+                <p><span class="ann-num">6.</span> 虚幌：轻薄的帷幔。什么时候才能一起倚在薄帷前赏月？</p>
+                
+                <p><span class="ann-num">7.</span> 双照泪痕干：两个人一起被月光照着，泪痕终于干了。与前面的&#34;独看&#34;形成对照——独看时流泪，双照时泪干。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>今夜鄜州<sup>1</sup>月，闺中<sup>2</sup>只独看。</p>
-        
-        
-        
-        <p>遥怜小儿女，未解忆长安<sup>3</sup>。</p>
-        
-        
-        
-        <p>香雾云鬟湿<sup>4</sup>，清辉玉臂寒<sup>5</sup>。</p>
-        
-        
-        
-        <p>何时倚虚幌<sup>6</sup>，双照泪痕干<sup>7</sup>。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这是杜甫被困长安时写给妻子的诗。至德元年（756年），安史之乱爆发，杜甫把家人安顿在鄜州（今陕西富县），自己则去投奔新即位的唐肃宗，不料中途被叛军俘获，押回长安。</p>
+                
+                
+                
+                
+                
+                <p>今夜鄜州月，闺中只独看——今夜鄜州的月亮，妻子只能在闺中独自观看。杜甫不写自己看月，而写妻子看月。这种从对方角度着笔的写法，让思念变得更加深切。只独看三个字，藏着多少孤寂。</p>
+                
+                
+                
+                
+                
+                <p>遥怜小儿女，未解忆长安——可怜我那年幼的儿女，还不懂得思念长安的父亲。未解是最让人心酸的：孩子太小了，连想念都不会。杜甫想念他们，但他们还不知道想念是什么。这种不对等的思念，让父亲的心更加疼痛。</p>
+                
+                
+                
+                
+                
+                <p>香雾云鬟湿，清辉玉臂寒——夜雾打湿了她的发髻，月光让她的手臂感到寒冷。云鬟是古代女子的发式，玉臂是对妻子手臂的美称。杜甫想象着妻子在月下站立太久，雾气沾湿了头发，月光冻冷了手臂。这些细节如此具体，仿佛他亲眼看见了一般。这就是杜甫的想象力：不是天马行空，而是设身处地。</p>
+                
+                
+                
+                
+                
+                <p>何时倚虚幌，双照泪痕干——什么时候才能一起倚在薄帷前，让月光照着我们两个人，把泪痕照干？虚幌就是轻薄的帷幔。双照是两个人一起被月光照耀，对应前面的独看。泪痕干意味着流泪已经结束，意味着团聚已经到来。但何时两个字，说明这只是一个愿望，一个不知道能不能实现的愿望。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/zeng-wei-ba-chu-shi.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 鄜州：今陕西富县。鄜（fū），地名。杜甫把家人安顿在鄜州，自己却被困在长安。</p>
-        
-        <p><span class="ann-num">2.</span> 闺中：女子的居室。指妻子在闺房中独自望月。</p>
-        
-        <p><span class="ann-num">3.</span> 未解忆长安：还不懂得思念在长安的父亲。杜甫的小儿女还太小，不知道什么是想念。</p>
-        
-        <p><span class="ann-num">4.</span> 香雾云鬟湿：月夜的雾气打湿了她的发髻。云鬟（huán），古代女子盘起的发髻。杜甫想象妻子在月下站了太久。</p>
-        
-        <p><span class="ann-num">5.</span> 玉臂寒：月光照射，手臂感到寒凉。玉臂是杜甫对妻子手臂的美称。</p>
-        
-        <p><span class="ann-num">6.</span> 虚幌：轻薄的帷幔。什么时候才能一起倚在薄帷前赏月？</p>
-        
-        <p><span class="ann-num">7.</span> 双照泪痕干：两个人一起被月光照着，泪痕终于干了。与前面的&#34;独看&#34;形成对照——独看时流泪，双照时泪干。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这是杜甫被困长安时写给妻子的诗。至德元年（756年），安史之乱爆发，杜甫把家人安顿在鄜州（今陕西富县），自己则去投奔新即位的唐肃宗，不料中途被叛军俘获，押回长安。</p>
-        
-        
-        
-        
-        
-        <p>今夜鄜州月，闺中只独看——今夜鄜州的月亮，妻子只能在闺中独自观看。杜甫不写自己看月，而写妻子看月。这种从对方角度着笔的写法，让思念变得更加深切。只独看三个字，藏着多少孤寂。</p>
-        
-        
-        
-        
-        
-        <p>遥怜小儿女，未解忆长安——可怜我那年幼的儿女，还不懂得思念长安的父亲。未解是最让人心酸的：孩子太小了，连想念都不会。杜甫想念他们，但他们还不知道想念是什么。这种不对等的思念，让父亲的心更加疼痛。</p>
-        
-        
-        
-        
-        
-        <p>香雾云鬟湿，清辉玉臂寒——夜雾打湿了她的发髻，月光让她的手臂感到寒冷。云鬟是古代女子的发式，玉臂是对妻子手臂的美称。杜甫想象着妻子在月下站立太久，雾气沾湿了头发，月光冻冷了手臂。这些细节如此具体，仿佛他亲眼看见了一般。这就是杜甫的想象力：不是天马行空，而是设身处地。</p>
-        
-        
-        
-        
-        
-        <p>何时倚虚幌，双照泪痕干——什么时候才能一起倚在薄帷前，让月光照着我们两个人，把泪痕照干？虚幌就是轻薄的帷幔。双照是两个人一起被月光照耀，对应前面的独看。泪痕干意味着流泪已经结束，意味着团聚已经到来。但何时两个字，说明这只是一个愿望，一个不知道能不能实现的愿望。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/zeng-wei-ba-chu-shi.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

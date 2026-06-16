@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,100 +20,172 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">登高</h1>
-        <div class="poem-page-meta">
-            <span>杜甫</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">登高</h1>
+                <div class="poem-page-meta">
+                    <span>杜甫</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>风急天高猿啸哀，渚清沙白鸟飞回<sup>1</sup>。</p>
+                
+                
+                
+                <p>无边落木萧萧下<sup>2</sup>，不尽长江滚滚来。</p>
+                
+                
+                
+                <p>万里悲秋常作客<sup>3</sup>，百年多病独登台<sup>4</sup>。</p>
+                
+                
+                
+                <p>艰难苦恨繁霜鬓<sup>5</sup>，潦倒新停浊酒杯<sup>6</sup>。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 渚清沙白鸟飞回：水中小洲清澈，沙滩洁白，鸟儿盘旋飞回。渚（zhǔ），水中小块陆地。六个意象并排——风、天、猿、渚、沙、鸟，像一幅工笔山水。</p>
+                
+                <p><span class="ann-num">2.</span> 落木：落叶。萧萧，落叶的声音。无边无际的落叶纷纷飘落。</p>
+                
+                <p><span class="ann-num">3.</span> 万里悲秋常作客：漂泊万里，在秋天里悲伤，常年做客他乡。&#34;万里&#34;写空间之远，&#34;常&#34;写时间之久。</p>
+                
+                <p><span class="ann-num">4.</span> 百年多病独登台：人生百年，疾病缠身，独自登上高台。&#34;百年&#34;写人生之短暂，&#34;多病&#34;写身体之衰残。</p>
+                
+                <p><span class="ann-num">5.</span> 繁霜鬓：白发像霜一样繁密。艰难和苦恨的累积，让白发愈加浓厚。</p>
+                
+                <p><span class="ann-num">6.</span> 潦倒新停浊酒杯：潦倒困顿，最近又戒了酒。新停，刚刚停止。连借酒消愁的最后一招也用不了了。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>风急天高猿啸哀，渚清沙白鸟飞回<sup>1</sup>。</p>
-        
-        
-        
-        <p>无边落木萧萧下<sup>2</sup>，不尽长江滚滚来。</p>
-        
-        
-        
-        <p>万里悲秋常作客<sup>3</sup>，百年多病独登台<sup>4</sup>。</p>
-        
-        
-        
-        <p>艰难苦恨繁霜鬓<sup>5</sup>，潦倒新停浊酒杯<sup>6</sup>。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这是杜甫最著名的一首诗，被后人推为古今七律第一。写于大历二年（767年）的重阳节，杜甫独自登上夔州白帝城附近的高台，面对萧瑟的秋景，写下了这首沉郁顿挫的绝唱。</p>
+                
+                
+                
+                
+                
+                <p>风急天高猿啸哀，渚清沙白鸟飞回——风很急，天很高，猿猴的叫声悲哀；水中小洲清澈，沙滩洁白，鸟儿在空中盘旋。这十四个字，每一个字都是一幅画：风、天、猿、渚、沙、鸟，六个意象并置，像电影的开场镜头。急、高、哀、清、白、回，六个形容词/动词，让静态的景物有了情绪和动态。</p>
+                
+                
+                
+                
+                
+                <p>无边落木萧萧下，不尽长江滚滚来——无边的落叶萧萧飘落，不尽的长江滚滚而来。这是全诗最壮美的两句，也是整个中国诗歌史上最经典的写景名句之一。无边对不尽，落木对长江，萧萧对滚滚，下对来——对仗之工整，气势之磅礴，后世几乎无人能及。落木就是落叶，萧萧是落叶的声音。但杜甫写的不是一片落叶，是无边无际的落叶；不是一条小溪，是无尽头的长江。这种宏大，和诗人内心的孤独形成了巨大的张力。</p>
+                
+                
+                
+                
+                
+                <p>万里悲秋常作客，百年多病独登台——漂泊万里，在秋天里悲伤，常年做客他乡；人生百年，疾病缠身，独自登上高台。万里、悲秋、常作客、百年、多病、独登台——这六个词叠加在一起，像一座山一样压在读者心上。每一个词都是一层苦难，六层苦难叠在一起，就是杜甫一生的缩影。</p>
+                
+                
+                
+                
+                
+                <p>艰难苦恨繁霜鬓，潦倒新停浊酒杯——艰难和苦恨让白发更加稠密，潦倒困顿，最近又戒了酒。新停浊酒杯是一个极其沉痛的细节。杜甫本来爱酒，酒是他排遣愁苦的方式。但现在连酒也不能喝了——因为多病，因为贫穷。当一个人的最后一丝慰藉也被剥夺时，他就真的什么都没有了。</p>
+                
+                
+                
+                
+                
+                <p>这首诗之所以被称为七律第一，不仅因为它的对仗工整、意境深远，更因为它写出了人类在命运面前的全部无奈。杜甫没有抱怨，没有控诉，他只是平静地陈述了自己的处境。但正是这种平静，让痛苦显得更加真实、更加不可逃避。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/jiang-nan-feng-li-gui-nian.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 渚清沙白鸟飞回：水中小洲清澈，沙滩洁白，鸟儿盘旋飞回。渚（zhǔ），水中小块陆地。六个意象并排——风、天、猿、渚、沙、鸟，像一幅工笔山水。</p>
-        
-        <p><span class="ann-num">2.</span> 落木：落叶。萧萧，落叶的声音。无边无际的落叶纷纷飘落。</p>
-        
-        <p><span class="ann-num">3.</span> 万里悲秋常作客：漂泊万里，在秋天里悲伤，常年做客他乡。&#34;万里&#34;写空间之远，&#34;常&#34;写时间之久。</p>
-        
-        <p><span class="ann-num">4.</span> 百年多病独登台：人生百年，疾病缠身，独自登上高台。&#34;百年&#34;写人生之短暂，&#34;多病&#34;写身体之衰残。</p>
-        
-        <p><span class="ann-num">5.</span> 繁霜鬓：白发像霜一样繁密。艰难和苦恨的累积，让白发愈加浓厚。</p>
-        
-        <p><span class="ann-num">6.</span> 潦倒新停浊酒杯：潦倒困顿，最近又戒了酒。新停，刚刚停止。连借酒消愁的最后一招也用不了了。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这是杜甫最著名的一首诗，被后人推为古今七律第一。写于大历二年（767年）的重阳节，杜甫独自登上夔州白帝城附近的高台，面对萧瑟的秋景，写下了这首沉郁顿挫的绝唱。</p>
-        
-        
-        
-        
-        
-        <p>风急天高猿啸哀，渚清沙白鸟飞回——风很急，天很高，猿猴的叫声悲哀；水中小洲清澈，沙滩洁白，鸟儿在空中盘旋。这十四个字，每一个字都是一幅画：风、天、猿、渚、沙、鸟，六个意象并置，像电影的开场镜头。急、高、哀、清、白、回，六个形容词/动词，让静态的景物有了情绪和动态。</p>
-        
-        
-        
-        
-        
-        <p>无边落木萧萧下，不尽长江滚滚来——无边的落叶萧萧飘落，不尽的长江滚滚而来。这是全诗最壮美的两句，也是整个中国诗歌史上最经典的写景名句之一。无边对不尽，落木对长江，萧萧对滚滚，下对来——对仗之工整，气势之磅礴，后世几乎无人能及。落木就是落叶，萧萧是落叶的声音。但杜甫写的不是一片落叶，是无边无际的落叶；不是一条小溪，是无尽头的长江。这种宏大，和诗人内心的孤独形成了巨大的张力。</p>
-        
-        
-        
-        
-        
-        <p>万里悲秋常作客，百年多病独登台——漂泊万里，在秋天里悲伤，常年做客他乡；人生百年，疾病缠身，独自登上高台。万里、悲秋、常作客、百年、多病、独登台——这六个词叠加在一起，像一座山一样压在读者心上。每一个词都是一层苦难，六层苦难叠在一起，就是杜甫一生的缩影。</p>
-        
-        
-        
-        
-        
-        <p>艰难苦恨繁霜鬓，潦倒新停浊酒杯——艰难和苦恨让白发更加稠密，潦倒困顿，最近又戒了酒。新停浊酒杯是一个极其沉痛的细节。杜甫本来爱酒，酒是他排遣愁苦的方式。但现在连酒也不能喝了——因为多病，因为贫穷。当一个人的最后一丝慰藉也被剥夺时，他就真的什么都没有了。</p>
-        
-        
-        
-        
-        
-        <p>这首诗之所以被称为七律第一，不仅因为它的对仗工整、意境深远，更因为它写出了人类在命运面前的全部无奈。杜甫没有抱怨，没有控诉，他只是平静地陈述了自己的处境。但正是这种平静，让痛苦显得更加真实、更加不可逃避。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/jiang-nan-feng-li-gui-nian.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

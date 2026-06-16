@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,114 +20,186 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">梦李白·其一</h1>
-        <div class="poem-page-meta">
-            <span>杜甫</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">梦李白·其一</h1>
+                <div class="poem-page-meta">
+                    <span>杜甫</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>死别已吞声<sup>1</sup>，生别常恻恻<sup>2</sup>。</p>
+                
+                
+                
+                <p>江南瘴疠地<sup>3</sup>，逐客<sup>4</sup>无消息。</p>
+                
+                
+                
+                <p>故人入我梦，明我长相忆。</p>
+                
+                
+                
+                <p>恐非平生魂，路远不可测。</p>
+                
+                
+                
+                <p>魂来枫林青，魂返关塞黑<sup>5</sup>。</p>
+                
+                
+                
+                <p>君今在罗网<sup>6</sup>，何以有羽翼？</p>
+                
+                
+                
+                <p>落月满屋梁，犹疑照颜色<sup>7</sup>。</p>
+                
+                
+                
+                <p>水深波浪阔，无使蛟龙得<sup>8</sup>。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 吞声：泣不成声。死别已经让人哭不出声了。</p>
+                
+                <p><span class="ann-num">2.</span> 恻恻：悲伤的样子。生离比死别更折磨人——持续的悬念最令人煎熬。</p>
+                
+                <p><span class="ann-num">3.</span> 瘴疠地：瘴气瘟疫流行的地方，指南方湿热地带。李白被流放到夜郎（今贵州），南方多瘴气。瘴（zhàng），热带山林中的毒气；疠（lì），瘟疫。</p>
+                
+                <p><span class="ann-num">4.</span> 逐客：被流放的人，指李白。</p>
+                
+                <p><span class="ann-num">5.</span> 魂来枫林青，魂返关塞黑：魂魄来时江南枫林正青，魂魄归去时关塞一片漆黑。一青一黑，一南一北，写空间之遥远。</p>
+                
+                <p><span class="ann-num">6.</span> 罗网：捕鸟的网，比喻牢狱或困境。你在罗网中，怎么可能有翅膀飞来呢？（杜甫怀疑梦中的李白或许已经不在了）</p>
+                
+                <p><span class="ann-num">7.</span> 犹疑照颜色：恍惚间还以为是月光照见了李白的面容。梦醒后，月光洒满屋梁，出现了短暂的幻觉。</p>
+                
+                <p><span class="ann-num">8.</span> 无使蛟龙得：不要让蛟龙伤害了你。蛟龙，传说中的水中恶兽。杜甫在远方祈祷李白平安。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>死别已吞声<sup>1</sup>，生别常恻恻<sup>2</sup>。</p>
-        
-        
-        
-        <p>江南瘴疠地<sup>3</sup>，逐客<sup>4</sup>无消息。</p>
-        
-        
-        
-        <p>故人入我梦，明我长相忆。</p>
-        
-        
-        
-        <p>恐非平生魂，路远不可测。</p>
-        
-        
-        
-        <p>魂来枫林青，魂返关塞黑<sup>5</sup>。</p>
-        
-        
-        
-        <p>君今在罗网<sup>6</sup>，何以有羽翼？</p>
-        
-        
-        
-        <p>落月满屋梁，犹疑照颜色<sup>7</sup>。</p>
-        
-        
-        
-        <p>水深波浪阔，无使蛟龙得<sup>8</sup>。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这是杜甫《梦李白》二首中的第一首。乾元二年（759年），李白因参与永王李璘幕府而获罪，被流放夜郎。杜甫不知道他已经在中途遇赦，日夜担心他的安危，终于在梦中见到了他。</p>
+                
+                
+                
+                
+                
+                <p>死别已吞声，生别常恻恻——死别已经让人泣不成声，生别更是让人长久地悲伤。杜甫把生别和死别对比，说明生别比死别更折磨人：死别是一次的痛，生别是持续的痛。李白被流放，生死未卜，这种悬而未决的状态，是最让人煎熬的。</p>
+                
+                
+                
+                
+                
+                <p>故人入我梦，明我长相忆——老朋友来到我的梦中，知道我长久地思念他。恐非平生魂，路远不可测——但恐怕这不是他生前的魂魄吧？路途那么远，谁知道发生了什么呢？魂来枫林青，魂返关塞黑——魂魄来的时候，江南的枫林正青；魂魄归去的时候，关塞一片漆黑。枫林青和关塞黑，一南一北，一青一黑，写出了空间的遥远和旅途的艰险。</p>
+                
+                
+                
+                
+                
+                <p>君今在罗网，何以有羽翼——你现在身陷罗网，怎么还能有翅膀飞来呢？这是一个令人毛骨悚然的疑问：如果李白已经被囚禁，他的魂魄是怎么飞来的？杜甫不敢想答案，因为答案可能是他最不愿意面对的。</p>
+                
+                
+                
+                
+                
+                <p>落月满屋梁，犹疑照颜色——梦醒之后，月光洒满屋梁，恍惚间还以为是照见了李白的面容。犹疑两个字，把梦醒后的恍惚写得极为真切。水深波浪阔，无使蛟龙得——江湖水深浪大，不要让蛟龙伤害了你。这是杜甫对李白的祝福，也是对自己无力保护朋友的愧疚。他只能在远方祈祷，希望李白平安。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/yong-huai-gu-ji-qi-yi.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 吞声：泣不成声。死别已经让人哭不出声了。</p>
-        
-        <p><span class="ann-num">2.</span> 恻恻：悲伤的样子。生离比死别更折磨人——持续的悬念最令人煎熬。</p>
-        
-        <p><span class="ann-num">3.</span> 瘴疠地：瘴气瘟疫流行的地方，指南方湿热地带。李白被流放到夜郎（今贵州），南方多瘴气。瘴（zhàng），热带山林中的毒气；疠（lì），瘟疫。</p>
-        
-        <p><span class="ann-num">4.</span> 逐客：被流放的人，指李白。</p>
-        
-        <p><span class="ann-num">5.</span> 魂来枫林青，魂返关塞黑：魂魄来时江南枫林正青，魂魄归去时关塞一片漆黑。一青一黑，一南一北，写空间之遥远。</p>
-        
-        <p><span class="ann-num">6.</span> 罗网：捕鸟的网，比喻牢狱或困境。你在罗网中，怎么可能有翅膀飞来呢？（杜甫怀疑梦中的李白或许已经不在了）</p>
-        
-        <p><span class="ann-num">7.</span> 犹疑照颜色：恍惚间还以为是月光照见了李白的面容。梦醒后，月光洒满屋梁，出现了短暂的幻觉。</p>
-        
-        <p><span class="ann-num">8.</span> 无使蛟龙得：不要让蛟龙伤害了你。蛟龙，传说中的水中恶兽。杜甫在远方祈祷李白平安。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这是杜甫《梦李白》二首中的第一首。乾元二年（759年），李白因参与永王李璘幕府而获罪，被流放夜郎。杜甫不知道他已经在中途遇赦，日夜担心他的安危，终于在梦中见到了他。</p>
-        
-        
-        
-        
-        
-        <p>死别已吞声，生别常恻恻——死别已经让人泣不成声，生别更是让人长久地悲伤。杜甫把生别和死别对比，说明生别比死别更折磨人：死别是一次的痛，生别是持续的痛。李白被流放，生死未卜，这种悬而未决的状态，是最让人煎熬的。</p>
-        
-        
-        
-        
-        
-        <p>故人入我梦，明我长相忆——老朋友来到我的梦中，知道我长久地思念他。恐非平生魂，路远不可测——但恐怕这不是他生前的魂魄吧？路途那么远，谁知道发生了什么呢？魂来枫林青，魂返关塞黑——魂魄来的时候，江南的枫林正青；魂魄归去的时候，关塞一片漆黑。枫林青和关塞黑，一南一北，一青一黑，写出了空间的遥远和旅途的艰险。</p>
-        
-        
-        
-        
-        
-        <p>君今在罗网，何以有羽翼——你现在身陷罗网，怎么还能有翅膀飞来呢？这是一个令人毛骨悚然的疑问：如果李白已经被囚禁，他的魂魄是怎么飞来的？杜甫不敢想答案，因为答案可能是他最不愿意面对的。</p>
-        
-        
-        
-        
-        
-        <p>落月满屋梁，犹疑照颜色——梦醒之后，月光洒满屋梁，恍惚间还以为是照见了李白的面容。犹疑两个字，把梦醒后的恍惚写得极为真切。水深波浪阔，无使蛟龙得——江湖水深浪大，不要让蛟龙伤害了你。这是杜甫对李白的祝福，也是对自己无力保护朋友的愧疚。他只能在远方祈祷，希望李白平安。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/yong-huai-gu-ji-qi-yi.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

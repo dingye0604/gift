@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,128 +20,200 @@
 
     <main class="site-main">
         
-<article class="poem-page">
-    <header class="poem-header">
-        <h1 class="poem-page-title">饮中八仙歌</h1>
-        <div class="poem-page-meta">
-            <span>杜甫</span>
-            <span class="meta-sep">·</span>
-            <span>唐</span>
+<div class="page-with-sidebar">
+    
+
+<aside class="river-sidebar river-zoom-poem">
+    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
+
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="poem-page">
+            <header class="poem-header">
+                <h1 class="poem-page-title">饮中八仙歌</h1>
+                <div class="poem-page-meta">
+                    <span>杜甫</span>
+                    <span class="meta-sep">·</span>
+                    <span>唐</span>
+                    
+                </div>
+            </header>
+
+            <div class="poem-text">
+                
+                
+                <p>知章<sup>1</sup>骑马似乘船，眼花落井水底眠。</p>
+                
+                
+                
+                <p>汝阳<sup>2</sup>三斗始朝天，道逢麴车<sup>3</sup>口流涎，恨不移封向酒泉<sup>4</sup>。</p>
+                
+                
+                
+                <p>左相<sup>5</sup>日兴费万钱，饮如长鲸吸百川，衔杯乐圣称避贤<sup>6</sup>。</p>
+                
+                
+                
+                <p>宗之<sup>7</sup>潇洒美少年，举觞白眼望青天，皎如玉树临风前<sup>8</sup>。</p>
+                
+                
+                
+                <p>苏晋<sup>9</sup>长斋绣佛前，醉中往往爱逃禅<sup>10</sup>。</p>
+                
+                
+                
+                <p>李白斗酒诗百篇，长安市上酒家眠，天子呼来不上船，自称臣是酒中仙。</p>
+                
+                
+                
+                <p>张旭<sup>11</sup>三杯草圣传，脱帽露顶王公前，挥毫落纸如云烟。</p>
+                
+                
+                
+                <p>焦遂<sup>12</sup>五斗方卓然，高谈雄辩惊四筵。</p>
+                
+                
+            </div>
+
             
-        </div>
-    </header>
+            <div class="poem-annotations">
+                
+                <p><span class="ann-num">1.</span> 知章：贺知章（659-744），盛唐诗人，以狂放善饮著称。他喝醉了骑马摇晃如坐船，眼花掉进井里，竟然在井底睡着了。</p>
+                
+                <p><span class="ann-num">2.</span> 汝阳：汝阳王李琎，唐玄宗的侄子。喝了三斗酒才去朝见天子。</p>
+                
+                <p><span class="ann-num">3.</span> 麴车：运酒曲（酿酒的酵母）的车。路上碰到酒车就流口水。麴（qū）。</p>
+                
+                <p><span class="ann-num">4.</span> 酒泉：地名，在今甘肃。传说此地有泉味如酒。&#34;恨不移封向酒泉&#34;——恨不得把封地改到酒泉去。</p>
+                
+                <p><span class="ann-num">5.</span> 左相：李适之，曾任左丞相（唐朝最高官职之一）。每天喝酒花费万钱，饮酒量像长鲸吸干百条河流。</p>
+                
+                <p><span class="ann-num">6.</span> 衔杯乐圣称避贤：李适之被李林甫排挤罢相后，作诗自嘲&#34;避贤初罢相，乐圣且衔杯&#34;。乐圣，爱酒（古代称清酒为&#34;圣人&#34;）。</p>
+                
+                <p><span class="ann-num">7.</span> 宗之：崔宗之，名士崔日用之子。举杯时翻白眼望天（魏晋名士以白眼表示不屑流俗），风度像玉树在风前摇曳。</p>
+                
+                <p><span class="ann-num">8.</span> 玉树临风前：像玉树一样挺立在风前，形容仪态高洁优美。这个成语迄今还在使用。</p>
+                
+                <p><span class="ann-num">9.</span> 苏晋：进士出身，善属文。长期在家中的绣佛像前吃斋，但一喝酒就把佛门戒律忘光了。</p>
+                
+                <p><span class="ann-num">10.</span> 逃禅：逃离禅规、破戒。</p>
+                
+                <p><span class="ann-num">11.</span> 张旭：盛唐最著名的草书书法家，称&#34;草圣&#34;。三杯酒后，当着王公脱帽露顶（不拘礼法），挥毫如云烟。</p>
+                
+                <p><span class="ann-num">12.</span> 焦遂：平民，口吃，但喝了五斗酒后精神焕发，高谈阔论令人惊服。卓然，神采焕发的样子。</p>
+                
+            </div>
+            
 
-    <div class="poem-text">
-        
-        
-        <p>知章<sup>1</sup>骑马似乘船，眼花落井水底眠。</p>
-        
-        
-        
-        <p>汝阳<sup>2</sup>三斗始朝天，道逢麴车<sup>3</sup>口流涎，恨不移封向酒泉<sup>4</sup>。</p>
-        
-        
-        
-        <p>左相<sup>5</sup>日兴费万钱，饮如长鲸吸百川，衔杯乐圣称避贤<sup>6</sup>。</p>
-        
-        
-        
-        <p>宗之<sup>7</sup>潇洒美少年，举觞白眼望青天，皎如玉树临风前<sup>8</sup>。</p>
-        
-        
-        
-        <p>苏晋<sup>9</sup>长斋绣佛前，醉中往往爱逃禅<sup>10</sup>。</p>
-        
-        
-        
-        <p>李白斗酒诗百篇，长安市上酒家眠，天子呼来不上船，自称臣是酒中仙。</p>
-        
-        
-        
-        <p>张旭<sup>11</sup>三杯草圣传，脱帽露顶王公前，挥毫落纸如云烟。</p>
-        
-        
-        
-        <p>焦遂<sup>12</sup>五斗方卓然，高谈雄辩惊四筵。</p>
-        
-        
+            <div class="appreciation-text">
+                
+                
+                <p>这是杜甫最轻快的一首诗，写了盛唐时期八位善饮的名士。诗中没有批判，没有沉痛，只有一种对那个时代的怀念和赞叹。</p>
+                
+                
+                
+                
+                
+                <p>饮中八仙是贺知章、汝阳王李琎、左丞相李适之、崔宗之、苏晋、李白、张旭、焦遂。他们身份各异，有亲王，有宰相，有诗人，有书法家，但都有一个共同点：爱酒。</p>
+                
+                
+                
+                
+                
+                <p>知章骑马似乘船，眼花落井水底眠——贺知章喝醉了骑马，摇摇晃晃像坐船；眼花掉进了井里，竟然在井底睡着了。汝阳三斗始朝天，道逢麴车口流涎——汝阳王喝了三斗酒才去上朝，路上遇到酒车，口水都流出来了，恨不得把封地改到酒泉去。麴车就是运酒的车。这些描写夸张而生动，把名士们嗜酒如命的形象刻画得栩栩如生。</p>
+                
+                
+                
+                
+                
+                <p>李白一出场，笔墨最重：李白斗酒诗百篇，长安市上酒家眠，天子呼来不上船，自称臣是酒中仙——一斗酒下肚，写出百篇诗；在长安的酒家里醉眠；皇帝召见，他也不上船，自称我是酒中的仙人。这三句诗，比任何传记都更精准地概括了李白的精神气质：才华、狂放、不畏权贵。天子呼来不上船——这七个字，把李白的傲骨写得淋漓尽致。</p>
+                
+                
+                
+                
+                
+                <p>张旭三杯草圣传，脱帽露顶王公前，挥毫落纸如云烟——张旭喝了三杯酒，就写出了草书的传奇；在王公贵族面前脱帽露顶，挥毫泼墨，字迹如云烟般飘逸。这是何等的洒脱。在盛唐，艺术和个性是被尊重的，甚至王侯也愿意欣赏这种不羁的美。</p>
+                
+                
+                
+                
+                
+                <p>杜甫写这首诗时，已经是在安史之乱以后了。他回望那个逝去的时代，像回望一个遥远的美梦。饮中八仙所代表的那种自由、那种狂放、那种对个性的大胆张扬，在乱世中再也不可复得了。所以这首诗表面上是写酒徒，实际上是在写一个时代的终结。那些醉态可掬的形象，是盛唐最后的光芒。</p>
+                
+                
+            </div>
+
+            <nav class="poem-nav">
+                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
+                
+                <a href="/gift/tang/chun-wang.html" class="nav-next">下一首 →</a>
+                
+            </nav>
+        </article>
     </div>
-
-    
-    <div class="poem-annotations">
-        
-        <p><span class="ann-num">1.</span> 知章：贺知章（659-744），盛唐诗人，以狂放善饮著称。他喝醉了骑马摇晃如坐船，眼花掉进井里，竟然在井底睡着了。</p>
-        
-        <p><span class="ann-num">2.</span> 汝阳：汝阳王李琎，唐玄宗的侄子。喝了三斗酒才去朝见天子。</p>
-        
-        <p><span class="ann-num">3.</span> 麴车：运酒曲（酿酒的酵母）的车。路上碰到酒车就流口水。麴（qū）。</p>
-        
-        <p><span class="ann-num">4.</span> 酒泉：地名，在今甘肃。传说此地有泉味如酒。&#34;恨不移封向酒泉&#34;——恨不得把封地改到酒泉去。</p>
-        
-        <p><span class="ann-num">5.</span> 左相：李适之，曾任左丞相（唐朝最高官职之一）。每天喝酒花费万钱，饮酒量像长鲸吸干百条河流。</p>
-        
-        <p><span class="ann-num">6.</span> 衔杯乐圣称避贤：李适之被李林甫排挤罢相后，作诗自嘲&#34;避贤初罢相，乐圣且衔杯&#34;。乐圣，爱酒（古代称清酒为&#34;圣人&#34;）。</p>
-        
-        <p><span class="ann-num">7.</span> 宗之：崔宗之，名士崔日用之子。举杯时翻白眼望天（魏晋名士以白眼表示不屑流俗），风度像玉树在风前摇曳。</p>
-        
-        <p><span class="ann-num">8.</span> 玉树临风前：像玉树一样挺立在风前，形容仪态高洁优美。这个成语迄今还在使用。</p>
-        
-        <p><span class="ann-num">9.</span> 苏晋：进士出身，善属文。长期在家中的绣佛像前吃斋，但一喝酒就把佛门戒律忘光了。</p>
-        
-        <p><span class="ann-num">10.</span> 逃禅：逃离禅规、破戒。</p>
-        
-        <p><span class="ann-num">11.</span> 张旭：盛唐最著名的草书书法家，称&#34;草圣&#34;。三杯酒后，当着王公脱帽露顶（不拘礼法），挥毫如云烟。</p>
-        
-        <p><span class="ann-num">12.</span> 焦遂：平民，口吃，但喝了五斗酒后精神焕发，高谈阔论令人惊服。卓然，神采焕发的样子。</p>
-        
-    </div>
-    
-
-    <div class="appreciation-text">
-        
-        
-        <p>这是杜甫最轻快的一首诗，写了盛唐时期八位善饮的名士。诗中没有批判，没有沉痛，只有一种对那个时代的怀念和赞叹。</p>
-        
-        
-        
-        
-        
-        <p>饮中八仙是贺知章、汝阳王李琎、左丞相李适之、崔宗之、苏晋、李白、张旭、焦遂。他们身份各异，有亲王，有宰相，有诗人，有书法家，但都有一个共同点：爱酒。</p>
-        
-        
-        
-        
-        
-        <p>知章骑马似乘船，眼花落井水底眠——贺知章喝醉了骑马，摇摇晃晃像坐船；眼花掉进了井里，竟然在井底睡着了。汝阳三斗始朝天，道逢麴车口流涎——汝阳王喝了三斗酒才去上朝，路上遇到酒车，口水都流出来了，恨不得把封地改到酒泉去。麴车就是运酒的车。这些描写夸张而生动，把名士们嗜酒如命的形象刻画得栩栩如生。</p>
-        
-        
-        
-        
-        
-        <p>李白一出场，笔墨最重：李白斗酒诗百篇，长安市上酒家眠，天子呼来不上船，自称臣是酒中仙——一斗酒下肚，写出百篇诗；在长安的酒家里醉眠；皇帝召见，他也不上船，自称我是酒中的仙人。这三句诗，比任何传记都更精准地概括了李白的精神气质：才华、狂放、不畏权贵。天子呼来不上船——这七个字，把李白的傲骨写得淋漓尽致。</p>
-        
-        
-        
-        
-        
-        <p>张旭三杯草圣传，脱帽露顶王公前，挥毫落纸如云烟——张旭喝了三杯酒，就写出了草书的传奇；在王公贵族面前脱帽露顶，挥毫泼墨，字迹如云烟般飘逸。这是何等的洒脱。在盛唐，艺术和个性是被尊重的，甚至王侯也愿意欣赏这种不羁的美。</p>
-        
-        
-        
-        
-        
-        <p>杜甫写这首诗时，已经是在安史之乱以后了。他回望那个逝去的时代，像回望一个遥远的美梦。饮中八仙所代表的那种自由、那种狂放、那种对个性的大胆张扬，在乱世中再也不可复得了。所以这首诗表面上是写酒徒，实际上是在写一个时代的终结。那些醉态可掬的形象，是盛唐最后的光芒。</p>
-        
-        
-    </div>
-
-    <nav class="poem-nav">
-        <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-        
-        <a href="/gift/tang/chun-wang.html" class="nav-next">下一首 →</a>
-        
-    </nav>
-</article>
+</div>
 
     </main>
 

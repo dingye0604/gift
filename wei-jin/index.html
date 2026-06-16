@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body ontouchstart="">
+<body class="has-sidebar" ontouchstart="">
     <header class="site-header">
         <nav class="site-nav">
             <a href="/gift/" class="site-logo">诗三百</a>
@@ -20,104 +20,176 @@
 
     <main class="site-main">
         
-<article class="dynasty-page">
-    <header class="dynasty-header">
-        <a href="/gift/" class="dynasty-breadcrumb">诗歌之河</a>
-        <h1 class="dynasty-title">魏晋</h1>
-        
-        <p class="dynasty-subtitle">文学的自觉时代</p>
-        
-    </header>
-
-    
-    <section class="dynasty-intro">
-        
-        
-        <p>魏晋是一个乱世，却也是中国文学最富创造力的时代之一。</p>
-        
-        
-        
-        
-        
-        <p>东汉末年天下大乱，董卓进京、黄巾起义、群雄割据，数百年统一帝国分崩离析。但正是在这样的动荡中，文学第一次获得了独立的地位——不再是经学的附庸，不再是政教的工具，而是个人情感与生命意识的直接表达。鲁迅说魏晋是&#34;文学的自觉时代&#34;，这个判断至今仍然成立。</p>
-        
-        
-        
-        
-        
-        <p>建安文学是魏晋的开端。曹操、曹丕、曹植父子三人，既是政治军事领袖，又是文坛巨擘。他们笔下的诗，没有了汉儒的迂腐说教，有的是直面乱世的慷慨悲凉。&#34;白骨露于野，千里无鸡鸣&#34;是曹操眼中的现实；&#34;秋风萧瑟天气凉，草木摇落露为霜&#34;是曹丕心中的感伤；&#34;捐躯赴国难，视死忽如归&#34;是曹植胸中的热血。这就是&#34;建安风骨&#34;——直面现实的勇气与深沉的生命意识。</p>
-        
-        
-        
-        
-        
-        <p>到了正始年间，政治环境日趋险恶，司马氏专权，名士动辄得咎。嵇康、阮籍等人选择了另一种姿态：纵酒放达、谈玄论道，把对现实的失望转化为对个体精神世界的探索。阮籍的《咏怀诗》八十二首，晦涩曲折，却道出了一个知识分子在黑暗时代的全部焦虑。</p>
-        
-        
-        
-        
-        
-        <p>陶渊明是魏晋文学的终点，也是新的起点。他不为五斗米折腰，归隐田园，在日常生活里发现了诗意。&#34;采菊东篱下，悠然见南山&#34;——这不是逃避，而是一种主动选择的生活方式。从建安的风骨到正始的玄思，再到陶渊明的自然，魏晋文学完成了从外在世界到内在精神的深度转向。</p>
-        
-        
-    </section>
+<div class="page-with-sidebar">
     
 
-    <section class="dynasty-directory">
-        <div class="directory-heading">
-            <h2>目录</h2>
-            <span>8 首</span>
-        </div>
+<aside class="river-sidebar river-zoom-dynasty">
+    <svg class="river-svg-side" viewBox="198 316 480 480" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
+                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
+                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
+                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
+                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
+            </linearGradient>
+            <filter id="riverGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
 
-        <div class="directory-poems">
-            
-            <a href="/gift/wei-jin/gui-yuan-tian-ju.html" class="directory-poem">
-                <span class="dir-poem-title">归园田居·其一</span>
-                <span class="dir-poem-meta">陶渊明 · 五言古诗</span>
-            </a>
-            
-            <a href="/gift/wei-jin/yin-jiu-qi-wu.html" class="directory-poem">
-                <span class="dir-poem-title">饮酒·其五</span>
-                <span class="dir-poem-meta">陶渊明 · 五言古诗</span>
-            </a>
-            
-            <a href="/gift/wei-jin/guan-cang-hai.html" class="directory-poem">
-                <span class="dir-poem-title">观沧海</span>
-                <span class="dir-poem-meta">曹操 · 四言古诗</span>
-            </a>
-            
-            <a href="/gift/wei-jin/gui-sui-shou.html" class="directory-poem">
-                <span class="dir-poem-title">龟虽寿</span>
-                <span class="dir-poem-meta">曹操 · 四言古诗</span>
-            </a>
-            
-            <a href="/gift/wei-jin/yan-ge-xing.html" class="directory-poem">
-                <span class="dir-poem-title">燕歌行其一</span>
-                <span class="dir-poem-meta">曹丕 · 七言古诗</span>
-            </a>
-            
-            <a href="/gift/wei-jin/bai-ma-pian.html" class="directory-poem">
-                <span class="dir-poem-title">白马篇</span>
-                <span class="dir-poem-meta">曹植 · 五言古诗</span>
-            </a>
-            
-            <a href="/gift/wei-jin/ye-tian-huang-que-xing.html" class="directory-poem">
-                <span class="dir-poem-title">野田黄雀行</span>
-                <span class="dir-poem-meta">曹植 · 五言古诗</span>
-            </a>
-            
-            <a href="/gift/wei-jin/ni-xing-lu-nan-qi-si.html" class="directory-poem">
-                <span class="dir-poem-title">拟行路难·其四</span>
-                <span class="dir-poem-meta">鲍照 · 七言古诗</span>
-            </a>
-            
-        </div>
-    </section>
+        <path class="river-body"
+            d="M 300 0
+               C 290 80, 330 180, 350 280
+               C 300 480, 478 660, 446 828
+               C 426 980, 276 1098, 325 1266
+               C 384 1468, 578 1538, 495 1738
+               C 458 1850, 580 1970, 770 2100
+               L 940 2100
+               C 800 1960, 800 1850, 702 1724
+               C 640 1560, 560 1478, 584 1318
+               C 610 1150, 756 1018, 693 832
+               C 668 672, 522 574, 584 388
+               C 620 240, 590 100, 590 0 Z"
+            fill="url(#riverGrad)"
+            filter="url(#riverGlow)"
+        />
 
-    <nav class="poem-nav">
-        <a href="/gift/" class="nav-back">← 返回总目录</a>
-    </nav>
-</article>
+        <path class="river-bank" d="M 300 0 C 290 80, 330 180, 350 280 C 300 480, 478 660, 446 828 C 426 980, 276 1098, 325 1266 C 384 1468, 578 1538, 495 1738 C 458 1850, 580 1970, 770 2100" />
+        <path class="river-bank" d="M 590 0 C 620 100, 610 240, 584 388 C 522 574, 668 672, 693 832 C 756 1018, 610 1150, 584 1318 C 560 1478, 640 1560, 702 1724 C 800 1850, 800 1960, 860 2100" />
+
+        <path class="river-flow river-flow--1"
+            d="M 440 40 C 380 180, 460 284, 420 420 C 380 594, 550 684, 500 840 C 470 1010, 350 1130, 390 1290 C 460 1502, 620 1574, 560 1764 C 540 1880, 640 1970, 820 2080"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
+
+        <path class="river-flow river-flow--2"
+            d="M 480 18 C 430 158, 510 256, 460 396 C 400 560, 590 694, 540 848 C 520 1006, 380 1140, 430 1308 C 490 1500, 660 1578, 600 1750 C 570 1864, 670 1965, 840 2094"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
+
+        <path class="river-flow river-flow--3"
+            d="M 400 100 C 330 246, 450 356, 390 504 C 350 620, 480 754, 440 896 C 410 1046, 290 1164, 350 1312 C 430 1478, 560 1592, 520 1752 C 500 1880, 610 1980, 800 2078"
+            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
+    </svg>
+</aside>
+    <div class="page-content">
+        <article class="dynasty-page">
+            <header class="dynasty-header">
+                <a href="/gift/" class="dynasty-breadcrumb">诗歌之河</a>
+                <h1 class="dynasty-title">魏晋</h1>
+                
+                <p class="dynasty-subtitle">文学的自觉时代</p>
+                
+            </header>
+
+            
+            <section class="dynasty-intro">
+                
+                
+                <p>魏晋是一个乱世，却也是中国文学最富创造力的时代之一。</p>
+                
+                
+                
+                
+                
+                <p>东汉末年天下大乱，董卓进京、黄巾起义、群雄割据，数百年统一帝国分崩离析。但正是在这样的动荡中，文学第一次获得了独立的地位——不再是经学的附庸，不再是政教的工具，而是个人情感与生命意识的直接表达。鲁迅说魏晋是&#34;文学的自觉时代&#34;，这个判断至今仍然成立。</p>
+                
+                
+                
+                
+                
+                <p>建安文学是魏晋的开端。曹操、曹丕、曹植父子三人，既是政治军事领袖，又是文坛巨擘。他们笔下的诗，没有了汉儒的迂腐说教，有的是直面乱世的慷慨悲凉。&#34;白骨露于野，千里无鸡鸣&#34;是曹操眼中的现实；&#34;秋风萧瑟天气凉，草木摇落露为霜&#34;是曹丕心中的感伤；&#34;捐躯赴国难，视死忽如归&#34;是曹植胸中的热血。这就是&#34;建安风骨&#34;——直面现实的勇气与深沉的生命意识。</p>
+                
+                
+                
+                
+                
+                <p>到了正始年间，政治环境日趋险恶，司马氏专权，名士动辄得咎。嵇康、阮籍等人选择了另一种姿态：纵酒放达、谈玄论道，把对现实的失望转化为对个体精神世界的探索。阮籍的《咏怀诗》八十二首，晦涩曲折，却道出了一个知识分子在黑暗时代的全部焦虑。</p>
+                
+                
+                
+                
+                
+                <p>陶渊明是魏晋文学的终点，也是新的起点。他不为五斗米折腰，归隐田园，在日常生活里发现了诗意。&#34;采菊东篱下，悠然见南山&#34;——这不是逃避，而是一种主动选择的生活方式。从建安的风骨到正始的玄思，再到陶渊明的自然，魏晋文学完成了从外在世界到内在精神的深度转向。</p>
+                
+                
+            </section>
+            
+
+            <section class="dynasty-directory">
+                <div class="directory-heading">
+                    <h2>目录</h2>
+                    <span>8 首</span>
+                </div>
+
+                <div class="directory-poems">
+                    
+                    <a href="/gift/wei-jin/gui-yuan-tian-ju.html" class="directory-poem">
+                        <span class="dir-poem-title">归园田居·其一</span>
+                        <span class="dir-poem-meta">陶渊明 · 五言古诗</span>
+                    </a>
+                    
+                    <a href="/gift/wei-jin/yin-jiu-qi-wu.html" class="directory-poem">
+                        <span class="dir-poem-title">饮酒·其五</span>
+                        <span class="dir-poem-meta">陶渊明 · 五言古诗</span>
+                    </a>
+                    
+                    <a href="/gift/wei-jin/guan-cang-hai.html" class="directory-poem">
+                        <span class="dir-poem-title">观沧海</span>
+                        <span class="dir-poem-meta">曹操 · 四言古诗</span>
+                    </a>
+                    
+                    <a href="/gift/wei-jin/gui-sui-shou.html" class="directory-poem">
+                        <span class="dir-poem-title">龟虽寿</span>
+                        <span class="dir-poem-meta">曹操 · 四言古诗</span>
+                    </a>
+                    
+                    <a href="/gift/wei-jin/yan-ge-xing.html" class="directory-poem">
+                        <span class="dir-poem-title">燕歌行其一</span>
+                        <span class="dir-poem-meta">曹丕 · 七言古诗</span>
+                    </a>
+                    
+                    <a href="/gift/wei-jin/bai-ma-pian.html" class="directory-poem">
+                        <span class="dir-poem-title">白马篇</span>
+                        <span class="dir-poem-meta">曹植 · 五言古诗</span>
+                    </a>
+                    
+                    <a href="/gift/wei-jin/ye-tian-huang-que-xing.html" class="directory-poem">
+                        <span class="dir-poem-title">野田黄雀行</span>
+                        <span class="dir-poem-meta">曹植 · 五言古诗</span>
+                    </a>
+                    
+                    <a href="/gift/wei-jin/ni-xing-lu-nan-qi-si.html" class="directory-poem">
+                        <span class="dir-poem-title">拟行路难·其四</span>
+                        <span class="dir-poem-meta">鲍照 · 七言古诗</span>
+                    </a>
+                    
+                </div>
+            </section>
+
+            <nav class="poem-nav">
+                <a href="/gift/" class="nav-back">← 返回总目录</a>
+            </nav>
+        </article>
+    </div>
+</div>
 
     </main>
 
