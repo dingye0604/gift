@@ -17,7 +17,7 @@ CONTENT_DIR = ROOT / "content"
 # 部署目标
 #   "github" → dingye0604.github.io/gift（子目录，BASE_URL = "/gift"）
 #   "local"   → 本地预览（根路径，BASE_URL = ""）
-TARGET = "github"
+TARGET = "local"
 BASE_URL = "/gift" if TARGET == "github" else ""
 BOOK_DIR = ROOT / "book"
 SITE_DIR = ROOT / "site"
@@ -36,6 +36,34 @@ DYNASTIES = [
     ("明清", "ming-qing"),
     ("近代", "jin-dai"),
 ]
+
+# 河流渡口 Y 位置（与 CSS .river-port--N 的 --y 值对应，0-1 比例）
+RIVER_PORT_Y = [0.085, 0.175, 0.265, 0.355, 0.455, 0.545, 0.635, 0.725, 0.815, 0.900]
+# 河流渡口 X 中心位置（从 SVG path 估算）
+RIVER_PORT_X = [445, 462, 438, 535, 560, 478, 462, 510, 598, 690]
+RIVER_HEIGHT = 2100
+RIVER_WIDTH = 960
+
+
+def get_river_viewbox(port_index: int, zoom: str) -> str:
+    """根据朝代渡口位置计算 sidebar SVG 的 viewBox。
+
+    port_index: 0-based，对应 RIVER_PORT_Y 中的索引
+    zoom: 'dynasty'（约 23% 高度）或 'poem'（约 11% 高度）
+    """
+    center_y = RIVER_PORT_Y[port_index] * RIVER_HEIGHT
+    center_x = RIVER_PORT_X[port_index]
+    
+    if zoom == "dynasty":
+        vb_w = 480
+        vb_h = 480
+    else:  # poem
+        vb_w = 280
+        vb_h = 230
+        
+    vb_x = max(0, min(center_x - vb_w / 2, RIVER_WIDTH - vb_w))
+    vb_y = max(0, min(center_y - vb_h / 2, RIVER_HEIGHT - vb_h))
+    return f"{vb_x:.0f} {vb_y:.0f} {vb_w:.0f} {vb_h:.0f}"
 
 
 # ── .tex 解析 ───────────────────────────────────────
@@ -262,11 +290,15 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
         poems = poems_by_dynasty.get(dynasty_name, [])
         if not poems:
             continue
+        port_idx = dynasty_order.index(dynasty_name)
+        river_viewbox = get_river_viewbox(port_idx, "dynasty")
         html = intro_tpl.render(
             dynasty=dynasty_name,
             dynasty_summary=dynasty_summaries.get(dynasty_name, ""),
             intro_text=dynasty_intros.get(dynasty_name, ""),
             poems=poems,
+            river_viewbox=river_viewbox,
+            river_zoom_class="river-zoom-dynasty",
             base_url=BASE_URL,
         )
         out = SITE_OUTPUT / dynasty_dir / "index.html"
@@ -283,7 +315,15 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
                 "title": nxt["meta"]["title"],
                 "url": f"{nxt['dynasty_dir']}/{nxt['slug']}.html",
             }
-        html = poem_tpl.render(poem=p, next_poem=next_poem, base_url=BASE_URL)
+        port_idx = dynasty_order.index(p["dynasty"])
+        river_viewbox = get_river_viewbox(port_idx, "poem")
+        html = poem_tpl.render(
+            poem=p,
+            next_poem=next_poem,
+            river_viewbox=river_viewbox,
+            river_zoom_class="river-zoom-poem",
+            base_url=BASE_URL,
+        )
         out = SITE_OUTPUT / p["dynasty_dir"] / f"{p['slug']}.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding="utf-8")

@@ -2,44 +2,51 @@
 
 {% block title %}{{ dynasty }} · 诗歌目录{% endblock %}
 
+{% block body_class %}has-sidebar{% endblock %}
+
 {% block content %}
-<article class="dynasty-page">
-    <header class="dynasty-header">
-        <a href="{{ base_url }}/" class="dynasty-breadcrumb">诗歌之河</a>
-        <h1 class="dynasty-title">{{ dynasty }}</h1>
-        {% if dynasty_summary %}
-        <p class="dynasty-subtitle">{{ dynasty_summary }}</p>
-        {% endif %}
-    </header>
+<div class="page-with-sidebar">
+    {% include "river_sidebar.html" %}
+    <div class="page-content">
+        <article class="dynasty-page">
+            <header class="dynasty-header">
+                <a href="{{ base_url }}/" class="dynasty-breadcrumb">诗歌之河</a>
+                <h1 class="dynasty-title">{{ dynasty }}</h1>
+                {% if dynasty_summary %}
+                <p class="dynasty-subtitle">{{ dynasty_summary }}</p>
+                {% endif %}
+            </header>
 
-    {% if intro_text %}
-    <section class="dynasty-intro">
-        {% for para in intro_text.split('\n') %}
-        {% if para.strip() %}
-        <p>{{ para }}</p>
-        {% endif %}
-        {% endfor %}
-    </section>
-    {% endif %}
+            {% if intro_text %}
+            <section class="dynasty-intro">
+                {% for para in intro_text.split('\n') %}
+                {% if para.strip() %}
+                <p>{{ para }}</p>
+                {% endif %}
+                {% endfor %}
+            </section>
+            {% endif %}
 
-    <section class="dynasty-directory">
-        <div class="directory-heading">
-            <h2>目录</h2>
-            <span>{{ poems|length }} 首</span>
-        </div>
+            <section class="dynasty-directory">
+                <div class="directory-heading">
+                    <h2>目录</h2>
+                    <span>{{ poems|length }} 首</span>
+                </div>
 
-        <div class="directory-poems">
-            {% for poem in poems %}
-            <a href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html" class="directory-poem">
-                <span class="dir-poem-title">{{ poem.meta.title }}</span>
-                <span class="dir-poem-meta">{{ poem.meta.author }}{% if poem.meta.genre %} · {{ poem.meta.genre }}{% endif %}</span>
-            </a>
-            {% endfor %}
-        </div>
-    </section>
+                <div class="directory-poems">
+                    {% for poem in poems %}
+                    <a href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html" class="directory-poem">
+                        <span class="dir-poem-title">{{ poem.meta.title }}</span>
+                        <span class="dir-poem-meta">{{ poem.meta.author }}{% if poem.meta.genre %} · {{ poem.meta.genre }}{% endif %}</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </section>
 
-    <nav class="poem-nav">
-        <a href="{{ base_url }}/" class="nav-back">← 返回总目录</a>
-    </nav>
-</article>
+            <nav class="poem-nav">
+                <a href="{{ base_url }}/" class="nav-back">← 返回总目录</a>
+            </nav>
+        </article>
+    </div>
+</div>
 {% endblock %}
