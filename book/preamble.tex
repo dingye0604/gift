@@ -5,6 +5,18 @@
 
 \usepackage{fontspec}
 \usepackage{graphicx}
+
+% ── CJK 字体 ──
+% fontset=none 后手动定义所有 CJK 字体族
+\setCJKmainfont{SourceHanSerifSC-Regular.otf}[Path=./assets/fonts/]
+\setCJKfamilyfont{zhsong}{SourceHanSerifSC-Regular.otf}[Path=./assets/fonts/]
+\setCJKfamilyfont{zhkai}{LXGWWenKai-Regular.ttf}[
+    Path=./assets/fonts/,
+    BoldFont=LXGWWenKai-Medium.ttf,
+]
+\newcommand{\songti}{\CJKfamily{zhsong}}
+\newcommand{\kaishu}{\CJKfamily{zhkai}}
+
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{fancyhdr}

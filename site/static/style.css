@@ -3,6 +3,22 @@
    基于「迟到了的碎碎念」视觉体系
    ═══════════════════════════════════════════════════ */
 
+/* ── 字体声明 ────────────────────────────────────── */
+@font-face {
+    font-family: "Source Han Serif SC";
+    src: url("fonts/SourceHanSerifSC-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "LXGW WenKai";
+    src: url("fonts/LXGWWenKai-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* ── 变量 ────────────────────────────────────────── */
 :root {
     --bg:           #f9f4ef;
@@ -33,12 +49,12 @@
     --side-padding: 40px;
 
     --font-serif:
-        "LXGW WenKai", "Noto Serif CJK SC", "Source Han Serif SC",
+        "Source Han Serif SC", "Noto Serif CJK SC",
         "STSong", "SimSun", "Songti SC",
         "PingFang SC", "Microsoft YaHei",
         serif;
     --font-sans:
-        "LXGW WenKai", "Noto Sans SC", "PingFang SC",
+        "Noto Sans SC", "PingFang SC",
         "Microsoft YaHei", "Hiragino Sans GB",
         sans-serif;
 }
@@ -373,7 +389,7 @@ a:hover {
 }
 
 .poem-page-title {
-    font-family: "KaiTi", "楷体", "STKaiti", "华文楷体", var(--font-serif), serif;
+    font-family: "LXGW WenKai", "KaiTi", "楷体", "STKaiti", var(--font-serif), serif;
     font-size: 34px;
     font-weight: 400;
     color: var(--title);
@@ -385,7 +401,7 @@ a:hover {
 .poem-page-meta {
     font-size: 15px;
     color: var(--text-faint);
-    font-family: "KaiTi", "楷体", "STKaiti", "华文楷体", var(--font-serif), serif;
+    font-family: "LXGW WenKai", "KaiTi", "楷体", "STKaiti", var(--font-serif), serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -433,7 +449,7 @@ a:hover {
     color: var(--teal);
     margin-bottom: 0.5em;
     text-align: center;
-    font-family: "KaiTi", "楷体", "STKaiti", "华文楷体", "AR PL UKai CN", "LXGW WenKai", var(--font-serif), serif;
+    font-family: "LXGW WenKai", "KaiTi", "楷体", "STKaiti", var(--font-serif), serif;
 }
 
 .poem-annotations p:last-child {
