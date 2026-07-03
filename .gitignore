@@ -15,10 +15,11 @@ book/*.synctex.gz
 __pycache__/
 *.pyc
 
-# Claude
+# Program Doc
 .claude/
 AGENTS.md
 CLAUDE.md
+WORKFLOW.md
 
 # Conda
 .conda/
