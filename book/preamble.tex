@@ -8,12 +8,9 @@
 
 % ── CJK 字体 ──
 % fontset=none 后手动定义所有 CJK 字体族
-\setCJKmainfont{SourceHanSerifSC-Regular.otf}[Path=./assets/fonts/]
-\setCJKfamilyfont{zhsong}{SourceHanSerifSC-Regular.otf}[Path=./assets/fonts/]
-\setCJKfamilyfont{zhkai}{LXGWWenKai-Regular.ttf}[
-    Path=./assets/fonts/,
-    BoldFont=LXGWWenKai-Medium.ttf,
-]
+\setCJKmainfont{KingHwaOldSong-GB.ttf}[Path=./assets/fonts/]
+\setCJKfamilyfont{zhsong}{KingHwaOldSong-GB.ttf}[Path=./assets/fonts/]
+\setCJKfamilyfont{zhkai}{KingHwaOldSong-GB.ttf}[Path=./assets/fonts/]
 \newcommand{\songti}{\CJKfamily{zhsong}}
 \newcommand{\kaishu}{\CJKfamily{zhkai}}
 
@@ -102,7 +99,7 @@
     {\par\addvspace{0.5em}}
 
 % ── 注释环境 ──────────────────────
-% 字号更小（\footnotesize），楷体，靛青色，用于诗歌正文后的注释块
+% 字号更小（\footnotesize），靛青色，用于诗歌正文后的注释块
 \newenvironment{annotations}
     {\par\addvspace{1em}
      \color{teal}

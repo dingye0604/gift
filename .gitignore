@@ -27,3 +27,9 @@ WORKFLOW.md
 # OS
 .DS_Store
 Thumbs.db
+
+# Retired fonts (keep on disk, not in git)
+book/assets/fonts/SourceHanSerifSC-Regular.otf
+book/assets/fonts/LXGWWenKai-*
+site/static/fonts/SourceHanSerifSC-Regular.otf
+site/static/fonts/LXGWWenKai-*
