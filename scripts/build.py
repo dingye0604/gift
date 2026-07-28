@@ -233,10 +233,14 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
         autoescape=True,
     )
 
-    # 清理输出
+    # 清理输出（先清内容，删不掉目录就留着，Windows 有时会锁目录）
     if SITE_OUTPUT.exists():
-        shutil.rmtree(SITE_OUTPUT)
-    SITE_OUTPUT.mkdir(parents=True)
+        for item in list(SITE_OUTPUT.iterdir()):
+            if item.is_dir():
+                shutil.rmtree(item)
+            else:
+                item.unlink()
+    SITE_OUTPUT.mkdir(parents=True, exist_ok=True)
 
     # 复制静态资源
     static_src = SITE_DIR / "static"
