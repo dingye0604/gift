@@ -1,111 +1,59 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>少年行四首 — 诗三百</title>
+    <title>少年行四首 · 王维</title>
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body class="has-sidebar" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="reading-page poem-page-body">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<div class="page-with-sidebar">
+<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
+    <a class="breadcrumb-link" href="/gift/tang/">← 返回唐目录</a>
+    <p class="eyebrow">唐 · 诗歌阅读</p>
+    <h1 id="poem-title">少年行四首</h1>
+    <div class="poem-meta" aria-label="作品信息">
+        <span>王维</span>
+        <span class="meta-sep">·</span><span>七言绝句</span>
+    </div>
+</section>
+
+<div class="reading-shell">
     
 
-<aside class="river-sidebar river-zoom-poem">
-    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
-                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
-                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
-                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
-                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-            </linearGradient>
-            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-flow river-flow--1"
-            d="M 425 0 C 435 83, 442 158, 460 250 C 478 342, 532 442, 540 550 C 548 658, 527 783, 515 900 C 503 1017, 463 1125, 475 1250 C 487 1375, 537 1508, 585 1650 C 633 1792, 723 1950, 790 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
-
-        <path class="river-flow river-flow--2"
-            d="M 445 0 C 458 83, 463 158, 485 250 C 507 342, 550 442, 560 550 C 570 658, 543 783, 530 900 C 517 1017, 477 1125, 490 1250 C 503 1375, 555 1508, 610 1650 C 665 1792, 740 1950, 810 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
-
-        <path class="river-flow river-flow--3"
-            d="M 410 0 C 418 83, 425 158, 440 250 C 455 342, 513 442, 520 550 C 527 658, 510 783, 500 900 C 490 1017, 450 1125, 460 1250 C 470 1375, 517 1508, 560 1650 C 603 1792, 707 1950, 770 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
-    </svg>
+<aside class="river-sidebar" aria-label="诗歌之河侧景">
+    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
+        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
+    </a>
+    <div class="sidebar-caption" aria-hidden="true">
+        <span>诗歌之河</span>
+        <span>唐</span>
+    </div>
 </aside>
-    <div class="page-content">
-        <article class="poem-page">
-            <header class="poem-header">
-                <h1 class="poem-page-title">少年行四首</h1>
-                <div class="poem-page-meta">
-                    <span>王维</span>
-                    <span class="meta-sep">·</span>
-                    <span>唐</span>
-                    
-                    <span class="meta-sep">·</span>
-                    <span>七言绝句</span>
-                    
-                </div>
-            </header>
 
+    <article class="reading-document poem-document">
+        <section class="document-section poem-original" aria-labelledby="original-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">原文</p>
+                <h2 id="original-title">诗句</h2>
+            </div>
             <div class="poem-text">
                 
                 
@@ -117,7 +65,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -129,7 +77,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -141,7 +89,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -153,45 +101,55 @@
                 
                 
             </div>
+        </section>
 
-            
-            <div class="poem-annotations">
+        
+        <section class="document-section poem-annotations" aria-labelledby="annotations-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">字词</p>
+                <h2 id="annotations-title">注释</h2>
+            </div>
+            <div class="annotation-list">
                 
-                <p><span class="ann-num">1.</span> 新丰美酒斗十千：新丰（长安附近地名）的美酒一斗值十千钱。斗，酒器，也是计量单位。</p>
+                <p><span class="ann-num">1</span>新丰美酒斗十千：新丰（长安附近地名）的美酒一斗值十千钱。斗，酒器，也是计量单位。</p>
                 
-                <p><span class="ann-num">2.</span> 意气为君饮：意气相投，就为你喝这杯酒。不需要交情深浅，意气相合就已足够。</p>
+                <p><span class="ann-num">2</span>意气为君饮：意气相投，就为你喝这杯酒。不需要交情深浅，意气相合就已足够。</p>
                 
-                <p><span class="ann-num">3.</span> 羽林郎：羽林军（汉代禁卫军）的军官。王维以汉比唐。</p>
+                <p><span class="ann-num">3</span>羽林郎：羽林军（汉代禁卫军）的军官。王维以汉比唐。</p>
                 
-                <p><span class="ann-num">4.</span> 骠骑：指汉代骠骑将军霍去病，少年名将。此处代指唐军将领。</p>
+                <p><span class="ann-num">4</span>骠骑：指汉代骠骑将军霍去病，少年名将。此处代指唐军将领。</p>
                 
-                <p><span class="ann-num">5.</span> 渔阳：今北京一带，唐代安禄山起兵之处，泛指边塞战场。</p>
+                <p><span class="ann-num">5</span>渔阳：今北京一带，唐代安禄山起兵之处，泛指边塞战场。</p>
                 
-                <p><span class="ann-num">6.</span> 孰知不向边庭苦：谁不知道边塞艰苦？但少年游侠不因苦而退缩。孰知，谁不知道。</p>
+                <p><span class="ann-num">6</span>孰知不向边庭苦：谁不知道边塞艰苦？但少年游侠不因苦而退缩。孰知，谁不知道。</p>
                 
-                <p><span class="ann-num">7.</span> 侠骨香：侠客的骨头是香的——即便战死，侠名也会流传千古。</p>
+                <p><span class="ann-num">7</span>侠骨香：侠客的骨头是香的——即便战死，侠名也会流传千古。</p>
                 
-                <p><span class="ann-num">8.</span> 擘两雕弧：拉开两张雕刻花纹的弓。擘（bò），拉开；雕弧，雕有花纹的硬弓。</p>
+                <p><span class="ann-num">8</span>擘两雕弧：拉开两张雕刻花纹的弓。擘（bò），拉开；雕弧，雕有花纹的硬弓。</p>
                 
-                <p><span class="ann-num">9.</span> 偏坐金鞍调白羽：侧身坐在金马鞍上，调整白羽箭。偏坐，侧身坐（射箭姿势）。白羽，箭名。</p>
+                <p><span class="ann-num">9</span>偏坐金鞍调白羽：侧身坐在金马鞍上，调整白羽箭。偏坐，侧身坐（射箭姿势）。白羽，箭名。</p>
                 
-                <p><span class="ann-num">10.</span> 五单于：五个单于（匈奴首领），这里泛指敌军将领。单于（chán yú）。</p>
+                <p><span class="ann-num">10</span>五单于：五个单于（匈奴首领），这里泛指敌军将领。单于（chán yú）。</p>
                 
-                <p><span class="ann-num">11.</span> 云台：汉代洛阳宫中的高台，陈列功臣画像。</p>
+                <p><span class="ann-num">11</span>云台：汉代洛阳宫中的高台，陈列功臣画像。</p>
                 
-                <p><span class="ann-num">12.</span> 临轩赐侯印：天子亲临殿前，赐予侯爵的金印。</p>
+                <p><span class="ann-num">12</span>临轩赐侯印：天子亲临殿前，赐予侯爵的金印。</p>
                 
-                <p><span class="ann-num">13.</span> 明光宫：汉代宫殿名，代指唐朝皇宫。</p>
+                <p><span class="ann-num">13</span>明光宫：汉代宫殿名，代指唐朝皇宫。</p>
                 
             </div>
-            
+        </section>
+        
 
+        
+        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">读后</p>
+                <h2 id="appreciation-title">赏析</h2>
+            </div>
             <div class="appreciation-text">
                 
-                
                 <p>这四首诗是王维早年作品，写的是一个少年游侠从长安饮酒到边塞立功、最后受封赏的完整故事。四首连读，像一部短篇小说的四个章节。</p>
-                
-                
                 
                 
                 
@@ -199,11 +157,7 @@
                 
                 
                 
-                
-                
                 <p>第二首：出身仕汉羽林郎，初随骠骑战渔阳——出身做了汉朝的羽林郎，初次跟随骠骑将军出征渔阳。羽林郎是皇帝的禁卫军，骠骑是汉代名将霍去病的官职。王维用汉事写唐事，是古诗常用的手法。孰知不向边庭苦，纵死犹闻侠骨香——谁知道不去边塞受苦呢？纵然战死，侠骨依然留香。擘（bò）是拉开的意思，雕弧（diāo hú）是雕刻有花纹的弓。不向边庭苦，是不怕边塞之苦；侠骨香，是少年人对荣誉的信仰。</p>
-                
-                
                 
                 
                 
@@ -211,34 +165,29 @@
                 
                 
                 
-                
-                
                 <p>第四首：汉家君臣欢宴终，高议云台论战功——汉家君臣欢宴结束，在云台高阁上论功行赏。云台是汉代陈列功臣画像的地方。天子临轩赐侯印，将军佩出明光宫——天子亲临殿前，赐予侯爵印信；将军佩戴着印信，走出明光宫。这是故事的结局：少年功成名就，受封侯爵。</p>
-                
-                
                 
                 
                 
                 <p>但四首连读，你会发现一种隐隐的失落。第一首的垂柳、美酒、意气，是最动人的；到了第四首，侯印、明光宫，反而显得空洞。王维或许也在暗示：少年人的侠骨香，终究要变成成年人的功名簿。那个系马高楼垂柳边的少年，和那个佩印走出明光宫的将军，还是同一个人吗？</p>
                 
-                
             </div>
+        </section>
+        
 
-            <nav class="poem-nav">
-                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-                
-                <a href="/gift/tang/xiang-si.html" class="nav-next">下一首 →</a>
-                
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav poem-nav" aria-label="诗歌导航">
+            <a class="nav-back" href="/gift/tang/">← 返回唐目录</a>
+            <a class="nav-next" href="/gift/tang/xiang-si.html">下一首：相思 →</a>
+        </nav>
+    </article>
 </div>
 
     </main>
 
     
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     
 </body>

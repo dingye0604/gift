@@ -1,111 +1,59 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>青玉案·元夕 — 诗三百</title>
+    <title>青玉案·元夕 · 辛弃疾</title>
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body class="has-sidebar" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="reading-page poem-page-body">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<div class="page-with-sidebar">
+<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
+    <a class="breadcrumb-link" href="/gift/liang-song/">← 返回两宋目录</a>
+    <p class="eyebrow">两宋 · 诗歌阅读</p>
+    <h1 id="poem-title">青玉案·元夕</h1>
+    <div class="poem-meta" aria-label="作品信息">
+        <span>辛弃疾</span>
+        <span class="meta-sep">·</span><span>词</span>
+    </div>
+</section>
+
+<div class="reading-shell">
     
 
-<aside class="river-sidebar river-zoom-poem">
-    <svg class="river-svg-side" viewBox="322 1218 280 230" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
-                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
-                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
-                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
-                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-            </linearGradient>
-            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-flow river-flow--1"
-            d="M 425 0 C 435 83, 442 158, 460 250 C 478 342, 532 442, 540 550 C 548 658, 527 783, 515 900 C 503 1017, 463 1125, 475 1250 C 487 1375, 537 1508, 585 1650 C 633 1792, 723 1950, 790 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
-
-        <path class="river-flow river-flow--2"
-            d="M 445 0 C 458 83, 463 158, 485 250 C 507 342, 550 442, 560 550 C 570 658, 543 783, 530 900 C 517 1017, 477 1125, 490 1250 C 503 1375, 555 1508, 610 1650 C 665 1792, 740 1950, 810 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
-
-        <path class="river-flow river-flow--3"
-            d="M 410 0 C 418 83, 425 158, 440 250 C 455 342, 513 442, 520 550 C 527 658, 510 783, 500 900 C 490 1017, 450 1125, 460 1250 C 470 1375, 517 1508, 560 1650 C 603 1792, 707 1950, 770 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
-    </svg>
+<aside class="river-sidebar" aria-label="诗歌之河侧景">
+    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
+        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
+    </a>
+    <div class="sidebar-caption" aria-hidden="true">
+        <span>诗歌之河</span>
+        <span>两宋</span>
+    </div>
 </aside>
-    <div class="page-content">
-        <article class="poem-page">
-            <header class="poem-header">
-                <h1 class="poem-page-title">青玉案·元夕</h1>
-                <div class="poem-page-meta">
-                    <span>辛弃疾</span>
-                    <span class="meta-sep">·</span>
-                    <span>两宋</span>
-                    
-                    <span class="meta-sep">·</span>
-                    <span>词</span>
-                    
-                </div>
-            </header>
 
+    <article class="reading-document poem-document">
+        <section class="document-section poem-original" aria-labelledby="original-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">原文</p>
+                <h2 id="original-title">诗句</h2>
+            </div>
             <div class="poem-text">
                 
                 
@@ -121,7 +69,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -137,37 +85,47 @@
                 
                 
             </div>
+        </section>
 
-            
-            <div class="poem-annotations">
+        
+        <section class="document-section poem-annotations" aria-labelledby="annotations-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">字词</p>
+                <h2 id="annotations-title">注释</h2>
+            </div>
+            <div class="annotation-list">
                 
-                <p><span class="ann-num">1.</span> 花千树：千万棵树开满花——形容元宵节街上张挂的花灯，像一夜春风吹开了千树万树的花朵。</p>
+                <p><span class="ann-num">1</span>花千树：千万棵树开满花——形容元宵节街上张挂的花灯，像一夜春风吹开了千树万树的花朵。</p>
                 
-                <p><span class="ann-num">2.</span> 星如雨：烟火像流星雨一样洒落。也可能是形容灯笼密密麻麻如满天星斗。</p>
+                <p><span class="ann-num">2</span>星如雨：烟火像流星雨一样洒落。也可能是形容灯笼密密麻麻如满天星斗。</p>
                 
-                <p><span class="ann-num">3.</span> 凤箫声动：排箫的声音响起。凤箫，排箫的美称。</p>
+                <p><span class="ann-num">3</span>凤箫声动：排箫的声音响起。凤箫，排箫的美称。</p>
                 
-                <p><span class="ann-num">4.</span> 玉壶光转：月亮渐渐西沉（像玉壶在转动）。也有一说指灯笼。</p>
+                <p><span class="ann-num">4</span>玉壶光转：月亮渐渐西沉（像玉壶在转动）。也有一说指灯笼。</p>
                 
-                <p><span class="ann-num">5.</span> 鱼龙舞：鱼形和龙形的灯笼在游动舞蹈。元宵节的灯舞表演。</p>
+                <p><span class="ann-num">5</span>鱼龙舞：鱼形和龙形的灯笼在游动舞蹈。元宵节的灯舞表演。</p>
                 
-                <p><span class="ann-num">6.</span> 蛾儿雪柳黄金缕：三种元宵节女子头上的装饰。“蛾儿”是蝴蝶形头饰，“雪柳”是白色柳枝形的绢花，“黄金缕”是金色丝线编成的饰物。都是宋代元宵女子盛装出游的行头。</p>
+                <p><span class="ann-num">6</span>蛾儿雪柳黄金缕：三种元宵节女子头上的装饰。“蛾儿”是蝴蝶形头饰，“雪柳”是白色柳枝形的绢花，“黄金缕”是金色丝线编成的饰物。都是宋代元宵女子盛装出游的行头。</p>
                 
-                <p><span class="ann-num">7.</span> 千百度：千百次、无数次。在人群里找她找了无数次都没找到。</p>
+                <p><span class="ann-num">7</span>千百度：千百次、无数次。在人群里找她找了无数次都没找到。</p>
                 
-                <p><span class="ann-num">8.</span> 蓦然：忽然、猛然。蓦（mò）。在快要放弃的时候，一回头，看见了她。</p>
+                <p><span class="ann-num">8</span>蓦然：忽然、猛然。蓦（mò）。在快要放弃的时候，一回头，看见了她。</p>
                 
-                <p><span class="ann-num">9.</span> 阑珊：零落、稀疏。灯火阑珊处——不是最热闹的地方，而是灯火将尽、人渐散去的地方。那个人不在人群中心，而在幽暗冷清处——这是全词的点睛之笔。</p>
+                <p><span class="ann-num">9</span>阑珊：零落、稀疏。灯火阑珊处——不是最热闹的地方，而是灯火将尽、人渐散去的地方。那个人不在人群中心，而在幽暗冷清处——这是全词的点睛之笔。</p>
                 
             </div>
-            
+        </section>
+        
 
+        
+        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">读后</p>
+                <h2 id="appreciation-title">赏析</h2>
+            </div>
             <div class="appreciation-text">
                 
-                
                 <p>《青玉案·元夕》写元宵节，写的是中国文学史上最有名的一次回头之一。</p>
-                
-                
                 
                 
                 
@@ -175,11 +133,7 @@
                 
                 
                 
-                
-                
                 <p>下阕把镜头移到人身上。蛾儿、雪柳、黄金缕——都是女子头上的饰物：蝴蝶形的，柳枝形的，金线编的。盛装的女子笑着走过，香气暗暗散去，但她们都不是他要找的人。&#34;众里寻他千百度&#34;——在人群里找了千百次，找不到。然后&#34;蓦然回首，那人却在，灯火阑珊处&#34;——一回头，那个人不在最热闹的地方，而在灯火将尽、人声渐稀的冷清角落。</p>
-                
-                
                 
                 
                 
@@ -187,34 +141,29 @@
                 
                 
                 
-                
-                
                 <p>王国维《人间词话》把这一句列为古今成大事业、大学问者的第三重境界。前两重是&#34;昨夜西风凋碧树&#34;的孤独、&#34;衣带渐宽终不悔&#34;的执着，第三重就是回头一看——功夫做到深处，答案自己走出来。</p>
-                
-                
                 
                 
                 
                 <p>《蒹葭》里的伊人&#34;在水一方&#34;，追了一章又一章，永远隔着一段水；辛弃疾的&#34;那人&#34;却在回头的一瞬间出现。《蒹葭》教我们追，《青玉案》教我们等。你有没有过这样的经验：找一样东西翻了半天抽屉，一回头，它就在手边。学习也是。有些答案不是找出来的，是你做到那一步，一回头，它就站在那里。</p>
                 
-                
             </div>
+        </section>
+        
 
-            <nav class="poem-nav">
-                <a href="/gift/liang-song/" class="nav-back">← 返回两宋目录</a>
-                
-                <a href="/gift/liang-song/xin-qi-ji-po-zhen-zi.html" class="nav-next">下一首 →</a>
-                
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav poem-nav" aria-label="诗歌导航">
+            <a class="nav-back" href="/gift/liang-song/">← 返回两宋目录</a>
+            <a class="nav-next" href="/gift/liang-song/xin-qi-ji-po-zhen-zi.html">下一首：破阵子·为陈同甫赋壮词以寄之 →</a>
+        </nav>
+    </article>
 </div>
 
     </main>
 
     
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     
 </body>

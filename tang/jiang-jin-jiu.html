@@ -1,108 +1,59 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>将进酒 — 诗三百</title>
+    <title>将进酒 · 李白</title>
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body class="has-sidebar" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="reading-page poem-page-body">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<div class="page-with-sidebar">
+<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
+    <a class="breadcrumb-link" href="/gift/tang/">← 返回唐目录</a>
+    <p class="eyebrow">唐 · 诗歌阅读</p>
+    <h1 id="poem-title">将进酒</h1>
+    <div class="poem-meta" aria-label="作品信息">
+        <span>李白</span>
+        
+    </div>
+</section>
+
+<div class="reading-shell">
     
 
-<aside class="river-sidebar river-zoom-poem">
-    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
-                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
-                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
-                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
-                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-            </linearGradient>
-            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-flow river-flow--1"
-            d="M 425 0 C 435 83, 442 158, 460 250 C 478 342, 532 442, 540 550 C 548 658, 527 783, 515 900 C 503 1017, 463 1125, 475 1250 C 487 1375, 537 1508, 585 1650 C 633 1792, 723 1950, 790 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
-
-        <path class="river-flow river-flow--2"
-            d="M 445 0 C 458 83, 463 158, 485 250 C 507 342, 550 442, 560 550 C 570 658, 543 783, 530 900 C 517 1017, 477 1125, 490 1250 C 503 1375, 555 1508, 610 1650 C 665 1792, 740 1950, 810 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
-
-        <path class="river-flow river-flow--3"
-            d="M 410 0 C 418 83, 425 158, 440 250 C 455 342, 513 442, 520 550 C 527 658, 510 783, 500 900 C 490 1017, 450 1125, 460 1250 C 470 1375, 517 1508, 560 1650 C 603 1792, 707 1950, 770 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
-    </svg>
+<aside class="river-sidebar" aria-label="诗歌之河侧景">
+    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
+        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
+    </a>
+    <div class="sidebar-caption" aria-hidden="true">
+        <span>诗歌之河</span>
+        <span>唐</span>
+    </div>
 </aside>
-    <div class="page-content">
-        <article class="poem-page">
-            <header class="poem-header">
-                <h1 class="poem-page-title">将进酒</h1>
-                <div class="poem-page-meta">
-                    <span>李白</span>
-                    <span class="meta-sep">·</span>
-                    <span>唐</span>
-                    
-                </div>
-            </header>
 
+    <article class="reading-document poem-document">
+        <section class="document-section poem-original" aria-labelledby="original-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">原文</p>
+                <h2 id="original-title">诗句</h2>
+            </div>
             <div class="poem-text">
                 
                 
@@ -126,7 +77,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -158,41 +109,51 @@
                 
                 
             </div>
+        </section>
 
-            
-            <div class="poem-annotations">
+        
+        <section class="document-section poem-annotations" aria-labelledby="annotations-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">字词</p>
+                <h2 id="annotations-title">注释</h2>
+            </div>
+            <div class="annotation-list">
                 
-                <p><span class="ann-num">1.</span> 朝如青丝暮成雪：早上头发还像黑色的丝线，晚上就全白了。极言时间流逝之快，人生之短暂。</p>
+                <p><span class="ann-num">1</span>朝如青丝暮成雪：早上头发还像黑色的丝线，晚上就全白了。极言时间流逝之快，人生之短暂。</p>
                 
-                <p><span class="ann-num">2.</span> 会须：应当、一定要。</p>
+                <p><span class="ann-num">2</span>会须：应当、一定要。</p>
                 
-                <p><span class="ann-num">3.</span> 岑夫子，丹丘生：岑勋（夫子是对前辈的尊称）和元丹丘（生是对年轻人的称呼），两人都是李白的朋友。</p>
+                <p><span class="ann-num">3</span>岑夫子，丹丘生：岑勋（夫子是对前辈的尊称）和元丹丘（生是对年轻人的称呼），两人都是李白的朋友。</p>
                 
-                <p><span class="ann-num">4.</span> 钟鼓馔玉：钟鼓齐鸣的排场和像玉一样精美的食物，代指富贵奢华的生活。馔（zhuàn），食物。</p>
+                <p><span class="ann-num">4</span>钟鼓馔玉：钟鼓齐鸣的排场和像玉一样精美的食物，代指富贵奢华的生活。馔（zhuàn），食物。</p>
                 
-                <p><span class="ann-num">5.</span> 陈王昔时宴平乐：曹植封陈王，曾在平乐观大宴宾客。李白引曹植（同为怀才不遇者）自比。</p>
+                <p><span class="ann-num">5</span>陈王昔时宴平乐：曹植封陈王，曾在平乐观大宴宾客。李白引曹植（同为怀才不遇者）自比。</p>
                 
-                <p><span class="ann-num">6.</span> 恣欢谑：尽情地欢乐戏谑。恣（zì），放纵；谑（xuè），开玩笑。</p>
+                <p><span class="ann-num">6</span>恣欢谑：尽情地欢乐戏谑。恣（zì），放纵；谑（xuè），开玩笑。</p>
                 
-                <p><span class="ann-num">7.</span> 径须：只管、只顾。径，直接；须，应当。</p>
+                <p><span class="ann-num">7</span>径须：只管、只顾。径，直接；须，应当。</p>
                 
-                <p><span class="ann-num">8.</span> 五花马：毛色斑驳的名贵马匹。一说指马鬃被剪成五瓣花形的骏马。</p>
+                <p><span class="ann-num">8</span>五花马：毛色斑驳的名贵马匹。一说指马鬃被剪成五瓣花形的骏马。</p>
                 
-                <p><span class="ann-num">9.</span> 千金裘：价值千金的皮裘。</p>
+                <p><span class="ann-num">9</span>千金裘：价值千金的皮裘。</p>
                 
-                <p><span class="ann-num">10.</span> 将出：拿去、拿出来。</p>
+                <p><span class="ann-num">10</span>将出：拿去、拿出来。</p>
                 
-                <p><span class="ann-num">11.</span> 万古愁：贯穿万古的忧愁。不只是个人的愁，而是古往今来所有怀才不遇者的共同愁绪。</p>
+                <p><span class="ann-num">11</span>万古愁：贯穿万古的忧愁。不只是个人的愁，而是古往今来所有怀才不遇者的共同愁绪。</p>
                 
             </div>
-            
+        </section>
+        
 
+        
+        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">读后</p>
+                <h2 id="appreciation-title">赏析</h2>
+            </div>
             <div class="appreciation-text">
                 
-                
                 <p>这是中国文学史上最著名的劝酒诗之一，也是李白写得最豪放的一首。但你要知道，这首诗的底子不是痛快，是难过——写它的李白，早已离开长安多年，人到中年，怀才不遇，还拍着桌子请朋友喝三百杯。</p>
-                
-                
                 
                 
                 
@@ -200,11 +161,7 @@
                 
                 
                 
-                
-                
                 <p>然后他给出对策：人生得意须尽欢，莫使金樽空对月。还记得《生年不满百》吗？那里头说“昼短苦夜长，何不秉烛游”。从东汉人的秉烛夜游，到曹操的“对酒当歌，人生几何”，再到李白的“人生得意须尽欢”，同一个主题传了几百年：人生太短，欢愉要及时。《生年不满百》的作者是劝世人想开，李白不一样——天生我材必有用，千金散尽还复来。钱花光了能再挣，才气是天给的，谁也拿不走。一个刚失业的人说这种话，听着像吹牛，其实是在给自己打气：我还没输。</p>
-                
-                
                 
                 
                 
@@ -212,11 +169,7 @@
                 
                 
                 
-                
-                
                 <p>最后几句是全诗最疯的地方：主人何为言少钱，径须沽取对君酌。五花马，千金裘，呼儿将出换美酒——最名贵的马、最贵的皮衣，全拿去换酒，跟主人说：别嫌钱少，我还有家当。一整首的狂，到这里推到顶点，然后落在最后五个字上：与尔同销万古愁。</p>
-                
-                
                 
                 
                 
@@ -224,28 +177,25 @@
                 
                 
                 
-                
-                
                 <p>这首诗哥哥读过很多遍，每次读到“天生我材必有用”都要停一停。等你长大了，饭局上也会有人劝你喝酒，觥筹交错——但哥哥不希望你用得上这首诗。李白要借酒销的愁太大了，哥哥希望你这一生的愁，都小到用不着一杯酒。</p>
                 
-                
             </div>
+        </section>
+        
 
-            <nav class="poem-nav">
-                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-                
-                <a href="/gift/tang/song-you-ren.html" class="nav-next">下一首 →</a>
-                
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav poem-nav" aria-label="诗歌导航">
+            <a class="nav-back" href="/gift/tang/">← 返回唐目录</a>
+            <a class="nav-next" href="/gift/tang/song-you-ren.html">下一首：送友人 →</a>
+        </nav>
+    </article>
 </div>
 
     </main>
 
     
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     
 </body>

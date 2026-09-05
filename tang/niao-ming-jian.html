@@ -1,111 +1,59 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鸟鸣涧 — 诗三百</title>
+    <title>鸟鸣涧 · 王维</title>
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body class="has-sidebar" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="reading-page poem-page-body">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<div class="page-with-sidebar">
+<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
+    <a class="breadcrumb-link" href="/gift/tang/">← 返回唐目录</a>
+    <p class="eyebrow">唐 · 诗歌阅读</p>
+    <h1 id="poem-title">鸟鸣涧</h1>
+    <div class="poem-meta" aria-label="作品信息">
+        <span>王维</span>
+        <span class="meta-sep">·</span><span>五言绝句</span>
+    </div>
+</section>
+
+<div class="reading-shell">
     
 
-<aside class="river-sidebar river-zoom-poem">
-    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
-                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
-                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
-                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
-                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-            </linearGradient>
-            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-flow river-flow--1"
-            d="M 425 0 C 435 83, 442 158, 460 250 C 478 342, 532 442, 540 550 C 548 658, 527 783, 515 900 C 503 1017, 463 1125, 475 1250 C 487 1375, 537 1508, 585 1650 C 633 1792, 723 1950, 790 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
-
-        <path class="river-flow river-flow--2"
-            d="M 445 0 C 458 83, 463 158, 485 250 C 507 342, 550 442, 560 550 C 570 658, 543 783, 530 900 C 517 1017, 477 1125, 490 1250 C 503 1375, 555 1508, 610 1650 C 665 1792, 740 1950, 810 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
-
-        <path class="river-flow river-flow--3"
-            d="M 410 0 C 418 83, 425 158, 440 250 C 455 342, 513 442, 520 550 C 527 658, 510 783, 500 900 C 490 1017, 450 1125, 460 1250 C 470 1375, 517 1508, 560 1650 C 603 1792, 707 1950, 770 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
-    </svg>
+<aside class="river-sidebar" aria-label="诗歌之河侧景">
+    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
+        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
+    </a>
+    <div class="sidebar-caption" aria-hidden="true">
+        <span>诗歌之河</span>
+        <span>唐</span>
+    </div>
 </aside>
-    <div class="page-content">
-        <article class="poem-page">
-            <header class="poem-header">
-                <h1 class="poem-page-title">鸟鸣涧</h1>
-                <div class="poem-page-meta">
-                    <span>王维</span>
-                    <span class="meta-sep">·</span>
-                    <span>唐</span>
-                    
-                    <span class="meta-sep">·</span>
-                    <span>五言绝句</span>
-                    
-                </div>
-            </header>
 
+    <article class="reading-document poem-document">
+        <section class="document-section poem-original" aria-labelledby="original-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">原文</p>
+                <h2 id="original-title">诗句</h2>
+            </div>
             <div class="poem-text">
                 
                 
@@ -117,25 +65,35 @@
                 
                 
             </div>
+        </section>
 
-            
-            <div class="poem-annotations">
+        
+        <section class="document-section poem-annotations" aria-labelledby="annotations-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">字词</p>
+                <h2 id="annotations-title">注释</h2>
+            </div>
+            <div class="annotation-list">
                 
-                <p><span class="ann-num">1.</span> 人闲桂花落：人闲下来才能注意到桂花在飘落。桂花极小，只有在极静的环境中、极闲的心境下，才能感知到花落。</p>
+                <p><span class="ann-num">1</span>人闲桂花落：人闲下来才能注意到桂花在飘落。桂花极小，只有在极静的环境中、极闲的心境下，才能感知到花落。</p>
                 
-                <p><span class="ann-num">2.</span> 月出惊山鸟：月亮升起的光惊动了山中的睡鸟。“惊”字写月光的明亮和突然。</p>
+                <p><span class="ann-num">2</span>月出惊山鸟：月亮升起的光惊动了山中的睡鸟。“惊”字写月光的明亮和突然。</p>
                 
-                <p><span class="ann-num">3.</span> 时鸣：偶尔鸣叫。正因为叫得少，每一声才格外清晰——以动衬静，鸟鸣让山涧显得更寂静。</p>
+                <p><span class="ann-num">3</span>时鸣：偶尔鸣叫。正因为叫得少，每一声才格外清晰——以动衬静，鸟鸣让山涧显得更寂静。</p>
                 
             </div>
-            
+        </section>
+        
 
+        
+        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">读后</p>
+                <h2 id="appreciation-title">赏析</h2>
+            </div>
             <div class="appreciation-text">
                 
-                
                 <p>这首诗是王维《皇甫岳云溪杂题五首》之一，写于隐居辋川时期。诗题叫鸟鸣涧，但全诗的重点不在鸟鸣，而在寂静。</p>
-                
-                
                 
                 
                 
@@ -143,11 +101,7 @@
                 
                 
                 
-                
-                
                 <p>月出惊山鸟，时鸣春涧中——月亮升起，惊动了山中的鸟儿，它们偶尔在春天的山涧中鸣叫几声。惊字是全诗的关键。月亮怎么会惊动鸟呢？因为月光突然照亮了山林，鸟儿以为是天亮了，或者有什么东西靠近，于是从睡梦中醒来。时鸣，是偶尔鸣叫，不是持续不断地叫。正因为叫得少，每一声才显得格外清晰。</p>
-                
-                
                 
                 
                 
@@ -155,28 +109,25 @@
                 
                 
                 
-                
-                
                 <p>读这首诗，需要放慢呼吸，放慢心跳。想象自己坐在春夜的山涧边，桂花落在肩上，月光照在脸上，远处偶尔传来一声鸟鸣。那一刻，时间仿佛静止了，所有的烦恼都烟消云散。这便是王维想带给我们的：一种超越语言的宁静。</p>
                 
-                
             </div>
+        </section>
+        
 
-            <nav class="poem-nav">
-                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-                
-                <a href="/gift/tang/zhong-nan-bie-ye.html" class="nav-next">下一首 →</a>
-                
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav poem-nav" aria-label="诗歌导航">
+            <a class="nav-back" href="/gift/tang/">← 返回唐目录</a>
+            <a class="nav-next" href="/gift/tang/zhong-nan-bie-ye.html">下一首：终南别业 →</a>
+        </nav>
+    </article>
 </div>
 
     </main>
 
     
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     
 </body>

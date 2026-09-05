@@ -1,108 +1,59 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>侠客行 — 诗三百</title>
+    <title>侠客行 · 李白</title>
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body class="has-sidebar" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="reading-page poem-page-body">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<div class="page-with-sidebar">
+<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
+    <a class="breadcrumb-link" href="/gift/tang/">← 返回唐目录</a>
+    <p class="eyebrow">唐 · 诗歌阅读</p>
+    <h1 id="poem-title">侠客行</h1>
+    <div class="poem-meta" aria-label="作品信息">
+        <span>李白</span>
+        
+    </div>
+</section>
+
+<div class="reading-shell">
     
 
-<aside class="river-sidebar river-zoom-poem">
-    <svg class="river-svg-side" viewBox="420 840 280 230" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
-                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
-                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
-                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
-                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-            </linearGradient>
-            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-flow river-flow--1"
-            d="M 425 0 C 435 83, 442 158, 460 250 C 478 342, 532 442, 540 550 C 548 658, 527 783, 515 900 C 503 1017, 463 1125, 475 1250 C 487 1375, 537 1508, 585 1650 C 633 1792, 723 1950, 790 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
-
-        <path class="river-flow river-flow--2"
-            d="M 445 0 C 458 83, 463 158, 485 250 C 507 342, 550 442, 560 550 C 570 658, 543 783, 530 900 C 517 1017, 477 1125, 490 1250 C 503 1375, 555 1508, 610 1650 C 665 1792, 740 1950, 810 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
-
-        <path class="river-flow river-flow--3"
-            d="M 410 0 C 418 83, 425 158, 440 250 C 455 342, 513 442, 520 550 C 527 658, 510 783, 500 900 C 490 1017, 450 1125, 460 1250 C 470 1375, 517 1508, 560 1650 C 603 1792, 707 1950, 770 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
-    </svg>
+<aside class="river-sidebar" aria-label="诗歌之河侧景">
+    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
+        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
+    </a>
+    <div class="sidebar-caption" aria-hidden="true">
+        <span>诗歌之河</span>
+        <span>唐</span>
+    </div>
 </aside>
-    <div class="page-content">
-        <article class="poem-page">
-            <header class="poem-header">
-                <h1 class="poem-page-title">侠客行</h1>
-                <div class="poem-page-meta">
-                    <span>李白</span>
-                    <span class="meta-sep">·</span>
-                    <span>唐</span>
-                    
-                </div>
-            </header>
 
+    <article class="reading-document poem-document">
+        <section class="document-section poem-original" aria-labelledby="original-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">原文</p>
+                <h2 id="original-title">诗句</h2>
+            </div>
             <div class="poem-text">
                 
                 
@@ -122,7 +73,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -142,7 +93,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -162,47 +113,57 @@
                 
                 
             </div>
+        </section>
 
-            
-            <div class="poem-annotations">
+        
+        <section class="document-section poem-annotations" aria-labelledby="annotations-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">字词</p>
+                <h2 id="annotations-title">注释</h2>
+            </div>
+            <div class="annotation-list">
                 
-                <p><span class="ann-num">1.</span> 赵客：赵地的壮士。古代燕赵之地（今河北一带）以出慷慨悲歌的侠客闻名。</p>
+                <p><span class="ann-num">1</span>赵客：赵地的壮士。古代燕赵之地（今河北一带）以出慷慨悲歌的侠客闻名。</p>
                 
-                <p><span class="ann-num">2.</span> 缦胡缨：一种粗制的胡人头巾。缦（màn），无文饰的粗帛；缨，帽带。侠客不讲究华服，穿戴朴素粗犷。</p>
+                <p><span class="ann-num">2</span>缦胡缨：一种粗制的胡人头巾。缦（màn），无文饰的粗帛；缨，帽带。侠客不讲究华服，穿戴朴素粗犷。</p>
                 
-                <p><span class="ann-num">3.</span> 吴钩：吴地（今江苏一带）出产的弯刀，以锋利著称。剑刃如霜雪般明亮。</p>
+                <p><span class="ann-num">3</span>吴钩：吴地（今江苏一带）出产的弯刀，以锋利著称。剑刃如霜雪般明亮。</p>
                 
-                <p><span class="ann-num">4.</span> 飒沓：马蹄声，形容马跑得飞快。飒沓（sà tà），疾速的样子。</p>
+                <p><span class="ann-num">4</span>飒沓：马蹄声，形容马跑得飞快。飒沓（sà tà），疾速的样子。</p>
                 
-                <p><span class="ann-num">5.</span> 不留行：不停留、不逗留。千里奔袭，无人能阻拦。</p>
+                <p><span class="ann-num">5</span>不留行：不停留、不逗留。千里奔袭，无人能阻拦。</p>
                 
-                <p><span class="ann-num">6.</span> 信陵：信陵君魏无忌，战国四公子之一，以爱养士闻名。</p>
+                <p><span class="ann-num">6</span>信陵：信陵君魏无忌，战国四公子之一，以爱养士闻名。</p>
                 
-                <p><span class="ann-num">7.</span> 朱亥：信陵君的门客，原为市井屠夫，力大无穷。信陵君窃符救赵时，朱亥用铁锤击杀魏将晋鄙。</p>
+                <p><span class="ann-num">7</span>朱亥：信陵君的门客，原为市井屠夫，力大无穷。信陵君窃符救赵时，朱亥用铁锤击杀魏将晋鄙。</p>
                 
-                <p><span class="ann-num">8.</span> 侯嬴：信陵君的门客，原为大梁城守门人。他为信陵君谋划了窃符救赵的计策，后因年老不能随行，自刎以谢。</p>
+                <p><span class="ann-num">8</span>侯嬴：信陵君的门客，原为大梁城守门人。他为信陵君谋划了窃符救赵的计策，后因年老不能随行，自刎以谢。</p>
                 
-                <p><span class="ann-num">9.</span> 然诺：承诺。三杯酒下肚，承诺便重于一切。</p>
+                <p><span class="ann-num">9</span>然诺：承诺。三杯酒下肚，承诺便重于一切。</p>
                 
-                <p><span class="ann-num">10.</span> 五岳倒为轻：和这份承诺相比，五岳都显得很轻。五岳，东岳泰山、西岳华山、南岳衡山、北岳恒山、中岳嵩山。</p>
+                <p><span class="ann-num">10</span>五岳倒为轻：和这份承诺相比，五岳都显得很轻。五岳，东岳泰山、西岳华山、南岳衡山、北岳恒山、中岳嵩山。</p>
                 
-                <p><span class="ann-num">11.</span> 素霓生：白虹（白色的虹霓）升起。古人认为白虹贯日是侠义之气感动天地的征兆。</p>
+                <p><span class="ann-num">11</span>素霓生：白虹（白色的虹霓）升起。古人认为白虹贯日是侠义之气感动天地的征兆。</p>
                 
-                <p><span class="ann-num">12.</span> 金槌：铁锤。指朱亥用铁锤击杀晋鄙、夺取兵符救赵的故事。槌（chuí）。</p>
+                <p><span class="ann-num">12</span>金槌：铁锤。指朱亥用铁锤击杀晋鄙、夺取兵符救赵的故事。槌（chuí）。</p>
                 
-                <p><span class="ann-num">13.</span> 烜赫大梁城：声名显赫于大梁城。烜赫（xuān hè），声威盛大；大梁，魏国都城（今开封）。</p>
+                <p><span class="ann-num">13</span>烜赫大梁城：声名显赫于大梁城。烜赫（xuān hè），声威盛大；大梁，魏国都城（今开封）。</p>
                 
-                <p><span class="ann-num">14.</span> 白首太玄经：西汉学者扬雄在书阁中埋头撰写《太玄经》直到白头。李白反问：谁愿意那样皓首穷经呢？</p>
+                <p><span class="ann-num">14</span>白首太玄经：西汉学者扬雄在书阁中埋头撰写《太玄经》直到白头。李白反问：谁愿意那样皓首穷经呢？</p>
                 
             </div>
-            
+        </section>
+        
 
+        
+        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">读后</p>
+                <h2 id="appreciation-title">赏析</h2>
+            </div>
             <div class="appreciation-text">
                 
-                
                 <p>这首诗是唐诗里写侠客最出名的作品之一。写它的李白并不会武功，但你读完全诗就会发现，侠客就是他心里那个理想的自己。</p>
-                
-                
                 
                 
                 
@@ -210,11 +171,7 @@
                 
                 
                 
-                
-                
                 <p>十步杀一人，千里不留行，这话出自《庄子》论剑的段落，李白把它写成了侠客的招牌。但真正漂亮的是后两句：事了拂衣去，深藏身与名。事办完了，掸掸衣角就走，名字都不留一个。中国文化里最了不起的功业观就是这一种：做成事，不居功。这也是李白最羡慕侠客的地方——他在长安求功名求不来，侠客却连功名都不要。</p>
-                
-                
                 
                 
                 
@@ -222,34 +179,29 @@
                 
                 
                 
-                
-                
                 <p>结尾是个反问：谁能书阁下，白首太玄经？西汉学者扬雄关在书阁里写《太玄经》，写到头发全白。李白问：谁愿意那样过一辈子？与其皓首穷经，不如纵死侠骨香——哪怕死了，骨头也是香的。这当然夸张，但夸张得让人痛快。</p>
-                
-                
                 
                 
                 
                 <p>读这首诗，你会觉得李白年轻时一定想过：我若生在战国，也要做那个挥金槌的朱亥。他把侠客写得越潇洒，你越能看出他在长安过得有多不痛快。这世上没有十步杀一人的本事，但“事了拂衣去”的境界倒可以学——考完试别老惦记对错，做完事别总念叨功劳，心里就轻快得多。</p>
                 
-                
             </div>
+        </section>
+        
 
-            <nav class="poem-nav">
-                <a href="/gift/tang/" class="nav-back">← 返回唐目录</a>
-                
-                <a href="/gift/tang/jiang-jin-jiu.html" class="nav-next">下一首 →</a>
-                
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav poem-nav" aria-label="诗歌导航">
+            <a class="nav-back" href="/gift/tang/">← 返回唐目录</a>
+            <a class="nav-next" href="/gift/tang/jiang-jin-jiu.html">下一首：将进酒 →</a>
+        </nav>
+    </article>
 </div>
 
     </main>
 
     
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     
 </body>

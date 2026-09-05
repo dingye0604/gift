@@ -1,111 +1,59 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>诗经·卫风·氓 — 诗三百</title>
+    <title>诗经·卫风·氓 · 无名氏</title>
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body class="has-sidebar" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="reading-page poem-page-body">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<div class="page-with-sidebar">
+<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
+    <a class="breadcrumb-link" href="/gift/xian-qin/">← 返回先秦目录</a>
+    <p class="eyebrow">先秦 · 诗歌阅读</p>
+    <h1 id="poem-title">诗经·卫风·氓</h1>
+    <div class="poem-meta" aria-label="作品信息">
+        <span>无名氏</span>
+        <span class="meta-sep">·</span><span>四言诗</span>
+    </div>
+</section>
+
+<div class="reading-shell">
     
 
-<aside class="river-sidebar river-zoom-poem">
-    <svg class="river-svg-side" viewBox="305 64 280 230" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
-                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
-                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
-                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
-                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-            </linearGradient>
-            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-flow river-flow--1"
-            d="M 425 0 C 435 83, 442 158, 460 250 C 478 342, 532 442, 540 550 C 548 658, 527 783, 515 900 C 503 1017, 463 1125, 475 1250 C 487 1375, 537 1508, 585 1650 C 633 1792, 723 1950, 790 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
-
-        <path class="river-flow river-flow--2"
-            d="M 445 0 C 458 83, 463 158, 485 250 C 507 342, 550 442, 560 550 C 570 658, 543 783, 530 900 C 517 1017, 477 1125, 490 1250 C 503 1375, 555 1508, 610 1650 C 665 1792, 740 1950, 810 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
-
-        <path class="river-flow river-flow--3"
-            d="M 410 0 C 418 83, 425 158, 440 250 C 455 342, 513 442, 520 550 C 527 658, 510 783, 500 900 C 490 1017, 450 1125, 460 1250 C 470 1375, 517 1508, 560 1650 C 603 1792, 707 1950, 770 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
-    </svg>
+<aside class="river-sidebar" aria-label="诗歌之河侧景">
+    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
+        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
+    </a>
+    <div class="sidebar-caption" aria-hidden="true">
+        <span>诗歌之河</span>
+        <span>先秦</span>
+    </div>
 </aside>
-    <div class="page-content">
-        <article class="poem-page">
-            <header class="poem-header">
-                <h1 class="poem-page-title">诗经·卫风·氓</h1>
-                <div class="poem-page-meta">
-                    <span>无名氏</span>
-                    <span class="meta-sep">·</span>
-                    <span>先秦</span>
-                    
-                    <span class="meta-sep">·</span>
-                    <span>四言诗</span>
-                    
-                </div>
-            </header>
 
+    <article class="reading-document poem-document">
+        <section class="document-section poem-original" aria-labelledby="original-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">原文</p>
+                <h2 id="original-title">诗句</h2>
+            </div>
             <div class="poem-text">
                 
                 
@@ -113,7 +61,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -121,7 +69,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -129,7 +77,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -137,7 +85,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -145,7 +93,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -153,47 +101,57 @@
                 
                 
             </div>
+        </section>
 
-            
-            <div class="poem-annotations">
+        
+        <section class="document-section poem-annotations" aria-labelledby="annotations-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">字词</p>
+                <h2 id="annotations-title">注释</h2>
+            </div>
+            <div class="annotation-list">
                 
-                <p><span class="ann-num">1.</span> 氓：古代对普通百姓男子的称呼，这里指那个男子。蚩蚩，老实憨厚的样子，暗示男子的伪装。</p>
+                <p><span class="ann-num">1</span>氓：古代对普通百姓男子的称呼，这里指那个男子。蚩蚩，老实憨厚的样子，暗示男子的伪装。</p>
                 
-                <p><span class="ann-num">2.</span> 将：将（qiāng），愿、请。将子无怒指请你不要生气。</p>
+                <p><span class="ann-num">2</span>将：将（qiāng），愿、请。将子无怒指请你不要生气。</p>
                 
-                <p><span class="ann-num">3.</span> 垝垣：倒塌破旧的土墙。垝（guǐ），破旧；垣（yuán），墙。女子在此登高盼望恋人。</p>
+                <p><span class="ann-num">3</span>垝垣：倒塌破旧的土墙。垝（guǐ），破旧；垣（yuán），墙。女子在此登高盼望恋人。</p>
                 
-                <p><span class="ann-num">4.</span> 复关：地名，那个男子居住的地方。女子登墙眺望复关，是在等待心上人到来。</p>
+                <p><span class="ann-num">4</span>复关：地名，那个男子居住的地方。女子登墙眺望复关，是在等待心上人到来。</p>
                 
-                <p><span class="ann-num">5.</span> 说：说，通”脱”（tuō），解脱、脱身。指女子一旦沉溺爱情就很难抽身。</p>
+                <p><span class="ann-num">5</span>说：说，通”脱”（tuō），解脱、脱身。指女子一旦沉溺爱情就很难抽身。</p>
                 
-                <p><span class="ann-num">6.</span> 徂：徂（cú），往、去。徂尔指嫁到你家。</p>
+                <p><span class="ann-num">6</span>徂：徂（cú），往、去。徂尔指嫁到你家。</p>
                 
-                <p><span class="ann-num">7.</span> 三岁：多年，三在古代为虚指，泛指多。</p>
+                <p><span class="ann-num">7</span>三岁：多年，三在古代为虚指，泛指多。</p>
                 
-                <p><span class="ann-num">8.</span> 罔极：罔，无；极，准则。指男子的行为没有道德准则、毫无底线。</p>
+                <p><span class="ann-num">8</span>罔极：罔，无；极，准则。指男子的行为没有道德准则、毫无底线。</p>
                 
-                <p><span class="ann-num">9.</span> 言：句首语气助词，无实义。言既遂矣指（你的）心愿实现之后。</p>
+                <p><span class="ann-num">9</span>言：句首语气助词，无实义。言既遂矣指（你的）心愿实现之后。</p>
                 
-                <p><span class="ann-num">10.</span> 遂：遂（suì），实现、满足。言既遂矣指你的心愿已经得到满足。</p>
+                <p><span class="ann-num">10</span>遂：遂（suì），实现、满足。言既遂矣指你的心愿已经得到满足。</p>
                 
-                <p><span class="ann-num">11.</span> 咥：咥（xì），大笑的样子。兄弟不知，咥其笑矣指兄弟不理解女子的处境，反而讥笑她。</p>
+                <p><span class="ann-num">11</span>咥：咥（xì），大笑的样子。兄弟不知，咥其笑矣指兄弟不理解女子的处境，反而讥笑她。</p>
                 
-                <p><span class="ann-num">12.</span> 躬：躬（gōng），自身。躬自悼矣指独自悲伤哀悼。</p>
+                <p><span class="ann-num">12</span>躬：躬（gōng），自身。躬自悼矣指独自悲伤哀悼。</p>
                 
-                <p><span class="ann-num">13.</span> 隰：隰（xí），低洼湿地。泮（pàn），通”畔”，边岸。此句喻凡事都有边际，悲苦的日子也该有个结束。</p>
+                <p><span class="ann-num">13</span>隰：隰（xí），低洼湿地。泮（pàn），通”畔”，边岸。此句喻凡事都有边际，悲苦的日子也该有个结束。</p>
                 
-                <p><span class="ann-num">14.</span> 总角：古代儿童把头发扎成小角的样子，代指童年时代。言笑晏晏形容温和欢乐的样子。</p>
+                <p><span class="ann-num">14</span>总角：古代儿童把头发扎成小角的样子，代指童年时代。言笑晏晏形容温和欢乐的样子。</p>
                 
             </div>
-            
+        </section>
+        
 
+        
+        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">读后</p>
+                <h2 id="appreciation-title">赏析</h2>
+            </div>
             <div class="appreciation-text">
                 
-                
                 <p>《氓》是中国文学史上最早、最完整的一首叙事诗之一，讲的是一个女子从恋爱、结婚到被抛弃的全过程。</p>
-                
-                
                 
                 
                 
@@ -201,11 +159,7 @@
                 
                 
                 
-                
-                
                 <p>第二章写女子热恋中的心情。她爬上倒塌的墙头眺望复关——那是氓居住的地方。看不见他的时候，眼泪哗哗地流；看见他的时候，又笑又说。这种情感的剧烈起伏，把恋爱中的女子写得活灵活现。卜筮的结果也很好，于是她带着嫁妆嫁了过去。</p>
-                
-                
                 
                 
                 
@@ -213,11 +167,7 @@
                 
                 
                 
-                
-                
                 <p>第四五章写婚后生活的贫困和男子的变心。第四章与第三章一样，依旧以桑叶起兴，桑叶发黄掉落，一如女人在婚后的不幸的生活里蹉跎了自己的青春，美好的容颜不再。“自我徂尔，三岁食贫”——自从嫁到你家，多年都在过苦日子。“女也不爽，士贰其行”——我没有做错什么，是你变了心。“士也罔极，二三其德”——男子的行为毫无底线，心意一变再变。这是女子对负心人的控诉。第五章则是女子对自己不幸福的婚姻的描述：我在你家多年都恪守妇道，繁重的家务我都担负。起早贪黑，没有一天不是这样的。你的心愿实现后，就很暴躁地对我。我的兄弟不知道我的遭遇，见面时还要讥笑我。安静无人时想一想，我只能独自伤心。这是多么不幸的生活啊！</p>
-                
-                
                 
                 
                 
@@ -225,28 +175,25 @@
                 
                 
                 
-                
-                
                 <p>选这首诗其实没什么其他的理由。只不过我总是害怕你长大了轻易地和人谈了恋爱。并不是每个人都有好运气能遇见关雎、淇澳里那样的君子。倘若真遇上了渣男，可一定要想起来这首诗，反是不思，亦已焉哉！</p>
                 
-                
             </div>
+        </section>
+        
 
-            <nav class="poem-nav">
-                <a href="/gift/xian-qin/" class="nav-back">← 返回先秦目录</a>
-                
-                <a href="/gift/xian-qin/tao-yao.html" class="nav-next">下一首 →</a>
-                
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav poem-nav" aria-label="诗歌导航">
+            <a class="nav-back" href="/gift/xian-qin/">← 返回先秦目录</a>
+            <a class="nav-next" href="/gift/xian-qin/tao-yao.html">下一首：诗经·周南·桃夭 →</a>
+        </nav>
+    </article>
 </div>
 
     </main>
 
     
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     
 </body>

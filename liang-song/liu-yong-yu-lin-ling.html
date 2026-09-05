@@ -1,111 +1,59 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雨霖铃·寒蝉凄切 — 诗三百</title>
+    <title>雨霖铃·寒蝉凄切 · 柳永</title>
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body class="has-sidebar" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="reading-page poem-page-body">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<div class="page-with-sidebar">
+<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
+    <a class="breadcrumb-link" href="/gift/liang-song/">← 返回两宋目录</a>
+    <p class="eyebrow">两宋 · 诗歌阅读</p>
+    <h1 id="poem-title">雨霖铃·寒蝉凄切</h1>
+    <div class="poem-meta" aria-label="作品信息">
+        <span>柳永</span>
+        <span class="meta-sep">·</span><span>词</span>
+    </div>
+</section>
+
+<div class="reading-shell">
     
 
-<aside class="river-sidebar river-zoom-poem">
-    <svg class="river-svg-side" viewBox="322 1218 280 230" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
-                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
-                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
-                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
-                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-            </linearGradient>
-            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-flow river-flow--1"
-            d="M 425 0 C 435 83, 442 158, 460 250 C 478 342, 532 442, 540 550 C 548 658, 527 783, 515 900 C 503 1017, 463 1125, 475 1250 C 487 1375, 537 1508, 585 1650 C 633 1792, 723 1950, 790 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
-
-        <path class="river-flow river-flow--2"
-            d="M 445 0 C 458 83, 463 158, 485 250 C 507 342, 550 442, 560 550 C 570 658, 543 783, 530 900 C 517 1017, 477 1125, 490 1250 C 503 1375, 555 1508, 610 1650 C 665 1792, 740 1950, 810 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
-
-        <path class="river-flow river-flow--3"
-            d="M 410 0 C 418 83, 425 158, 440 250 C 455 342, 513 442, 520 550 C 527 658, 510 783, 500 900 C 490 1017, 450 1125, 460 1250 C 470 1375, 517 1508, 560 1650 C 603 1792, 707 1950, 770 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
-    </svg>
+<aside class="river-sidebar" aria-label="诗歌之河侧景">
+    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
+        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
+    </a>
+    <div class="sidebar-caption" aria-hidden="true">
+        <span>诗歌之河</span>
+        <span>两宋</span>
+    </div>
 </aside>
-    <div class="page-content">
-        <article class="poem-page">
-            <header class="poem-header">
-                <h1 class="poem-page-title">雨霖铃·寒蝉凄切</h1>
-                <div class="poem-page-meta">
-                    <span>柳永</span>
-                    <span class="meta-sep">·</span>
-                    <span>两宋</span>
-                    
-                    <span class="meta-sep">·</span>
-                    <span>词</span>
-                    
-                </div>
-            </header>
 
+    <article class="reading-document poem-document">
+        <section class="document-section poem-original" aria-labelledby="original-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">原文</p>
+                <h2 id="original-title">诗句</h2>
+            </div>
             <div class="poem-text">
                 
                 
@@ -125,7 +73,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -145,45 +93,55 @@
                 
                 
             </div>
+        </section>
 
-            
-            <div class="poem-annotations">
+        
+        <section class="document-section poem-annotations" aria-labelledby="annotations-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">字词</p>
+                <h2 id="annotations-title">注释</h2>
+            </div>
+            <div class="annotation-list">
                 
-                <p><span class="ann-num">1.</span> 寒蝉：秋后的蝉。蝉的生命将尽，叫声凄凉，故称“寒蝉”。</p>
+                <p><span class="ann-num">1</span>寒蝉：秋后的蝉。蝉的生命将尽，叫声凄凉，故称“寒蝉”。</p>
                 
-                <p><span class="ann-num">2.</span> 长亭：古代设在路边的亭舍，用作送别的场所，常是“十里一长亭，五里一短亭”。</p>
+                <p><span class="ann-num">2</span>长亭：古代设在路边的亭舍，用作送别的场所，常是“十里一长亭，五里一短亭”。</p>
                 
-                <p><span class="ann-num">3.</span> 都门帐饮：在京城门外搭帐篷饯行饮酒。</p>
+                <p><span class="ann-num">3</span>都门帐饮：在京城门外搭帐篷饯行饮酒。</p>
                 
-                <p><span class="ann-num">4.</span> 无绪：没有心情。虽设帐饯行，却心烦意乱，无心吃喝。</p>
+                <p><span class="ann-num">4</span>无绪：没有心情。虽设帐饯行，却心烦意乱，无心吃喝。</p>
                 
-                <p><span class="ann-num">5.</span> 兰舟：木兰木做的小船，是船的美称。也有人说指划船的船夫（鲁班曾刻木兰为舟）。</p>
+                <p><span class="ann-num">5</span>兰舟：木兰木做的小船，是船的美称。也有人说指划船的船夫（鲁班曾刻木兰为舟）。</p>
                 
-                <p><span class="ann-num">6.</span> 凝噎：喉咙被堵住说不出话。噎（yē），气逆哽塞。太难过以至于一个字都说不出来。</p>
+                <p><span class="ann-num">6</span>凝噎：喉咙被堵住说不出话。噎（yē），气逆哽塞。太难过以至于一个字都说不出来。</p>
                 
-                <p><span class="ann-num">7.</span> 去去：走了又走，越走越远。叠用“去”字，写出路的漫长和别离的深切。</p>
+                <p><span class="ann-num">7</span>去去：走了又走，越走越远。叠用“去”字，写出路的漫长和别离的深切。</p>
                 
-                <p><span class="ann-num">8.</span> 暮霭：傍晚的雾气。霭（ǎi），云雾。</p>
+                <p><span class="ann-num">8</span>暮霭：傍晚的雾气。霭（ǎi），云雾。</p>
                 
-                <p><span class="ann-num">9.</span> 楚天：楚地的天空。柳永从汴京（河南）出发南下，南方的天空开阔无边，衬托人的渺小和孤单。</p>
+                <p><span class="ann-num">9</span>楚天：楚地的天空。柳永从汴京（河南）出发南下，南方的天空开阔无边，衬托人的渺小和孤单。</p>
                 
-                <p><span class="ann-num">10.</span> 清秋节：清冷的秋季时节。离别本已令人难过，再逢冷落凄清的秋天，更加不堪。</p>
+                <p><span class="ann-num">10</span>清秋节：清冷的秋季时节。离别本已令人难过，再逢冷落凄清的秋天，更加不堪。</p>
                 
-                <p><span class="ann-num">11.</span> 杨柳岸、晓风残月：杨柳岸边，晨风吹拂，天上挂着一弯残月——这是全词最有名的句子。杨柳代表离别（古人有折柳送别的习俗），残月代表残缺与孤寂。</p>
+                <p><span class="ann-num">11</span>杨柳岸、晓风残月：杨柳岸边，晨风吹拂，天上挂着一弯残月——这是全词最有名的句子。杨柳代表离别（古人有折柳送别的习俗），残月代表残缺与孤寂。</p>
                 
-                <p><span class="ann-num">12.</span> 经年：年复一年，一年又一年。此去一别，不知多少年才能相见。</p>
+                <p><span class="ann-num">12</span>经年：年复一年，一年又一年。此去一别，不知多少年才能相见。</p>
                 
-                <p><span class="ann-num">13.</span> 风情：情意、柔情蜜意。即使有千万种深情，又能对谁说呢？</p>
+                <p><span class="ann-num">13</span>风情：情意、柔情蜜意。即使有千万种深情，又能对谁说呢？</p>
                 
             </div>
-            
+        </section>
+        
 
+        
+        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">读后</p>
+                <h2 id="appreciation-title">赏析</h2>
+            </div>
             <div class="appreciation-text">
                 
-                
                 <p>《雨霖铃》是中国文学史上写离别最有名的一首词之一。“多情自古伤离别”——这句被后人引用上千年的词，就是从这首词里来的。</p>
-                
-                
                 
                 
                 
@@ -191,11 +149,7 @@
                 
                 
                 
-                
-                
                 <p>于是有了全词最动人的画面：“执手相看泪眼，竟无语凝噎。”不是没有话说，是话太多，全堵在喉咙口。</p>
-                
-                
                 
                 
                 
@@ -203,11 +157,7 @@
                 
                 
                 
-                
-                
                 <p>“今宵酒醒何处？杨柳岸、晓风残月。”酒醒时人在哪里？没有答案，只有杨柳岸、晨风、一弯残月。杨柳是折柳送别的柳——“柳”与“留”同音，折柳就是留人；残月是残缺的月。九个字里没有一个“愁”字，却比什么愁都凉。</p>
-                
-                
                 
                 
                 
@@ -215,34 +165,29 @@
                 
                 
                 
-                
-                
                 <p>还记得《行行重行行》吗？那首诗里我预告过，柳永写“衣带渐宽终不悔”，接的就是“衣带日已缓”——写这两句的柳永，正是这首《雨霖铃》的作者。《行行重行行》写等人的苦，《雨霖铃》写走的人的苦，合起来才是离别完整的样子。还有《少司命》里的“悲莫悲兮生别离”——这首词就是给这句古话做了一整套插图。</p>
-                
-                
                 
                 
                 
                 <p>人生躲不开离别：升学、工作、搬家，每一次都是“兰舟催发”。但好好说再见，然后各自好好吃饭，该见面的时候自然会见。古人要杨柳和残月陪着过这个坎，我们不必。</p>
                 
-                
             </div>
+        </section>
+        
 
-            <nav class="poem-nav">
-                <a href="/gift/liang-song/" class="nav-back">← 返回两宋目录</a>
-                
-                <a href="/gift/liang-song/liu-yong-ba-sheng-gan-zhou.html" class="nav-next">下一首 →</a>
-                
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav poem-nav" aria-label="诗歌导航">
+            <a class="nav-back" href="/gift/liang-song/">← 返回两宋目录</a>
+            <a class="nav-next" href="/gift/liang-song/liu-yong-ba-sheng-gan-zhou.html">下一首：八声甘州·对潇潇暮雨洒江天 →</a>
+        </nav>
+    </article>
 </div>
 
     </main>
 
     
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     
 </body>

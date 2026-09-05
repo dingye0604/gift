@@ -1,111 +1,59 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>正气歌 — 诗三百</title>
+    <title>正气歌 · 文天祥</title>
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body class="has-sidebar" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="reading-page poem-page-body">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<div class="page-with-sidebar">
+<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
+    <a class="breadcrumb-link" href="/gift/liang-song/">← 返回两宋目录</a>
+    <p class="eyebrow">两宋 · 诗歌阅读</p>
+    <h1 id="poem-title">正气歌</h1>
+    <div class="poem-meta" aria-label="作品信息">
+        <span>文天祥</span>
+        <span class="meta-sep">·</span><span>五言古诗</span>
+    </div>
+</section>
+
+<div class="reading-shell">
     
 
-<aside class="river-sidebar river-zoom-poem">
-    <svg class="river-svg-side" viewBox="322 1218 280 230" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
-                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
-                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
-                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
-                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-            </linearGradient>
-            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-flow river-flow--1"
-            d="M 425 0 C 435 83, 442 158, 460 250 C 478 342, 532 442, 540 550 C 548 658, 527 783, 515 900 C 503 1017, 463 1125, 475 1250 C 487 1375, 537 1508, 585 1650 C 633 1792, 723 1950, 790 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
-
-        <path class="river-flow river-flow--2"
-            d="M 445 0 C 458 83, 463 158, 485 250 C 507 342, 550 442, 560 550 C 570 658, 543 783, 530 900 C 517 1017, 477 1125, 490 1250 C 503 1375, 555 1508, 610 1650 C 665 1792, 740 1950, 810 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
-
-        <path class="river-flow river-flow--3"
-            d="M 410 0 C 418 83, 425 158, 440 250 C 455 342, 513 442, 520 550 C 527 658, 510 783, 500 900 C 490 1017, 450 1125, 460 1250 C 470 1375, 517 1508, 560 1650 C 603 1792, 707 1950, 770 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
-    </svg>
+<aside class="river-sidebar" aria-label="诗歌之河侧景">
+    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
+        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
+    </a>
+    <div class="sidebar-caption" aria-hidden="true">
+        <span>诗歌之河</span>
+        <span>两宋</span>
+    </div>
 </aside>
-    <div class="page-content">
-        <article class="poem-page">
-            <header class="poem-header">
-                <h1 class="poem-page-title">正气歌</h1>
-                <div class="poem-page-meta">
-                    <span>文天祥</span>
-                    <span class="meta-sep">·</span>
-                    <span>两宋</span>
-                    
-                    <span class="meta-sep">·</span>
-                    <span>五言古诗</span>
-                    
-                </div>
-            </header>
 
+    <article class="reading-document poem-document">
+        <section class="document-section poem-original" aria-labelledby="original-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">原文</p>
+                <h2 id="original-title">诗句</h2>
+            </div>
             <div class="poem-text">
                 
                 
@@ -129,7 +77,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -165,7 +113,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -185,7 +133,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -241,113 +189,123 @@
                 
                 
             </div>
+        </section>
 
-            
-            <div class="poem-annotations">
+        
+        <section class="document-section poem-annotations" aria-labelledby="annotations-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">字词</p>
+                <h2 id="annotations-title">注释</h2>
+            </div>
+            <div class="annotation-list">
                 
-                <p><span class="ann-num">1.</span> 正气：刚正宏大的气节。文天祥认为天地间存在一种正气，赋予万物以形态——在地为山河，在天为日月，在人为浩然之气。</p>
+                <p><span class="ann-num">1</span>正气：刚正宏大的气节。文天祥认为天地间存在一种正气，赋予万物以形态——在地为山河，在天为日月，在人为浩然之气。</p>
                 
-                <p><span class="ann-num">2.</span> 杂然赋流形：纷纷地赋予万物各种形态。杂然，纷繁多样；赋，赋予；流形，流动变化的形体。</p>
+                <p><span class="ann-num">2</span>杂然赋流形：纷纷地赋予万物各种形态。杂然，纷繁多样；赋，赋予；流形，流动变化的形体。</p>
                 
-                <p><span class="ann-num">3.</span> 浩然：浩然之气，语出《孟子》“我善养吾浩然之气”，指一种充塞天地的至大至刚之气。</p>
+                <p><span class="ann-num">3</span>浩然：浩然之气，语出《孟子》“我善养吾浩然之气”，指一种充塞天地的至大至刚之气。</p>
                 
-                <p><span class="ann-num">4.</span> 沛乎：充沛盛大的样子。</p>
+                <p><span class="ann-num">4</span>沛乎：充沛盛大的样子。</p>
                 
-                <p><span class="ann-num">5.</span> 苍冥：苍天、天空。冥（míng），深远幽暗，指高远的天空。</p>
+                <p><span class="ann-num">5</span>苍冥：苍天、天空。冥（míng），深远幽暗，指高远的天空。</p>
                 
-                <p><span class="ann-num">6.</span> 皇路当清夷：国家的政治道路正应当清明平坦。皇路，国运；清夷，清平。</p>
+                <p><span class="ann-num">6</span>皇路当清夷：国家的政治道路正应当清明平坦。皇路，国运；清夷，清平。</p>
                 
-                <p><span class="ann-num">7.</span> 含和吐明庭：含着和气、吐露于圣明的朝廷。有气节的人在太平年代能为朝廷贡献才智。</p>
+                <p><span class="ann-num">7</span>含和吐明庭：含着和气、吐露于圣明的朝廷。有气节的人在太平年代能为朝廷贡献才智。</p>
                 
-                <p><span class="ann-num">8.</span> 时穷节乃见：时局到了穷途末路的时候，人的气节才会显露出来。见（xiàn），显现。这是全文的纲领。</p>
+                <p><span class="ann-num">8</span>时穷节乃见：时局到了穷途末路的时候，人的气节才会显露出来。见（xiàn），显现。这是全文的纲领。</p>
                 
-                <p><span class="ann-num">9.</span> 丹青：红色和青色颜料，代指画像、史册。这些有节操的人被绘成肖像流传后世。</p>
+                <p><span class="ann-num">9</span>丹青：红色和青色颜料，代指画像、史册。这些有节操的人被绘成肖像流传后世。</p>
                 
-                <p><span class="ann-num">10.</span> 齐太史简：春秋时，齐国太史在竹简上直书“崔杼弑其君”，崔杼连杀三位太史，第四位仍坚持如实记录。简，竹简。</p>
+                <p><span class="ann-num">10</span>齐太史简：春秋时，齐国太史在竹简上直书“崔杼弑其君”，崔杼连杀三位太史，第四位仍坚持如实记录。简，竹简。</p>
                 
-                <p><span class="ann-num">11.</span> 董狐笔：春秋时晋国史官董狐，直书“赵盾弑其君”，被孔子称赞为“书法不隐”的良史。</p>
+                <p><span class="ann-num">11</span>董狐笔：春秋时晋国史官董狐，直书“赵盾弑其君”，被孔子称赞为“书法不隐”的良史。</p>
                 
-                <p><span class="ann-num">12.</span> 张良椎：张良为报韩国被秦所灭之仇，在博浪沙用大铁椎狙击秦始皇，未中。椎（chuí），铁锤。</p>
+                <p><span class="ann-num">12</span>张良椎：张良为报韩国被秦所灭之仇，在博浪沙用大铁椎狙击秦始皇，未中。椎（chuí），铁锤。</p>
                 
-                <p><span class="ann-num">13.</span> 苏武节：苏武出使匈奴被扣留十九年，手持汉朝使节（符节）不放，节上的旄毛都掉光了，始终不降。节，使臣的凭证。</p>
+                <p><span class="ann-num">13</span>苏武节：苏武出使匈奴被扣留十九年，手持汉朝使节（符节）不放，节上的旄毛都掉光了，始终不降。节，使臣的凭证。</p>
                 
-                <p><span class="ann-num">14.</span> 严将军头：三国时严颜被张飞俘虏，说“但有断头将军，无降将军”。</p>
+                <p><span class="ann-num">14</span>严将军头：三国时严颜被张飞俘虏，说“但有断头将军，无降将军”。</p>
                 
-                <p><span class="ann-num">15.</span> 嵇侍中血：西晋嵇绍在战乱中以身护卫晋惠帝，被乱军杀害，鲜血溅在惠帝龙袍上。事后惠帝不让洗袍，说“此嵇侍中血，勿洗也”。</p>
+                <p><span class="ann-num">15</span>嵇侍中血：西晋嵇绍在战乱中以身护卫晋惠帝，被乱军杀害，鲜血溅在惠帝龙袍上。事后惠帝不让洗袍，说“此嵇侍中血，勿洗也”。</p>
                 
-                <p><span class="ann-num">16.</span> 张睢阳齿：唐代安史之乱中，张巡死守睢阳，城破被俘，大骂叛军，牙齿都被敲碎。睢（suī）阳。</p>
+                <p><span class="ann-num">16</span>张睢阳齿：唐代安史之乱中，张巡死守睢阳，城破被俘，大骂叛军，牙齿都被敲碎。睢（suī）阳。</p>
                 
-                <p><span class="ann-num">17.</span> 颜常山舌：唐代颜杲卿任常山太守，安史之乱中城破被俘，骂不绝口，叛军割了他的舌头。</p>
+                <p><span class="ann-num">17</span>颜常山舌：唐代颜杲卿任常山太守，安史之乱中城破被俘，骂不绝口，叛军割了他的舌头。</p>
                 
-                <p><span class="ann-num">18.</span> 辽东帽：东汉末年管宁避乱辽东，常戴皂帽、穿布衣，终身不仕魏。“清操厉冰雪”——清白的操守比冰雪还洁净。</p>
+                <p><span class="ann-num">18</span>辽东帽：东汉末年管宁避乱辽东，常戴皂帽、穿布衣，终身不仕魏。“清操厉冰雪”——清白的操守比冰雪还洁净。</p>
                 
-                <p><span class="ann-num">19.</span> 出师表：诸葛亮北伐前写给后主刘禅的《出师表》，情辞恳切，“鬼神泣壮烈”——鬼神读了都为之落泪。</p>
+                <p><span class="ann-num">19</span>出师表：诸葛亮北伐前写给后主刘禅的《出师表》，情辞恳切，“鬼神泣壮烈”——鬼神读了都为之落泪。</p>
                 
-                <p><span class="ann-num">20.</span> 渡江楫：东晋祖逖率军渡江北伐，在长江中敲打船桨发誓收复中原。楫（jí），船桨。</p>
+                <p><span class="ann-num">20</span>渡江楫：东晋祖逖率军渡江北伐，在长江中敲打船桨发誓收复中原。楫（jí），船桨。</p>
                 
-                <p><span class="ann-num">21.</span> 击贼笏：唐代段秀实用笏板猛击叛臣朱泚的额头，朱泚头破血流。笏（hù），大臣上朝拿的板子；逆竖，对叛贼的蔑称。</p>
+                <p><span class="ann-num">21</span>击贼笏：唐代段秀实用笏板猛击叛臣朱泚的额头，朱泚头破血流。笏（hù），大臣上朝拿的板子；逆竖，对叛贼的蔑称。</p>
                 
-                <p><span class="ann-num">22.</span> 磅礴：气势盛大、充满。正气盛大到极点。</p>
+                <p><span class="ann-num">22</span>磅礴：气势盛大、充满。正气盛大到极点。</p>
                 
-                <p><span class="ann-num">23.</span> 凛烈万古存：庄严猛烈地万古长存。凛（lǐn），庄严不可侵犯。</p>
+                <p><span class="ann-num">23</span>凛烈万古存：庄严猛烈地万古长存。凛（lǐn），庄严不可侵犯。</p>
                 
-                <p><span class="ann-num">24.</span> 地维：维系大地的绳索。古人认为大地由四角的绳子拉着，才能稳固。</p>
+                <p><span class="ann-num">24</span>地维：维系大地的绳索。古人认为大地由四角的绳子拉着，才能稳固。</p>
                 
-                <p><span class="ann-num">25.</span> 天柱：支撑天空的柱子。古人认为天由柱子撑着。正气是天地立命的根本。</p>
+                <p><span class="ann-num">25</span>天柱：支撑天空的柱子。古人认为天由柱子撑着。正气是天地立命的根本。</p>
                 
-                <p><span class="ann-num">26.</span> 三纲：君为臣纲、父为子纲、夫为妻纲。三纲靠道义维系，道义的根本就是正气。</p>
+                <p><span class="ann-num">26</span>三纲：君为臣纲、父为子纲、夫为妻纲。三纲靠道义维系，道义的根本就是正气。</p>
                 
-                <p><span class="ann-num">27.</span> 嗟予遘阳九：可叹我碰上了厄运。嗟（jiē），叹息；遘（gòu），遭遇；阳九，古代术数认为的大灾难年数。指宋朝灭亡。</p>
+                <p><span class="ann-num">27</span>嗟予遘阳九：可叹我碰上了厄运。嗟（jiē），叹息；遘（gòu），遭遇；阳九，古代术数认为的大灾难年数。指宋朝灭亡。</p>
                 
-                <p><span class="ann-num">28.</span> 隶也实不力：我这个做臣子的实在没有能力挽回局面。文天祥自责。</p>
+                <p><span class="ann-num">28</span>隶也实不力：我这个做臣子的实在没有能力挽回局面。文天祥自责。</p>
                 
-                <p><span class="ann-num">29.</span> 楚囚缨其冠：像楚囚一样还戴着南冠。楚国俘虏钟仪被囚时仍戴楚国帽子。文天祥被俘后仍保持宋朝衣冠。缨，帽带。</p>
+                <p><span class="ann-num">29</span>楚囚缨其冠：像楚囚一样还戴着南冠。楚国俘虏钟仪被囚时仍戴楚国帽子。文天祥被俘后仍保持宋朝衣冠。缨，帽带。</p>
                 
-                <p><span class="ann-num">30.</span> 传车：驿站的囚车。被用囚车押送到极北的苦寒之地（指元大都，今北京）。</p>
+                <p><span class="ann-num">30</span>传车：驿站的囚车。被用囚车押送到极北的苦寒之地（指元大都，今北京）。</p>
                 
-                <p><span class="ann-num">31.</span> 鼎镬甘如饴：大锅烹煮的酷刑像糖浆一样甜。鼎镬（huò），古代烹人的刑具；饴（yí），糖浆。意为宁受极刑也不屈服。</p>
+                <p><span class="ann-num">31</span>鼎镬甘如饴：大锅烹煮的酷刑像糖浆一样甜。鼎镬（huò），古代烹人的刑具；饴（yí），糖浆。意为宁受极刑也不屈服。</p>
                 
-                <p><span class="ann-num">32.</span> 阴房阒鬼火：阴暗的牢房里寂静无人，只有磷火幽幽地飘。阒（qù），寂静。</p>
+                <p><span class="ann-num">32</span>阴房阒鬼火：阴暗的牢房里寂静无人，只有磷火幽幽地飘。阒（qù），寂静。</p>
                 
-                <p><span class="ann-num">33.</span> 春院閟天黑：春天的院子被锁得黑暗不透光。閟（bì），关闭。</p>
+                <p><span class="ann-num">33</span>春院閟天黑：春天的院子被锁得黑暗不透光。閟（bì），关闭。</p>
                 
-                <p><span class="ann-num">34.</span> 牛骥同一皂：老牛和千里马关在同一个槽里。骥（jì），千里马；皂（zào），马槽。比喻贤愚不分。</p>
+                <p><span class="ann-num">34</span>牛骥同一皂：老牛和千里马关在同一个槽里。骥（jì），千里马；皂（zào），马槽。比喻贤愚不分。</p>
                 
-                <p><span class="ann-num">35.</span> 鸡栖凤凰食：凤凰在鸡窝里觅食。比喻高洁之人落在卑贱环境中。</p>
+                <p><span class="ann-num">35</span>鸡栖凤凰食：凤凰在鸡窝里觅食。比喻高洁之人落在卑贱环境中。</p>
                 
-                <p><span class="ann-num">36.</span> 一朝蒙雾露：有一天染上瘴气疫病。蒙雾露，被雾气露水所伤。</p>
+                <p><span class="ann-num">36</span>一朝蒙雾露：有一天染上瘴气疫病。蒙雾露，被雾气露水所伤。</p>
                 
-                <p><span class="ann-num">37.</span> 分作沟中瘠：按理说会死在沟壑中变成枯骨。分（fèn），按理；瘠（jí），枯骨。</p>
+                <p><span class="ann-num">37</span>分作沟中瘠：按理说会死在沟壑中变成枯骨。分（fèn），按理；瘠（jí），枯骨。</p>
                 
-                <p><span class="ann-num">38.</span> 百沴自辟易：各种邪气（瘟疫、瘴气）都自动退避了。沴（lì），灾气、恶气；辟易，退避。正气护身，百毒不侵。</p>
+                <p><span class="ann-num">38</span>百沴自辟易：各种邪气（瘟疫、瘴气）都自动退避了。沴（lì），灾气、恶气；辟易，退避。正气护身，百毒不侵。</p>
                 
-                <p><span class="ann-num">39.</span> 沮洳场：低湿泥泞的地方，指阴暗潮湿的牢房。沮洳（jù rù），低湿。</p>
+                <p><span class="ann-num">39</span>沮洳场：低湿泥泞的地方，指阴暗潮湿的牢房。沮洳（jù rù），低湿。</p>
                 
-                <p><span class="ann-num">40.</span> 缪巧：机巧、窍门。缪（miù），巧诈。并没有什么奇特的技巧能活下来。</p>
+                <p><span class="ann-num">40</span>缪巧：机巧、窍门。缪（miù），巧诈。并没有什么奇特的技巧能活下来。</p>
                 
-                <p><span class="ann-num">41.</span> 阴阳不能贼：阴阳二气（冷热、疾病）也不能伤害我。贼，伤害。正气在体内护佑。</p>
+                <p><span class="ann-num">41</span>阴阳不能贼：阴阳二气（冷热、疾病）也不能伤害我。贼，伤害。正气在体内护佑。</p>
                 
-                <p><span class="ann-num">42.</span> 耿耿存：一颗耿耿忠心犹在。耿耿，明亮的样子，形容心光明磊落。</p>
+                <p><span class="ann-num">42</span>耿耿存：一颗耿耿忠心犹在。耿耿，明亮的样子，形容心光明磊落。</p>
                 
-                <p><span class="ann-num">43.</span> 苍天曷有极：苍天啊，这悲伤什么时候才有尽头？曷（hé），何。典出《诗经》“悠悠苍天，曷其有极”。</p>
+                <p><span class="ann-num">43</span>苍天曷有极：苍天啊，这悲伤什么时候才有尽头？曷（hé），何。典出《诗经》“悠悠苍天，曷其有极”。</p>
                 
-                <p><span class="ann-num">44.</span> 哲人日已远：古代贤哲们一天比一天远了。</p>
+                <p><span class="ann-num">44</span>哲人日已远：古代贤哲们一天比一天远了。</p>
                 
-                <p><span class="ann-num">45.</span> 典刑在夙昔：但他们的榜样还在从前的事迹中。典刑，典范、楷模；夙昔，往日。</p>
+                <p><span class="ann-num">45</span>典刑在夙昔：但他们的榜样还在从前的事迹中。典刑，典范、楷模；夙昔，往日。</p>
                 
-                <p><span class="ann-num">46.</span> 风檐展书读：在风吹的屋檐下展开书卷来读圣贤的事迹。</p>
+                <p><span class="ann-num">46</span>风檐展书读：在风吹的屋檐下展开书卷来读圣贤的事迹。</p>
                 
-                <p><span class="ann-num">47.</span> 古道照颜色：古人的道义之光映照在我的脸上。道义的光芒穿越时空，照亮了一个临死者的面容。</p>
+                <p><span class="ann-num">47</span>古道照颜色：古人的道义之光映照在我的脸上。道义的光芒穿越时空，照亮了一个临死者的面容。</p>
                 
             </div>
-            
+        </section>
+        
 
+        
+        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">读后</p>
+                <h2 id="appreciation-title">赏析</h2>
+            </div>
             <div class="appreciation-text">
                 
-                
                 <p>《正气歌》写于元大都的牢房里，是文天祥留给世界的最后一份长答卷，也是中国文学史上最长的气节宣言之一。</p>
-                
-                
                 
                 
                 
@@ -355,11 +313,7 @@
                 
                 
                 
-                
-                
                 <p>接下来是一串名字，像念一份长长的名单：齐国的史官宁死也要把&#34;崔杼弑其君&#34;写进竹简；董狐的笔从不替人遮掩；张良的大铁椎在博浪沙砸向秦始皇的车队；苏武在北海放羊十九年，使节上的旄毛一根不剩；严颜说&#34;但有断头将军，无降将军&#34;；嵇绍的血溅在皇帝的衣服上，皇帝不许洗；张巡城破被俘，牙齿被敲碎还要骂；颜杲卿舌头被割掉还要骂；还有管宁的辽东帽、诸葛亮的出师表、祖逖中流击楫的船桨、段秀实砸向叛贼的笏板。十二个人，有的死有的活，但文天祥说，那是同一股气在不同人身上的样子。这份名单从春秋排到唐朝，其实就是一部中国精神的族谱。</p>
-                
-                
                 
                 
                 
@@ -367,11 +321,7 @@
                 
                 
                 
-                
-                
                 <p>诗的后半写他所在的牢房：阴暗潮湿，磷火飘忽，老牛和千里马同槽，凤凰落到鸡窝里啄食。这样的地方，他住了整整三年，瘟疫瘴气居然都放过了他。&#34;百沴自辟易&#34;——各种邪气见了他都退避。今天我们知道，那是卫生、体质和意志一起作用的结果；但文天祥更愿意相信，是那股正气替他挡着。&#34;风檐展书读，古道照颜色&#34;——在风穿过的屋檐下翻开古书，古人的道义之光映在他脸上。他把名单上的名字读了一遍又一遍，现在他知道了：自己也要上名单了。</p>
-                
-                
                 
                 
                 
@@ -379,28 +329,25 @@
                 
                 
                 
-                
-                
                 <p>我不指望你成为这名单上的人，那太苦了。我只是想让你知道，人心里要有一根线：该说的话敢说，不该做的事不做。平时它看不见，考场上用不着，可万一哪天用得上，你要拿得出来。</p>
                 
-                
             </div>
+        </section>
+        
 
-            <nav class="poem-nav">
-                <a href="/gift/liang-song/" class="nav-back">← 返回两宋目录</a>
-                
-                <a href="/gift/yuan/ma-zhi-yuan-tian-jing-sha.html" class="nav-next">下一首 →</a>
-                
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav poem-nav" aria-label="诗歌导航">
+            <a class="nav-back" href="/gift/liang-song/">← 返回两宋目录</a>
+            <a class="nav-next" href="/gift/yuan/ma-zhi-yuan-tian-jing-sha.html">下一首：天净沙·秋思 →</a>
+        </nav>
+    </article>
 </div>
 
     </main>
 
     
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     
 </body>

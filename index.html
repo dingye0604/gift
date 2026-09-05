@@ -1,259 +1,1833 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>目录 — 诗三百</title>
+    <title>诗三百 · 读诗</title>
     <link rel="stylesheet" href="/gift/static/style.css">
-    
+    <script src="/gift/static/reading-note.js" defer></script>
 </head>
-<body class="home-page" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="home-page">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<section class="river-hero">
-    <span class="river-hero-watermark" aria-hidden="true">詩</span>
-    <p class="river-hero-kicker">中国古代诗歌选</p>
-    <h1 class="river-hero-title">诗三百</h1>
-    <p class="river-hero-desc">给妹妹的礼物</p>
-    <p class="river-hero-quote">温柔敦厚，诗教也</p>
+<section class="intro" aria-labelledby="title">
+    <div>
+        <p class="eyebrow">中国古代诗歌选</p>
+        <h1 id="title">诗三百</h1>
+        <p class="intro-description">温柔敦厚，诗教也。</p>
+    </div>
 </section>
 
-<section class="river-timeline" aria-label="诗歌之河 · 朝代目录">
-    <div class="river-intro" aria-hidden="true">
-        <span>循流而下</span>
-        <span>自先秦至近代</span>
+<section class="library" id="dynasties" aria-labelledby="library-title">
+    <div class="section-heading">
+        <h2 id="library-title">循朝代读诗</h2>
+        <span>沿流而下，循朝代读诗</span>
     </div>
-    <svg class="river-svg" viewBox="0 0 960 2100" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="8%" x2="92%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#afc1b5" stop-opacity="0"/>
-                <stop offset="8%" stop-color="#8ca89d" stop-opacity="0.16"/>
-                <stop offset="34%" stop-color="#5f8984" stop-opacity="0.40"/>
-                <stop offset="67%" stop-color="#3f7474" stop-opacity="0.48"/>
-                <stop offset="90%" stop-color="#668c83" stop-opacity="0.22"/>
-                <stop offset="100%" stop-color="#9eb2a7" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="10%" stop-color="#4a7c7c" stop-opacity="0.16"/>
-                <stop offset="62%" stop-color="#315f61" stop-opacity="0.32"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="10" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
+    <div class="dynasty-browser">
+        
+        
+        
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-xian-qin"
+               aria-label="先秦" checked>
+        
+        
+        
+        
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-liang-han"
+               aria-label="两汉">
+        
+        
+        
+        
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-wei-jin"
+               aria-label="魏晋">
+        
+        
+        
+        
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-nan-bei-chao"
+               aria-label="南北朝">
+        
+        
+        
+        
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-tang"
+               aria-label="唐">
+        
+        
+        
+        
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-wudai-shiguo"
+               aria-label="五代十国">
+        
+        
+        
+        
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-liang-song"
+               aria-label="两宋">
+        
+        
+        
+        
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-yuan"
+               aria-label="元">
+        
+        
+        
+        
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-ming-qing"
+               aria-label="明清">
+        
+        
+        
+        
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-jin-dai"
+               aria-label="近代">
+        
+        
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
+        <div class="dynasty-map" role="group" aria-label="山水朝代目录">
+            <img class="map-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="" width="1024" height="1536">
+            <svg class="waterways" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+                <path class="water-section water-0" d="M305 103 Q330 107 362 101 M318 112 Q338 115 352 111"/>
+                <path class="water-section water-1" d="M655 193 Q680 197 712 191 M668 202 Q688 205 702 201"/>
+                <path class="water-section water-2" d="M275 283 Q300 287 332 281 M288 292 Q308 295 322 291"/>
+                <path class="water-section water-3" d="M685 373 Q710 377 742 371 M698 382 Q718 385 732 381"/>
+                <path class="water-section water-4" d="M315 463 Q340 467 372 461 M328 472 Q348 475 362 471"/>
+                <path class="water-section water-5" d="M665 553 Q690 557 722 551 M678 562 Q698 565 712 561"/>
+                <path class="water-section water-6" d="M265 643 Q290 647 322 641 M278 652 Q298 655 312 651"/>
+                <path class="water-section water-7" d="M645 733 Q670 737 702 731 M658 742 Q678 745 692 741"/>
+                <path class="water-section water-8" d="M305 823 Q330 827 362 821 M318 832 Q338 835 352 831"/>
+                <path class="water-section water-9" d="M665 913 Q690 917 722 911 M678 922 Q698 925 712 921"/>
+            </svg>
 
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
+            
+            
+            
+            
+            
+            
+            <label class="shore-card shore-xian-qin" for="tab-xian-qin"
+                   style="--x:33%;--y:7%">
+                <span class="shore-name">先秦</span>
+                <span class="shore-sub">风雅之始</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            
+            
+            
+            
+            
+            <label class="shore-card shore-liang-han" for="tab-liang-han"
+                   style="--x:68%;--y:16%">
+                <span class="shore-name">两汉</span>
+                <span class="shore-sub">古诗余音</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            
+            
+            
+            
+            
+            <label class="shore-card shore-wei-jin" for="tab-wei-jin"
+                   style="--x:30%;--y:25%">
+                <span class="shore-name">魏晋</span>
+                <span class="shore-sub">山水清音</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            
+            
+            
+            
+            
+            <label class="shore-card shore-nan-bei-chao" for="tab-nan-bei-chao"
+                   style="--x:71%;--y:34%">
+                <span class="shore-name">南北朝</span>
+                <span class="shore-sub">南北风流</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            
+            
+            
+            
+            
+            <label class="shore-card shore-tang" for="tab-tang"
+                   style="--x:34%;--y:43%">
+                <span class="shore-name">唐</span>
+                <span class="shore-sub">盛唐气象</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            
+            
+            
+            
+            
+            <label class="shore-card shore-wudai-shiguo" for="tab-wudai-shiguo"
+                   style="--x:69%;--y:52%">
+                <span class="shore-name">五代十国</span>
+                <span class="shore-sub">小楼词韵</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            
+            
+            
+            
+            
+            <label class="shore-card shore-liang-song" for="tab-liang-song"
+                   style="--x:29%;--y:61%">
+                <span class="shore-name">两宋</span>
+                <span class="shore-sub">烟雨词境</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            
+            
+            
+            
+            
+            <label class="shore-card shore-yuan" for="tab-yuan"
+                   style="--x:67%;--y:70%">
+                <span class="shore-name">元</span>
+                <span class="shore-sub">曲中天地</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            
+            
+            
+            
+            
+            <label class="shore-card shore-ming-qing" for="tab-ming-qing"
+                   style="--x:33%;--y:79%">
+                <span class="shore-name">明清</span>
+                <span class="shore-sub">人间情味</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            
+            
+            
+            
+            
+            <label class="shore-card shore-jin-dai" for="tab-jin-dai"
+                   style="--x:69%;--y:88%">
+                <span class="shore-name">近代</span>
+                <span class="shore-sub">旧雨新声</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            
+            
 
-        <path class="river-current"
-            d="M 382 0 C 392 150, 413 322, 466 500 C 519 678, 482 864, 455 1050 C 428 1236, 484 1432, 548 1625 C 612 1818, 706 1975, 764 2100" />
-    </svg>
+            <span class="map-caption" aria-hidden="true">诗歌之河 · 自先秦至近代</span>
+            <a class="map-read-link" href="#poem-selection">阅读所选朝代 <span aria-hidden="true">↓</span></a>
+        </div>
 
+        <div class="reading-layout" id="poem-selection" tabindex="-1">
+            <div class="panels">
+                
+                
+                
+                <section class="dynasty-panel panel-xian-qin" aria-label="先秦诗歌">
+                    <div class="list-heading">
+                        <h3>先秦</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>诗经·周南·关雎</strong>
+                                <small>无名氏 · 四言诗</small>
+                            </span>
+                            <span class="row-excerpt">关关雎鸠&lt;sup&gt;1&lt;/sup&gt;，在河之洲。窈窕淑女，君子好逑&lt;sup&gt;2&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>关关雎鸠<sup>1</sup>，在河之洲。窈窕淑女，君子好逑<sup>2</sup>。</p>
+                            
+                            
+                            
+                            <p>参差荇菜<sup>3</sup>，左右流之。窈窕淑女，寤寐求之。</p>
+                            
+                            <p>求之不得，寤寐思服。悠哉悠哉，辗转反侧<sup>4</sup>。</p>
+                            
+                            
+                            
+                            <p>参差荇菜，左右采之。窈窕淑女，琴瑟友之。</p>
+                            
+                            <p>参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。</p>
+                            
+                            <a class="preview-link" href="/gift/xian-qin/guan-ju.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>诗经·小雅·鹿鸣</strong>
+                                <small>无名氏 · 四言诗</small>
+                            </span>
+                            <span class="row-excerpt">呦呦鹿鸣&lt;sup&gt;1&lt;/sup&gt;，食野之苹&lt;sup&gt;2&lt;/sup&gt;。我有嘉宾，鼓瑟吹笙。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>呦呦鹿鸣<sup>1</sup>，食野之苹<sup>2</sup>。我有嘉宾，鼓瑟吹笙。</p>
+                            
+                            <p>吹笙鼓簧，承筐是将<sup>3</sup>。人之好我，示我周行<sup>4</sup>。</p>
+                            
+                            
+                            
+                            <p>呦呦鹿鸣，食野之蒿<sup>5</sup>。我有嘉宾，德音孔昭<sup>6</sup>。</p>
+                            
+                            <p>视民不恌，君子是则是效。我有旨酒<sup>7</sup>，嘉宾式燕以敖。</p>
+                            
+                            
+                            
+                            <p>呦呦鹿鸣，食野之芩。我有嘉宾，鼓瑟鼓琴。</p>
+                            
+                            <p>鼓瑟鼓琴，和乐且湛<sup>8</sup>。我有旨酒，以燕乐嘉宾之心。</p>
+                            
+                            <a class="preview-link" href="/gift/xian-qin/lu-ming.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>诗经·卫风·淇奥</strong>
+                                <small>无名氏 · 四言诗</small>
+                            </span>
+                            <span class="row-excerpt">瞻彼淇奥&lt;sup&gt;1&lt;/sup&gt;，绿竹猗猗&lt;sup&gt;2&lt;/sup&gt;。有匪君子&lt;sup&gt;3&lt;/sup&gt;，如切如磋，如琢如磨。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>瞻彼淇奥<sup>1</sup>，绿竹猗猗<sup>2</sup>。有匪君子<sup>3</sup>，如切如磋，如琢如磨。</p>
+                            
+                            <p>瑟兮僩兮<sup>4</sup>，赫兮咺兮。有匪君子，终不可谖<sup>5</sup>兮。</p>
+                            
+                            
+                            
+                            <p>瞻彼淇奥，绿竹青青。有匪君子，充耳琇莹<sup>6</sup>，会弁如星<sup>7</sup>。</p>
+                            
+                            <p>瑟兮僩兮，赫兮咺兮。有匪君子，终不可谖兮。</p>
+                            
+                            
+                            
+                            <p>瞻彼淇奥，绿竹如箦<sup>8</sup>。有匪君子，如金如锡，如圭如璧。</p>
+                            
+                            <p>宽兮绰兮，猗重较兮。善戏谑兮，不为虐兮<sup>9</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/xian-qin/xi-ao.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <a class="directory-link" href="/gift/xian-qin/">进入先秦完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                
+                
+                
+                
+                <section class="dynasty-panel panel-liang-han" aria-label="两汉诗歌">
+                    <div class="list-heading">
+                        <h3>两汉</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>行行重行行</strong>
+                                <small>无名氏 · 五言古诗</small>
+                            </span>
+                            <span class="row-excerpt">行行重行行&lt;sup&gt;1&lt;/sup&gt;，与君生别离。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>行行重行行<sup>1</sup>，与君生别离。</p>
+                            
+                            <p>相去万余里，各在天一涯<sup>2</sup>。</p>
+                            
+                            <p>道路阻且长，会面安可知？</p>
+                            
+                            <p>胡马依北风，越鸟巢南枝<sup>3</sup>。</p>
+                            
+                            <p>相去日已远，衣带日已缓<sup>4</sup>。</p>
+                            
+                            <p>浮云蔽白日，游子不顾反<sup>5</sup>。</p>
+                            
+                            <p>思君令人老，岁月忽已晚。</p>
+                            
+                            <p>弃捐<sup>6</sup>勿复道，努力加餐饭。</p>
+                            
+                            <a class="preview-link" href="/gift/liang-han/xing-xing-chong-xing-xing.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>生年不满百</strong>
+                                <small>无名氏 · 五言古诗</small>
+                            </span>
+                            <span class="row-excerpt">生年不满百，常怀千岁忧&lt;sup&gt;1&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>生年不满百，常怀千岁忧<sup>1</sup>。</p>
+                            
+                            <p>昼短苦夜长，何不秉烛游<sup>2</sup>？</p>
+                            
+                            <p>为乐当及时，何能待来兹<sup>3</sup>？</p>
+                            
+                            <p>愚者爱惜费<sup>4</sup>，但为后世嗤。</p>
+                            
+                            <p>仙人王子乔<sup>5</sup>，难可与等期<sup>6</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/liang-han/sheng-nian-bu-man-bai.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>庭中有奇树</strong>
+                                <small>无名氏 · 五言古诗</small>
+                            </span>
+                            <span class="row-excerpt">庭中有奇树，绿叶发华滋&lt;sup&gt;1&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>庭中有奇树，绿叶发华滋<sup>1</sup>。</p>
+                            
+                            <p>攀条折其荣<sup>2</sup>，将以遗<sup>3</sup>所思。</p>
+                            
+                            <p>馨香<sup>4</sup>盈怀袖，路远莫致<sup>5</sup>之。</p>
+                            
+                            <p>此物何足贵？但感别经时<sup>6</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/liang-han/ting-zhong-you-qi-shu.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <a class="directory-link" href="/gift/liang-han/">进入两汉完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                
+                
+                
+                
+                <section class="dynasty-panel panel-wei-jin" aria-label="魏晋诗歌">
+                    <div class="list-heading">
+                        <h3>魏晋</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>归园田居·其一</strong>
+                                <small>陶渊明 · 五言古诗</small>
+                            </span>
+                            <span class="row-excerpt">少无适俗韵&lt;sup&gt;1&lt;/sup&gt;，性本爱丘山。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>少无适俗韵<sup>1</sup>，性本爱丘山。</p>
+                            
+                            <p>误落尘网<sup>2</sup>中，一去三十年。</p>
+                            
+                            <p>羁鸟<sup>3</sup>恋旧林，池鱼思故渊。</p>
+                            
+                            <p>开荒南野际，守拙<sup>4</sup>归园田。</p>
+                            
+                            <p>方宅十余亩，草屋八九间。</p>
+                            
+                            <p>榆柳荫后檐，桃李罗堂前。</p>
+                            
+                            <p>暧暧<sup>5</sup>远人村，依依<sup>6</sup>墟里烟。</p>
+                            
+                            <p>狗吠深巷中，鸡鸣桑树颠。</p>
+                            
+                            <p>户庭无尘杂，虚室有余闲。</p>
+                            
+                            <p>久在樊笼<sup>7</sup>里，复得返自然。</p>
+                            
+                            <a class="preview-link" href="/gift/wei-jin/gui-yuan-tian-ju.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>饮酒·其五</strong>
+                                <small>陶渊明 · 五言古诗</small>
+                            </span>
+                            <span class="row-excerpt">结庐&lt;sup&gt;1&lt;/sup&gt;在人境&lt;sup&gt;2&lt;/sup&gt;，而无车马喧。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>结庐<sup>1</sup>在人境<sup>2</sup>，而无车马喧。</p>
+                            
+                            <p>问君何能尔<sup>3</sup>？心远地自偏。</p>
+                            
+                            <p>采菊东篱下，悠然<sup>4</sup>见南山。</p>
+                            
+                            <p>山气日夕佳，飞鸟相与<sup>5</sup>还。</p>
+                            
+                            <p>此中有真意，欲辨<sup>6</sup>已忘言。</p>
+                            
+                            <a class="preview-link" href="/gift/wei-jin/yin-jiu-qi-wu.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>观沧海</strong>
+                                <small>曹操 · 四言古诗</small>
+                            </span>
+                            <span class="row-excerpt">东临&lt;sup&gt;1&lt;/sup&gt;碣石，以观沧海。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>东临<sup>1</sup>碣石，以观沧海。</p>
+                            
+                            <p>水何澹澹<sup>2</sup>，山岛竦峙<sup>3</sup>。</p>
+                            
+                            <p>树木丛生，百草丰茂。</p>
+                            
+                            <p>秋风萧瑟<sup>4</sup>，洪波涌起。</p>
+                            
+                            <p>日月之行，若出其中；</p>
+                            
+                            <p>星汉<sup>5</sup>灿烂，若出其里。</p>
+                            
+                            <p>幸甚至哉，歌以咏志。</p>
+                            
+                            <a class="preview-link" href="/gift/wei-jin/guan-cang-hai.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <a class="directory-link" href="/gift/wei-jin/">进入魏晋完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                
+                
+                
+                
+                <section class="dynasty-panel panel-nan-bei-chao" aria-label="南北朝诗歌">
+                    <div class="list-heading">
+                        <h3>南北朝</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>木兰诗</strong>
+                                <small>无名氏 · 乐府民歌</small>
+                            </span>
+                            <span class="row-excerpt">唧唧&lt;sup&gt;1&lt;/sup&gt;复唧唧，木兰当户&lt;sup&gt;2&lt;/sup&gt;织。不闻机杼&lt;sup&gt;3&lt;/sup&gt;声，唯闻女叹息。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>唧唧<sup>1</sup>复唧唧，木兰当户<sup>2</sup>织。不闻机杼<sup>3</sup>声，唯闻女叹息。</p>
+                            
+                            
+                            
+                            <p>问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖<sup>4</sup>，可汗<sup>5</sup>大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马<sup>6</sup>，从此替爷征。</p>
+                            
+                            
+                            
+                            <p>东市买骏马，西市买鞍鞯<sup>7</sup>，南市买辔头<sup>8</sup>，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅<sup>9</sup>。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾<sup>10</sup>。</p>
+                            
+                            
+                            
+                            <p>万里赴戎机<sup>11</sup>，关山度若飞。朔气传金柝<sup>12</sup>，寒光照铁衣<sup>13</sup>。将军百战死，壮士十年归。</p>
+                            
+                            
+                            
+                            <p>归来见天子，天子坐明堂<sup>14</sup>。策勋十二转<sup>15</sup>，赏赐百千强<sup>16</sup>。可汗问所欲，木兰不用尚书郎<sup>17</sup>，愿驰千里足，送儿还故乡。</p>
+                            
+                            
+                            
+                            <p>爷娘闻女来，出郭<sup>18</sup>相扶将；阿姊闻妹来，当户理红妆<sup>19</sup>；小弟闻姊来，磨刀霍霍<sup>20</sup>向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓<sup>21</sup>，对镜帖花黄<sup>22</sup>。出门看火伴<sup>23</sup>，火伴皆惊忙：同行十二年，不知木兰是女郎。</p>
+                            
+                            
+                            
+                            <p>雄兔脚扑朔<sup>24</sup>，雌兔眼迷离<sup>25</sup>；双兔傍地走<sup>26</sup>，安能辨我是雄雌？</p>
+                            
+                            <a class="preview-link" href="/gift/nan-bei-chao/mu-lan-shi.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>敕勒歌</strong>
+                                <small>无名氏 · 北朝民歌</small>
+                            </span>
+                            <span class="row-excerpt">敕勒川&lt;sup&gt;1&lt;/sup&gt;，阴山&lt;sup&gt;2&lt;/sup&gt;下。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>敕勒川<sup>1</sup>，阴山<sup>2</sup>下。</p>
+                            
+                            <p>天似穹庐<sup>3</sup>，笼盖四野。</p>
+                            
+                            <p>天苍苍<sup>4</sup>，野茫茫<sup>5</sup>，</p>
+                            
+                            <p>风吹草低见<sup>6</sup>牛羊。</p>
+                            
+                            <a class="preview-link" href="/gift/nan-bei-chao/chi-le-ge.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>晚登三山还望京邑</strong>
+                                <small>谢朓 · 五言古诗</small>
+                            </span>
+                            <span class="row-excerpt">灞涘&lt;sup&gt;1&lt;/sup&gt;望长安，河阳&lt;sup&gt;2&lt;/sup&gt;视京县。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>灞涘<sup>1</sup>望长安，河阳<sup>2</sup>视京县。</p>
+                            
+                            <p>白日丽飞甍<sup>3</sup>，参差皆可见。</p>
+                            
+                            <p>余霞散成绮<sup>4</sup>，澄江静如练<sup>5</sup>。</p>
+                            
+                            <p>喧鸟覆春洲<sup>6</sup>，杂英满芳甸<sup>7</sup>。</p>
+                            
+                            <p>去矣方滞淫<sup>8</sup>，怀哉罢欢宴。</p>
+                            
+                            <p>佳期怅何许，泪下如流霰<sup>9</sup>。</p>
+                            
+                            <p>有情知望乡，谁能鬒<sup>10</sup>不变？</p>
+                            
+                            <a class="preview-link" href="/gift/nan-bei-chao/wan-xi-xie-gong-ding.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <a class="directory-link" href="/gift/nan-bei-chao/">进入南北朝完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                
+                
+                
+                
+                <section class="dynasty-panel panel-tang" aria-label="唐诗歌">
+                    <div class="list-heading">
+                        <h3>唐</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>送杜少府之任蜀州</strong>
+                                <small>王勃 · 五言律诗</small>
+                            </span>
+                            <span class="row-excerpt">城阙&lt;sup&gt;1&lt;/sup&gt;辅三秦&lt;sup&gt;2&lt;/sup&gt;，风烟望五津&lt;sup&gt;3&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>城阙<sup>1</sup>辅三秦<sup>2</sup>，风烟望五津<sup>3</sup>。</p>
+                            
+                            <p>与君离别意，同是宦游<sup>4</sup>人。</p>
+                            
+                            <p>海内存知己，天涯若比邻<sup>5</sup>。</p>
+                            
+                            <p>无为在歧路<sup>6</sup>，儿女共沾巾<sup>7</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/tang/song-du-shao-fu-zhi-ren-shu-zhou.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>上李邕</strong>
+                                <small>李白</small>
+                            </span>
+                            <span class="row-excerpt">大鹏&lt;sup&gt;1&lt;/sup&gt;一日同风起，扶摇&lt;sup&gt;2&lt;/sup&gt;直上九万里。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>大鹏<sup>1</sup>一日同风起，扶摇<sup>2</sup>直上九万里。</p>
+                            
+                            <p>假令风歇时下来，犹能簸却<sup>3</sup>沧溟<sup>4</sup>水。</p>
+                            
+                            <p>世人见我恒殊调<sup>5</sup>，闻余大言皆冷笑。</p>
+                            
+                            <p>宣父<sup>6</sup>犹能畏后生，丈夫未可轻年少。</p>
+                            
+                            <a class="preview-link" href="/gift/tang/shang-li-yong.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>渡荆门送别</strong>
+                                <small>李白</small>
+                            </span>
+                            <span class="row-excerpt">渡远荆门&lt;sup&gt;1&lt;/sup&gt;外，来从楚国&lt;sup&gt;2&lt;/sup&gt;游。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>渡远荆门<sup>1</sup>外，来从楚国<sup>2</sup>游。</p>
+                            
+                            <p>山随平野尽，江入大荒<sup>3</sup>流。</p>
+                            
+                            <p>月下飞天镜<sup>4</sup>，云生结海楼<sup>5</sup>。</p>
+                            
+                            <p>仍怜故乡水，万里送行舟。</p>
+                            
+                            <a class="preview-link" href="/gift/tang/du-jing-men-song-bie.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <a class="directory-link" href="/gift/tang/">进入唐完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                
+                
+                
+                
+                <section class="dynasty-panel panel-wudai-shiguo" aria-label="五代十国诗歌">
+                    <div class="list-heading">
+                        <h3>五代十国</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>浣溪沙·红日已高三丈透</strong>
+                                <small>李煜 · 词</small>
+                            </span>
+                            <span class="row-excerpt">红日已高三丈透&lt;sup&gt;1&lt;/sup&gt;，</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>红日已高三丈透<sup>1</sup>，</p>
+                            
+                            <p>金炉<sup>2</sup>次第<sup>3</sup>添香兽<sup>4</sup>。</p>
+                            
+                            <p>红锦地衣<sup>5</sup>随步皱。</p>
+                            
+                            
+                            
+                            <p>佳人舞点<sup>6</sup>金钗溜<sup>7</sup>，</p>
+                            
+                            <p>酒恶<sup>8</sup>时拈<sup>9</sup>花蕊嗅。</p>
+                            
+                            <p>别殿<sup>10</sup>遥闻箫鼓奏。</p>
+                            
+                            <a class="preview-link" href="/gift/wudai-shiguo/li-yu-huan-xi-sha.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>玉楼春·晚妆初了明肌雪</strong>
+                                <small>李煜 · 词</small>
+                            </span>
+                            <span class="row-excerpt">晚妆&lt;sup&gt;1&lt;/sup&gt;初了明肌雪&lt;sup&gt;2&lt;/sup&gt;，春殿嫔娥&lt;sup&gt;3&lt;/sup&gt;鱼贯列&lt;sup&gt;4&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>晚妆<sup>1</sup>初了明肌雪<sup>2</sup>，春殿嫔娥<sup>3</sup>鱼贯列<sup>4</sup>。</p>
+                            
+                            <p>凤箫<sup>5</sup>吹断水云闲，重按霓裳<sup>6</sup>歌遍彻<sup>7</sup>。</p>
+                            
+                            
+                            
+                            <p>临风谁更飘香屑<sup>8</sup>，醉拍阑干情味切<sup>9</sup>。</p>
+                            
+                            <p>归时休放烛花红<sup>10</sup>，待踏马蹄清夜月<sup>11</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/wudai-shiguo/li-yu-yu-lou-chun.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>破阵子·四十年来家国</strong>
+                                <small>李煜 · 词</small>
+                            </span>
+                            <span class="row-excerpt">四十年来家国&lt;sup&gt;1&lt;/sup&gt;，三千里地山河&lt;sup&gt;2&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>四十年来家国<sup>1</sup>，三千里地山河<sup>2</sup>。</p>
+                            
+                            <p>凤阁龙楼<sup>3</sup>连霄汉<sup>4</sup>，玉树琼枝<sup>5</sup>作烟萝<sup>6</sup>，几曾识干戈<sup>7</sup>？</p>
+                            
+                            
+                            
+                            <p>一旦归为臣虏<sup>8</sup>，沈腰潘鬓<sup>9</sup>消磨。</p>
+                            
+                            <p>最是仓皇辞庙<sup>10</sup>日，教坊<sup>11</sup>犹奏别离歌，垂泪对宫娥<sup>12</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/wudai-shiguo/li-yu-po-zhen-zi.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <a class="directory-link" href="/gift/wudai-shiguo/">进入五代十国完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                
+                
+                
+                
+                <section class="dynasty-panel panel-liang-song" aria-label="两宋诗歌">
+                    <div class="list-heading">
+                        <h3>两宋</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>浣溪沙·一曲新词酒一杯</strong>
+                                <small>晏殊 · 词</small>
+                            </span>
+                            <span class="row-excerpt">一曲新词酒一杯，去年天气旧亭台&lt;sup&gt;1&lt;/sup&gt;。夕阳西下几时回&lt;sup&gt;2&lt;/sup&gt;？</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>一曲新词酒一杯，去年天气旧亭台<sup>1</sup>。夕阳西下几时回<sup>2</sup>？</p>
+                            
+                            
+                            
+                            <p>无可奈何<sup>3</sup>花落去，似曾相识<sup>4</sup>燕归来。小园香径<sup>5</sup>独徘徊<sup>6</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/liang-song/yan-shu-huan-xi-sha.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>临江仙·梦后楼台高锁</strong>
+                                <small>晏几道 · 词</small>
+                            </span>
+                            <span class="row-excerpt">梦后楼台高锁，酒醒帘幕低垂。去年春恨却来时&lt;sup&gt;1&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>梦后楼台高锁，酒醒帘幕低垂。去年春恨却来时<sup>1</sup>。</p>
+                            
+                            <p>落花人独立，微雨燕双飞<sup>2</sup>。</p>
+                            
+                            
+                            
+                            <p>记得小蘋<sup>3</sup>初见，两重心字罗衣<sup>4</sup>。琵琶弦上说相思<sup>5</sup>。</p>
+                            
+                            <p>当时明月在，曾照彩云归<sup>6</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/liang-song/yan-ji-dao-lin-jiang-xian.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>蝶恋花·庭院深深深几许</strong>
+                                <small>欧阳修 · 词</small>
+                            </span>
+                            <span class="row-excerpt">庭院深深深几许&lt;sup&gt;1&lt;/sup&gt;？杨柳堆烟&lt;sup&gt;2&lt;/sup&gt;，帘幕无重数。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>庭院深深深几许<sup>1</sup>？杨柳堆烟<sup>2</sup>，帘幕无重数。</p>
+                            
+                            <p>玉勒雕鞍<sup>3</sup>游冶处<sup>4</sup>，楼高不见章台路<sup>5</sup>。</p>
+                            
+                            
+                            
+                            <p>雨横风狂<sup>6</sup>三月暮，门掩黄昏，无计留春住。</p>
+                            
+                            <p>泪眼问花花不语，乱红<sup>7</sup>飞过秋千去。</p>
+                            
+                            <a class="preview-link" href="/gift/liang-song/ou-yang-xiu-die-lian-hua.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <a class="directory-link" href="/gift/liang-song/">进入两宋完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                
+                
+                
+                
+                <section class="dynasty-panel panel-yuan" aria-label="元诗歌">
+                    <div class="list-heading">
+                        <h3>元</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>天净沙·秋思</strong>
+                                <small>马致远 · 散曲</small>
+                            </span>
+                            <span class="row-excerpt">枯藤&lt;sup&gt;1&lt;/sup&gt;老树昏鸦&lt;sup&gt;2&lt;/sup&gt;，小桥流水人家，古道&lt;sup&gt;3&lt;/sup&gt;西风瘦马。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>枯藤<sup>1</sup>老树昏鸦<sup>2</sup>，小桥流水人家，古道<sup>3</sup>西风瘦马。</p>
+                            
+                            <p>夕阳西下，断肠人<sup>4</sup>在天涯<sup>5</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/yuan/ma-zhi-yuan-tian-jing-sha.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>山坡羊·潼关怀古</strong>
+                                <small>张养浩 · 散曲</small>
+                            </span>
+                            <span class="row-excerpt">峰峦如聚&lt;sup&gt;1&lt;/sup&gt;，波涛如怒&lt;sup&gt;2&lt;/sup&gt;，山河表里&lt;sup&gt;3&lt;/sup&gt;潼关&lt;sup&gt;4&lt;/sup&gt;路。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>峰峦如聚<sup>1</sup>，波涛如怒<sup>2</sup>，山河表里<sup>3</sup>潼关<sup>4</sup>路。</p>
+                            
+                            <p>望西都<sup>5</sup>，意踌躇<sup>6</sup>。</p>
+                            
+                            <p>伤心秦汉经行处<sup>7</sup>，宫阙万间都做了土<sup>8</sup>。</p>
+                            
+                            <p>兴，百姓苦；亡，百姓苦。</p>
+                            
+                            <a class="preview-link" href="/gift/yuan/zhang-yang-hao-shan-po-yang.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>天净沙·秋</strong>
+                                <small>白朴 · 散曲</small>
+                            </span>
+                            <span class="row-excerpt">孤村落日残霞&lt;sup&gt;1&lt;/sup&gt;，轻烟老树寒鸦&lt;sup&gt;2&lt;/sup&gt;，一点飞鸿影下&lt;sup&gt;3&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>孤村落日残霞<sup>1</sup>，轻烟老树寒鸦<sup>2</sup>，一点飞鸿影下<sup>3</sup>。</p>
+                            
+                            <p>青山绿水，白草红叶黄花<sup>4</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/yuan/bai-pu-tian-jing-sha.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <a class="directory-link" href="/gift/yuan/">进入元完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                
+                
+                
+                
+                <section class="dynasty-panel panel-ming-qing" aria-label="明清诗歌">
+                    <div class="list-heading">
+                        <h3>明清</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>桃花庵歌</strong>
+                                <small>唐寅 · 七言古诗</small>
+                            </span>
+                            <span class="row-excerpt">桃花坞&lt;sup&gt;1&lt;/sup&gt;里桃花庵&lt;sup&gt;2&lt;/sup&gt;，桃花庵下桃花仙。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>桃花坞<sup>1</sup>里桃花庵<sup>2</sup>，桃花庵下桃花仙。</p>
+                            
+                            <p>桃花仙人种桃树，又摘桃花换酒钱。</p>
+                            
+                            <p>酒醒只在花前坐，酒醉还来花下眠。</p>
+                            
+                            <p>半醉半醒日复日，花落花开年复年。</p>
+                            
+                            <p>但愿老死花酒间，不愿鞠躬车马前<sup>3</sup>。</p>
+                            
+                            <p>车尘马足<sup>4</sup>富者趣<sup>5</sup>，酒盏花枝贫者缘<sup>6</sup>。</p>
+                            
+                            <p>若将富贵比贫者，一在平地一在天。</p>
+                            
+                            <p>若将贫贱比车马，他得驱驰我得闲。</p>
+                            
+                            <p>别人笑我忒<sup>7</sup>风颠<sup>8</sup>，我笑他人看不穿<sup>9</sup>。</p>
+                            
+                            <p>不见五陵豪杰墓<sup>10</sup>，无花无酒锄作田。</p>
+                            
+                            <a class="preview-link" href="/gift/ming-qing/tang-yin-tao-hua-an-ge.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>牡丹亭·惊梦（节选）</strong>
+                                <small>汤显祖 · 戏曲唱词</small>
+                            </span>
+                            <span class="row-excerpt">原来姹紫嫣红&lt;sup&gt;1&lt;/sup&gt;开遍，似这般都付与断井颓垣&lt;sup&gt;2&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>原来姹紫嫣红<sup>1</sup>开遍，似这般都付与断井颓垣<sup>2</sup>。</p>
+                            
+                            <p>良辰美景奈何天<sup>3</sup>，赏心乐事谁家院。</p>
+                            
+                            <p>朝飞暮卷<sup>4</sup>，云霞翠轩<sup>5</sup>；雨丝风片，烟波画船——锦屏人<sup>6</sup>忒<sup>7</sup>看的这韶光<sup>8</sup>贱！</p>
+                            
+                            
+                            
+                            <p>遍青山啼红了杜鹃<sup>9</sup>，荼蘼<sup>10</sup>外烟丝醉软。</p>
+                            
+                            <p>牡丹虽好，他春归怎占的先<sup>11</sup>！</p>
+                            
+                            
+                            
+                            <p>不到园林，怎知春色如许<sup>12</sup>？</p>
+                            
+                            <a class="preview-link" href="/gift/ming-qing/tang-xian-zu-mu-dan-ting.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>木兰花令·拟古决绝词</strong>
+                                <small>纳兰性德 · 词</small>
+                            </span>
+                            <span class="row-excerpt">人生若只如初见&lt;sup&gt;1&lt;/sup&gt;，何事秋风悲画扇&lt;sup&gt;2&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>人生若只如初见<sup>1</sup>，何事秋风悲画扇<sup>2</sup>。</p>
+                            
+                            <p>等闲<sup>3</sup>变却故人心<sup>4</sup>，却道故人心易变。</p>
+                            
+                            
+                            
+                            <p>骊山语罢清宵半<sup>5</sup>，泪雨霖铃<sup>6</sup>终不怨。</p>
+                            
+                            <p>何如薄幸<sup>7</sup>锦衣郎<sup>8</sup>，比翼连枝<sup>9</sup>当日愿。</p>
+                            
+                            <a class="preview-link" href="/gift/ming-qing/na-lan-mu-lan-hua-ling.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <a class="directory-link" href="/gift/ming-qing/">进入明清完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                
+                
+                
+                
+                <section class="dynasty-panel panel-jin-dai" aria-label="近代诗歌">
+                    <div class="list-heading">
+                        <h3>近代</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>己亥杂诗·其五</strong>
+                                <small>龚自珍 · 七言绝句</small>
+                            </span>
+                            <span class="row-excerpt">浩荡&lt;sup&gt;1&lt;/sup&gt;离愁白日斜，吟鞭&lt;sup&gt;2&lt;/sup&gt;东指即天涯&lt;sup&gt;3&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>浩荡<sup>1</sup>离愁白日斜，吟鞭<sup>2</sup>东指即天涯<sup>3</sup>。</p>
+                            
+                            <p>落红<sup>4</sup>不是无情物，化作春泥更护花<sup>5</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/jin-dai/ji-hai-za-shi.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>狱中题壁</strong>
+                                <small>谭嗣同 · 七言绝句</small>
+                            </span>
+                            <span class="row-excerpt">望门投止思张俭&lt;sup&gt;1&lt;/sup&gt;，忍死须臾待杜根&lt;sup&gt;2&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>望门投止思张俭<sup>1</sup>，忍死须臾待杜根<sup>2</sup>。</p>
+                            
+                            <p>我自横刀向天笑，去留肝胆两昆仑<sup>3</sup>。</p>
+                            
+                            <a class="preview-link" href="/gift/jin-dai/yu-zhong-ti-bi.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>黄海舟中日人索句并见日俄战争地图</strong>
+                                <small>秋瑾 · 七言律诗</small>
+                            </span>
+                            <span class="row-excerpt">万里乘风&lt;sup&gt;1&lt;/sup&gt;去复来，只身东海挟春雷&lt;sup&gt;2&lt;/sup&gt;。</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            
+                            <p>万里乘风<sup>1</sup>去复来，只身东海挟春雷<sup>2</sup>。</p>
+                            
+                            <p>忍看图画移颜色<sup>3</sup>，肯使江山付劫灰<sup>4</sup>。</p>
+                            
+                            <p>浊酒难销忧国泪，救时应仗出群才<sup>5</sup>。</p>
+                            
+                            <p>拼将十万头颅血，须把乾坤<sup>6</sup>力挽回。</p>
+                            
+                            <a class="preview-link" href="/gift/jin-dai/huang-hai-zhou-zhong.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    
+                    <a class="directory-link" href="/gift/jin-dai/">进入近代完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                
+                
+            </div>
 
-
-    <nav class="river-nodes">
-        
-        
-        
-        <a href="/gift/xian-qin/"
-           class="river-node river-port--1"
-           aria-label="先秦 · 12首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">先秦</span>
+            <aside class="reading-note" data-random-reading-note>
+                <span class="note-label">诗间一页</span>
+                <blockquote data-note-quote>关关雎鸠，<br>在河之洲。</blockquote>
+                <p data-note-source>《诗经 · 周南 · 关雎》</p>
+                <span class="note-rule" aria-hidden="true"></span>
+                <span class="note-caption">原文 · 注释 · 赏析</span>
                 
-                <span class="river-summary">一切的开始</span>
                 
-                <span class="river-count">12 首</span>
-            </span>
-        </a>
-        
-        
-        
-        
-        <a href="/gift/liang-han/"
-           class="river-node river-port--2"
-           aria-label="两汉 · 6首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">两汉</span>
                 
-                <span class="river-summary">乐府与古诗的交响</span>
+                <template class="note-candidate" data-key="先秦|guan-ju"
+                          data-title="诗经·周南·关雎">
+                    <span class="note-candidate-quote">关关雎鸠<sup>1</sup>，在河之洲。窈窕淑女，君子好逑<sup>2</sup>。</span>
+                </template>
                 
-                <span class="river-count">6 首</span>
-            </span>
-        </a>
-        
-        
-        
-        
-        <a href="/gift/wei-jin/"
-           class="river-node river-port--3"
-           aria-label="魏晋 · 8首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">魏晋</span>
+                <template class="note-candidate" data-key="先秦|lu-ming"
+                          data-title="诗经·小雅·鹿鸣">
+                    <span class="note-candidate-quote">呦呦鹿鸣<sup>1</sup>，食野之苹<sup>2</sup>。我有嘉宾，鼓瑟吹笙。</span>
+                </template>
                 
-                <span class="river-summary">文学的自觉时代</span>
+                <template class="note-candidate" data-key="先秦|xi-ao"
+                          data-title="诗经·卫风·淇奥">
+                    <span class="note-candidate-quote">瞻彼淇奥<sup>1</sup>，绿竹猗猗<sup>2</sup>。有匪君子<sup>3</sup>，如切如磋，如琢如磨。</span>
+                </template>
                 
-                <span class="river-count">8 首</span>
-            </span>
-        </a>
-        
-        
-        
-        
-        <a href="/gift/nan-bei-chao/"
-           class="river-node river-port--4"
-           aria-label="南北朝 · 4首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">南北朝</span>
+                <template class="note-candidate" data-key="先秦|cai-wei"
+                          data-title="诗经·小雅·采薇（节选）">
+                    <span class="note-candidate-quote">昔我往矣，杨柳依依<sup>1</sup>。</span>
+                </template>
                 
-                <span class="river-summary">声律的孕育与南北交融</span>
+                <template class="note-candidate" data-key="先秦|meng"
+                          data-title="诗经·卫风·氓">
+                    <span class="note-candidate-quote">氓<sup>1</sup>之蚩蚩，抱布贸丝。匪来贸丝，来即我谋。送子涉淇，至于顿丘。匪我愆期，子无良媒。将<sup>2</sup>子无怒，秋以为期。</span>
+                </template>
                 
-                <span class="river-count">4 首</span>
-            </span>
-        </a>
-        
-        
-        
-        
-        <a href="/gift/tang/"
-           class="river-node river-port--5"
-           aria-label="唐 · 55首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">唐</span>
+                <template class="note-candidate" data-key="先秦|tao-yao"
+                          data-title="诗经·周南·桃夭">
+                    <span class="note-candidate-quote">桃之夭夭<sup>1</sup>，灼灼<sup>2</sup>其华。</span>
+                </template>
                 
-                <span class="river-summary">中国诗歌的黄金时代</span>
+                <template class="note-candidate" data-key="先秦|jian-jia"
+                          data-title="诗经·秦风·蒹葭">
+                    <span class="note-candidate-quote">蒹葭<sup>1</sup>苍苍，白露为霜。</span>
+                </template>
                 
-                <span class="river-count">55 首</span>
-            </span>
-        </a>
-        
-        
-        
-        
-        <a href="/gift/wudai-shiguo/"
-           class="river-node river-port--6"
-           aria-label="五代十国 · 7首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">五代十国</span>
+                <template class="note-candidate" data-key="先秦|wu-yi"
+                          data-title="诗经·秦风·无衣">
+                    <span class="note-candidate-quote">岂曰无衣？与子同袍<sup>1</sup>。</span>
+                </template>
                 
-                <span class="river-summary">乱世中的词心</span>
+                <template class="note-candidate" data-key="先秦|jiu-ge-shan-gui"
+                          data-title="楚辞·九歌·山鬼">
+                    <span class="note-candidate-quote">若有人兮山之阿<sup>1</sup>，被薜荔兮带女萝<sup>2</sup>。</span>
+                </template>
                 
-                <span class="river-count">7 首</span>
-            </span>
-        </a>
-        
-        
-        
-        
-        <a href="/gift/liang-song/"
-           class="river-node river-port--7"
-           aria-label="两宋 · 19首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">两宋</span>
+                <template class="note-candidate" data-key="先秦|jiu-ge-shao-si-ming"
+                          data-title="楚辞·九歌·少司命">
+                    <span class="note-candidate-quote">秋兰兮麋芜<sup>1</sup>，罗生兮堂下<sup>2</sup>。</span>
+                </template>
                 
-                <span class="river-summary">词与诗并峙的巅峰</span>
+                <template class="note-candidate" data-key="先秦|tian-wen-jie-xuan"
+                          data-title="楚辞·天问（节选）">
+                    <span class="note-candidate-quote">曰：遂古之初<sup>1</sup>，谁传道之<sup>2</sup>？</span>
+                </template>
                 
-                <span class="river-count">19 首</span>
-            </span>
-        </a>
-        
-        
-        
-        
-        <a href="/gift/yuan/"
-           class="river-node river-port--8"
-           aria-label="元 · 5首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">元</span>
+                <template class="note-candidate" data-key="先秦|li-sao-jie-xuan"
+                          data-title="楚辞·离骚（节选）">
+                    <span class="note-candidate-quote">帝高阳之苗裔兮<sup>1</sup>，朕皇考曰伯庸<sup>2</sup>。</span>
+                </template>
                 
-                <span class="river-summary">俗文学的崛起</span>
                 
-                <span class="river-count">5 首</span>
-            </span>
-        </a>
-        
-        
-        
-        
-        <a href="/gift/ming-qing/"
-           class="river-node river-port--9"
-           aria-label="明清 · 9首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">明清</span>
                 
-                <span class="river-summary">复古与革新的张力</span>
                 
-                <span class="river-count">9 首</span>
-            </span>
-        </a>
-        
-        
-        
-        
-        <a href="/gift/jin-dai/"
-           class="river-node river-port--10"
-           aria-label="近代 · 4首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">近代</span>
+                <template class="note-candidate" data-key="两汉|xing-xing-chong-xing-xing"
+                          data-title="行行重行行">
+                    <span class="note-candidate-quote">行行重行行<sup>1</sup>，与君生别离。</span>
+                </template>
                 
-                <span class="river-summary">旧诗新命</span>
+                <template class="note-candidate" data-key="两汉|sheng-nian-bu-man-bai"
+                          data-title="生年不满百">
+                    <span class="note-candidate-quote">生年不满百，常怀千岁忧<sup>1</sup>。</span>
+                </template>
                 
-                <span class="river-count">4 首</span>
-            </span>
-        </a>
-        
-        
-    </nav>
-
-    <footer class="river-footer">
-        <p>给妹妹的礼物</p>
-    </footer>
+                <template class="note-candidate" data-key="两汉|ting-zhong-you-qi-shu"
+                          data-title="庭中有奇树">
+                    <span class="note-candidate-quote">庭中有奇树，绿叶发华滋<sup>1</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两汉|she-jiang-cai-fu-rong"
+                          data-title="涉江采芙蓉">
+                    <span class="note-candidate-quote">涉江采芙蓉<sup>1</sup>，兰泽<sup>2</sup>多芳草。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两汉|shi-wu-cong-jun-zheng"
+                          data-title="十五从军征">
+                    <span class="note-candidate-quote">十五从军征，八十始得归。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两汉|yin-ma-chang-cheng-ku-xing"
+                          data-title="饮马长城窟行">
+                    <span class="note-candidate-quote">青青河畔草，绵绵思远道。</span>
+                </template>
+                
+                
+                
+                
+                <template class="note-candidate" data-key="魏晋|gui-yuan-tian-ju"
+                          data-title="归园田居·其一">
+                    <span class="note-candidate-quote">少无适俗韵<sup>1</sup>，性本爱丘山。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="魏晋|yin-jiu-qi-wu"
+                          data-title="饮酒·其五">
+                    <span class="note-candidate-quote">结庐<sup>1</sup>在人境<sup>2</sup>，而无车马喧。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="魏晋|guan-cang-hai"
+                          data-title="观沧海">
+                    <span class="note-candidate-quote">东临<sup>1</sup>碣石，以观沧海。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="魏晋|gui-sui-shou"
+                          data-title="龟虽寿">
+                    <span class="note-candidate-quote">神龟虽寿，犹有竟时<sup>1</sup>；</span>
+                </template>
+                
+                <template class="note-candidate" data-key="魏晋|yan-ge-xing"
+                          data-title="燕歌行其一">
+                    <span class="note-candidate-quote">秋风萧瑟天气凉，草木摇落<sup>1</sup>露为霜。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="魏晋|bai-ma-pian"
+                          data-title="白马篇">
+                    <span class="note-candidate-quote">白马饰金羁<sup>1</sup>，连翩西北驰。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="魏晋|ye-tian-huang-que-xing"
+                          data-title="野田黄雀行">
+                    <span class="note-candidate-quote">高树多悲风<sup>1</sup>，海水扬其波。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="魏晋|ni-xing-lu-nan-qi-si"
+                          data-title="拟行路难·其四">
+                    <span class="note-candidate-quote">泻<sup>1</sup>水置平地，各自东西南北流。</span>
+                </template>
+                
+                
+                
+                
+                <template class="note-candidate" data-key="南北朝|mu-lan-shi"
+                          data-title="木兰诗">
+                    <span class="note-candidate-quote">唧唧<sup>1</sup>复唧唧，木兰当户<sup>2</sup>织。不闻机杼<sup>3</sup>声，唯闻女叹息。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="南北朝|chi-le-ge"
+                          data-title="敕勒歌">
+                    <span class="note-candidate-quote">敕勒川<sup>1</sup>，阴山<sup>2</sup>下。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="南北朝|wan-xi-xie-gong-ding"
+                          data-title="晚登三山还望京邑">
+                    <span class="note-candidate-quote">灞涘<sup>1</sup>望长安，河阳<sup>2</sup>视京县。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="南北朝|ai-jiang-nan-fu"
+                          data-title="哀江南赋（节选）">
+                    <span class="note-candidate-quote">日暮途远<sup>1</sup>，人间何世！</span>
+                </template>
+                
+                
+                
+                
+                <template class="note-candidate" data-key="唐|song-du-shao-fu-zhi-ren-shu-zhou"
+                          data-title="送杜少府之任蜀州">
+                    <span class="note-candidate-quote">城阙<sup>1</sup>辅三秦<sup>2</sup>，风烟望五津<sup>3</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|shang-li-yong"
+                          data-title="上李邕">
+                    <span class="note-candidate-quote">大鹏<sup>1</sup>一日同风起，扶摇<sup>2</sup>直上九万里。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|du-jing-men-song-bie"
+                          data-title="渡荆门送别">
+                    <span class="note-candidate-quote">渡远荆门<sup>1</sup>外，来从楚国<sup>2</sup>游。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|jing-ye-si"
+                          data-title="静夜思">
+                    <span class="note-candidate-quote">床前明月光，疑<sup>1</sup>是地上霜。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|huang-he-lou-song-meng-hao-ran-zhi-guang-ling"
+                          data-title="黄鹤楼送孟浩然之广陵">
+                    <span class="note-candidate-quote">故人西辞黄鹤楼<sup>1</sup>，烟花三月<sup>2</sup>下扬州<sup>3</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|nan-ling-bie-er-tong-ru-jing"
+                          data-title="南陵别儿童入京">
+                    <span class="note-candidate-quote">白酒新熟山中归，黄鸡啄黍<sup>1</sup>秋正肥。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|xing-lu-nan"
+                          data-title="行路难·其一">
+                    <span class="note-candidate-quote">金樽清酒斗十千<sup>1</sup>，玉盘珍羞直万钱<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|xia-ke-xing"
+                          data-title="侠客行">
+                    <span class="note-candidate-quote">赵客<sup>1</sup>缦胡缨<sup>2</sup>，吴钩<sup>3</sup>霜雪明。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|jiang-jin-jiu"
+                          data-title="将进酒">
+                    <span class="note-candidate-quote">君不见黄河之水天上来，奔流到海不复回。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|song-you-ren"
+                          data-title="送友人">
+                    <span class="note-candidate-quote">青山横北郭<sup>1</sup>，白水绕东城。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|ba-jiu-wen-yue"
+                          data-title="把酒问月">
+                    <span class="note-candidate-quote">青天有月来几时？我今停杯一问之。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|chang-xiang-si-qi-yi"
+                          data-title="长相思·其一">
+                    <span class="note-candidate-quote">长相思，在长安。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|chang-xiang-si-qi-er"
+                          data-title="长相思·其二">
+                    <span class="note-candidate-quote">日色欲尽花含烟<sup>1</sup>，月明如素<sup>2</sup>愁不眠。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|zao-fa-bai-di-cheng"
+                          data-title="早发白帝城">
+                    <span class="note-candidate-quote">朝辞白帝彩云间<sup>1</sup>，千里江陵<sup>2</sup>一日还。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|lin-lu-ge"
+                          data-title="临路歌">
+                    <span class="note-candidate-quote">大鹏飞兮振八裔<sup>1</sup>，中天摧兮力不济<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|wang-yue"
+                          data-title="望岳">
+                    <span class="note-candidate-quote">岱宗<sup>1</sup>夫如何？齐鲁<sup>2</sup>青未了<sup>3</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|bing-che-xing"
+                          data-title="兵车行">
+                    <span class="note-candidate-quote">车辚辚<sup>1</sup>，马萧萧<sup>2</sup>，行人弓箭各在腰。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|yin-zhong-ba-xian-ge"
+                          data-title="饮中八仙歌">
+                    <span class="note-candidate-quote">知章<sup>1</sup>骑马似乘船，眼花落井水底眠。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|chun-wang"
+                          data-title="春望">
+                    <span class="note-candidate-quote">国破山河在，城春草木深。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|mao-wu-wei-qiu-feng-suo-po-ge"
+                          data-title="茅屋为秋风所破歌">
+                    <span class="note-candidate-quote">八月秋高风怒号，卷我屋上三重茅<sup>1</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|yue-ye"
+                          data-title="月夜">
+                    <span class="note-candidate-quote">今夜鄜州<sup>1</sup>月，闺中<sup>2</sup>只独看。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|zeng-wei-ba-chu-shi"
+                          data-title="赠卫八处士">
+                    <span class="note-candidate-quote">人生不相见，动如参与商<sup>1</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|chun-ye-xi-yu"
+                          data-title="春夜喜雨">
+                    <span class="note-candidate-quote">好雨知时节<sup>1</sup>，当春乃发生。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|shu-xiang"
+                          data-title="蜀相">
+                    <span class="note-candidate-quote">丞相祠堂何处寻，锦官城外柏森森<sup>1</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|wen-guan-jun-shou-he-nan-he-bei"
+                          data-title="闻官军收河南河北">
+                    <span class="note-candidate-quote">剑外忽传收蓟北<sup>1</sup>，初闻涕泪满衣裳。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|lv-ye-shu-huai"
+                          data-title="旅夜书怀">
+                    <span class="note-candidate-quote">细草微风岸，危樯独夜舟<sup>1</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|deng-yue-yang-lou"
+                          data-title="登岳阳楼">
+                    <span class="note-candidate-quote">昔闻洞庭水，今上岳阳楼。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|deng-gao"
+                          data-title="登高">
+                    <span class="note-candidate-quote">风急天高猿啸哀，渚清沙白鸟飞回<sup>1</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|jiang-nan-feng-li-gui-nian"
+                          data-title="江南逢李龟年">
+                    <span class="note-candidate-quote">岐王宅里寻常见<sup>1</sup>，崔九堂前几度闻<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|chun-ri-yi-li-bai"
+                          data-title="春日忆李白">
+                    <span class="note-candidate-quote">白也诗无敌<sup>1</sup>，飘然思不群<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|meng-li-bai-qi-yi"
+                          data-title="梦李白·其一">
+                    <span class="note-candidate-quote">死别已吞声<sup>1</sup>，生别常恻恻<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|yong-huai-gu-ji-qi-yi"
+                          data-title="咏怀古迹·其一">
+                    <span class="note-candidate-quote">支离东北风尘际<sup>1</sup>，漂泊西南天地间。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|you-cheng-wu-lang"
+                          data-title="又呈吴郎">
+                    <span class="note-candidate-quote">堂前扑枣<sup>1</sup>任西邻，无食无儿一妇人。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|shao-nian-xing-si-shou"
+                          data-title="少年行四首">
+                    <span class="note-candidate-quote">新丰美酒斗十千<sup>1</sup>，咸阳游侠多少年。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|xiang-si"
+                          data-title="相思">
+                    <span class="note-candidate-quote">红豆<sup>1</sup>生南国，春来发几枝。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|niao-ming-jian"
+                          data-title="鸟鸣涧">
+                    <span class="note-candidate-quote">人闲桂花落<sup>1</sup>，夜静春山空。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|zhong-nan-bie-ye"
+                          data-title="终南别业">
+                    <span class="note-candidate-quote">中岁颇好道<sup>1</sup>，晚家南山陲<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|shan-ju-qiu-ming"
+                          data-title="山居秋暝">
+                    <span class="note-candidate-quote">空山新雨后，天气晚来秋。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|shi-zhi-sai-shang"
+                          data-title="使至塞上">
+                    <span class="note-candidate-quote">单车<sup>1</sup>欲问边，属国<sup>2</sup>过居延<sup>3</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|song-yuan-er-shi-an-xi"
+                          data-title="送元二使安西">
+                    <span class="note-candidate-quote">渭城朝雨浥轻尘<sup>1</sup>，客舍青青柳色新<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|xin-yi-wu"
+                          data-title="辛夷坞">
+                    <span class="note-candidate-quote">木末芙蓉花<sup>1</sup>，山中发红萼<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|fu-de-gu-yuan-cao-song-bie"
+                          data-title="赋得古原草送别">
+                    <span class="note-candidate-quote">离离<sup>1</sup>原上草，一岁一枯荣<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|guan-yi-mai"
+                          data-title="观刈麦">
+                    <span class="note-candidate-quote">田家少闲月，五月人倍忙。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|mai-tan-weng"
+                          data-title="卖炭翁">
+                    <span class="note-candidate-quote">卖炭翁<sup>1</sup>，伐薪<sup>2</sup>烧炭南山中。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|pi-pa-xing"
+                          data-title="琵琶行">
+                    <span class="note-candidate-quote">浔阳江<sup>1</sup>头夜送客，枫叶荻花秋瑟瑟<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|wen-liu-shi-jiu"
+                          data-title="问刘十九">
+                    <span class="note-candidate-quote">绿蚁新醅酒<sup>1</sup>，红泥小火炉。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|meng-wei-zhi"
+                          data-title="梦微之">
+                    <span class="note-candidate-quote">夜来携手梦同游，晨起盈巾泪莫收。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|yi-jiang-nan-san-shou"
+                          data-title="忆江南三首">
+                    <span class="note-candidate-quote">江南好，风景旧曾谙<sup>1</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|chang-xiang-si-bian-shui-liu"
+                          data-title="长相思·汴水流">
+                    <span class="note-candidate-quote">汴水<sup>1</sup>流，泗水<sup>2</sup>流，流到瓜洲<sup>3</sup>古渡头。吴山<sup>4</sup>点点愁。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|shang-shan-zao-xing"
+                          data-title="商山早行">
+                    <span class="note-candidate-quote">晨起动征铎<sup>1</sup>，客行悲故乡。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|yan-men-tai-shou-xing"
+                          data-title="雁门太守行">
+                    <span class="note-candidate-quote">黑云压城城欲摧<sup>1</sup>，甲光向日金鳞开<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|jin-se"
+                          data-title="锦瑟">
+                    <span class="note-candidate-quote">锦瑟无端五十弦<sup>1</sup>，一弦一柱思华年<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|ye-yu-ji-bei"
+                          data-title="夜雨寄北">
+                    <span class="note-candidate-quote">君问归期未有期<sup>1</sup>，巴山<sup>2</sup>夜雨涨秋池。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|bo-qin-huai"
+                          data-title="泊秦淮">
+                    <span class="note-candidate-quote">烟笼寒水月笼沙<sup>1</sup>，夜泊秦淮<sup>2</sup>近酒家。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="唐|chi-bi"
+                          data-title="赤壁">
+                    <span class="note-candidate-quote">折戟沉沙铁未销<sup>1</sup>，自将磨洗认前朝<sup>2</sup>。</span>
+                </template>
+                
+                
+                
+                
+                <template class="note-candidate" data-key="五代十国|li-yu-huan-xi-sha"
+                          data-title="浣溪沙·红日已高三丈透">
+                    <span class="note-candidate-quote">红日已高三丈透<sup>1</sup>，</span>
+                </template>
+                
+                <template class="note-candidate" data-key="五代十国|li-yu-yu-lou-chun"
+                          data-title="玉楼春·晚妆初了明肌雪">
+                    <span class="note-candidate-quote">晚妆<sup>1</sup>初了明肌雪<sup>2</sup>，春殿嫔娥<sup>3</sup>鱼贯列<sup>4</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="五代十国|li-yu-po-zhen-zi"
+                          data-title="破阵子·四十年来家国">
+                    <span class="note-candidate-quote">四十年来家国<sup>1</sup>，三千里地山河<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="五代十国|li-yu-yu-mei-ren"
+                          data-title="虞美人·春花秋月何时了">
+                    <span class="note-candidate-quote">春花秋月何时了<sup>1</sup>？往事知多少。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="五代十国|li-yu-lang-tao-sha"
+                          data-title="浪淘沙·帘外雨潺潺">
+                    <span class="note-candidate-quote">帘外雨潺潺<sup>1</sup>，春意阑珊<sup>2</sup>。罗衾<sup>3</sup>不耐五更<sup>4</sup>寒。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="五代十国|li-yu-xiang-jian-huan"
+                          data-title="相见欢·无言独上西楼">
+                    <span class="note-candidate-quote">无言独上西楼，月如钩<sup>1</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="五代十国|feng-yan-si-que-ta-zhi"
+                          data-title="鹊踏枝·谁道闲情抛掷久">
+                    <span class="note-candidate-quote">谁道闲情<sup>1</sup>抛掷<sup>2</sup>久？每到春来，惆怅<sup>3</sup>还依旧。</span>
+                </template>
+                
+                
+                
+                
+                <template class="note-candidate" data-key="两宋|yan-shu-huan-xi-sha"
+                          data-title="浣溪沙·一曲新词酒一杯">
+                    <span class="note-candidate-quote">一曲新词酒一杯，去年天气旧亭台<sup>1</sup>。夕阳西下几时回<sup>2</sup>？</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|yan-ji-dao-lin-jiang-xian"
+                          data-title="临江仙·梦后楼台高锁">
+                    <span class="note-candidate-quote">梦后楼台高锁，酒醒帘幕低垂。去年春恨却来时<sup>1</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|ou-yang-xiu-die-lian-hua"
+                          data-title="蝶恋花·庭院深深深几许">
+                    <span class="note-candidate-quote">庭院深深深几许<sup>1</sup>？杨柳堆烟<sup>2</sup>，帘幕无重数。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|liu-yong-yu-lin-ling"
+                          data-title="雨霖铃·寒蝉凄切">
+                    <span class="note-candidate-quote">寒蝉<sup>1</sup>凄切，对长亭<sup>2</sup>晚，骤雨初歇。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|liu-yong-ba-sheng-gan-zhou"
+                          data-title="八声甘州·对潇潇暮雨洒江天">
+                    <span class="note-candidate-quote">对潇潇<sup>1</sup>暮雨洒江天，一番洗清秋。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|su-shi-shui-diao-ge-tou"
+                          data-title="水调歌头·明月几时有">
+                    <span class="note-candidate-quote">明月几时有？把酒问青天。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|su-shi-nian-nu-jiao"
+                          data-title="念奴娇·赤壁怀古">
+                    <span class="note-candidate-quote">大江东去，浪淘尽，千古风流人物<sup>1</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|su-shi-ding-feng-bo"
+                          data-title="定风波·莫听穿林打叶声">
+                    <span class="note-candidate-quote">莫听穿林打叶声，何妨吟啸<sup>1</sup>且徐行。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|wang-an-shi-gui-zhi-xiang"
+                          data-title="桂枝香·金陵怀古">
+                    <span class="note-candidate-quote">登临送目<sup>1</sup>，正故国<sup>2</sup>晚秋，天气初肃<sup>3</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|qin-guan-que-qiao-xian"
+                          data-title="鹊桥仙·纤云弄巧">
+                    <span class="note-candidate-quote">纤云弄巧<sup>1</sup>，飞星传恨<sup>2</sup>，银汉<sup>3</sup>迢迢暗度。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|song-hui-zong-yan-shan-ting"
+                          data-title="燕山亭·北行见杏花">
+                    <span class="note-candidate-quote">裁剪冰绡<sup>1</sup>，轻叠数重，淡著胭脂匀注。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|li-qing-zhao-sheng-sheng-man"
+                          data-title="声声慢·寻寻觅觅">
+                    <span class="note-candidate-quote">寻寻觅觅<sup>1</sup>，冷冷清清，凄凄惨惨戚戚<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|li-qing-zhao-ru-meng-ling"
+                          data-title="如梦令·昨夜雨疏风骤">
+                    <span class="note-candidate-quote">昨夜雨疏风骤<sup>1</sup>，浓睡不消残酒<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|li-qing-zhao-yi-jian-mei"
+                          data-title="一剪梅·红藕香残玉簟秋">
+                    <span class="note-candidate-quote">红藕<sup>1</sup>香残玉簟<sup>2</sup>秋。轻解罗裳<sup>3</sup>，独上兰舟。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|xin-qi-ji-yong-yu-le"
+                          data-title="永遇乐·京口北固亭怀古">
+                    <span class="note-candidate-quote">千古江山，英雄无觅，孙仲谋<sup>1</sup>处。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|xin-qi-ji-qing-yu-an"
+                          data-title="青玉案·元夕">
+                    <span class="note-candidate-quote">东风夜放花千树<sup>1</sup>，更吹落，星如雨<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|xin-qi-ji-po-zhen-zi"
+                          data-title="破阵子·为陈同甫赋壮词以寄之">
+                    <span class="note-candidate-quote">醉里挑灯<sup>1</sup>看剑，梦回吹角连营<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|wen-tian-xiang-guo-ling-ding-yang"
+                          data-title="过零丁洋">
+                    <span class="note-candidate-quote">辛苦遭逢起一经<sup>1</sup>，干戈<sup>2</sup>寥落四周星<sup>3</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="两宋|wen-tian-xiang-zheng-qi-ge"
+                          data-title="正气歌">
+                    <span class="note-candidate-quote">天地有正气<sup>1</sup>，杂然赋流形<sup>2</sup>。</span>
+                </template>
+                
+                
+                
+                
+                <template class="note-candidate" data-key="元|ma-zhi-yuan-tian-jing-sha"
+                          data-title="天净沙·秋思">
+                    <span class="note-candidate-quote">枯藤<sup>1</sup>老树昏鸦<sup>2</sup>，小桥流水人家，古道<sup>3</sup>西风瘦马。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="元|zhang-yang-hao-shan-po-yang"
+                          data-title="山坡羊·潼关怀古">
+                    <span class="note-candidate-quote">峰峦如聚<sup>1</sup>，波涛如怒<sup>2</sup>，山河表里<sup>3</sup>潼关<sup>4</sup>路。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="元|bai-pu-tian-jing-sha"
+                          data-title="天净沙·秋">
+                    <span class="note-candidate-quote">孤村落日残霞<sup>1</sup>，轻烟老树寒鸦<sup>2</sup>，一点飞鸿影下<sup>3</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="元|guan-han-qing-si-kuai-yu"
+                          data-title="四块玉·别情">
+                    <span class="note-candidate-quote">自送别，心难舍，一点相思几时绝？</span>
+                </template>
+                
+                <template class="note-candidate" data-key="元|sui-jing-chen-shao-bian"
+                          data-title="哨遍·高祖还乡（节选）">
+                    <span class="note-candidate-quote">社长<sup>1</sup>排门告示<sup>2</sup>，但有的差使无推故<sup>3</sup>，这差使不寻俗<sup>4</sup>。</span>
+                </template>
+                
+                
+                
+                
+                <template class="note-candidate" data-key="明清|tang-yin-tao-hua-an-ge"
+                          data-title="桃花庵歌">
+                    <span class="note-candidate-quote">桃花坞<sup>1</sup>里桃花庵<sup>2</sup>，桃花庵下桃花仙。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="明清|tang-xian-zu-mu-dan-ting"
+                          data-title="牡丹亭·惊梦（节选）">
+                    <span class="note-candidate-quote">原来姹紫嫣红<sup>1</sup>开遍，似这般都付与断井颓垣<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="明清|na-lan-mu-lan-hua-ling"
+                          data-title="木兰花令·拟古决绝词">
+                    <span class="note-candidate-quote">人生若只如初见<sup>1</sup>，何事秋风悲画扇<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="明清|na-lan-huan-xi-sha"
+                          data-title="浣溪沙·谁念西风独自凉">
+                    <span class="note-candidate-quote">谁念西风<sup>1</sup>独自凉，萧萧<sup>2</sup>黄叶闭疏窗<sup>3</sup>，沉思往事立残阳。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="明清|na-lan-chang-xiang-si"
+                          data-title="长相思·山一程">
+                    <span class="note-candidate-quote">山一程<sup>1</sup>，水一程，身向榆关<sup>2</sup>那畔<sup>3</sup>行，夜深千帐灯<sup>4</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="明清|cao-xue-qin-zang-hua-yin"
+                          data-title="葬花吟（节选）">
+                    <span class="note-candidate-quote">花谢花飞花满天，红消香断<sup>1</sup>有谁怜？</span>
+                </template>
+                
+                <template class="note-candidate" data-key="明清|cao-xue-qin-lin-jiang-xian"
+                          data-title="临江仙·柳絮">
+                    <span class="note-candidate-quote">白玉堂<sup>1</sup>前春解舞<sup>2</sup>，东风卷得均匀。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="明清|cao-xue-qin-hong-dou-qu"
+                          data-title="红豆曲">
+                    <span class="note-candidate-quote">滴不尽相思血泪抛红豆<sup>1</sup>，开不完春柳春花满画楼，</span>
+                </template>
+                
+                <template class="note-candidate" data-key="明清|guo-ye-xia-diao-gao-shen-wu"
+                          data-title="过邺下吊高神武">
+                    <span class="note-candidate-quote">唱罢阴山敕勒歌<sup>1</sup>，英雄涕泪老来多。</span>
+                </template>
+                
+                
+                
+                
+                <template class="note-candidate" data-key="近代|ji-hai-za-shi"
+                          data-title="己亥杂诗·其五">
+                    <span class="note-candidate-quote">浩荡<sup>1</sup>离愁白日斜，吟鞭<sup>2</sup>东指即天涯<sup>3</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="近代|yu-zhong-ti-bi"
+                          data-title="狱中题壁">
+                    <span class="note-candidate-quote">望门投止思张俭<sup>1</sup>，忍死须臾待杜根<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="近代|huang-hai-zhou-zhong"
+                          data-title="黄海舟中日人索句并见日俄战争地图">
+                    <span class="note-candidate-quote">万里乘风<sup>1</sup>去复来，只身东海挟春雷<sup>2</sup>。</span>
+                </template>
+                
+                <template class="note-candidate" data-key="近代|qin-yuan-chun-chang-sha"
+                          data-title="沁园春·长沙">
+                    <span class="note-candidate-quote">独立寒秋，湘江北去，橘子洲头<sup>1</sup>。</span>
+                </template>
+                
+                
+            </aside>
+        </div>
+    </div>
 </section>
 
     </main>

@@ -1,111 +1,59 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>长相思·山一程 — 诗三百</title>
+    <title>长相思·山一程 · 纳兰性德</title>
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body class="has-sidebar" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="reading-page poem-page-body">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<div class="page-with-sidebar">
+<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
+    <a class="breadcrumb-link" href="/gift/ming-qing/">← 返回明清目录</a>
+    <p class="eyebrow">明清 · 诗歌阅读</p>
+    <h1 id="poem-title">长相思·山一程</h1>
+    <div class="poem-meta" aria-label="作品信息">
+        <span>纳兰性德</span>
+        <span class="meta-sep">·</span><span>词</span>
+    </div>
+</section>
+
+<div class="reading-shell">
     
 
-<aside class="river-sidebar river-zoom-poem">
-    <svg class="river-svg-side" viewBox="458 1596 280 230" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
-                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
-                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
-                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
-                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-            </linearGradient>
-            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-flow river-flow--1"
-            d="M 425 0 C 435 83, 442 158, 460 250 C 478 342, 532 442, 540 550 C 548 658, 527 783, 515 900 C 503 1017, 463 1125, 475 1250 C 487 1375, 537 1508, 585 1650 C 633 1792, 723 1950, 790 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
-
-        <path class="river-flow river-flow--2"
-            d="M 445 0 C 458 83, 463 158, 485 250 C 507 342, 550 442, 560 550 C 570 658, 543 783, 530 900 C 517 1017, 477 1125, 490 1250 C 503 1375, 555 1508, 610 1650 C 665 1792, 740 1950, 810 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
-
-        <path class="river-flow river-flow--3"
-            d="M 410 0 C 418 83, 425 158, 440 250 C 455 342, 513 442, 520 550 C 527 658, 510 783, 500 900 C 490 1017, 450 1125, 460 1250 C 470 1375, 517 1508, 560 1650 C 603 1792, 707 1950, 770 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
-    </svg>
+<aside class="river-sidebar" aria-label="诗歌之河侧景">
+    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
+        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
+    </a>
+    <div class="sidebar-caption" aria-hidden="true">
+        <span>诗歌之河</span>
+        <span>明清</span>
+    </div>
 </aside>
-    <div class="page-content">
-        <article class="poem-page">
-            <header class="poem-header">
-                <h1 class="poem-page-title">长相思·山一程</h1>
-                <div class="poem-page-meta">
-                    <span>纳兰性德</span>
-                    <span class="meta-sep">·</span>
-                    <span>明清</span>
-                    
-                    <span class="meta-sep">·</span>
-                    <span>词</span>
-                    
-                </div>
-            </header>
 
+    <article class="reading-document poem-document">
+        <section class="document-section poem-original" aria-labelledby="original-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">原文</p>
+                <h2 id="original-title">诗句</h2>
+            </div>
             <div class="poem-text">
                 
                 
@@ -113,7 +61,7 @@
                 
                 
                 
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 
                 
                 
@@ -121,33 +69,43 @@
                 
                 
             </div>
+        </section>
 
-            
-            <div class="poem-annotations">
+        
+        <section class="document-section poem-annotations" aria-labelledby="annotations-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">字词</p>
+                <h2 id="annotations-title">注释</h2>
+            </div>
+            <div class="annotation-list">
                 
-                <p><span class="ann-num">1.</span> 一程：一段路程。重复“一程”写跋山涉水、路途漫漫。</p>
+                <p><span class="ann-num">1</span>一程：一段路程。重复“一程”写跋山涉水、路途漫漫。</p>
                 
-                <p><span class="ann-num">2.</span> 榆关：即山海关，在今河北秦皇岛。清代皇帝常出山海关巡视东北，纳兰性德作为侍卫随行。</p>
+                <p><span class="ann-num">2</span>榆关：即山海关，在今河北秦皇岛。清代皇帝常出山海关巡视东北，纳兰性德作为侍卫随行。</p>
                 
-                <p><span class="ann-num">3.</span> 那畔：那边、那一侧。指山海关以外的关外地区。</p>
+                <p><span class="ann-num">3</span>那畔：那边、那一侧。指山海关以外的关外地区。</p>
                 
-                <p><span class="ann-num">4.</span> 千帐灯：千万座营帐中亮着灯火。行军途中夜晚宿营的壮观景象——但灯火虽多，没有一盏是家的灯。</p>
+                <p><span class="ann-num">4</span>千帐灯：千万座营帐中亮着灯火。行军途中夜晚宿营的壮观景象——但灯火虽多，没有一盏是家的灯。</p>
                 
-                <p><span class="ann-num">5.</span> 一更：古代夜间计时单位，一夜分为五更，每更约两小时。风一更、雪一更，写风雪整夜不停。</p>
+                <p><span class="ann-num">5</span>一更：古代夜间计时单位，一夜分为五更，每更约两小时。风一更、雪一更，写风雪整夜不停。</p>
                 
-                <p><span class="ann-num">6.</span> 聒碎乡心：风雪声喧扰，把思乡的心撕碎了。聒（guō），声音嘈杂扰人。</p>
+                <p><span class="ann-num">6</span>聒碎乡心：风雪声喧扰，把思乡的心撕碎了。聒（guō），声音嘈杂扰人。</p>
                 
-                <p><span class="ann-num">7.</span> 故园：家乡、故里。家乡的夜晚没有这种风雪之声——言外之意，故园是安静的、温暖的。</p>
+                <p><span class="ann-num">7</span>故园：家乡、故里。家乡的夜晚没有这种风雪之声——言外之意，故园是安静的、温暖的。</p>
                 
             </div>
-            
+        </section>
+        
 
+        
+        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">读后</p>
+                <h2 id="appreciation-title">赏析</h2>
+            </div>
             <div class="appreciation-text">
                 
-                
                 <p>这首小令是纳兰性德随康熙皇帝出山海关巡视时写的，写旅途中的思乡——中国词里写思乡最干净的一首之一。</p>
-                
-                
                 
                 
                 
@@ -155,11 +113,7 @@
                 
                 
                 
-                
-                
                 <p>&#34;身向榆关那畔行&#34;，榆关就是山海关，往关外去。&#34;那畔&#34;是口语——那边。纳兰是满洲贵族，祖辈的天地本来就在关外，可他的家早就在北京城了。人往家相反的方向走，一步远过一步。</p>
-                
-                
                 
                 
                 
@@ -167,11 +121,7 @@
                 
                 
                 
-                
-                
                 <p>&#34;风一更，雪一更&#34;，更是一夜五更的计时——风一整夜，雪一整夜。&#34;聒碎乡心梦不成&#34;，&#34;聒&#34;是吵——风雪声把想家的心吵碎了，觉也睡不成。末句是答案：&#34;故园无此声。&#34;家乡的夜里没有这种声音。原来他睡不着，不只是因为风雪吵，是因为这声音太陌生——家是安静的、暖和的、熟悉的地方。</p>
-                
-                
                 
                 
                 
@@ -179,28 +129,25 @@
                 
                 
                 
-                
-                
                 <p>你以后第一次住校，半夜醒来听见陌生的声音，想家是很正常的事——一千年前，纳兰性德也在山海关外想他的家。别硬撑着，想家就给家里打个电话，妈妈的手机一直开着。</p>
                 
-                
             </div>
+        </section>
+        
 
-            <nav class="poem-nav">
-                <a href="/gift/ming-qing/" class="nav-back">← 返回明清目录</a>
-                
-                <a href="/gift/ming-qing/cao-xue-qin-zang-hua-yin.html" class="nav-next">下一首 →</a>
-                
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav poem-nav" aria-label="诗歌导航">
+            <a class="nav-back" href="/gift/ming-qing/">← 返回明清目录</a>
+            <a class="nav-next" href="/gift/ming-qing/cao-xue-qin-zang-hua-yin.html">下一首：葬花吟（节选） →</a>
+        </nav>
+    </article>
 </div>
 
     </main>
 
     
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     
 </body>

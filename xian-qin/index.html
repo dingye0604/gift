@@ -1,229 +1,214 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>先秦 · 诗歌目录 — 诗三百</title>
+    <title>先秦 · 诗歌目录</title>
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
-<body class="has-sidebar" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="/gift/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="/gift/">目录</a>
-                <a href="/gift/about.html">关于</a>
-            </div>
+<body class="reading-page dynasty-page-body">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="/gift/" aria-label="诗三百首页">
+            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="current" href="/gift/#dynasties">读诗</a>
+            <a class="" href="/gift/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         
-<div class="page-with-sidebar">
+<section class="page-hero" aria-labelledby="dynasty-title">
+    <a class="breadcrumb-link" href="/gift/">← 回到诗歌之河</a>
+    <p class="eyebrow">沿流而下</p>
+    <h1 id="dynasty-title">先秦</h1>
+    <p class="page-lede">一切的开始</p>
+</section>
+
+<div class="reading-shell">
     
 
-<aside class="river-sidebar river-zoom-dynasty">
-    <svg class="river-svg-side" viewBox="205 0 480 480" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#82988a" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#6c8c85" stop-opacity="0.14"/>
-                <stop offset="60%" stop-color="#4f7a78" stop-opacity="0.20"/>
-                <stop offset="82%" stop-color="#4f7a78" stop-opacity="0.14"/>
-                <stop offset="94%" stop-color="#82988a" stop-opacity="0.04"/>
-                <stop offset="100%" stop-color="#82988a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0.10"/>
-            </linearGradient>
-            <linearGradient id="whiteFlowGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="6%" stop-color="#ffffff" stop-opacity="0"/>
-                <stop offset="18%" stop-color="#ffffff" stop-opacity="0.10"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.10"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="8" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-flow river-flow--1"
-            d="M 425 0 C 435 83, 442 158, 460 250 C 478 342, 532 442, 540 550 C 548 658, 527 783, 515 900 C 503 1017, 463 1125, 475 1250 C 487 1375, 537 1508, 585 1650 C 633 1792, 723 1950, 790 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.0" stroke-dasharray="14 32 4 45 22 28"/>
-
-        <path class="river-flow river-flow--2"
-            d="M 445 0 C 458 83, 463 158, 485 250 C 507 342, 550 442, 560 550 C 570 658, 543 783, 530 900 C 517 1017, 477 1125, 490 1250 C 503 1375, 555 1508, 610 1650 C 665 1792, 740 1950, 810 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="1.4" stroke-dasharray="8 48 16 32 5 55"/>
-
-        <path class="river-flow river-flow--3"
-            d="M 410 0 C 418 83, 425 158, 440 250 C 455 342, 513 442, 520 550 C 527 658, 510 783, 500 900 C 490 1017, 450 1125, 460 1250 C 470 1375, 517 1508, 560 1650 C 603 1792, 707 1950, 770 2100"
-            fill="none" stroke="url(#whiteFlowGrad)" stroke-width="0.8" stroke-dasharray="3 22 11 28 2 40"/>
-    </svg>
-</aside>
-    <div class="page-content">
-        <article class="dynasty-page">
-            <header class="dynasty-header">
-                <a href="/gift/" class="dynasty-breadcrumb">诗歌之河</a>
-                <h1 class="dynasty-title">先秦</h1>
-                
-                <p class="dynasty-subtitle">一切的开始</p>
-                
-            </header>
-
-            
-            <section class="dynasty-intro">
-                
-                
-                <p>我们的旅程，从先秦开始，这是一切的开始、一切的起点。</p>
-                
-                
-                
-                
-                
-                <p>三千年前的黄河之畔，一位君子爱上了一位淑女，却不知她的心意。他朝思暮想辗转反侧，终于在一个夜晚写下了一首诗。这就是后来的《关雎》。那个夜晚，文学诞生了。当然，中华文学的起源在此之前就已出现，在甲骨文的卜辞里，在田亩间的歌唱里，在宗庙祭祀的乐章里，在大胜而归的篝火晚会上，但当第一篇诗出现在大地上时，文学终于以一种独立的姿态展现在我们面前。此后，风骚雅颂，秦文汉赋，唐诗宋词，元曲明清小说，直到今天我们所看到的一切汉字、一切中文文学，就这样流淌了出来。</p>
-                
-                
-                
-                
-                
-                <p>而回到最初，这条大河的源头，叫做《诗经》和《楚辞》。</p>
-                
-                
-                
-                
-                
-                <p>《诗经》三百零五篇，收的是西周初年到春秋中叶五百年间的歌谣与乐章。它是北方的声音——是在黄河流域，史官文化的土壤里长出来的。风、雅、颂三种体例中，最动人的是十五国风，那些“饥者歌其食，劳者歌其事”的句子，没有作者署名，却比任何署名之作都更直接地触碰了人类共通的情感。文学的技巧在《诗经》里已经得到初步的使用——铺陈直叙的赋，以此喻彼的比，托物起兴的兴。赋比兴的写作技巧也成为了后世文学的重要技法，为什么歌唱祖国里，为什么要先唱“五星红旗迎风飘扬”，这就是起兴，这就是《诗经》的痕迹。</p>
-                
-                
-                
-                
-                
-                <p>如果说《诗经》是北方的，是世俗的，那么《楚辞》就是南方的，是浪漫的。它是从长江流域，巫官文化的土壤里长出来的。它比《诗经》晚了几百年，气象却完全不同——如果说《诗经》是素白的棉麻，《楚辞》就是织金的锦缎。屈原的出现是一个标志：在此之前，诗歌是集体的、匿名的、口耳相传的；在此之后，有了一个人的名字，有了一个个体的全部情感与命运。于是文学不再只是集体的声音，也能承载个人的表达。那些在历史里姓名模糊的人物，借助文学留下了清晰的身影。今天的我们已经很难说出唐朝都有哪些皇帝，都做了什么说了什么，可我们都记得李白曾经在一个夜晚抬起头对着天上的明月思念故乡。这就是文学的价值。</p>
-                
-                
-                
-                
-                
-                <p>《诗经》的现实主义与《楚辞》的浪漫主义，北方的质朴与南方的瑰丽，风与骚——这两条河流，从先秦大地的东西两端发源，汇成了此后两千年中国文学的干流。让我们踏入这条河流吧！</p>
-                
-                
-            </section>
-            
-
-            <section class="dynasty-directory">
-                <div class="directory-heading">
-                    <h2>目录</h2>
-                    <span>12 首</span>
-                </div>
-
-                <div class="directory-poems">
-                    
-                    <a href="/gift/xian-qin/guan-ju.html" class="directory-poem">
-                        <span class="dir-poem-title">诗经·周南·关雎</span>
-                        <span class="dir-poem-meta">无名氏 · 四言诗</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/lu-ming.html" class="directory-poem">
-                        <span class="dir-poem-title">诗经·小雅·鹿鸣</span>
-                        <span class="dir-poem-meta">无名氏 · 四言诗</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/xi-ao.html" class="directory-poem">
-                        <span class="dir-poem-title">诗经·卫风·淇奥</span>
-                        <span class="dir-poem-meta">无名氏 · 四言诗</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/cai-wei.html" class="directory-poem">
-                        <span class="dir-poem-title">诗经·小雅·采薇（节选）</span>
-                        <span class="dir-poem-meta">无名氏 · 四言诗</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/meng.html" class="directory-poem">
-                        <span class="dir-poem-title">诗经·卫风·氓</span>
-                        <span class="dir-poem-meta">无名氏 · 四言诗</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/tao-yao.html" class="directory-poem">
-                        <span class="dir-poem-title">诗经·周南·桃夭</span>
-                        <span class="dir-poem-meta">无名氏 · 四言诗</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/jian-jia.html" class="directory-poem">
-                        <span class="dir-poem-title">诗经·秦风·蒹葭</span>
-                        <span class="dir-poem-meta">无名氏 · 四言诗</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/wu-yi.html" class="directory-poem">
-                        <span class="dir-poem-title">诗经·秦风·无衣</span>
-                        <span class="dir-poem-meta">无名氏 · 四言诗</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/jiu-ge-shan-gui.html" class="directory-poem">
-                        <span class="dir-poem-title">楚辞·九歌·山鬼</span>
-                        <span class="dir-poem-meta">屈原 · 楚辞</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/jiu-ge-shao-si-ming.html" class="directory-poem">
-                        <span class="dir-poem-title">楚辞·九歌·少司命</span>
-                        <span class="dir-poem-meta">屈原 · 楚辞</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/tian-wen-jie-xuan.html" class="directory-poem">
-                        <span class="dir-poem-title">楚辞·天问（节选）</span>
-                        <span class="dir-poem-meta">屈原 · 楚辞</span>
-                    </a>
-                    
-                    <a href="/gift/xian-qin/li-sao-jie-xuan.html" class="directory-poem">
-                        <span class="dir-poem-title">楚辞·离骚（节选）</span>
-                        <span class="dir-poem-meta">屈原 · 楚辞</span>
-                    </a>
-                    
-                </div>
-            </section>
-
-            <nav class="poem-nav">
-                <a href="/gift/" class="nav-back">← 返回总目录</a>
-            </nav>
-        </article>
+<aside class="river-sidebar" aria-label="诗歌之河侧景">
+    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
+        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
+    </a>
+    <div class="sidebar-caption" aria-hidden="true">
+        <span>诗歌之河</span>
+        <span>先秦</span>
     </div>
+</aside>
+
+    <article class="reading-document dynasty-document">
+        
+        <section class="dynasty-intro" aria-labelledby="dynasty-intro-title">
+            <h2 id="dynasty-intro-title" class="visually-hidden">先秦导言</h2>
+            
+            <p>我们的旅程，从先秦开始，这是一切的开始、一切的起点。</p>
+            
+            
+            
+            <p>三千年前的黄河之畔，一位君子爱上了一位淑女，却不知她的心意。他朝思暮想辗转反侧，终于在一个夜晚写下了一首诗。这就是后来的《关雎》。那个夜晚，文学诞生了。当然，中华文学的起源在此之前就已出现，在甲骨文的卜辞里，在田亩间的歌唱里，在宗庙祭祀的乐章里，在大胜而归的篝火晚会上，但当第一篇诗出现在大地上时，文学终于以一种独立的姿态展现在我们面前。此后，风骚雅颂，秦文汉赋，唐诗宋词，元曲明清小说，直到今天我们所看到的一切汉字、一切中文文学，就这样流淌了出来。</p>
+            
+            
+            
+            <p>而回到最初，这条大河的源头，叫做《诗经》和《楚辞》。</p>
+            
+            
+            
+            <p>《诗经》三百零五篇，收的是西周初年到春秋中叶五百年间的歌谣与乐章。它是北方的声音——是在黄河流域，史官文化的土壤里长出来的。风、雅、颂三种体例中，最动人的是十五国风，那些“饥者歌其食，劳者歌其事”的句子，没有作者署名，却比任何署名之作都更直接地触碰了人类共通的情感。文学的技巧在《诗经》里已经得到初步的使用——铺陈直叙的赋，以此喻彼的比，托物起兴的兴。赋比兴的写作技巧也成为了后世文学的重要技法，为什么歌唱祖国里，为什么要先唱“五星红旗迎风飘扬”，这就是起兴，这就是《诗经》的痕迹。</p>
+            
+            
+            
+            <p>如果说《诗经》是北方的，是世俗的，那么《楚辞》就是南方的，是浪漫的。它是从长江流域，巫官文化的土壤里长出来的。它比《诗经》晚了几百年，气象却完全不同——如果说《诗经》是素白的棉麻，《楚辞》就是织金的锦缎。屈原的出现是一个标志：在此之前，诗歌是集体的、匿名的、口耳相传的；在此之后，有了一个人的名字，有了一个个体的全部情感与命运。于是文学不再只是集体的声音，也能承载个人的表达。那些在历史里姓名模糊的人物，借助文学留下了清晰的身影。今天的我们已经很难说出唐朝都有哪些皇帝，都做了什么说了什么，可我们都记得李白曾经在一个夜晚抬起头对着天上的明月思念故乡。这就是文学的价值。</p>
+            
+            
+            
+            <p>《诗经》的现实主义与《楚辞》的浪漫主义，北方的质朴与南方的瑰丽，风与骚——这两条河流，从先秦大地的东西两端发源，汇成了此后两千年中国文学的干流。让我们踏入这条河流吧！</p>
+            
+        </section>
+        
+
+        <section class="directory-section" aria-labelledby="directory-title">
+            <div class="directory-heading">
+                <div>
+                    <p class="section-kicker">本朝诗目</p>
+                    <h2 id="directory-title">按顺序阅读</h2>
+                </div>
+                <span>每一首都可单独打开</span>
+            </div>
+
+            <div class="directory-poems">
+                
+                <a href="/gift/xian-qin/guan-ju.html" class="directory-poem">
+                    <span class="directory-poem-index">01</span>
+                    <span class="directory-poem-main">
+                        <strong>诗经·周南·关雎</strong>
+                        <small>无名氏 · 四言诗</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/lu-ming.html" class="directory-poem">
+                    <span class="directory-poem-index">02</span>
+                    <span class="directory-poem-main">
+                        <strong>诗经·小雅·鹿鸣</strong>
+                        <small>无名氏 · 四言诗</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/xi-ao.html" class="directory-poem">
+                    <span class="directory-poem-index">03</span>
+                    <span class="directory-poem-main">
+                        <strong>诗经·卫风·淇奥</strong>
+                        <small>无名氏 · 四言诗</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/cai-wei.html" class="directory-poem">
+                    <span class="directory-poem-index">04</span>
+                    <span class="directory-poem-main">
+                        <strong>诗经·小雅·采薇（节选）</strong>
+                        <small>无名氏 · 四言诗</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/meng.html" class="directory-poem">
+                    <span class="directory-poem-index">05</span>
+                    <span class="directory-poem-main">
+                        <strong>诗经·卫风·氓</strong>
+                        <small>无名氏 · 四言诗</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/tao-yao.html" class="directory-poem">
+                    <span class="directory-poem-index">06</span>
+                    <span class="directory-poem-main">
+                        <strong>诗经·周南·桃夭</strong>
+                        <small>无名氏 · 四言诗</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/jian-jia.html" class="directory-poem">
+                    <span class="directory-poem-index">07</span>
+                    <span class="directory-poem-main">
+                        <strong>诗经·秦风·蒹葭</strong>
+                        <small>无名氏 · 四言诗</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/wu-yi.html" class="directory-poem">
+                    <span class="directory-poem-index">08</span>
+                    <span class="directory-poem-main">
+                        <strong>诗经·秦风·无衣</strong>
+                        <small>无名氏 · 四言诗</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/jiu-ge-shan-gui.html" class="directory-poem">
+                    <span class="directory-poem-index">09</span>
+                    <span class="directory-poem-main">
+                        <strong>楚辞·九歌·山鬼</strong>
+                        <small>屈原 · 楚辞</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/jiu-ge-shao-si-ming.html" class="directory-poem">
+                    <span class="directory-poem-index">10</span>
+                    <span class="directory-poem-main">
+                        <strong>楚辞·九歌·少司命</strong>
+                        <small>屈原 · 楚辞</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/tian-wen-jie-xuan.html" class="directory-poem">
+                    <span class="directory-poem-index">11</span>
+                    <span class="directory-poem-main">
+                        <strong>楚辞·天问（节选）</strong>
+                        <small>屈原 · 楚辞</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+                <a href="/gift/xian-qin/li-sao-jie-xuan.html" class="directory-poem">
+                    <span class="directory-poem-index">12</span>
+                    <span class="directory-poem-main">
+                        <strong>楚辞·离骚（节选）</strong>
+                        <small>屈原 · 楚辞</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
+                
+            </div>
+        </section>
+
+        <nav class="page-nav" aria-label="目录导航">
+            <a class="nav-back" href="/gift/">← 回到总目录</a>
+        </nav>
+    </article>
 </div>
 
     </main>
 
     
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     
 </body>
