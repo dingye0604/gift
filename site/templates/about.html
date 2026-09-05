@@ -1,9 +1,22 @@
 {% extends "base.html" %}
 
-{% block title %}关于{% endblock %}
+{% block title %}关于 · 诗三百{% endblock %}
+{% block body_class %}reading-page about-page-body{% endblock %}
+{% block read_nav_class %}{% endblock %}
+{% block about_nav_class %}current{% endblock %}
 
 {% block content %}
-<section class="about-page">
-    <p>这是一份送给妹妹的十岁礼物。</p>
+<section class="page-hero" aria-labelledby="about-title">
+    <p class="eyebrow">关于</p>
+    <h1 id="about-title">一份礼物</h1>
 </section>
+
+<div class="reading-shell">
+    {% include "river_sidebar.html" %}
+    <article class="reading-document about-document">
+        <section class="about-copy" aria-label="礼物说明">
+            <p>这是一份送给妹妹的十岁礼物。</p>
+        </section>
+    </article>
+</div>
 {% endblock %}

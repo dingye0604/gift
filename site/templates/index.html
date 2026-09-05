@@ -1,99 +1,122 @@
 {% extends "base.html" %}
 
-{% block title %}目录{% endblock %}
+{% block title %}诗三百 · 读诗{% endblock %}
 {% block body_class %}home-page{% endblock %}
+{% block extra_head %}<script src="{{ base_url }}/static/reading-note.js" defer></script>{% endblock %}
 
 {% block content %}
-<section class="river-hero">
-    <span class="river-hero-watermark" aria-hidden="true">詩</span>
-    <p class="river-hero-kicker">中国古代诗歌选</p>
-    <h1 class="river-hero-title">诗三百</h1>
-    <p class="river-hero-desc">给妹妹的礼物</p>
-    <p class="river-hero-quote">温柔敦厚，诗教也</p>
+<section class="intro" aria-labelledby="title">
+    <div>
+        <p class="eyebrow">中国古代诗歌选</p>
+        <h1 id="title">诗三百</h1>
+        <p class="intro-description">温柔敦厚，诗教也。</p>
+    </div>
 </section>
 
-<section class="river-timeline" aria-label="诗歌之河 · 朝代目录">
-    <div class="river-intro" aria-hidden="true">
-        <span>循流而下</span>
-        <span>自先秦至近代</span>
+<section class="library" id="dynasties" aria-labelledby="library-title">
+    <div class="section-heading">
+        <h2 id="library-title">循朝代读诗</h2>
+        <span>沿流而下，循朝代读诗</span>
     </div>
-    <svg class="river-svg" viewBox="0 0 960 2100" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-            <linearGradient id="riverGrad" x1="8%" x2="92%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#afc1b5" stop-opacity="0"/>
-                <stop offset="8%" stop-color="#8ca89d" stop-opacity="0.16"/>
-                <stop offset="34%" stop-color="#5f8984" stop-opacity="0.40"/>
-                <stop offset="67%" stop-color="#3f7474" stop-opacity="0.48"/>
-                <stop offset="90%" stop-color="#668c83" stop-opacity="0.22"/>
-                <stop offset="100%" stop-color="#9eb2a7" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="bankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#4a7c7c" stop-opacity="0"/>
-                <stop offset="10%" stop-color="#4a7c7c" stop-opacity="0.16"/>
-                <stop offset="62%" stop-color="#315f61" stop-opacity="0.32"/>
-                <stop offset="100%" stop-color="#4a7c7c" stop-opacity="0"/>
-            </linearGradient>
-            <filter id="riverGlow">
-                <feGaussianBlur stdDeviation="10" result="blur"/>
-                <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-
-        <path class="river-body"
-            d="M 325 0
-               C 332 83, 331 158, 345 250
-               C 359 342, 400 442, 410 550
-               C 420 658, 410 783, 405 900
-               C 400 1017, 369 1125, 380 1250
-               C 391 1375, 425 1508, 470 1650
-               C 515 1792, 590 1950, 650 2100
-               L 910 2100
-               C 837 1950, 748 1792, 690 1650
-               C 632 1508, 572 1375, 560 1250
-               C 548 1125, 598 1017, 615 900
-               C 632 783, 668 658, 660 550
-               C 652 442, 589 342, 565 250
-               C 541 158, 532 83, 515 0 Z"
-            fill="url(#riverGrad)"
-            filter="url(#riverGlow)"
-        />
-
-        <path class="river-bank" d="M 325 0 C 332 83, 331 158, 345 250 C 359 342, 400 442, 410 550 C 420 658, 410 783, 405 900 C 400 1017, 369 1125, 380 1250 C 391 1375, 425 1508, 470 1650 C 515 1792, 590 1950, 650 2100" />
-        <path class="river-bank" d="M 515 0 C 532 83, 541 158, 565 250 C 589 342, 652 442, 660 550 C 668 658, 632 783, 615 900 C 598 1017, 548 1125, 560 1250 C 572 1375, 632 1508, 690 1650 C 748 1792, 837 1950, 910 2100" />
-
-        <path class="river-current"
-            d="M 382 0 C 392 150, 413 322, 466 500 C 519 678, 482 864, 455 1050 C 428 1236, 484 1432, 548 1625 C 612 1818, 706 1975, 764 2100" />
-    </svg>
-
-
-
-    <nav class="river-nodes">
+    <div class="dynasty-browser">
         {% for dynasty in dynasty_order %}
         {% set poems = poems_by_dynasty.get(dynasty, []) %}
         {% if poems %}
-        <a href="{{ base_url }}/{{ poems[0].dynasty_dir }}/"
-           class="river-node river-port--{{ loop.index }}"
-           aria-label="{{ dynasty }} · {{ poems|length }}首">
-            <span class="river-dot" aria-hidden="true"></span>
-            <span class="river-card">
-                <span class="river-dynasty">{{ dynasty }}</span>
-                {% if dynasty_summaries.get(dynasty) %}
-                <span class="river-summary">{{ dynasty_summaries[dynasty] }}</span>
-                {% endif %}
-                <span class="river-count">{{ poems|length }} 首</span>
-            </span>
-        </a>
+        <input class="dynasty-radio" type="radio" name="dynasty" id="tab-{{ poems[0].dynasty_dir }}"
+               aria-label="{{ dynasty }}"{% if loop.first %} checked{% endif %}>
         {% endif %}
         {% endfor %}
-    </nav>
 
-    <footer class="river-footer">
-        <p>给妹妹的礼物</p>
-    </footer>
+        <div class="dynasty-map" role="group" aria-label="山水朝代目录">
+            <img class="map-landscape" src="{{ asset_root }}/landscape-vertical.png" alt="" width="1024" height="1536">
+            <svg class="waterways" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+                <path class="water-section water-0" d="M305 103 Q330 107 362 101 M318 112 Q338 115 352 111"/>
+                <path class="water-section water-1" d="M655 193 Q680 197 712 191 M668 202 Q688 205 702 201"/>
+                <path class="water-section water-2" d="M275 283 Q300 287 332 281 M288 292 Q308 295 322 291"/>
+                <path class="water-section water-3" d="M685 373 Q710 377 742 371 M698 382 Q718 385 732 381"/>
+                <path class="water-section water-4" d="M315 463 Q340 467 372 461 M328 472 Q348 475 362 471"/>
+                <path class="water-section water-5" d="M665 553 Q690 557 722 551 M678 562 Q698 565 712 561"/>
+                <path class="water-section water-6" d="M265 643 Q290 647 322 641 M278 652 Q298 655 312 651"/>
+                <path class="water-section water-7" d="M645 733 Q670 737 702 731 M658 742 Q678 745 692 741"/>
+                <path class="water-section water-8" d="M305 823 Q330 827 362 821 M318 832 Q338 835 352 831"/>
+                <path class="water-section water-9" d="M665 913 Q690 917 722 911 M678 922 Q698 925 712 921"/>
+            </svg>
+
+            {% set shore_notes = ['风雅之始', '古诗余音', '山水清音', '南北风流', '盛唐气象', '小楼词韵', '烟雨词境', '曲中天地', '人间情味', '旧雨新声'] %}
+            {% set shore_positions = [
+                ('33%', '7%'), ('68%', '16%'), ('30%', '25%'), ('71%', '34%'), ('34%', '43%'),
+                ('69%', '52%'), ('29%', '61%'), ('67%', '70%'), ('33%', '79%'), ('69%', '88%')
+            ] %}
+            {% for dynasty in dynasty_order %}
+            {% set poems = poems_by_dynasty.get(dynasty, []) %}
+            {% if poems %}
+            {% set position = shore_positions[loop.index0] %}
+            <label class="shore-card shore-{{ poems[0].dynasty_dir }}" for="tab-{{ poems[0].dynasty_dir }}"
+                   style="--x:{{ position[0] }};--y:{{ position[1] }}">
+                <span class="shore-name">{{ dynasty }}</span>
+                <span class="shore-sub">{{ shore_notes[loop.index0] }}</span>
+                <span class="moor" aria-hidden="true"></span>
+            </label>
+            {% endif %}
+            {% endfor %}
+
+            <span class="map-caption" aria-hidden="true">诗歌之河 · 自先秦至近代</span>
+            <a class="map-read-link" href="#poem-selection">阅读所选朝代 <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="reading-layout" id="poem-selection" tabindex="-1">
+            <div class="panels">
+                {% for dynasty in dynasty_order %}
+                {% set poems = poems_by_dynasty.get(dynasty, []) %}
+                {% if poems %}
+                <section class="dynasty-panel panel-{{ poems[0].dynasty_dir }}" aria-label="{{ dynasty }}诗歌">
+                    <div class="list-heading">
+                        <h3>{{ dynasty }}</h3>
+                        <span>选一首，慢慢读</span>
+                    </div>
+                    {% for poem in poems[:3] %}
+                    <details class="poem-row">
+                        <summary>
+                            <span>
+                                <strong>{{ poem.meta.title }}</strong>
+                                <small>{{ poem.meta.author }}{% if poem.meta.genre %} · {{ poem.meta.genre }}{% endif %}</small>
+                            </span>
+                            <span class="row-excerpt">{{ poem.poem_clean.split('\n')[0] }}</span>
+                            <span class="row-arrow" aria-hidden="true">↗</span>
+                        </summary>
+                        <div class="poem-body">
+                            {% for line in poem.poem_clean.split('\n') %}
+                            {% if line.strip() %}<p>{{ line | safe }}</p>{% endif %}
+                            {% endfor %}
+                            <a class="preview-link" href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html">进入完整赏析 <span aria-hidden="true">→</span></a>
+                        </div>
+                    </details>
+                    {% endfor %}
+                    <a class="directory-link" href="{{ base_url }}/{{ poems[0].dynasty_dir }}/">进入{{ dynasty }}完整目录 <span aria-hidden="true">→</span></a>
+                </section>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <aside class="reading-note" data-random-reading-note>
+                <span class="note-label">诗间一页</span>
+                <blockquote data-note-quote>关关雎鸠，<br>在河之洲。</blockquote>
+                <p data-note-source>《诗经 · 周南 · 关雎》</p>
+                <span class="note-rule" aria-hidden="true"></span>
+                <span class="note-caption">原文 · 注释 · 赏析</span>
+                {% for candidate_dynasty in dynasty_order %}
+                {% set candidate_poems = poems_by_dynasty.get(candidate_dynasty, []) %}
+                {% for candidate_poem in candidate_poems %}
+                <template class="note-candidate" data-key="{{ candidate_dynasty }}|{{ candidate_poem.slug }}"
+                          data-title="{{ candidate_poem.meta.title }}">
+                    <span class="note-candidate-quote">{{ candidate_poem.poem_clean.split('\n')[0] | safe }}</span>
+                </template>
+                {% endfor %}
+                {% endfor %}
+            </aside>
+        </div>
+    </div>
 </section>
 {% endblock %}
 

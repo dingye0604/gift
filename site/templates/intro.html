@@ -1,52 +1,55 @@
 {% extends "base.html" %}
 
 {% block title %}{{ dynasty }} · 诗歌目录{% endblock %}
-
-{% block body_class %}has-sidebar{% endblock %}
+{% block body_class %}reading-page dynasty-page-body{% endblock %}
 
 {% block content %}
-<div class="page-with-sidebar">
+<section class="page-hero" aria-labelledby="dynasty-title">
+    <a class="breadcrumb-link" href="{{ base_url }}/">← 回到诗歌之河</a>
+    <p class="eyebrow">沿流而下</p>
+    <h1 id="dynasty-title">{{ dynasty }}</h1>
+    {% if dynasty_summary %}<p class="page-lede">{{ dynasty_summary }}</p>{% endif %}
+</section>
+
+<div class="reading-shell">
     {% include "river_sidebar.html" %}
-    <div class="page-content">
-        <article class="dynasty-page">
-            <header class="dynasty-header">
-                <a href="{{ base_url }}/" class="dynasty-breadcrumb">诗歌之河</a>
-                <h1 class="dynasty-title">{{ dynasty }}</h1>
-                {% if dynasty_summary %}
-                <p class="dynasty-subtitle">{{ dynasty_summary }}</p>
-                {% endif %}
-            </header>
 
-            {% if intro_text %}
-            <section class="dynasty-intro">
-                {% for para in intro_text.split('\n') %}
-                {% if para.strip() %}
-                <p>{{ para }}</p>
-                {% endif %}
+    <article class="reading-document dynasty-document">
+        {% if intro_text %}
+        <section class="dynasty-intro" aria-labelledby="dynasty-intro-title">
+            <h2 id="dynasty-intro-title" class="visually-hidden">{{ dynasty }}导言</h2>
+            {% for para in intro_text.split('\n') %}
+            {% if para.strip() %}<p>{{ para }}</p>{% endif %}
+            {% endfor %}
+        </section>
+        {% endif %}
+
+        <section class="directory-section" aria-labelledby="directory-title">
+            <div class="directory-heading">
+                <div>
+                    <p class="section-kicker">本朝诗目</p>
+                    <h2 id="directory-title">按顺序阅读</h2>
+                </div>
+                <span>每一首都可单独打开</span>
+            </div>
+
+            <div class="directory-poems">
+                {% for poem in poems %}
+                <a href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html" class="directory-poem">
+                    <span class="directory-poem-index">{{ '%02d' % loop.index }}</span>
+                    <span class="directory-poem-main">
+                        <strong>{{ poem.meta.title }}</strong>
+                        <small>{{ poem.meta.author }}{% if poem.meta.genre %} · {{ poem.meta.genre }}{% endif %}</small>
+                    </span>
+                    <span class="directory-arrow" aria-hidden="true">↗</span>
+                </a>
                 {% endfor %}
-            </section>
-            {% endif %}
+            </div>
+        </section>
 
-            <section class="dynasty-directory">
-                <div class="directory-heading">
-                    <h2>目录</h2>
-                    <span>{{ poems|length }} 首</span>
-                </div>
-
-                <div class="directory-poems">
-                    {% for poem in poems %}
-                    <a href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html" class="directory-poem">
-                        <span class="dir-poem-title">{{ poem.meta.title }}</span>
-                        <span class="dir-poem-meta">{{ poem.meta.author }}{% if poem.meta.genre %} · {{ poem.meta.genre }}{% endif %}</span>
-                    </a>
-                    {% endfor %}
-                </div>
-            </section>
-
-            <nav class="poem-nav">
-                <a href="{{ base_url }}/" class="nav-back">← 返回总目录</a>
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav" aria-label="目录导航">
+            <a class="nav-back" href="{{ base_url }}/">← 回到总目录</a>
+        </nav>
+    </article>
 </div>
 {% endblock %}

@@ -1,30 +1,35 @@
-<!DOCTYPE html>
+{% set asset_root = base_url ~ '/static/images/shanshui' %}
+<!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %} — 诗三百</title>
+    <title>{% block title %}诗三百 · 读诗{% endblock %}</title>
     <link rel="stylesheet" href="{{ base_url }}/static/style.css">
     {% block extra_head %}{% endblock %}
 </head>
-<body class="{% block body_class %}{% endblock %}" ontouchstart="">
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="{{ base_url }}/" class="site-logo">诗三百</a>
-            <div class="nav-links">
-                <a href="{{ base_url }}/">目录</a>
-                <a href="{{ base_url }}/about.html">关于</a>
-            </div>
+<body class="{% block body_class %}{% endblock %}">
+    <a class="skip" href="#main-content">跳至正文</a>
+
+    <header class="header">
+        <a class="brand" href="{{ base_url }}/" aria-label="诗三百首页">
+            <img class="seal-image" src="{{ asset_root }}/seal-shi.png" alt="诗字阴文印">
+        </a>
+        <nav aria-label="主导航">
+            <a class="{% block read_nav_class %}current{% endblock %}" href="{{ base_url }}/#dynasties">读诗</a>
+            <a class="{% block about_nav_class %}{% endblock %}" href="{{ base_url }}/about.html">关于</a>
         </nav>
+        <span class="header-note">给妹妹的礼物</span>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" tabindex="-1">
         {% block content %}{% endblock %}
     </main>
 
     {% block footer %}
-    <footer class="site-footer">
-        <p>给妹妹的礼物</p>
+    <footer id="gift">
+        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
+        <small>原文 · 注释 · 赏析</small>
     </footer>
     {% endblock %}
 </body>

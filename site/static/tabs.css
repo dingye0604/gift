@@ -1,0 +1,60 @@
+#tab-xian-qin:checked~.dynasty-map .shore-xian-qin{color:var(--red)}
+#tab-xian-qin:checked~.dynasty-map .shore-xian-qin .moor{background:var(--red);border-color:var(--red);box-shadow:0 0 0 5px #984f4010}
+#tab-xian-qin:checked~.dynasty-map .shore-xian-qin .shore-sub{color:var(--red)}
+#tab-xian-qin:focus-visible~.dynasty-map .shore-xian-qin{outline:2px solid var(--red);outline-offset:4px}
+#tab-xian-qin:checked~.dynasty-map .water-0{opacity:.58;stroke-width:1.7}
+#tab-xian-qin:checked~.reading-layout .panel-xian-qin{display:block}
+#tab-liang-han:checked~.dynasty-map .shore-liang-han{color:var(--red)}
+#tab-liang-han:checked~.dynasty-map .shore-liang-han .moor{background:var(--red);border-color:var(--red);box-shadow:0 0 0 5px #984f4010}
+#tab-liang-han:checked~.dynasty-map .shore-liang-han .shore-sub{color:var(--red)}
+#tab-liang-han:focus-visible~.dynasty-map .shore-liang-han{outline:2px solid var(--red);outline-offset:4px}
+#tab-liang-han:checked~.dynasty-map .water-1{opacity:.58;stroke-width:1.7}
+#tab-liang-han:checked~.reading-layout .panel-liang-han{display:block}
+#tab-wei-jin:checked~.dynasty-map .shore-wei-jin{color:var(--red)}
+#tab-wei-jin:checked~.dynasty-map .shore-wei-jin .moor{background:var(--red);border-color:var(--red);box-shadow:0 0 0 5px #984f4010}
+#tab-wei-jin:checked~.dynasty-map .shore-wei-jin .shore-sub{color:var(--red)}
+#tab-wei-jin:focus-visible~.dynasty-map .shore-wei-jin{outline:2px solid var(--red);outline-offset:4px}
+#tab-wei-jin:checked~.dynasty-map .water-2{opacity:.58;stroke-width:1.7}
+#tab-wei-jin:checked~.reading-layout .panel-wei-jin{display:block}
+#tab-nan-bei-chao:checked~.dynasty-map .shore-nan-bei-chao{color:var(--red)}
+#tab-nan-bei-chao:checked~.dynasty-map .shore-nan-bei-chao .moor{background:var(--red);border-color:var(--red);box-shadow:0 0 0 5px #984f4010}
+#tab-nan-bei-chao:checked~.dynasty-map .shore-nan-bei-chao .shore-sub{color:var(--red)}
+#tab-nan-bei-chao:focus-visible~.dynasty-map .shore-nan-bei-chao{outline:2px solid var(--red);outline-offset:4px}
+#tab-nan-bei-chao:checked~.dynasty-map .water-3{opacity:.58;stroke-width:1.7}
+#tab-nan-bei-chao:checked~.reading-layout .panel-nan-bei-chao{display:block}
+#tab-tang:checked~.dynasty-map .shore-tang{color:var(--red)}
+#tab-tang:checked~.dynasty-map .shore-tang .moor{background:var(--red);border-color:var(--red);box-shadow:0 0 0 5px #984f4010}
+#tab-tang:checked~.dynasty-map .shore-tang .shore-sub{color:var(--red)}
+#tab-tang:focus-visible~.dynasty-map .shore-tang{outline:2px solid var(--red);outline-offset:4px}
+#tab-tang:checked~.dynasty-map .water-4{opacity:.58;stroke-width:1.7}
+#tab-tang:checked~.reading-layout .panel-tang{display:block}
+#tab-wudai-shiguo:checked~.dynasty-map .shore-wudai-shiguo{color:var(--red)}
+#tab-wudai-shiguo:checked~.dynasty-map .shore-wudai-shiguo .moor{background:var(--red);border-color:var(--red);box-shadow:0 0 0 5px #984f4010}
+#tab-wudai-shiguo:checked~.dynasty-map .shore-wudai-shiguo .shore-sub{color:var(--red)}
+#tab-wudai-shiguo:focus-visible~.dynasty-map .shore-wudai-shiguo{outline:2px solid var(--red);outline-offset:4px}
+#tab-wudai-shiguo:checked~.dynasty-map .water-5{opacity:.58;stroke-width:1.7}
+#tab-wudai-shiguo:checked~.reading-layout .panel-wudai-shiguo{display:block}
+#tab-liang-song:checked~.dynasty-map .shore-liang-song{color:var(--red)}
+#tab-liang-song:checked~.dynasty-map .shore-liang-song .moor{background:var(--red);border-color:var(--red);box-shadow:0 0 0 5px #984f4010}
+#tab-liang-song:checked~.dynasty-map .shore-liang-song .shore-sub{color:var(--red)}
+#tab-liang-song:focus-visible~.dynasty-map .shore-liang-song{outline:2px solid var(--red);outline-offset:4px}
+#tab-liang-song:checked~.dynasty-map .water-6{opacity:.58;stroke-width:1.7}
+#tab-liang-song:checked~.reading-layout .panel-liang-song{display:block}
+#tab-yuan:checked~.dynasty-map .shore-yuan{color:var(--red)}
+#tab-yuan:checked~.dynasty-map .shore-yuan .moor{background:var(--red);border-color:var(--red);box-shadow:0 0 0 5px #984f4010}
+#tab-yuan:checked~.dynasty-map .shore-yuan .shore-sub{color:var(--red)}
+#tab-yuan:focus-visible~.dynasty-map .shore-yuan{outline:2px solid var(--red);outline-offset:4px}
+#tab-yuan:checked~.dynasty-map .water-7{opacity:.58;stroke-width:1.7}
+#tab-yuan:checked~.reading-layout .panel-yuan{display:block}
+#tab-ming-qing:checked~.dynasty-map .shore-ming-qing{color:var(--red)}
+#tab-ming-qing:checked~.dynasty-map .shore-ming-qing .moor{background:var(--red);border-color:var(--red);box-shadow:0 0 0 5px #984f4010}
+#tab-ming-qing:checked~.dynasty-map .shore-ming-qing .shore-sub{color:var(--red)}
+#tab-ming-qing:focus-visible~.dynasty-map .shore-ming-qing{outline:2px solid var(--red);outline-offset:4px}
+#tab-ming-qing:checked~.dynasty-map .water-8{opacity:.58;stroke-width:1.7}
+#tab-ming-qing:checked~.reading-layout .panel-ming-qing{display:block}
+#tab-jin-dai:checked~.dynasty-map .shore-jin-dai{color:var(--red)}
+#tab-jin-dai:checked~.dynasty-map .shore-jin-dai .moor{background:var(--red);border-color:var(--red);box-shadow:0 0 0 5px #984f4010}
+#tab-jin-dai:checked~.dynasty-map .shore-jin-dai .shore-sub{color:var(--red)}
+#tab-jin-dai:focus-visible~.dynasty-map .shore-jin-dai{outline:2px solid var(--red);outline-offset:4px}
+#tab-jin-dai:checked~.dynasty-map .water-9{opacity:.58;stroke-width:1.7}
+#tab-jin-dai:checked~.reading-layout .panel-jin-dai{display:block}

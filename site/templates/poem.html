@@ -1,60 +1,71 @@
 {% extends "base.html" %}
 
-{% block title %}{{ poem.meta.title }}{% endblock %}
-
-{% block body_class %}has-sidebar{% endblock %}
+{% block title %}{{ poem.meta.title }} · {{ poem.meta.author }}{% endblock %}
+{% block body_class %}reading-page poem-page-body{% endblock %}
 
 {% block content %}
-<div class="page-with-sidebar">
-    {% include "river_sidebar.html" %}
-    <div class="page-content">
-        <article class="poem-page">
-            <header class="poem-header">
-                <h1 class="poem-page-title">{{ poem.meta.title }}</h1>
-                <div class="poem-page-meta">
-                    <span>{{ poem.meta.author }}</span>
-                    <span class="meta-sep">·</span>
-                    <span>{{ poem.meta.dynasty }}</span>
-                    {% if poem.meta.genre %}
-                    <span class="meta-sep">·</span>
-                    <span>{{ poem.meta.genre }}</span>
-                    {% endif %}
-                </div>
-            </header>
+<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
+    <a class="breadcrumb-link" href="{{ base_url }}/{{ poem.dynasty_dir }}/">← 返回{{ poem.meta.dynasty }}目录</a>
+    <p class="eyebrow">{{ poem.meta.dynasty }} · 诗歌阅读</p>
+    <h1 id="poem-title">{{ poem.meta.title }}</h1>
+    <div class="poem-meta" aria-label="作品信息">
+        <span>{{ poem.meta.author }}</span>
+        {% if poem.meta.genre %}<span class="meta-sep">·</span><span>{{ poem.meta.genre }}</span>{% endif %}
+    </div>
+</section>
 
+<div class="reading-shell">
+    {% include "river_sidebar.html" %}
+
+    <article class="reading-document poem-document">
+        <section class="document-section poem-original" aria-labelledby="original-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">原文</p>
+                <h2 id="original-title">诗句</h2>
+            </div>
             <div class="poem-text">
                 {% for line in poem.poem_clean.split('\n') %}
                 {% if line.strip() %}
                 <p>{{ line | safe }}</p>
                 {% else %}
-                <div class="poem-stanza-break"></div>
+                <div class="poem-stanza-break" aria-hidden="true"></div>
                 {% endif %}
                 {% endfor %}
             </div>
+        </section>
 
-            {% if poem.annotations %}
-            <div class="poem-annotations">
+        {% if poem.annotations %}
+        <section class="document-section poem-annotations" aria-labelledby="annotations-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">字词</p>
+                <h2 id="annotations-title">注释</h2>
+            </div>
+            <div class="annotation-list">
                 {% for ann in poem.annotations %}
-                <p><span class="ann-num">{{ ann.num }}.</span> {{ ann.text }}</p>
+                <p><span class="ann-num">{{ ann.num }}</span>{{ ann.text }}</p>
                 {% endfor %}
             </div>
-            {% endif %}
+        </section>
+        {% endif %}
 
+        {% if poem.appreciation_clean %}
+        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
+            <div class="content-section-heading">
+                <p class="section-kicker">读后</p>
+                <h2 id="appreciation-title">赏析</h2>
+            </div>
             <div class="appreciation-text">
                 {% for para in poem.appreciation_clean.split('\n') %}
-                {% if para.strip() %}
-                <p>{{ para }}</p>
-                {% endif %}
+                {% if para.strip() %}<p>{{ para }}</p>{% endif %}
                 {% endfor %}
             </div>
+        </section>
+        {% endif %}
 
-            <nav class="poem-nav">
-                <a href="{{ base_url }}/{{ poem.dynasty_dir }}/" class="nav-back">← 返回{{ poem.dynasty }}目录</a>
-                {% if next_poem %}
-                <a href="{{ base_url }}/{{ next_poem.url }}" class="nav-next">下一首 →</a>
-                {% endif %}
-            </nav>
-        </article>
-    </div>
+        <nav class="page-nav poem-nav" aria-label="诗歌导航">
+            <a class="nav-back" href="{{ base_url }}/{{ poem.dynasty_dir }}/">← 返回{{ poem.meta.dynasty }}目录</a>
+            {% if next_poem %}<a class="nav-next" href="{{ base_url }}/{{ next_poem.url }}">下一首：{{ next_poem.title }} →</a>{% endif %}
+        </nav>
+    </article>
 </div>
 {% endblock %}
