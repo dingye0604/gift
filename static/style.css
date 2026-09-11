@@ -41,7 +41,7 @@ main:focus{outline:none}
 .sidebar-landscape{display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.55;mix-blend-mode:multiply;mask-image:linear-gradient(180deg,transparent,#000 12%,#000 87%,transparent)}
 .sidebar-caption{position:absolute;top:24px;left:13px;display:flex;flex-direction:column;gap:12px;color:#858f82;font-size:11px;letter-spacing:4px;writing-mode:vertical-rl}
 .reading-document{min-width:0;padding-bottom:15px}
-.dynasty-intro{max-width:62ch;padding:0 0 30px;color:#58655d;font-size:15px;line-height:2.2}
+.dynasty-intro{max-width:62ch;padding:0 0 30px;color:#58655d;font-size:17px;line-height:2.2}
 .dynasty-intro p+p{margin-top:14px}
 .directory-section{border-top:1px solid var(--line);padding-top:27px}
 .directory-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:5px}
