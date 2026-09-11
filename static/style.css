@@ -64,8 +64,8 @@ main:focus{outline:none}
 .section-kicker{color:var(--muted);font-size:11px;letter-spacing:3px}
 .poem-text{max-width:34em;font-size:18px;line-height:2.15;letter-spacing:1px}
 .poem-text p{margin:0}.poem-text p+p{margin-top:3px}.poem-stanza-break{height:14px}
-.annotation-list{max-width:62ch;color:#58655d;font-size:14px;line-height:2.15}.annotation-list p{margin:0 0 10px}.ann-num{display:inline-block;min-width:24px;color:var(--red);font-size:12px}
-.appreciation-text{max-width:65ch;color:#4f5b53;font-size:15px;line-height:2.2}.appreciation-text p{margin:0 0 17px}
+.annotation-list{max-width:62ch;color:#58655d;font-size:16px;line-height:2.15}.annotation-list p{margin:0 0 10px}.ann-num{display:inline-block;min-width:24px;color:var(--red);font-size:12px}
+.appreciation-text{max-width:65ch;color:#4f5b53;font-size:17px;line-height:2.2}.appreciation-text p{margin:0 0 17px}
 .about-copy{max-width:60ch;color:#4f5b53;font-size:16px;line-height:2.2;padding-top:4px}
 
 @media(max-width:760px){
