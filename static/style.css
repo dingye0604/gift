@@ -75,3 +75,10 @@ main:focus{outline:none}
   .directory-poem{grid-template-columns:27px minmax(0,1fr) 20px;gap:12px;min-height:75px}.directory-poem-main strong{font-size:17px}
   .page-nav{flex-wrap:wrap;margin-top:29px}.poem-text{font-size:17px;line-height:2.05}.document-section{margin-top:35px;padding-top:24px}.content-section-heading{margin-bottom:18px}
 }
+
+/* The gift note rests on the same river painting as the home page. */
+.about-landscape{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;min-height:560px;padding:90px 28px;overflow:hidden}
+.about-landscape-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 52%;opacity:.38;mix-blend-mode:multiply;z-index:-1;mask-image:linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent)}
+.about-document{padding:28px 20px;text-align:center;background:radial-gradient(ellipse,#f9f8f4e6,transparent 75%)}
+.about-landscape .about-copy{padding:0;text-wrap:balance}
+@media(max-width:760px){.about-landscape{min-height:470px;padding:65px 10px}.about-landscape-background{object-position:center}.about-document{padding:24px 10px}}
