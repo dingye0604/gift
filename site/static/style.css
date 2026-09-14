@@ -1,4 +1,5 @@
 @import url('tabs.css');
+.reading-note{position:relative}.reading-note-link{display:block}.reading-note-link::after{content:'';position:absolute;inset:0}
 @font-face{font-family:KingHwa;src:url('fonts/KingHwaOldSong-GB.ttf') format('truetype');font-display:swap}
 :root{--paper:#f9f8f4;--ink:#34413b;--muted:#70756d;--red:#984f40;--line:#394c3c24;--ease:cubic-bezier(.22,1,.36,1);font-family:KingHwa,'Songti SC',serif;color:var(--ink);background:var(--paper);font-synthesis:none;scroll-behavior:smooth}
 *{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}p,h1,h2,h3,blockquote{margin:0;font-weight:400}a:focus-visible,summary:focus-visible{outline:2px solid var(--red);outline-offset:6px}.skip{position:absolute;top:-80px;left:20px;z-index:10;padding:12px;background:var(--paper)}.skip:focus{top:8px}

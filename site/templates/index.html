@@ -99,16 +99,19 @@
             </div>
 
             <aside class="reading-note" data-random-reading-note>
+                <a class="reading-note-link" data-note-link href="{{ base_url }}/xian-qin/guan-ju.html" aria-label="阅读《关雎》的原文、注释与赏析">
                 <span class="note-label">诗间一页</span>
                 <blockquote data-note-quote>关关雎鸠，<br>在河之洲。</blockquote>
                 <p data-note-source>《诗经 · 周南 · 关雎》</p>
                 <span class="note-rule" aria-hidden="true"></span>
                 <span class="note-caption">原文 · 注释 · 赏析</span>
+                </a>
                 {% for candidate_dynasty in dynasty_order %}
                 {% set candidate_poems = poems_by_dynasty.get(candidate_dynasty, []) %}
                 {% for candidate_poem in candidate_poems %}
                 <template class="note-candidate" data-key="{{ candidate_dynasty }}|{{ candidate_poem.slug }}"
-                          data-title="{{ candidate_poem.meta.title }}">
+                          data-title="{{ candidate_poem.meta.title }}"
+                          data-url="{{ base_url }}/{{ candidate_poem.dynasty_dir }}/{{ candidate_poem.slug }}.html">
                     <span class="note-candidate-quote">{{ candidate_poem.poem_clean.split('\n')[0] | safe }}</span>
                 </template>
                 {% endfor %}

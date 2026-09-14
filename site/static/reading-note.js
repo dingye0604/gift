@@ -5,7 +5,8 @@
     const candidates = [...note.querySelectorAll('.note-candidate')];
     const quote = note.querySelector('[data-note-quote]');
     const source = note.querySelector('[data-note-source]');
-    if (!candidates.length || !quote || !source) return;
+    const link = note.querySelector('[data-note-link]');
+    if (!candidates.length || !quote || !source || !link) return;
 
     const storageKey = 'gift-reading-note-last';
     let lastKey = null;
@@ -28,10 +29,12 @@
 
     const selected = available[randomIndex(available.length)];
     const selectedQuote = selected.content.querySelector('.note-candidate-quote');
-    if (!selectedQuote) return;
+    if (!selectedQuote || !selected.dataset.url) return;
 
     quote.replaceChildren(...selectedQuote.cloneNode(true).childNodes);
     source.textContent = `《${selected.dataset.title}》`;
+    link.href = selected.dataset.url;
+    link.setAttribute('aria-label', `阅读《${selected.dataset.title}》的原文、注释与赏析`);
     try {
         window.localStorage.setItem(storageKey, selected.dataset.key);
     } catch {
