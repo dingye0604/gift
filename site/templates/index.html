@@ -42,7 +42,6 @@
                 <path class="water-section water-9" d="M665 913 Q690 917 722 911 M678 922 Q698 925 712 921"/>
             </svg>
 
-            {% set shore_notes = ['风雅之始', '古诗余音', '山水清音', '南北风流', '盛唐气象', '小楼词韵', '烟雨词境', '曲中天地', '人间情味', '旧雨新声'] %}
             {% set shore_positions = [
                 ('33%', '7%'), ('68%', '16%'), ('30%', '25%'), ('71%', '34%'), ('34%', '43%'),
                 ('69%', '52%'), ('29%', '61%'), ('67%', '70%'), ('33%', '79%'), ('69%', '88%')
@@ -54,7 +53,7 @@
             <label class="shore-card shore-{{ poems[0].dynasty_dir }}" for="tab-{{ poems[0].dynasty_dir }}"
                    style="--x:{{ position[0] }};--y:{{ position[1] }}">
                 <span class="shore-name">{{ dynasty }}</span>
-                <span class="shore-sub">{{ shore_notes[loop.index0] }}</span>
+                <span class="shore-sub">{{ dynasty_summaries.get(dynasty, '') }}</span>
                 <span class="moor" aria-hidden="true"></span>
             </label>
             {% endif %}

@@ -10,7 +10,9 @@
         <img class="sidebar-landscape" src="{{ asset_root }}/landscape-vertical.png" alt="">
     </a>
     <div class="sidebar-caption" aria-hidden="true">
-        <span>诗歌之河</span>
+        {% if dynasty_summary is defined and dynasty_summary %}
+        <span>{{ dynasty_summary }}</span>
+        {% endif %}
         <span>{{ sidebar_label }}</span>
     </div>
 </aside>
