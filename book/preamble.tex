@@ -86,7 +86,7 @@
      \setlength{\baselineskip}{1.75em}
      \setlength{\parindent}{2em}
      \setlength{\parskip}{0.5em}}
-    {\par\addvspace{0.5em}}
+    {\ifhmode\vadjust{\penalty10000}\fi\par\nobreak\addvspace{0.5em}}
 
 % ── 朝代导言环境 ──────────────────
 % 宋体，正常字号，首行缩进，用于每章开篇介绍
@@ -110,6 +110,15 @@
 
 \newcommand{\notetext}[2]{%
     \noindent #1.\enspace #2\par}
+
+% 来源在选文与赏析后显示，整块保持在一起，避免只剩一行来源独占一页。
+\newenvironment{poemsources}
+    {\par\nobreak\vspace{0.5em}\nobreak\noindent%
+     \begin{minipage}{\linewidth}\footnotesize\color{textgray}%
+     \setlength{\parindent}{0em}}
+    {\end{minipage}\par}
+\newcommand{\poemsource}[2]{%
+    \noindent #1：#2\par}
 
 % ── 元信息标记 ────────────────────
 % 每首诗前自动显示标题、作者、朝代（无序号，居中，加入目录）

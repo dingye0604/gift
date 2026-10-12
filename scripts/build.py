@@ -104,6 +104,7 @@ def parse_tex(filepath: Path) -> dict | None:
 
     return {
         "meta": meta,
+        "sources": source_details(meta),
         "poem": poem,
         "appreciation": appreciation,
         "annotations": annotations,
@@ -113,31 +114,51 @@ def parse_tex(filepath: Path) -> dict | None:
     }
 
 
+def source_details(meta: dict) -> list[dict[str, str]]:
+    """区分原始出处、实际底本和尚未核实的候选，供书站共用。"""
+    details = []
+    if meta.get("source"):
+        details.append({"label": "原始出处", "text": meta["source"]})
+    if meta.get("edition"):
+        status = meta.get("edition_status", "pending")
+        if status not in {"pending", "verified"}:
+            raise ValueError(f"Invalid edition status: {status}")
+        label = "采用底本" if status == "verified" else "拟用底本（待核）"
+        details.append({"label": label, "text": meta["edition"]})
+        if meta.get("locator"):
+            details.append({"label": "底本定位", "text": meta["locator"]})
+    return details
+
+
 def scan_poems() -> dict[str, list[dict]]:
-    """扫描 content/poems/ 下所有 .tex 文件，按朝代分组。"""
-    poems_by_dynasty: dict[str, list[dict]] = {}
+    """保留历史文件路径，按真实朝代元信息分章。"""
+    poems_by_dynasty: dict[str, list[dict]] = {name: [] for name, _ in DYNASTIES}
+    dynasty_dirs = dict(DYNASTIES)
     poems_dir = CONTENT_DIR / "poems"
 
     for dynasty_name, dynasty_dir in DYNASTIES:
         d = poems_dir / dynasty_dir
         if not d.is_dir():
             continue
-        poems = []
         for f in sorted(d.glob("*.tex")):
             if f.name.startswith("_"):  # 跳过 _intro.tex 等辅助文件
                 continue
             data = parse_tex(f)
             if data:
-                poems.append(data)
+                actual_dynasty = data["meta"].get("dynasty", dynasty_name)
+                if actual_dynasty not in dynasty_dirs:
+                    raise ValueError(f"Unknown dynasty in {f}: {actual_dynasty}")
+                data["dynasty_dir"] = dynasty_dirs[actual_dynasty]
+                poems_by_dynasty[actual_dynasty].append(data)
+    for poems in poems_by_dynasty.values():
         poems.sort(key=lambda p: int(p["meta"].get("order", 0)))
-        poems_by_dynasty[dynasty_name] = poems
 
     return poems_by_dynasty
 
 
 # ── 书构建 ─────────────────────────────────────────
 def build_book(poems_by_dynasty: dict[str, list[dict]]) -> None:
-    """在 main.tex 骨架中插入章节和 \input 语句，然后编译 PDF。"""
+    r"""在 main.tex 骨架中插入章节和 \input 语句，然后编译 PDF。"""
     main_tex = BOOK_DIR / "main.tex"
     if not main_tex.exists():
         print("Error: book/main.tex not found")
@@ -167,6 +188,15 @@ def build_book(poems_by_dynasty: dict[str, list[dict]]) -> None:
             author = p["meta"]["author"]
             lines.append(f"\\poemheading{{{title}}}{{{author}}}{{{dynasty_name}}}")
             lines.append(f"\\input{{{rel}}}")
+            if p["sources"]:
+                lines.append("\\begin{poemsources}")
+            for source in p["sources"]:
+                lines.append(
+                    f"\\poemsource{{{escape_latex(source['label'])}}}"
+                    f"{{{escape_latex(source['text'])}}}"
+                )
+            if p["sources"]:
+                lines.append("\\end{poemsources}")
             lines.append("\\newpage")
             lines.append("")
 
@@ -194,7 +224,7 @@ def build_book(poems_by_dynasty: dict[str, list[dict]]) -> None:
     try:
         subprocess.run(
             ["latexmk", "-xelatex", "-interaction=nonstopmode", "main_generated.tex"],
-            check=False,
+            check=True,
         )
     finally:
         os.chdir(cwd)
@@ -204,9 +234,19 @@ def build_book(poems_by_dynasty: dict[str, list[dict]]) -> None:
     if pdf_src.exists():
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         shutil.copy2(str(pdf_src), str(OUTPUT_DIR / "book.pdf"))
-        print("Book built -> output/book.pdf")
+        print(f"Book built -> {OUTPUT_DIR / 'book.pdf'}")
     else:
-        print("Error: PDF compilation failed — check LaTeX log for details")
+        raise FileNotFoundError("PDF compilation produced no main_generated.pdf")
+
+
+def escape_latex(text: str) -> str:
+    """来源字段是纯文本，不能把出版社/书名中的符号当作TeX执行。"""
+    replacements = {
+        "\\": r"\textbackslash{}", "{": r"\{", "}": r"\}",
+        "%": r"\%", "&": r"\&", "_": r"\_", "#": r"\#",
+        "$": r"\$", "~": r"\textasciitilde{}", "^": r"\textasciicircum{}",
+    }
+    return "".join(replacements.get(char, char) for char in text)
 
 
 # ── 文本清理 ───────────────────────────────────────
@@ -226,7 +266,7 @@ def clean_poem_text(text: str) -> str:
 
 
 # ── 网站构建 ───────────────────────────────────────
-def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
+def build_site(poems_by_dynasty: dict[str, list[dict]], *, clean_output: bool = True) -> None:
     """从 .tex 提取内容，通过 Jinja2 生成静态网站。"""
     env = Environment(
         loader=FileSystemLoader(SITE_DIR / "templates"),
@@ -234,7 +274,7 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
     )
 
     # 清理输出（先清内容，删不掉目录就留着，Windows 有时会锁目录）
-    if SITE_OUTPUT.exists():
+    if clean_output and SITE_OUTPUT.exists():
         for item in list(SITE_OUTPUT.iterdir()):
             if item.is_dir():
                 shutil.rmtree(item)
@@ -245,7 +285,7 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
     # 复制静态资源
     static_src = SITE_DIR / "static"
     if static_src.exists():
-        shutil.copytree(static_src, SITE_OUTPUT / "static")
+        shutil.copytree(static_src, SITE_OUTPUT / "static", dirs_exist_ok=not clean_output)
 
     # 朝代导言
     dynasty_intros = {}
@@ -323,6 +363,7 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
         river_viewbox = get_river_viewbox(port_idx, "poem")
         html = poem_tpl.render(
             poem=p,
+            dynasty_summary=dynasty_summaries.get(p["dynasty"], ""),
             next_poem=next_poem,
             river_viewbox=river_viewbox,
             river_zoom_class="river-zoom-poem",
@@ -342,10 +383,15 @@ def build_site(poems_by_dynasty: dict[str, list[dict]]) -> None:
 
 # ── 主入口 ─────────────────────────────────────────
 def main() -> None:
+    global OUTPUT_DIR, SITE_OUTPUT
     parser = argparse.ArgumentParser(description="Gift build script")
     parser.add_argument("--book", action="store_true", help="仅构建 PDF")
     parser.add_argument("--site", action="store_true", help="仅构建网站")
+    parser.add_argument("--output-root", type=Path, help="独立校订输出目录，内含book.pdf和site/")
     args = parser.parse_args()
+    if args.output_root:
+        OUTPUT_DIR = args.output_root.resolve()
+        SITE_OUTPUT = OUTPUT_DIR / "site"
 
     do_book = args.book or (not args.site)
     do_site = args.site or (not args.book)
@@ -358,7 +404,7 @@ def main() -> None:
     if do_book:
         build_book(poems)
     if do_site:
-        build_site(poems)
+        build_site(poems, clean_output=not args.output_root)
 
 
 if __name__ == "__main__":

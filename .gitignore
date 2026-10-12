@@ -16,7 +16,7 @@ __pycache__/
 *.pyc
 
 # 本地临时文件与设计原型（只留在本地，不进仓库）
-_check_appr.py
+_*.py
 feedback.json
 site/demo-shanshui/
 

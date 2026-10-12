@@ -62,6 +62,14 @@
         </section>
         {% endif %}
 
+        {% if poem.sources %}
+        <section class="document-section poem-sources" aria-label="选文来源">
+            {% for source in poem.sources %}
+            <p><strong>{{ source.label }}：</strong>{{ source.text }}</p>
+            {% endfor %}
+        </section>
+        {% endif %}
+
         <nav class="page-nav poem-nav" aria-label="诗歌导航">
             <a class="nav-back" href="{{ base_url }}/{{ poem.dynasty_dir }}/">← 返回{{ poem.meta.dynasty }}目录</a>
             {% if next_poem %}<a class="nav-next" href="{{ base_url }}/{{ next_poem.url }}">下一首：{{ next_poem.title }} →</a>{% endif %}
