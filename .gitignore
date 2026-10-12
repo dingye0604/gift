@@ -26,6 +26,9 @@ AGENTS.md
 CLAUDE.md
 WORKFLOW.md
 
+# 校订过程文档（本地工作底稿，不进仓库）
+book/*-20??-??-??.md
+
 # Conda
 .conda/
 
