@@ -37,6 +37,12 @@ DYNASTIES = [
     ("近代", "jin-dai"),
 ]
 
+# 分卷《先秦·两汉·魏晋篇》只收前三章，与全书共用 content/ 和 preamble.tex
+VOLUME_DYNASTIES = ("先秦", "两汉", "魏晋")
+VOLUME_SKELETON = "main_volume.tex"
+VOLUME_GENERATED = "main_volume_generated.tex"
+VOLUME_OUTPUT = "book-volume.pdf"
+
 # 河流渡口 Y 位置（与 CSS .river-port--N 的 --y 值对应，0-1 比例）
 RIVER_PORT_Y = [0.085, 0.175, 0.265, 0.355, 0.455, 0.545, 0.635, 0.725, 0.815, 0.900]
 # 河流渡口 X 中心位置（从 SVG path 估算）
@@ -115,15 +121,13 @@ def parse_tex(filepath: Path) -> dict | None:
 
 
 def source_details(meta: dict) -> list[dict[str, str]]:
-    """区分原始出处、实际底本和尚未核实的候选，供书站共用。"""
+    """返回篇末显示的底本信息；!SOURCE 仅作内部记录，不显示。"""
     details = []
-    if meta.get("source"):
-        details.append({"label": "原始出处", "text": meta["source"]})
     if meta.get("edition"):
         status = meta.get("edition_status", "pending")
         if status not in {"pending", "verified"}:
             raise ValueError(f"Invalid edition status: {status}")
-        label = "采用底本" if status == "verified" else "拟用底本（待核）"
+        label = "采用底本" if status == "verified" else "底本"
         details.append({"label": label, "text": meta["edition"]})
         if meta.get("locator"):
             details.append({"label": "底本定位", "text": meta["locator"]})
@@ -157,11 +161,21 @@ def scan_poems() -> dict[str, list[dict]]:
 
 
 # ── 书构建 ─────────────────────────────────────────
-def build_book(poems_by_dynasty: dict[str, list[dict]]) -> None:
-    r"""在 main.tex 骨架中插入章节和 \input 语句，然后编译 PDF。"""
-    main_tex = BOOK_DIR / "main.tex"
+def build_book(
+    poems_by_dynasty: dict[str, list[dict]],
+    *,
+    skeleton_name: str = "main.tex",
+    generated_name: str = "main_generated.tex",
+    output_name: str = "book.pdf",
+    dynasties: tuple[str, ...] | None = None,
+) -> None:
+    r"""在骨架中插入章节和 \input 语句，然后编译 PDF。
+
+    默认构建全书；传入 dynasties 可只收指定朝代（用于分卷）。
+    """
+    main_tex = BOOK_DIR / skeleton_name
     if not main_tex.exists():
-        print("Error: book/main.tex not found")
+        print(f"Error: book/{skeleton_name} not found")
         return
 
     skeleton = main_tex.read_text(encoding="utf-8")
@@ -170,6 +184,8 @@ def build_book(poems_by_dynasty: dict[str, list[dict]]) -> None:
     lines = []
     poems_dir = CONTENT_DIR / "poems"
     for dynasty_name, dynasty_dir in DYNASTIES:
+        if dynasties is not None and dynasty_name not in dynasties:
+            continue
         poems = poems_by_dynasty.get(dynasty_name, [])
         if not poems:
             continue
@@ -215,7 +231,7 @@ def build_book(poems_by_dynasty: dict[str, list[dict]]) -> None:
     generated = before + "\n" + chapter_text + "\n" + after
 
     # 写入临时文件
-    tmp = BOOK_DIR / "main_generated.tex"
+    tmp = BOOK_DIR / generated_name
     tmp.write_text(generated, encoding="utf-8")
 
     # 编译
@@ -223,20 +239,20 @@ def build_book(poems_by_dynasty: dict[str, list[dict]]) -> None:
     os.chdir(BOOK_DIR)
     try:
         subprocess.run(
-            ["latexmk", "-xelatex", "-interaction=nonstopmode", "main_generated.tex"],
+            ["latexmk", "-xelatex", "-interaction=nonstopmode", generated_name],
             check=True,
         )
     finally:
         os.chdir(cwd)
 
     # 复制 PDF 到 output/
-    pdf_src = BOOK_DIR / "main_generated.pdf"
+    pdf_src = BOOK_DIR / Path(generated_name).with_suffix(".pdf").name
     if pdf_src.exists():
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(str(pdf_src), str(OUTPUT_DIR / "book.pdf"))
-        print(f"Book built -> {OUTPUT_DIR / 'book.pdf'}")
+        shutil.copy2(str(pdf_src), str(OUTPUT_DIR / output_name))
+        print(f"Book built -> {OUTPUT_DIR / output_name}")
     else:
-        raise FileNotFoundError("PDF compilation produced no main_generated.pdf")
+        raise FileNotFoundError(f"PDF compilation produced no {pdf_src.name}")
 
 
 def escape_latex(text: str) -> str:
@@ -385,16 +401,26 @@ def build_site(poems_by_dynasty: dict[str, list[dict]], *, clean_output: bool = 
 def main() -> None:
     global OUTPUT_DIR, SITE_OUTPUT
     parser = argparse.ArgumentParser(description="Gift build script")
-    parser.add_argument("--book", action="store_true", help="仅构建 PDF")
+    parser.add_argument("--book", action="store_true", help="仅构建全书 PDF")
     parser.add_argument("--site", action="store_true", help="仅构建网站")
+    parser.add_argument(
+        "--volume",
+        action="store_true",
+        help="仅构建分卷《先秦·两汉·魏晋篇》PDF",
+    )
     parser.add_argument("--output-root", type=Path, help="独立校订输出目录，内含book.pdf和site/")
     args = parser.parse_args()
+    if args.volume and args.site:
+        parser.error("--volume 只构建分卷 PDF，不能与 --site 同时使用")
     if args.output_root:
         OUTPUT_DIR = args.output_root.resolve()
         SITE_OUTPUT = OUTPUT_DIR / "site"
 
-    do_book = args.book or (not args.site)
-    do_site = args.site or (not args.book)
+    if args.volume:
+        do_book, do_site = True, False
+    else:
+        do_book = args.book or (not args.site)
+        do_site = args.site or (not args.book)
 
     poems = scan_poems()
     if not poems:
@@ -402,7 +428,16 @@ def main() -> None:
         return
 
     if do_book:
-        build_book(poems)
+        if args.volume:
+            build_book(
+                poems,
+                skeleton_name=VOLUME_SKELETON,
+                generated_name=VOLUME_GENERATED,
+                output_name=VOLUME_OUTPUT,
+                dynasties=VOLUME_DYNASTIES,
+            )
+        else:
+            build_book(poems)
     if do_site:
         build_site(poems, clean_output=not args.output_root)
 

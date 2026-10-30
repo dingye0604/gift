@@ -2,6 +2,7 @@
 output/
 site/output/
 book/main_generated.*
+book/main_volume_generated.*
 book/*.aux
 book/*.log
 book/*.out
