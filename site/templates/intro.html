@@ -19,7 +19,7 @@
         <section class="dynasty-intro" aria-labelledby="dynasty-intro-title">
             <h2 id="dynasty-intro-title" class="visually-hidden">{{ dynasty }}导言</h2>
             {% for para in intro_text.split('\n') %}
-            {% if para.strip() %}<p>{{ para }}</p>{% endif %}
+            {% if para.strip() %}<p>{{ para | inline }}</p>{% endif %}
             {% endfor %}
         </section>
         {% endif %}

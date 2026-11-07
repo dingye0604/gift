@@ -9,6 +9,7 @@ import subprocess
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
+from markupsafe import Markup, escape
 
 # ── 路径配置 ────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent.parent
@@ -266,11 +267,27 @@ def escape_latex(text: str) -> str:
 
 
 # ── 文本清理 ───────────────────────────────────────
+ITALIC_OPEN = "\ue000"
+ITALIC_CLOSE = "\ue001"
+
+
 def clean_latex(text: str) -> str:
-    """移除基本 LaTeX 命令，返回纯文本。"""
+    """移除基本 LaTeX 命令，返回纯文本；\\textit 转为内部斜体标记。"""
+    text = re.sub(
+        r"\\textit\{([^{}]*)\}",
+        lambda m: f"{ITALIC_OPEN}{m.group(1)}{ITALIC_CLOSE}",
+        text,
+    )
     text = re.sub(r"\\\w+\{([^}]*)\}", r"\1", text)
     text = re.sub(r"\\(?!\n)", "", text)
     return text.strip()
+
+
+def inline_markup(text: str) -> Markup:
+    """转义文本，再把内部斜体标记还原为 <em>。"""
+    escaped = str(escape(text))
+    escaped = escaped.replace(ITALIC_OPEN, "<em>").replace(ITALIC_CLOSE, "</em>")
+    return Markup(escaped)
 
 
 def clean_poem_text(text: str) -> str:
@@ -288,6 +305,7 @@ def build_site(poems_by_dynasty: dict[str, list[dict]], *, clean_output: bool = 
         loader=FileSystemLoader(SITE_DIR / "templates"),
         autoescape=True,
     )
+    env.filters["inline"] = inline_markup
 
     # 清理输出（先清内容，删不掉目录就留着，Windows 有时会锁目录）
     if clean_output and SITE_OUTPUT.exists():

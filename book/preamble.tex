@@ -8,19 +8,21 @@
 
 % ── CJK 字体 ──
 % fontset=none 后手动定义所有 CJK 字体族
-\setCJKmainfont{KingHwaOldSong-GB.ttf}[Path=./assets/fonts/]
-\setCJKfamilyfont{zhsong}{KingHwaOldSong-GB.ttf}[Path=./assets/fonts/]
-\setCJKfamilyfont{zhkai}{KingHwaOldSong-GB.ttf}[Path=./assets/fonts/]
+\setCJKmainfont{KingHwaOldSong-GB.ttf}[Path=./assets/fonts/, AutoFakeSlant=0.2]
+\setCJKfamilyfont{zhsong}{KingHwaOldSong-GB.ttf}[Path=./assets/fonts/, AutoFakeSlant=0.2]
+\setCJKfamilyfont{zhkai}{KingHwaOldSong-GB.ttf}[Path=./assets/fonts/, AutoFakeSlant=0.2]
 \newcommand{\songti}{\CJKfamily{zhsong}}
 \newcommand{\kaishu}{\CJKfamily{zhkai}}
 
 \usepackage{xcolor}
+\usepackage{tikz}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 
 % ── 颜色 ──────────────────────────
 \definecolor{pagebg}{HTML}{f9f4ef}
+\definecolor{inkblack}{HTML}{1f1d1b}
 \definecolor{accent}{HTML}{9e4a3e}
 \definecolor{textgray}{HTML}{333333}
 \definecolor{warmbrown}{HTML}{6b4c3b}
@@ -130,4 +132,48 @@
     \small\kaishu #3 · #2
     \end{center}
     \vspace{-0.5em}
+}
+
+% ── 水墨封面页 ────────────────────
+% 全出血水墨宣纸底图 + 京華老宋体矢量竖排书名与署名
+\newcommand{\makecover}{%
+    \begin{titlepage}%
+    \thispagestyle{empty}%
+    \begin{tikzpicture}[remember picture, overlay]
+        % 全出血水墨底图
+        \node[inner sep=0pt] at (current page.center) {%
+            \includegraphics[width=\paperwidth, height=\paperheight]{./assets/cover-bg-xiange.jpg}%
+        };
+        % 竖排主书名：弦歌
+        \node[anchor=center, text=inkblack] at ([xshift=-3.2cm, yshift=-4.0cm]current page.north east) {%
+            {\songti\fontsize{46pt}{46pt}\selectfont 弦}%
+        };
+        \node[anchor=center, text=inkblack] at ([xshift=-3.2cm, yshift=-6.25cm]current page.north east) {%
+            {\songti\fontsize{46pt}{46pt}\selectfont 歌}%
+        };
+        % 竖排作者署名：陈顶立
+        \node[anchor=center, text=inkblack!85!pagebg] at ([xshift=-4.85cm, yshift=-6.55cm]current page.north east) {%
+            {\songti\fontsize{13pt}{13pt}\selectfont 陈}%
+        };
+        \node[anchor=center, text=inkblack!85!pagebg] at ([xshift=-4.85cm, yshift=-7.28cm]current page.north east) {%
+            {\songti\fontsize{13pt}{13pt}\selectfont 顶}%
+        };
+        \node[anchor=center, text=inkblack!85!pagebg] at ([xshift=-4.85cm, yshift=-8.01cm]current page.north east) {%
+            {\songti\fontsize{13pt}{13pt}\selectfont 立}%
+        };
+        % 朱砂小印章（呼应全书主点缀色 #9e4a3e）
+        \node[
+            fill=accent!88!pagebg,
+            text=pagebg,
+            inner sep=1.5pt,
+            minimum size=0.44cm,
+            rounded corners=0.6pt,
+            anchor=center
+        ] at ([xshift=-4.85cm, yshift=-8.82cm]current page.north east) {%
+            {\songti\fontsize{8.5pt}{8.5pt}\selectfont 诗}%
+        };
+    \end{tikzpicture}%
+    \null\vfill
+    \end{titlepage}%
+    \clearpage
 }

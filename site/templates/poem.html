@@ -56,7 +56,7 @@
             </div>
             <div class="appreciation-text">
                 {% for para in poem.appreciation_clean.split('\n') %}
-                {% if para.strip() %}<p>{{ para }}</p>{% endif %}
+                {% if para.strip() %}<p>{{ para | inline }}</p>{% endif %}
                 {% endfor %}
             </div>
         </section>

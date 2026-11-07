@@ -1,0 +1,10 @@
+Generation: built-in image_gen; exact model version unavailable.
+Use case: stylized-concept
+Asset type: Finished flat front-cover artwork for an A5 Chinese poetry appreciation book, portrait ratio 148:210, high resolution.
+Primary request: 为《中国古代诗歌赏析》设计一幅简约、清雅、有诗意的中国水墨风书籍封面，作者陈顶立，面向青少年读者。平面封面原稿，图像本身就是完整封面。
+Style/medium: 精致现代书籍装帧，传统中国水墨在宣纸上自然晕染，宋版书式端正中文排字。克制、宁静、轻盈。
+Scene/backdrop: 温暖的米白色宣纸，极细微的纸纤维纹理。画面下方约四分之一处，仅几笔疏淡的灰墨远山与水面，山岚淡入纸白。层次很轻，山水意象极简。至少三分之二画面保持宽阔干净的留白。
+Composition/framing: Full-bleed flat rectangular cover, no perspective. 视觉重心在上半部偏右的一列竖排主标题，下方淡墨山水与之平衡，四周宽裕。书名完整排在一列，每字从上到下依次为：中、国、古、代、诗、歌、赏、析。字体为清晰精致、有古典书卷气的简体中文宋体，接近京华老宋体的印刷质感，深墨黑，字形端正、不要狂草。标题左侧一列更小更轻的竖排署名：陈、顶、立。标题和署名保持足够距离。所有文字远离裁切边缘。
+Text (verbatim): "中国古代诗歌赏析" and "陈顶立" only. All Chinese characters must be accurate, legible, and appear once.
+Palette: warm ivory paper, soft ink gray, near-black typography. Monochrome restrained Chinese ink.
+Constraints: no extra text, no subtitle, no publisher, no seal with invented characters, no Latin letters, no watermark, no border, no mockup, no book spine, no 3D book, no photographic table background, no ornate motifs, no crowded details. Deliver a refined complete front cover with carefully typeset correct Chinese text.
