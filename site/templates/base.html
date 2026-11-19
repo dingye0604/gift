@@ -3,23 +3,40 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f8f7f2">
+    <meta name="description" content="{% block description %}诗三百：给妹妹的中国古代诗歌赏析，自先秦至近代，原文、注释与赏析。{% endblock %}">
     <title>{% block title %}诗三百 · 读诗{% endblock %}</title>
+    <link rel="icon" href="{{ asset_root }}/seal-shi.png">
     <link rel="stylesheet" href="{{ base_url }}/static/style.css">
     {% block extra_head %}{% endblock %}
 </head>
 <body class="{% block body_class %}{% endblock %}">
     <a class="skip" href="#main-content">跳至正文</a>
+    <div class="progress" aria-hidden="true"></div>
 
     <header class="header">
-        <a class="brand" href="{{ base_url }}/" aria-label="诗三百首页">
-            <img class="seal-image" src="{{ asset_root }}/seal-shi.png" alt="诗字阴文印">
-        </a>
-        <nav aria-label="主导航">
-            <a class="{% block read_nav_class %}current{% endblock %}" href="{{ base_url }}/#dynasties">读诗</a>
-            <a class="{% block about_nav_class %}{% endblock %}" href="{{ base_url }}/about.html">关于</a>
-        </nav>
-        <span class="header-note">给妹妹的礼物</span>
+        <div class="header-inner">
+            <a class="brand" href="{{ base_url }}/" aria-label="诗三百首页">
+                <img class="seal-image" src="{{ asset_root }}/seal-shi.png" alt="" width="36" height="36">
+                <span class="brand-name">诗三百</span>
+            </a>
+            <nav class="main-nav" aria-label="主导航">
+                <a class="{% block read_nav_class %}current{% endblock %}" href="{{ base_url }}/#dynasties">读诗</a>
+                <div class="nav-menu">
+                    <a class="nav-menu-trigger" href="{{ base_url }}/#dynasties" aria-haspopup="true">朝代<span class="caret" aria-hidden="true"></span></a>
+                    <div class="nav-menu-panel">
+                        <ul>
+                            {% for d in dynasty_nav %}
+                            <li><a href="{{ base_url }}/{{ d.dir }}/"><span>{{ d.name }}</span><small>{{ d.count }} 首</small></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <a class="{% block about_nav_class %}{% endblock %}" href="{{ base_url }}/about.html">关于</a>
+            </nav>
+            <span class="header-note">给妹妹的礼物</span>
+        </div>
     </header>
 
     <main id="main-content" tabindex="-1">
@@ -27,9 +44,25 @@
     </main>
 
     {% block footer %}
-    <footer id="gift">
-        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
-        <small>原文 · 注释 · 赏析</small>
+    <footer class="footer" id="gift">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="{{ asset_root }}/seal-shi.png" alt="" width="40" height="40">
+                <div>
+                    <strong>诗三百</strong>
+                    <span>给妹妹的中国古代诗歌赏析书</span>
+                </div>
+            </div>
+            <ul class="footer-dynasties" aria-label="朝代索引">
+                {% for d in dynasty_nav %}
+                <li><a href="{{ base_url }}/{{ d.dir }}/">{{ d.name }}</a></li>
+                {% endfor %}
+            </ul>
+            <div class="footer-meta">
+                <span>陈顶立　编选</span>
+                <small>原文 · 注释 · 赏析　共 {{ poem_total }} 首</small>
+            </div>
+        </div>
     </footer>
     {% endblock %}
 </body>

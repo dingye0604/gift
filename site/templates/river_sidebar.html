@@ -1,18 +1,34 @@
-{% if dynasty is defined %}
-{% set sidebar_label = dynasty %}
-{% elif poem is defined %}
+{% if poem is defined %}
 {% set sidebar_label = poem.meta.dynasty %}
+{% elif dynasty is defined %}
+{% set sidebar_label = dynasty %}
 {% else %}
 {% set sidebar_label = '诗歌之河' %}
 {% endif %}
-<aside class="river-sidebar" aria-label="诗歌之河侧景">
-    <a class="sidebar-landscape-link" href="{{ base_url }}/" aria-label="回到诗歌之河首页">
-        <img class="sidebar-landscape" src="{{ asset_root }}/landscape-vertical.png" alt="">
-    </a>
-    <div class="sidebar-caption" aria-hidden="true">
-        {% if dynasty_summary is defined and dynasty_summary %}
-        <span>{{ dynasty_summary }}</span>
+<aside class="side-rail" aria-label="{{ sidebar_label }}导航">
+    <div class="rail-inner">
+        <a class="rail-art" href="{{ base_url }}/" aria-label="回到诗歌之河首页">
+            <img src="{{ asset_root }}/landscape-vertical.png" alt="" loading="lazy">
+            <span class="rail-art-caption">
+                <span>{{ sidebar_label }}</span>
+                {% if dynasty_summary is defined and dynasty_summary %}<small>{{ dynasty_summary }}</small>{% endif %}
+            </span>
+        </a>
+
+        {% if poem is defined and dynasty_poems is defined %}
+        <p class="rail-title">本朝诗目 <span>{{ dynasty_poems | length }}</span></p>
+        <ol class="rail-list">
+            {% for item in dynasty_poems %}
+            <li><a href="{{ base_url }}/{{ item.dynasty_dir }}/{{ item.slug }}.html"{% if item.slug == poem.slug %} class="active" aria-current="page"{% endif %}>{{ item.meta.title }}</a></li>
+            {% endfor %}
+        </ol>
+        {% else %}
+        <p class="rail-title">诗歌之河</p>
+        <ol class="rail-list rail-dynasties">
+            {% for d in dynasty_nav %}
+            <li><a href="{{ base_url }}/{{ d.dir }}/"{% if dynasty is defined and d.name == dynasty %} class="active" aria-current="page"{% endif %}><span>{{ d.name }}</span><small>{{ d.count }}</small></a></li>
+            {% endfor %}
+        </ol>
         {% endif %}
-        <span>{{ sidebar_label }}</span>
     </div>
 </aside>

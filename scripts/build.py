@@ -348,11 +348,25 @@ def build_site(poems_by_dynasty: dict[str, list[dict]], *, clean_output: bool = 
             p["dynasty_dir"] = dynasty_dir
             p["poem_clean"] = clean_poem_text(p["poem"])
             p["appreciation_clean"] = clean_latex(p["appreciation"])
+            first_line = next((ln for ln in p["poem_clean"].split("\n") if ln.strip()), "")
+            p["first_line"] = re.sub(r"<sup>.*?</sup>|<[^>]+>", "", first_line).strip()
             all_poems.append(p)
 
     # 首页
     idx_tpl = env.get_template("index.html")
     dynasty_order = [d for d, _ in DYNASTIES if poems_by_dynasty.get(d)]
+    dynasty_nav = [
+        {
+            "name": d,
+            "dir": d_dir,
+            "count": len(poems_by_dynasty[d]),
+            "summary": dynasty_summaries.get(d, ""),
+        }
+        for d, d_dir in DYNASTIES
+        if poems_by_dynasty.get(d)
+    ]
+    env.globals["dynasty_nav"] = dynasty_nav
+    env.globals["poem_total"] = len(all_poems)
     idx_html = idx_tpl.render(
         poems_by_dynasty=poems_by_dynasty,
         dynasty_order=dynasty_order,
@@ -387,6 +401,13 @@ def build_site(poems_by_dynasty: dict[str, list[dict]], *, clean_output: bool = 
     poem_tpl = env.get_template("poem.html")
     for i, p in enumerate(all_poems):
         next_poem = None
+        prev_poem = None
+        if i > 0:
+            prv = all_poems[i - 1]
+            prev_poem = {
+                "title": prv["meta"]["title"],
+                "url": f"{prv['dynasty_dir']}/{prv['slug']}.html",
+            }
         if i + 1 < len(all_poems):
             nxt = all_poems[i + 1]
             next_poem = {
@@ -399,6 +420,8 @@ def build_site(poems_by_dynasty: dict[str, list[dict]], *, clean_output: bool = 
             poem=p,
             dynasty_summary=dynasty_summaries.get(p["dynasty"], ""),
             next_poem=next_poem,
+            prev_poem=prev_poem,
+            dynasty_poems=poems_by_dynasty.get(p["dynasty"], []),
             river_viewbox=river_viewbox,
             river_zoom_class="river-zoom-poem",
             base_url=BASE_URL,

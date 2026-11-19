@@ -5,120 +5,118 @@
 {% block extra_head %}<script src="{{ base_url }}/static/reading-note.js" defer></script>{% endblock %}
 
 {% block content %}
-<section class="intro" aria-labelledby="title">
-    <div>
-        <p class="eyebrow">中国古代诗歌选</p>
-        <h1 id="title">诗三百</h1>
-        <p class="intro-description">温柔敦厚，诗教也。</p>
+<section class="hero" aria-labelledby="title">
+    <div class="hero-copy">
+        <p class="eyebrow reveal" style="--d:0">中国古代诗歌选 · 先秦至近代</p>
+        <h1 id="title" class="hero-title reveal" style="--d:1">诗三百</h1>
+        <p class="hero-lede reveal" style="--d:2">温柔敦厚，诗教也。</p>
+        <div class="hero-actions reveal" style="--d:3">
+            <a class="btn btn-primary" href="#dynasties">开始读诗<span class="btn-icon" aria-hidden="true">↓</span></a>
+            <a class="btn btn-ghost" href="{{ base_url }}/about.html">关于这本书</a>
+        </div>
+        <dl class="hero-stats reveal" style="--d:4">
+            <div><dt>诗篇</dt><dd>{{ poem_total }}</dd></div>
+            <div><dt>朝代</dt><dd>{{ dynasty_nav | length }}</dd></div>
+            <div><dt>每首</dt><dd class="dd-text">原文 · 注释 · 赏析</dd></div>
+        </dl>
     </div>
+
+    <figure class="hero-art reveal" style="--d:2">
+        <img class="hero-landscape" src="{{ asset_root }}/landscape-vertical.png" alt="" width="1024" height="1536">
+        <aside class="reading-note" data-random-reading-note aria-label="随机一句">
+            <a class="reading-note-link" data-note-link href="{{ base_url }}/xian-qin/guan-ju.html" aria-label="阅读《关雎》的原文、注释与赏析">
+                <span class="note-label">诗间一页</span>
+                <blockquote data-note-quote>关关雎鸠，<br>在河之洲。</blockquote>
+                <span class="note-foot">
+                    <span data-note-source>《诗经 · 周南 · 关雎》</span>
+                    <span class="note-go" aria-hidden="true">→</span>
+                </span>
+            </a>
+            {% for candidate_dynasty in dynasty_order %}
+            {% for candidate_poem in poems_by_dynasty.get(candidate_dynasty, []) %}
+            <template class="note-candidate" data-key="{{ candidate_dynasty }}|{{ candidate_poem.slug }}"
+                      data-title="{{ candidate_poem.meta.title }}"
+                      data-url="{{ base_url }}/{{ candidate_poem.dynasty_dir }}/{{ candidate_poem.slug }}.html">
+                <span class="note-candidate-quote">{{ candidate_poem.poem_clean.split('\n')[0] | safe }}</span>
+            </template>
+            {% endfor %}
+            {% endfor %}
+        </aside>
+    </figure>
 </section>
 
 <section class="library" id="dynasties" aria-labelledby="library-title">
-    <div class="section-heading">
+    <header class="section-head">
         <h2 id="library-title">循朝代读诗</h2>
-    </div>
+        <p>一条河，自先秦流到近代。选一处停泊，慢慢读。</p>
+    </header>
 
     <div class="dynasty-browser">
         {% for dynasty in dynasty_order %}
         {% set poems = poems_by_dynasty.get(dynasty, []) %}
-        {% if poems %}
         <input class="dynasty-radio" type="radio" name="dynasty" id="tab-{{ poems[0].dynasty_dir }}"
                aria-label="{{ dynasty }}"{% if loop.first %} checked{% endif %}>
-        {% endif %}
         {% endfor %}
 
-        <div class="dynasty-map" role="group" aria-label="山水朝代目录">
-            <img class="map-landscape" src="{{ asset_root }}/landscape-vertical.png" alt="" width="1024" height="1536">
-            <svg class="waterways" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
-                <path class="water-section water-0" d="M305 103 Q330 107 362 101 M318 112 Q338 115 352 111"/>
-                <path class="water-section water-1" d="M655 193 Q680 197 712 191 M668 202 Q688 205 702 201"/>
-                <path class="water-section water-2" d="M275 283 Q300 287 332 281 M288 292 Q308 295 322 291"/>
-                <path class="water-section water-3" d="M685 373 Q710 377 742 371 M698 382 Q718 385 732 381"/>
-                <path class="water-section water-4" d="M315 463 Q340 467 372 461 M328 472 Q348 475 362 471"/>
-                <path class="water-section water-5" d="M665 553 Q690 557 722 551 M678 562 Q698 565 712 561"/>
-                <path class="water-section water-6" d="M265 643 Q290 647 322 641 M278 652 Q298 655 312 651"/>
-                <path class="water-section water-7" d="M645 733 Q670 737 702 731 M658 742 Q678 745 692 741"/>
-                <path class="water-section water-8" d="M305 823 Q330 827 362 821 M318 832 Q338 835 352 831"/>
-                <path class="water-section water-9" d="M665 913 Q690 917 722 911 M678 922 Q698 925 712 921"/>
+        {# 蜿蜒河道：每个朝代占一行（viewBox 中 100 单位高），节点横向偏移沿曲线摆动 #}
+        {% set bends = [30, 44, 50, 42, 26, 14, 16, 30, 46, 40] %}
+        {% set n = dynasty_order | length %}
+        {% set ns = namespace(d='M ' ~ bends[0] ~ ' 0 L ' ~ bends[0] ~ ' 50') %}
+        {% for i in range(1, n) %}
+        {% set ns.d = ns.d ~ ' C ' ~ bends[i-1] ~ ' ' ~ (i*100 - 10) ~ ', ' ~ bends[i] ~ ' ' ~ (i*100 + 10) ~ ', ' ~ bends[i] ~ ' ' ~ (i*100 + 50) %}
+        {% endfor %}
+        {% set ns.d = ns.d ~ ' L ' ~ bends[n-1] ~ ' ' ~ (n*100) %}
+        <div class="river" role="group" aria-label="朝代" style="--n:{{ n }}">
+            <span class="river-line" aria-hidden="true"></span>
+            <svg class="river-path" viewBox="0 0 60 {{ n * 100 }}" preserveAspectRatio="none" aria-hidden="true">
+                <path class="river-wash" d="{{ ns.d }}"/>
+                <path class="river-stroke" d="{{ ns.d }}" pathLength="1"/>
             </svg>
-
-            {% set shore_positions = [
-                ('33%', '7%'), ('68%', '16%'), ('30%', '25%'), ('71%', '34%'), ('34%', '43%'),
-                ('69%', '52%'), ('29%', '61%'), ('67%', '70%'), ('33%', '79%'), ('69%', '88%')
-            ] %}
             {% for dynasty in dynasty_order %}
             {% set poems = poems_by_dynasty.get(dynasty, []) %}
-            {% if poems %}
-            {% set position = shore_positions[loop.index0] %}
-            <label class="shore-card shore-{{ poems[0].dynasty_dir }}" for="tab-{{ poems[0].dynasty_dir }}"
-                   style="--x:{{ position[0] }};--y:{{ position[1] }}">
-                <span class="shore-name">{{ dynasty }}</span>
-                <span class="shore-sub">{{ dynasty_summaries.get(dynasty, '') }}</span>
-                <span class="moor" aria-hidden="true"></span>
+            <label class="river-stop stop-{{ poems[0].dynasty_dir }}" for="tab-{{ poems[0].dynasty_dir }}" style="--x:{{ bends[loop.index0 % 10] }}">
+                <span class="river-node" aria-hidden="true"></span>
+                <span class="river-text">
+                    <span class="river-name">{{ dynasty }}</span>
+                    <span class="river-sub">{{ dynasty_summaries.get(dynasty, '') }}</span>
+                </span>
+                <span class="river-count">{{ poems | length }}</span>
             </label>
-            {% endif %}
             {% endfor %}
-
-            <span class="map-caption" aria-hidden="true">诗歌之河 · 自先秦至近代</span>
-            <a class="map-read-link" href="#poem-selection">阅读所选朝代 <span aria-hidden="true">↓</span></a>
         </div>
 
-        <div class="reading-layout" id="poem-selection" tabindex="-1">
-            <div class="panels">
-                {% for dynasty in dynasty_order %}
-                {% set poems = poems_by_dynasty.get(dynasty, []) %}
-                {% if poems %}
-                <section class="dynasty-panel panel-{{ poems[0].dynasty_dir }}" aria-label="{{ dynasty }}诗歌">
-                    <div class="list-heading">
+        <div class="panels">
+            {% for dynasty in dynasty_order %}
+            {% set poems = poems_by_dynasty.get(dynasty, []) %}
+            <section class="dynasty-panel panel-{{ poems[0].dynasty_dir }}" aria-label="{{ dynasty }}诗歌">
+                <header class="panel-head">
+                    <div>
+                        <p class="panel-index">{{ '%02d' % loop.index }} / {{ '%02d' % (dynasty_order | length) }}</p>
                         <h3>{{ dynasty }}</h3>
-                        <span>选一首，慢慢读</span>
+                        {% if dynasty_summaries.get(dynasty) %}<p class="panel-sub">{{ dynasty_summaries.get(dynasty) }}</p>{% endif %}
                     </div>
-                    {% for poem in poems[:8] %}
-                    <details class="poem-row">
-                        <summary>
-                            <span>
+                    <a class="text-link" href="{{ base_url }}/{{ poems[0].dynasty_dir }}/">导言与全部 {{ poems | length }} 首<span aria-hidden="true">→</span></a>
+                </header>
+                <ul class="poem-grid">
+                    {% for poem in poems[:9] %}
+                    <li style="--i:{{ loop.index0 }}">
+                        <a class="poem-card" href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html">
+                            <span class="poem-card-top">
                                 <strong>{{ poem.meta.title }}</strong>
-                                <small>{{ poem.meta.author }}{% if poem.meta.genre %} · {{ poem.meta.genre }}{% endif %}</small>
+                                <span class="poem-card-arrow" aria-hidden="true">↗</span>
                             </span>
-                            <span class="row-excerpt">{{ poem.poem_clean.split('\n')[0] }}</span>
-                            <span class="row-arrow" aria-hidden="true">↗</span>
-                        </summary>
-                        <div class="poem-body">
-                            {% for line in poem.poem_clean.split('\n') %}
-                            {% if line.strip() %}<p>{{ line | safe }}</p>{% endif %}
-                            {% endfor %}
-                            <a class="preview-link" href="{{ base_url }}/{{ poem.dynasty_dir }}/{{ poem.slug }}.html">进入完整赏析 <span aria-hidden="true">→</span></a>
-                        </div>
-                    </details>
+                            <small>{{ poem.meta.author }}{% if poem.meta.genre %} · {{ poem.meta.genre }}{% endif %}</small>
+                            <span class="poem-card-line">{{ poem.first_line }}</span>
+                        </a>
+                    </li>
                     {% endfor %}
-                    <a class="directory-link" href="{{ base_url }}/{{ poems[0].dynasty_dir }}/">进入{{ dynasty }}完整目录 <span aria-hidden="true">→</span></a>
-                </section>
+                </ul>
+                {% if poems | length > 9 %}
+                <a class="more-link" href="{{ base_url }}/{{ poems[0].dynasty_dir }}/">还有 {{ poems | length - 9 }} 首，进入{{ dynasty }}目录<span aria-hidden="true">→</span></a>
                 {% endif %}
-                {% endfor %}
-            </div>
-
-            <aside class="reading-note" data-random-reading-note>
-                <a class="reading-note-link" data-note-link href="{{ base_url }}/xian-qin/guan-ju.html" aria-label="阅读《关雎》的原文、注释与赏析">
-                <span class="note-label">诗间一页</span>
-                <blockquote data-note-quote>关关雎鸠，<br>在河之洲。</blockquote>
-                <p data-note-source>《诗经 · 周南 · 关雎》</p>
-                <span class="note-rule" aria-hidden="true"></span>
-                <span class="note-caption">原文 · 注释 · 赏析</span>
-                </a>
-                {% for candidate_dynasty in dynasty_order %}
-                {% set candidate_poems = poems_by_dynasty.get(candidate_dynasty, []) %}
-                {% for candidate_poem in candidate_poems %}
-                <template class="note-candidate" data-key="{{ candidate_dynasty }}|{{ candidate_poem.slug }}"
-                          data-title="{{ candidate_poem.meta.title }}"
-                          data-url="{{ base_url }}/{{ candidate_poem.dynasty_dir }}/{{ candidate_poem.slug }}.html">
-                    <span class="note-candidate-quote">{{ candidate_poem.poem_clean.split('\n')[0] | safe }}</span>
-                </template>
-                {% endfor %}
-                {% endfor %}
-            </aside>
+            </section>
+            {% endfor %}
         </div>
     </div>
 </section>
 {% endblock %}
-
-{% block footer %}{% endblock %}
