@@ -3,59 +3,215 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>山居秋暝 · 王维</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f8f7f2">
+    <meta name="description" content="山居秋暝，王维。空山新雨后，天气晚来秋。">
+    <title>山居秋暝 · 王维 · 诗三百</title>
+    <link rel="icon" href="/gift/static/images/shanshui/seal-shi.png">
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
 <body class="reading-page poem-page-body">
     <a class="skip" href="#main-content">跳至正文</a>
+    <div class="progress" aria-hidden="true"></div>
 
     <header class="header">
-        <a class="brand" href="/gift/" aria-label="诗三百首页">
-            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
-        </a>
-        <nav aria-label="主导航">
-            <a class="current" href="/gift/#dynasties">读诗</a>
-            <a class="" href="/gift/about.html">关于</a>
-        </nav>
-        <span class="header-note">给妹妹的礼物</span>
+        <div class="header-inner">
+            <a class="brand" href="/gift/" aria-label="诗三百首页">
+                <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="" width="36" height="36">
+                <span class="brand-name">诗三百</span>
+            </a>
+            <nav class="main-nav" aria-label="主导航">
+                <a class="current" href="/gift/#dynasties">读诗</a>
+                <div class="nav-menu">
+                    <a class="nav-menu-trigger" href="/gift/#dynasties" aria-haspopup="true">朝代<span class="caret" aria-hidden="true"></span></a>
+                    <div class="nav-menu-panel">
+                        <ul>
+                            
+                            <li><a href="/gift/xian-qin/"><span>先秦</span><small>12 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-han/"><span>两汉</span><small>11 首</small></a></li>
+                            
+                            <li><a href="/gift/wei-jin/"><span>魏晋</span><small>10 首</small></a></li>
+                            
+                            <li><a href="/gift/nan-bei-chao/"><span>南北朝</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/tang/"><span>唐</span><small>55 首</small></a></li>
+                            
+                            <li><a href="/gift/wudai-shiguo/"><span>五代十国</span><small>7 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-song/"><span>两宋</span><small>23 首</small></a></li>
+                            
+                            <li><a href="/gift/yuan/"><span>元</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/ming-qing/"><span>明清</span><small>9 首</small></a></li>
+                            
+                            <li><a href="/gift/jin-dai/"><span>近代</span><small>4 首</small></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <a class="" href="/gift/about.html">关于</a>
+            </nav>
+            <span class="header-note">给妹妹的礼物</span>
+        </div>
     </header>
 
     <main id="main-content" tabindex="-1">
         
-<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
-    <a class="breadcrumb-link" href="/gift/tang/">← 返回唐目录</a>
-    <p class="eyebrow">唐 · 诗歌阅读</p>
-    <h1 id="poem-title">山居秋暝</h1>
-    <div class="poem-meta" aria-label="作品信息">
-        <span>王维</span>
-        <span class="meta-sep">·</span><span>五言律诗</span>
-    </div>
+<section class="page-hero poem-hero" aria-labelledby="poem-title">
+    <nav class="crumbs reveal" style="--d:0" aria-label="位置">
+        <a href="/gift/">诗三百</a><span aria-hidden="true">/</span><a href="/gift/tang/">唐</a>
+    </nav>
+    <h1 id="poem-title" class="reveal" style="--d:1">山居秋暝</h1>
+    <p class="poem-meta reveal" style="--d:2">
+        <span class="author">王维</span>
+        <span class="chip">五言律诗</span>
+        <span class="chip">唐</span>
+    </p>
+    <nav class="toc reveal" style="--d:3" aria-label="本页目录">
+        <a href="#original-title">原文</a>
+        <a href="#annotations-title">注释</a>
+        <a href="#appreciation-title">赏析</a>
+    </nav>
 </section>
 
 <div class="reading-shell">
     
 
 
-<aside class="river-sidebar" aria-label="诗歌之河侧景">
-    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
-        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
-    </a>
-    <div class="sidebar-caption" aria-hidden="true">
+<aside class="side-rail" aria-label="唐导航">
+    <div class="rail-inner">
+        <a class="rail-art" href="/gift/" aria-label="回到诗歌之河首页">
+            <img src="/gift/static/images/shanshui/landscape-vertical.png" alt="" loading="lazy">
+            <span class="rail-art-caption">
+                <span>唐</span>
+                <small>中国诗歌的黄金时代</small>
+            </span>
+        </a>
+
         
-        <span>中国诗歌的黄金时代</span>
+        <p class="rail-title">本朝诗目 <span>55</span></p>
+        <ol class="rail-list">
+            
+            <li><a href="/gift/tang/song-du-shao-fu-zhi-ren-shu-zhou.html">送杜少府之任蜀州</a></li>
+            
+            <li><a href="/gift/tang/shang-li-yong.html">上李邕</a></li>
+            
+            <li><a href="/gift/tang/du-jing-men-song-bie.html">渡荆门送别</a></li>
+            
+            <li><a href="/gift/tang/jing-ye-si.html">静夜思</a></li>
+            
+            <li><a href="/gift/tang/huang-he-lou-song-meng-hao-ran-zhi-guang-ling.html">黄鹤楼送孟浩然之广陵</a></li>
+            
+            <li><a href="/gift/tang/nan-ling-bie-er-tong-ru-jing.html">南陵别儿童入京</a></li>
+            
+            <li><a href="/gift/tang/xing-lu-nan.html">行路难·其一</a></li>
+            
+            <li><a href="/gift/tang/xia-ke-xing.html">侠客行</a></li>
+            
+            <li><a href="/gift/tang/jiang-jin-jiu.html">将进酒</a></li>
+            
+            <li><a href="/gift/tang/song-you-ren.html">送友人</a></li>
+            
+            <li><a href="/gift/tang/ba-jiu-wen-yue.html">把酒问月</a></li>
+            
+            <li><a href="/gift/tang/chang-xiang-si-qi-yi.html">长相思·其一</a></li>
+            
+            <li><a href="/gift/tang/chang-xiang-si-qi-er.html">长相思·其二</a></li>
+            
+            <li><a href="/gift/tang/zao-fa-bai-di-cheng.html">早发白帝城</a></li>
+            
+            <li><a href="/gift/tang/lin-lu-ge.html">临路歌</a></li>
+            
+            <li><a href="/gift/tang/wang-yue.html">望岳</a></li>
+            
+            <li><a href="/gift/tang/bing-che-xing.html">兵车行</a></li>
+            
+            <li><a href="/gift/tang/yin-zhong-ba-xian-ge.html">饮中八仙歌</a></li>
+            
+            <li><a href="/gift/tang/chun-wang.html">春望</a></li>
+            
+            <li><a href="/gift/tang/mao-wu-wei-qiu-feng-suo-po-ge.html">茅屋为秋风所破歌</a></li>
+            
+            <li><a href="/gift/tang/yue-ye.html">月夜</a></li>
+            
+            <li><a href="/gift/tang/zeng-wei-ba-chu-shi.html">赠卫八处士</a></li>
+            
+            <li><a href="/gift/tang/chun-ye-xi-yu.html">春夜喜雨</a></li>
+            
+            <li><a href="/gift/tang/shu-xiang.html">蜀相</a></li>
+            
+            <li><a href="/gift/tang/wen-guan-jun-shou-he-nan-he-bei.html">闻官军收河南河北</a></li>
+            
+            <li><a href="/gift/tang/lv-ye-shu-huai.html">旅夜书怀</a></li>
+            
+            <li><a href="/gift/tang/deng-yue-yang-lou.html">登岳阳楼</a></li>
+            
+            <li><a href="/gift/tang/deng-gao.html">登高</a></li>
+            
+            <li><a href="/gift/tang/jiang-nan-feng-li-gui-nian.html">江南逢李龟年</a></li>
+            
+            <li><a href="/gift/tang/chun-ri-yi-li-bai.html">春日忆李白</a></li>
+            
+            <li><a href="/gift/tang/meng-li-bai-qi-yi.html">梦李白·其一</a></li>
+            
+            <li><a href="/gift/tang/yong-huai-gu-ji-qi-yi.html">咏怀古迹·其一</a></li>
+            
+            <li><a href="/gift/tang/you-cheng-wu-lang.html">又呈吴郎</a></li>
+            
+            <li><a href="/gift/tang/shao-nian-xing-si-shou.html">少年行四首</a></li>
+            
+            <li><a href="/gift/tang/xiang-si.html">相思</a></li>
+            
+            <li><a href="/gift/tang/niao-ming-jian.html">鸟鸣涧</a></li>
+            
+            <li><a href="/gift/tang/zhong-nan-bie-ye.html">终南别业</a></li>
+            
+            <li><a href="/gift/tang/shan-ju-qiu-ming.html" class="active" aria-current="page">山居秋暝</a></li>
+            
+            <li><a href="/gift/tang/shi-zhi-sai-shang.html">使至塞上</a></li>
+            
+            <li><a href="/gift/tang/song-yuan-er-shi-an-xi.html">送元二使安西</a></li>
+            
+            <li><a href="/gift/tang/xin-yi-wu.html">辛夷坞</a></li>
+            
+            <li><a href="/gift/tang/fu-de-gu-yuan-cao-song-bie.html">赋得古原草送别</a></li>
+            
+            <li><a href="/gift/tang/guan-yi-mai.html">观刈麦</a></li>
+            
+            <li><a href="/gift/tang/mai-tan-weng.html">卖炭翁</a></li>
+            
+            <li><a href="/gift/tang/pi-pa-xing.html">琵琶行</a></li>
+            
+            <li><a href="/gift/tang/wen-liu-shi-jiu.html">问刘十九</a></li>
+            
+            <li><a href="/gift/tang/meng-wei-zhi.html">梦微之</a></li>
+            
+            <li><a href="/gift/tang/yi-jiang-nan-san-shou.html">忆江南三首</a></li>
+            
+            <li><a href="/gift/tang/chang-xiang-si-bian-shui-liu.html">长相思·汴水流</a></li>
+            
+            <li><a href="/gift/tang/shang-shan-zao-xing.html">商山早行</a></li>
+            
+            <li><a href="/gift/tang/yan-men-tai-shou-xing.html">雁门太守行</a></li>
+            
+            <li><a href="/gift/tang/jin-se.html">锦瑟</a></li>
+            
+            <li><a href="/gift/tang/ye-yu-ji-bei.html">夜雨寄北</a></li>
+            
+            <li><a href="/gift/tang/bo-qin-huai.html">泊秦淮</a></li>
+            
+            <li><a href="/gift/tang/chi-bi.html">赤壁</a></li>
+            
+        </ol>
         
-        <span>唐</span>
     </div>
 </aside>
 
     <article class="reading-document poem-document">
-        <section class="document-section poem-original" aria-labelledby="original-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">原文</p>
-                <h2 id="original-title">诗句</h2>
-            </div>
+        <section class="poem-original reveal" style="--d:3" aria-labelledby="original-title">
+            <h2 id="original-title" class="section-label">原文</h2>
             <div class="poem-text">
                 
                 
@@ -79,63 +235,59 @@
 
         
         <section class="document-section poem-annotations" aria-labelledby="annotations-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">字词</p>
-                <h2 id="annotations-title">注释</h2>
-            </div>
-            <div class="annotation-list">
+            <h2 id="annotations-title" class="section-label">注释</h2>
+            <ol class="annotation-list">
                 
-                <p><span class="ann-num">1</span>竹喧归浣女：竹林中传来喧笑声，是洗衣女子归来了。浣（huàn），洗濯。王维写人不写面目，只写声音和动作。</p>
+                <li><span class="ann-num">1</span><p>竹喧归浣女：竹林中传来喧笑声，是洗衣女子归来了。浣（huàn），洗濯。王维写人不写面目，只写声音和动作。</p></li>
                 
-                <p><span class="ann-num">2</span>春芳歇：春天的芳华凋谢了。随意，随它去吧。春天过去了没关系，秋天也有秋天的美。</p>
+                <li><span class="ann-num">2</span><p>春芳歇：春天的芳华凋谢了。随意，随它去吧。春天过去了没关系，秋天也有秋天的美。</p></li>
                 
-                <p><span class="ann-num">3</span>王孙自可留：王孙（贵族子弟，泛指君子）自然可以留在这里。王维自比——这山中值得留下，他不是无处可去，是主动选择留在这里。</p>
+                <li><span class="ann-num">3</span><p>王孙自可留：王孙（贵族子弟，泛指君子）自然可以留在这里。王维自比——这山中值得留下，他不是无处可去，是主动选择留在这里。</p></li>
                 
-            </div>
+            </ol>
         </section>
         
 
         
-        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">读后</p>
-                <h2 id="appreciation-title">赏析</h2>
-            </div>
-            <div class="appreciation-text">
-                
-                <p>《山居秋暝》是王维山水诗的代表作之一，写于他隐居辋川的岁月。暝（míng）是日落，秋暝便是秋天的黄昏。</p>
-                
-                
-                
-                <p>“空山新雨后，天气晚来秋。”所谓空山并不是空无一人的荒山，它只是一座远离尘嚣不染世味的山。一场新雨洗过，空气清透，万物如新；到了傍晚，秋意一分一分地浓起来。</p>
-                
-                
-                
-                <p>“明月松间照，清泉石上流。”月光透过松枝洒下来，泉水漫过石头淌过去。月光是静的，泉水是动的；松间是幽暗的，石上是明亮的。一个“照”字，见月色如泻；一个“流”字，见水声可闻。十个字摆在一起，竟分不清哪里是月光，哪里是泉声。这两句历来被当作“诗中有画”的注脚，但它的画是活的有声响有凉意的。</p>
-                
-                
-                
-                <p>“竹喧归浣女，莲动下渔舟。”竹林里传出笑语，便知是浣衣的女子回来了；莲叶忽然摇动，便知是渔船顺流而下。这两句的次序很讲究：先听见声音，再想到人；先看见叶动，再想到船。因果是颠倒的，读者却跟着诗人的耳目一步一步猜出了竹林中、莲叶下的答案。王维写人从不写面目，只写声音和动作——你看见竹在响莲在动的时候人便已经来了。</p>
-                
-                
-                
-                <p>“随意春芳歇，王孙自可留。”《楚辞》里有一篇《招隐士》，末句劝人“王孙兮归来，山中兮不可以久留”，说山中荒僻，留不得。王维翻案：春天的芳华尽可以凋谢，山中之人却自可以留下。这一句是全诗的态度——他留在山中，是出于甘心，而不是别无去处。前面读过的《鸟鸣涧》写春夜的万籁俱寂，这一首写秋晚的声色俱全，合起来看，便是王维辋川岁月里最安稳的两幅画。</p>
-                
-            </div>
-        </section>
-        
-
-        
-        <section class="document-section poem-sources" aria-label="选文来源">
+        <section class="document-section appreciation-section prose" aria-labelledby="appreciation-title">
+            <h2 id="appreciation-title" class="section-label">赏析</h2>
             
-            <p><strong>底本：</strong>《王维集校注》，陈铁民校注，中华书局</p>
+            <p>《山居秋暝》是王维山水诗的代表作之一，写于他隐居辋川的岁月。暝（míng）是日落，秋暝便是秋天的黄昏。</p>
+            
+            
+            
+            <p>“空山新雨后，天气晚来秋。”所谓空山并不是空无一人的荒山，它只是一座远离尘嚣不染世味的山。一场新雨洗过，空气清透，万物如新；到了傍晚，秋意一分一分地浓起来。</p>
+            
+            
+            
+            <p>“明月松间照，清泉石上流。”月光透过松枝洒下来，泉水漫过石头淌过去。月光是静的，泉水是动的；松间是幽暗的，石上是明亮的。一个“照”字，见月色如泻；一个“流”字，见水声可闻。十个字摆在一起，竟分不清哪里是月光，哪里是泉声。这两句历来被当作“诗中有画”的注脚，但它的画是活的有声响有凉意的。</p>
+            
+            
+            
+            <p>“竹喧归浣女，莲动下渔舟。”竹林里传出笑语，便知是浣衣的女子回来了；莲叶忽然摇动，便知是渔船顺流而下。这两句的次序很讲究：先听见声音，再想到人；先看见叶动，再想到船。因果是颠倒的，读者却跟着诗人的耳目一步一步猜出了竹林中、莲叶下的答案。王维写人从不写面目，只写声音和动作——你看见竹在响莲在动的时候人便已经来了。</p>
+            
+            
+            
+            <p>“随意春芳歇，王孙自可留。”《楚辞》里有一篇《招隐士》，末句劝人“王孙兮归来，山中兮不可以久留”，说山中荒僻，留不得。王维翻案：春天的芳华尽可以凋谢，山中之人却自可以留下。这一句是全诗的态度——他留在山中，是出于甘心，而不是别无去处。前面读过的《鸟鸣涧》写春夜的万籁俱寂，这一首写秋晚的声色俱全，合起来看，便是王维辋川岁月里最安稳的两幅画。</p>
             
         </section>
         
 
-        <nav class="page-nav poem-nav" aria-label="诗歌导航">
-            <a class="nav-back" href="/gift/tang/">← 返回唐目录</a>
-            <a class="nav-next" href="/gift/tang/shi-zhi-sai-shang.html">下一首：使至塞上 →</a>
+        
+        <section class="poem-sources" aria-label="选文来源">
+            
+            <p><strong>底本</strong>《王维集校注》，陈铁民校注，中华书局</p>
+            
+        </section>
+        
+
+        <nav class="pager" aria-label="上一首与下一首">
+            
+            <a class="pager-card prev" href="/gift/tang/zhong-nan-bie-ye.html"><small>← 上一首</small><strong>终南别业</strong></a>
+            
+            
+            <a class="pager-card next" href="/gift/tang/shi-zhi-sai-shang.html"><small>下一首 →</small><strong>使至塞上</strong></a>
+            
         </nav>
     </article>
 </div>
@@ -143,9 +295,43 @@
     </main>
 
     
-    <footer id="gift">
-        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
-        <small>原文 · 注释 · 赏析</small>
+    <footer class="footer" id="gift">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="/gift/static/images/shanshui/seal-shi.png" alt="" width="40" height="40">
+                <div>
+                    <strong>诗三百</strong>
+                    <span>给妹妹的中国古代诗歌赏析书</span>
+                </div>
+            </div>
+            <ul class="footer-dynasties" aria-label="朝代索引">
+                
+                <li><a href="/gift/xian-qin/">先秦</a></li>
+                
+                <li><a href="/gift/liang-han/">两汉</a></li>
+                
+                <li><a href="/gift/wei-jin/">魏晋</a></li>
+                
+                <li><a href="/gift/nan-bei-chao/">南北朝</a></li>
+                
+                <li><a href="/gift/tang/">唐</a></li>
+                
+                <li><a href="/gift/wudai-shiguo/">五代十国</a></li>
+                
+                <li><a href="/gift/liang-song/">两宋</a></li>
+                
+                <li><a href="/gift/yuan/">元</a></li>
+                
+                <li><a href="/gift/ming-qing/">明清</a></li>
+                
+                <li><a href="/gift/jin-dai/">近代</a></li>
+                
+            </ul>
+            <div class="footer-meta">
+                <span>陈顶立　编选</span>
+                <small>原文 · 注释 · 赏析　共 141 首</small>
+            </div>
+        </div>
     </footer>
     
 </body>

@@ -3,59 +3,125 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>野田黄雀行 · 曹植</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f8f7f2">
+    <meta name="description" content="野田黄雀行，曹植。高树多悲风，海水扬其波。">
+    <title>野田黄雀行 · 曹植 · 诗三百</title>
+    <link rel="icon" href="/gift/static/images/shanshui/seal-shi.png">
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
 <body class="reading-page poem-page-body">
     <a class="skip" href="#main-content">跳至正文</a>
+    <div class="progress" aria-hidden="true"></div>
 
     <header class="header">
-        <a class="brand" href="/gift/" aria-label="诗三百首页">
-            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
-        </a>
-        <nav aria-label="主导航">
-            <a class="current" href="/gift/#dynasties">读诗</a>
-            <a class="" href="/gift/about.html">关于</a>
-        </nav>
-        <span class="header-note">给妹妹的礼物</span>
+        <div class="header-inner">
+            <a class="brand" href="/gift/" aria-label="诗三百首页">
+                <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="" width="36" height="36">
+                <span class="brand-name">诗三百</span>
+            </a>
+            <nav class="main-nav" aria-label="主导航">
+                <a class="current" href="/gift/#dynasties">读诗</a>
+                <div class="nav-menu">
+                    <a class="nav-menu-trigger" href="/gift/#dynasties" aria-haspopup="true">朝代<span class="caret" aria-hidden="true"></span></a>
+                    <div class="nav-menu-panel">
+                        <ul>
+                            
+                            <li><a href="/gift/xian-qin/"><span>先秦</span><small>12 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-han/"><span>两汉</span><small>11 首</small></a></li>
+                            
+                            <li><a href="/gift/wei-jin/"><span>魏晋</span><small>10 首</small></a></li>
+                            
+                            <li><a href="/gift/nan-bei-chao/"><span>南北朝</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/tang/"><span>唐</span><small>55 首</small></a></li>
+                            
+                            <li><a href="/gift/wudai-shiguo/"><span>五代十国</span><small>7 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-song/"><span>两宋</span><small>23 首</small></a></li>
+                            
+                            <li><a href="/gift/yuan/"><span>元</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/ming-qing/"><span>明清</span><small>9 首</small></a></li>
+                            
+                            <li><a href="/gift/jin-dai/"><span>近代</span><small>4 首</small></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <a class="" href="/gift/about.html">关于</a>
+            </nav>
+            <span class="header-note">给妹妹的礼物</span>
+        </div>
     </header>
 
     <main id="main-content" tabindex="-1">
         
-<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
-    <a class="breadcrumb-link" href="/gift/wei-jin/">← 返回魏晋目录</a>
-    <p class="eyebrow">魏晋 · 诗歌阅读</p>
-    <h1 id="poem-title">野田黄雀行</h1>
-    <div class="poem-meta" aria-label="作品信息">
-        <span>曹植</span>
-        <span class="meta-sep">·</span><span>五言古诗</span>
-    </div>
+<section class="page-hero poem-hero" aria-labelledby="poem-title">
+    <nav class="crumbs reveal" style="--d:0" aria-label="位置">
+        <a href="/gift/">诗三百</a><span aria-hidden="true">/</span><a href="/gift/wei-jin/">魏晋</a>
+    </nav>
+    <h1 id="poem-title" class="reveal" style="--d:1">野田黄雀行</h1>
+    <p class="poem-meta reveal" style="--d:2">
+        <span class="author">曹植</span>
+        <span class="chip">五言古诗</span>
+        <span class="chip">魏晋</span>
+    </p>
+    <nav class="toc reveal" style="--d:3" aria-label="本页目录">
+        <a href="#original-title">原文</a>
+        <a href="#annotations-title">注释</a>
+        <a href="#appreciation-title">赏析</a>
+    </nav>
 </section>
 
 <div class="reading-shell">
     
 
 
-<aside class="river-sidebar" aria-label="诗歌之河侧景">
-    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
-        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
-    </a>
-    <div class="sidebar-caption" aria-hidden="true">
+<aside class="side-rail" aria-label="魏晋导航">
+    <div class="rail-inner">
+        <a class="rail-art" href="/gift/" aria-label="回到诗歌之河首页">
+            <img src="/gift/static/images/shanshui/landscape-vertical.png" alt="" loading="lazy">
+            <span class="rail-art-caption">
+                <span>魏晋</span>
+                <small>文学的自觉时代</small>
+            </span>
+        </a>
+
         
-        <span>文学的自觉时代</span>
+        <p class="rail-title">本朝诗目 <span>10</span></p>
+        <ol class="rail-list">
+            
+            <li><a href="/gift/wei-jin/hao-li-xing.html">蒿里行</a></li>
+            
+            <li><a href="/gift/wei-jin/guan-cang-hai.html">观沧海</a></li>
+            
+            <li><a href="/gift/wei-jin/gui-sui-shou.html">龟虽寿</a></li>
+            
+            <li><a href="/gift/wei-jin/duan-ge-xing.html">短歌行·其一</a></li>
+            
+            <li><a href="/gift/wei-jin/yan-ge-xing.html">燕歌行·其一</a></li>
+            
+            <li><a href="/gift/wei-jin/yan-ge-xing-qi-er.html">燕歌行·其二</a></li>
+            
+            <li><a href="/gift/wei-jin/bai-ma-pian.html">白马篇</a></li>
+            
+            <li><a href="/gift/wei-jin/ye-tian-huang-que-xing.html" class="active" aria-current="page">野田黄雀行</a></li>
+            
+            <li><a href="/gift/wei-jin/gui-yuan-tian-ju.html">归园田居·其一</a></li>
+            
+            <li><a href="/gift/wei-jin/yin-jiu-qi-wu.html">饮酒·其五</a></li>
+            
+        </ol>
         
-        <span>魏晋</span>
     </div>
 </aside>
 
     <article class="reading-document poem-document">
-        <section class="document-section poem-original" aria-labelledby="original-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">原文</p>
-                <h2 id="original-title">诗句</h2>
-            </div>
+        <section class="poem-original reveal" style="--d:3" aria-labelledby="original-title">
+            <h2 id="original-title" class="section-label">原文</h2>
             <div class="poem-text">
                 
                 
@@ -87,79 +153,75 @@
 
         
         <section class="document-section poem-annotations" aria-labelledby="annotations-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">字词</p>
-                <h2 id="annotations-title">注释</h2>
-            </div>
-            <div class="annotation-list">
+            <h2 id="annotations-title" class="section-label">注释</h2>
+            <ol class="annotation-list">
                 
-                <p><span class="ann-num">1</span>悲风：凄凉的秋风。古人常用“悲风”来渲染凄凉萧瑟的氛围。</p>
+                <li><span class="ann-num">1</span><p>悲风：凄凉的秋风。古人常用“悲风”来渲染凄凉萧瑟的氛围。</p></li>
                 
-                <p><span class="ann-num">2</span>鹞：鹞（yào），一种善于捕食小鸟的猛禽。</p>
+                <li><span class="ann-num">2</span><p>鹞：鹞（yào），一种善于捕食小鸟的猛禽。</p></li>
                 
-                <p><span class="ann-num">3</span>罗：捕鸟的网。</p>
+                <li><span class="ann-num">3</span><p>罗：捕鸟的网。</p></li>
                 
-                <p><span class="ann-num">4</span>捎：捎（shāo），这里指拔剑砍断、削去（罗网）。</p>
+                <li><span class="ann-num">4</span><p>捎：捎（shāo），这里指拔剑砍断、削去（罗网）。</p></li>
                 
-                <p><span class="ann-num">5</span>摩：贴近、迫近。摩苍天，形容黄雀飞得极高，好像贴着青天。</p>
+                <li><span class="ann-num">5</span><p>摩：贴近、迫近。摩苍天，形容黄雀飞得极高，好像贴着青天。</p></li>
                 
-            </div>
+            </ol>
         </section>
         
 
         
-        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">读后</p>
-                <h2 id="appreciation-title">赏析</h2>
-            </div>
-            <div class="appreciation-text">
-                
-                <p>《野田黄雀行》是曹植后期的一首寓言诗，借一只黄雀落网又得救的故事，写他心中说不出口的痛。</p>
-                
-                
-                
-                <p>公元220年，曹操去世，曹丕继位为魏王，随即诛杀了丁仪、丁廙兄弟和他们家中的男丁。二丁是曹植最亲近的朋友，当年曾极力劝曹操立曹植为继承人。朋友因自己而死，曹植却什么也做不了。这首诗便写在这样的时候。</p>
-                
-                
-                
-                <p>“高树多悲风，海水扬其波。”高高的树上，悲风不断；辽阔的海面，波浪翻涌。起首两句是景，也是时局：风从高处来，浪从大海起，人在其中，无处躲藏。“利剑不在掌，结友何须多？”手里没有利剑，结交再多朋友又有什么用。这是全诗最痛的一句。曹植一向以才名交游天下，此时却说“结友何须多”，与其说是看透了交情，不如说是恨自己无力。朋友越多，眼睁睁看着他们受难的痛就越多。</p>
-                
-                
-                
-                <p>“不见篱间雀，见鹞自投罗？”你没看见篱笆间那只黄雀吗？见了鹞鹰，慌忙逃窜，一头撞进了罗网。前有罗网，后有鹞鹰，黄雀进退都是死路。《战国策》里庄辛讲过一只黄雀，俯啄白粒，仰栖茂树，自以为与人无争，却不知道王孙公子早已挟着弹弓瞄准了它。乱世里的弱者大抵如此，与人无争，祸却自己找上门来。</p>
-                
-                
-                
-                <p>“罗家得雀喜，少年见雀悲。”张网的人捕到了雀，满心欢喜；少年看见了，却满心悲伤。同一只黄雀，一个看见的是猎物，一个看见的是生命，一喜一悲之间，是两种人心。</p>
-                
-                
-                
-                <p>“拔剑捎罗网，黄雀得飞飞。飞飞摩苍天，来下谢少年。”少年拔剑削破罗网，黄雀终于飞走了。它越飞越高，几乎贴着青天，然后又飞下来，向少年道谢。“飞飞”二字前一句收尾、后一句开头，像黄雀扑棱着翅膀一路飞上去，读来轻快极了。这是全诗唯一明亮的地方，也是最叫人心酸的地方：诗里有拔剑的少年，现实里没有。</p>
-                
-                
-                
-                <p>还记得《白马篇》里那个“控弦破左的”的少年吗？那时的曹植意气风发，诗里的箭射向边疆的敌人；到了这首诗，剑只剩下一个用处，就是去砍断一张网。而这把剑也不在他自己手里，只能交给诗中的少年。</p>
-                
-                
-                
-                <p>诗能做的事很少。它救不回丁氏兄弟，只能让一只黄雀，在纸上飞走。</p>
-                
-            </div>
-        </section>
-        
-
-        
-        <section class="document-section poem-sources" aria-label="选文来源">
+        <section class="document-section appreciation-section prose" aria-labelledby="appreciation-title">
+            <h2 id="appreciation-title" class="section-label">赏析</h2>
             
-            <p><strong>底本：</strong>《先秦汉魏晋南北朝诗》，逯钦立辑校，中华书局</p>
+            <p>《野田黄雀行》是曹植后期的一首寓言诗，借一只黄雀落网又得救的故事，写他心中说不出口的痛。</p>
+            
+            
+            
+            <p>公元220年，曹操去世，曹丕继位为魏王，随即诛杀了丁仪、丁廙兄弟和他们家中的男丁。二丁是曹植最亲近的朋友，当年曾极力劝曹操立曹植为继承人。朋友因自己而死，曹植却什么也做不了。这首诗便写在这样的时候。</p>
+            
+            
+            
+            <p>“高树多悲风，海水扬其波。”高高的树上，悲风不断；辽阔的海面，波浪翻涌。起首两句是景，也是时局：风从高处来，浪从大海起，人在其中，无处躲藏。“利剑不在掌，结友何须多？”手里没有利剑，结交再多朋友又有什么用。这是全诗最痛的一句。曹植一向以才名交游天下，此时却说“结友何须多”，与其说是看透了交情，不如说是恨自己无力。朋友越多，眼睁睁看着他们受难的痛就越多。</p>
+            
+            
+            
+            <p>“不见篱间雀，见鹞自投罗？”你没看见篱笆间那只黄雀吗？见了鹞鹰，慌忙逃窜，一头撞进了罗网。前有罗网，后有鹞鹰，黄雀进退都是死路。《战国策》里庄辛讲过一只黄雀，俯啄白粒，仰栖茂树，自以为与人无争，却不知道王孙公子早已挟着弹弓瞄准了它。乱世里的弱者大抵如此，与人无争，祸却自己找上门来。</p>
+            
+            
+            
+            <p>“罗家得雀喜，少年见雀悲。”张网的人捕到了雀，满心欢喜；少年看见了，却满心悲伤。同一只黄雀，一个看见的是猎物，一个看见的是生命，一喜一悲之间，是两种人心。</p>
+            
+            
+            
+            <p>“拔剑捎罗网，黄雀得飞飞。飞飞摩苍天，来下谢少年。”少年拔剑削破罗网，黄雀终于飞走了。它越飞越高，几乎贴着青天，然后又飞下来，向少年道谢。“飞飞”二字前一句收尾、后一句开头，像黄雀扑棱着翅膀一路飞上去，读来轻快极了。这是全诗唯一明亮的地方，也是最叫人心酸的地方：诗里有拔剑的少年，现实里没有。</p>
+            
+            
+            
+            <p>还记得《白马篇》里那个“控弦破左的”的少年吗？那时的曹植意气风发，诗里的箭射向边疆的敌人；到了这首诗，剑只剩下一个用处，就是去砍断一张网。而这把剑也不在他自己手里，只能交给诗中的少年。</p>
+            
+            
+            
+            <p>诗能做的事很少。它救不回丁氏兄弟，只能让一只黄雀，在纸上飞走。</p>
             
         </section>
         
 
-        <nav class="page-nav poem-nav" aria-label="诗歌导航">
-            <a class="nav-back" href="/gift/wei-jin/">← 返回魏晋目录</a>
-            <a class="nav-next" href="/gift/wei-jin/gui-yuan-tian-ju.html">下一首：归园田居·其一 →</a>
+        
+        <section class="poem-sources" aria-label="选文来源">
+            
+            <p><strong>底本</strong>《先秦汉魏晋南北朝诗》，逯钦立辑校，中华书局</p>
+            
+        </section>
+        
+
+        <nav class="pager" aria-label="上一首与下一首">
+            
+            <a class="pager-card prev" href="/gift/wei-jin/bai-ma-pian.html"><small>← 上一首</small><strong>白马篇</strong></a>
+            
+            
+            <a class="pager-card next" href="/gift/wei-jin/gui-yuan-tian-ju.html"><small>下一首 →</small><strong>归园田居·其一</strong></a>
+            
         </nav>
     </article>
 </div>
@@ -167,9 +229,43 @@
     </main>
 
     
-    <footer id="gift">
-        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
-        <small>原文 · 注释 · 赏析</small>
+    <footer class="footer" id="gift">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="/gift/static/images/shanshui/seal-shi.png" alt="" width="40" height="40">
+                <div>
+                    <strong>诗三百</strong>
+                    <span>给妹妹的中国古代诗歌赏析书</span>
+                </div>
+            </div>
+            <ul class="footer-dynasties" aria-label="朝代索引">
+                
+                <li><a href="/gift/xian-qin/">先秦</a></li>
+                
+                <li><a href="/gift/liang-han/">两汉</a></li>
+                
+                <li><a href="/gift/wei-jin/">魏晋</a></li>
+                
+                <li><a href="/gift/nan-bei-chao/">南北朝</a></li>
+                
+                <li><a href="/gift/tang/">唐</a></li>
+                
+                <li><a href="/gift/wudai-shiguo/">五代十国</a></li>
+                
+                <li><a href="/gift/liang-song/">两宋</a></li>
+                
+                <li><a href="/gift/yuan/">元</a></li>
+                
+                <li><a href="/gift/ming-qing/">明清</a></li>
+                
+                <li><a href="/gift/jin-dai/">近代</a></li>
+                
+            </ul>
+            <div class="footer-meta">
+                <span>陈顶立　编选</span>
+                <small>原文 · 注释 · 赏析　共 141 首</small>
+            </div>
+        </div>
     </footer>
     
 </body>

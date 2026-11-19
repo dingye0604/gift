@@ -3,59 +3,125 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>短歌行·其一 · 曹操</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f8f7f2">
+    <meta name="description" content="短歌行·其一，曹操。对酒当歌，人生几何！">
+    <title>短歌行·其一 · 曹操 · 诗三百</title>
+    <link rel="icon" href="/gift/static/images/shanshui/seal-shi.png">
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
 <body class="reading-page poem-page-body">
     <a class="skip" href="#main-content">跳至正文</a>
+    <div class="progress" aria-hidden="true"></div>
 
     <header class="header">
-        <a class="brand" href="/gift/" aria-label="诗三百首页">
-            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
-        </a>
-        <nav aria-label="主导航">
-            <a class="current" href="/gift/#dynasties">读诗</a>
-            <a class="" href="/gift/about.html">关于</a>
-        </nav>
-        <span class="header-note">给妹妹的礼物</span>
+        <div class="header-inner">
+            <a class="brand" href="/gift/" aria-label="诗三百首页">
+                <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="" width="36" height="36">
+                <span class="brand-name">诗三百</span>
+            </a>
+            <nav class="main-nav" aria-label="主导航">
+                <a class="current" href="/gift/#dynasties">读诗</a>
+                <div class="nav-menu">
+                    <a class="nav-menu-trigger" href="/gift/#dynasties" aria-haspopup="true">朝代<span class="caret" aria-hidden="true"></span></a>
+                    <div class="nav-menu-panel">
+                        <ul>
+                            
+                            <li><a href="/gift/xian-qin/"><span>先秦</span><small>12 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-han/"><span>两汉</span><small>11 首</small></a></li>
+                            
+                            <li><a href="/gift/wei-jin/"><span>魏晋</span><small>10 首</small></a></li>
+                            
+                            <li><a href="/gift/nan-bei-chao/"><span>南北朝</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/tang/"><span>唐</span><small>55 首</small></a></li>
+                            
+                            <li><a href="/gift/wudai-shiguo/"><span>五代十国</span><small>7 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-song/"><span>两宋</span><small>23 首</small></a></li>
+                            
+                            <li><a href="/gift/yuan/"><span>元</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/ming-qing/"><span>明清</span><small>9 首</small></a></li>
+                            
+                            <li><a href="/gift/jin-dai/"><span>近代</span><small>4 首</small></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <a class="" href="/gift/about.html">关于</a>
+            </nav>
+            <span class="header-note">给妹妹的礼物</span>
+        </div>
     </header>
 
     <main id="main-content" tabindex="-1">
         
-<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
-    <a class="breadcrumb-link" href="/gift/wei-jin/">← 返回魏晋目录</a>
-    <p class="eyebrow">魏晋 · 诗歌阅读</p>
-    <h1 id="poem-title">短歌行·其一</h1>
-    <div class="poem-meta" aria-label="作品信息">
-        <span>曹操</span>
-        <span class="meta-sep">·</span><span>四言古诗</span>
-    </div>
+<section class="page-hero poem-hero" aria-labelledby="poem-title">
+    <nav class="crumbs reveal" style="--d:0" aria-label="位置">
+        <a href="/gift/">诗三百</a><span aria-hidden="true">/</span><a href="/gift/wei-jin/">魏晋</a>
+    </nav>
+    <h1 id="poem-title" class="reveal" style="--d:1">短歌行·其一</h1>
+    <p class="poem-meta reveal" style="--d:2">
+        <span class="author">曹操</span>
+        <span class="chip">四言古诗</span>
+        <span class="chip">魏晋</span>
+    </p>
+    <nav class="toc reveal" style="--d:3" aria-label="本页目录">
+        <a href="#original-title">原文</a>
+        <a href="#annotations-title">注释</a>
+        <a href="#appreciation-title">赏析</a>
+    </nav>
 </section>
 
 <div class="reading-shell">
     
 
 
-<aside class="river-sidebar" aria-label="诗歌之河侧景">
-    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
-        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
-    </a>
-    <div class="sidebar-caption" aria-hidden="true">
+<aside class="side-rail" aria-label="魏晋导航">
+    <div class="rail-inner">
+        <a class="rail-art" href="/gift/" aria-label="回到诗歌之河首页">
+            <img src="/gift/static/images/shanshui/landscape-vertical.png" alt="" loading="lazy">
+            <span class="rail-art-caption">
+                <span>魏晋</span>
+                <small>文学的自觉时代</small>
+            </span>
+        </a>
+
         
-        <span>文学的自觉时代</span>
+        <p class="rail-title">本朝诗目 <span>10</span></p>
+        <ol class="rail-list">
+            
+            <li><a href="/gift/wei-jin/hao-li-xing.html">蒿里行</a></li>
+            
+            <li><a href="/gift/wei-jin/guan-cang-hai.html">观沧海</a></li>
+            
+            <li><a href="/gift/wei-jin/gui-sui-shou.html">龟虽寿</a></li>
+            
+            <li><a href="/gift/wei-jin/duan-ge-xing.html" class="active" aria-current="page">短歌行·其一</a></li>
+            
+            <li><a href="/gift/wei-jin/yan-ge-xing.html">燕歌行·其一</a></li>
+            
+            <li><a href="/gift/wei-jin/yan-ge-xing-qi-er.html">燕歌行·其二</a></li>
+            
+            <li><a href="/gift/wei-jin/bai-ma-pian.html">白马篇</a></li>
+            
+            <li><a href="/gift/wei-jin/ye-tian-huang-que-xing.html">野田黄雀行</a></li>
+            
+            <li><a href="/gift/wei-jin/gui-yuan-tian-ju.html">归园田居·其一</a></li>
+            
+            <li><a href="/gift/wei-jin/yin-jiu-qi-wu.html">饮酒·其五</a></li>
+            
+        </ol>
         
-        <span>魏晋</span>
     </div>
 </aside>
 
     <article class="reading-document poem-document">
-        <section class="document-section poem-original" aria-labelledby="original-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">原文</p>
-                <h2 id="original-title">诗句</h2>
-            </div>
+        <section class="poem-original reveal" style="--d:3" aria-labelledby="original-title">
+            <h2 id="original-title" class="section-label">原文</h2>
             <div class="poem-text">
                 
                 
@@ -127,91 +193,87 @@
 
         
         <section class="document-section poem-annotations" aria-labelledby="annotations-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">字词</p>
-                <h2 id="annotations-title">注释</h2>
-            </div>
-            <div class="annotation-list">
+            <h2 id="annotations-title" class="section-label">注释</h2>
+            <ol class="annotation-list">
                 
-                <p><span class="ann-num">1</span>去日苦多：苦于逝去的日子太多。苦，苦于。</p>
+                <li><span class="ann-num">1</span><p>去日苦多：苦于逝去的日子太多。苦，苦于。</p></li>
                 
-                <p><span class="ann-num">2</span>慨当以慷：即“慷慨”，意气激昂。当以，语助词，无实义。</p>
+                <li><span class="ann-num">2</span><p>慨当以慷：即“慷慨”，意气激昂。当以，语助词，无实义。</p></li>
                 
-                <p><span class="ann-num">3</span>杜康：相传为最早酿酒的人，这里代指酒。</p>
+                <li><span class="ann-num">3</span><p>杜康：相传为最早酿酒的人，这里代指酒。</p></li>
                 
-                <p><span class="ann-num">4</span>青青子衿，悠悠我心：语出《诗经·郑风·子衿》。衿（jīn），衣领。原诗写思念之情，这里借指对贤才的思慕。</p>
+                <li><span class="ann-num">4</span><p>青青子衿，悠悠我心：语出《诗经·郑风·子衿》。衿（jīn），衣领。原诗写思念之情，这里借指对贤才的思慕。</p></li>
                 
-                <p><span class="ann-num">5</span>沉吟：低声吟咏，指反复思念。</p>
+                <li><span class="ann-num">5</span><p>沉吟：低声吟咏，指反复思念。</p></li>
                 
-                <p><span class="ann-num">6</span>呦呦鹿鸣，食野之苹：语出《诗经·小雅·鹿鸣》。呦呦，鹿鸣声。苹，艾蒿。原诗写宴饮嘉宾，这里借指招纳贤才。</p>
+                <li><span class="ann-num">6</span><p>呦呦鹿鸣，食野之苹：语出《诗经·小雅·鹿鸣》。呦呦，鹿鸣声。苹，艾蒿。原诗写宴饮嘉宾，这里借指招纳贤才。</p></li>
                 
-                <p><span class="ann-num">7</span>掇：拾取。掇（duō）。</p>
+                <li><span class="ann-num">7</span><p>掇：拾取。掇（duō）。</p></li>
                 
-                <p><span class="ann-num">8</span>越陌度阡：穿过纵横的田间小路。南北为阡，东西为陌。指贤才远道来投。</p>
+                <li><span class="ann-num">8</span><p>越陌度阡：穿过纵横的田间小路。南北为阡，东西为陌。指贤才远道来投。</p></li>
                 
-                <p><span class="ann-num">9</span>枉用相存：屈尊前来问候。枉，屈尊；存，问候、探望。</p>
+                <li><span class="ann-num">9</span><p>枉用相存：屈尊前来问候。枉，屈尊；存，问候、探望。</p></li>
                 
-                <p><span class="ann-num">10</span>契阔谈讌：久别重逢，设宴谈心。契阔，久别。讌，同“宴”。</p>
+                <li><span class="ann-num">10</span><p>契阔谈讌：久别重逢，设宴谈心。契阔，久别。讌，同“宴”。</p></li>
                 
-                <p><span class="ann-num">11</span>匝：周，圈。匝（zā）。</p>
+                <li><span class="ann-num">11</span><p>匝：周，圈。匝（zā）。</p></li>
                 
-                <p><span class="ann-num">12</span>山不厌高，海不厌深：山不嫌高，海不嫌深。厌，满足。比喻招纳贤才越多越好。</p>
+                <li><span class="ann-num">12</span><p>山不厌高，海不厌深：山不嫌高，海不嫌深。厌，满足。比喻招纳贤才越多越好。</p></li>
                 
-                <p><span class="ann-num">13</span>周公吐哺：周公吃饭时多次吐出口中的食物，起身接待来访的士人。《史记·鲁周公世家》载周公自言“一沐三捉发，一饭三吐哺，起以待士，犹恐失天下之贤人”。诗中借以自比，表明求贤之心。</p>
+                <li><span class="ann-num">13</span><p>周公吐哺：周公吃饭时多次吐出口中的食物，起身接待来访的士人。《史记·鲁周公世家》载周公自言“一沐三捉发，一饭三吐哺，起以待士，犹恐失天下之贤人”。诗中借以自比，表明求贤之心。</p></li>
                 
-            </div>
+            </ol>
         </section>
         
 
         
-        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">读后</p>
-                <h2 id="appreciation-title">赏析</h2>
-            </div>
-            <div class="appreciation-text">
-                
-                <p>《短歌行》是曹操最负盛名的作品之一，也是中国诗里写求贤的名篇。“短歌”是乐府旧题，与“长歌”相对，指歌声短促。全诗三十二句，从一场酒宴写起，一直写到天下归心。</p>
-                
-                
-                
-                <p>“对酒当歌，人生几何！譬如朝露，去日苦多。”面对美酒，正该放声高歌，可人生能有多长呢？就像清晨的露水，太阳一出便干了，逝去的日子已经太多。汉代挽歌《薤露》唱“薤上露，何易晞”，露水是古人眼里最短暂的东西，曹操一开口就把它端上了酒宴。我们读过《生年不满百》，知道汉末人一想到人生短暂，常常转向及时行乐。曹操也说喝酒，“慨当以慷，忧思难忘。何以解忧？唯有杜康”，杜康是传说中最早酿酒的人，这里代指酒。可他借酒要浇的，是另一种愁。</p>
-                
-                
-                
-                <p>这愁是什么，他借两首《诗经》来回答。“青青子衿，悠悠我心”出自《郑风·子衿》，原诗是女子思念穿青色衣领的恋人，青衿后来成了读书人的代称。曹操把情诗借过来，后面接一句“但为君故，沉吟至今”：为了你们，我一直低声吟咏到如今。这个“君”是天下所有尚未来投的贤士。“呦呦鹿鸣，食野之苹。我有嘉宾，鼓瑟吹笙”出自《小雅·鹿鸣》，我们在先秦卷里读过，那是宴请嘉宾的诗。前一首写思慕，后一首写款待，一个说我在想你，一个说你来了我便这样待你。借古人的成句说自己的话，严丝合缝，这是曹操的手段。</p>
-                
-                
-                
-                <p>可贤才还没有来。“明明如月，何时可掇？忧从中来，不可断绝。”贤才像天上的明月，什么时候才能摘到手里？忧愁从心底涌出，怎么也断不了。于是他想象贤士们“越陌度阡，枉用相存”，穿过纵横的田间小路，屈尊前来探望；“契阔谈讌，心念旧恩”，久别重逢，设宴畅谈，念着往日的情谊。上一段月还在天上，这一段人已到了眼前，求贤的心在想象与现实之间来回拉扯，一刻也不得安宁。</p>
-                
-                
-                
-                <p>“月明星稀，乌鹊南飞。绕树三匝，何枝可依？”月光明亮，星星稀疏，乌鹊向南飞去，绕着树飞了一圈又一圈，不知哪根树枝可以栖身。这四句是眼前的夜景，也是乱世士人的写照：天下纷乱，群雄并起，有才的人像这些乌鹊一样盘旋徘徊，不知该投奔谁。曹操替他们问出这一句，答案已经藏在问题里了：来我这里。</p>
-                
-                
-                
-                <p>最后四句是收束，也是宣言。“山不厌高，海不厌深”化用《管子》“海不辞水，故能成其大；山不辞土石，故能成其高”，山不嫌土石多，海不嫌水多，所以能成其高深。“周公吐哺，天下归心”，周公礼贤下士，吃一顿饭几次吐出口中的食物起身接待来客，于是天下人心都归向他。曹操以周公自比，气魄极大，却也透出一丝焦虑：天下还没有归心，所以他还在宴席上反复吟唱。</p>
-                
-                
-                
-                <p>八百多年后，苏轼泛舟赤壁，在《前赤壁赋》里借客人之口吟出“月明星稀，乌鹊南飞”，接着叹道：“固一世之雄也，而今安在哉？”那位横槊赋诗的英雄早已不在了，他求贤的歌声却还在江上回荡。</p>
-                
-            </div>
-        </section>
-        
-
-        
-        <section class="document-section poem-sources" aria-label="选文来源">
+        <section class="document-section appreciation-section prose" aria-labelledby="appreciation-title">
+            <h2 id="appreciation-title" class="section-label">赏析</h2>
             
-            <p><strong>底本：</strong>《先秦汉魏晋南北朝诗》，逯钦立辑校，中华书局</p>
+            <p>《短歌行》是曹操最负盛名的作品之一，也是中国诗里写求贤的名篇。“短歌”是乐府旧题，与“长歌”相对，指歌声短促。全诗三十二句，从一场酒宴写起，一直写到天下归心。</p>
+            
+            
+            
+            <p>“对酒当歌，人生几何！譬如朝露，去日苦多。”面对美酒，正该放声高歌，可人生能有多长呢？就像清晨的露水，太阳一出便干了，逝去的日子已经太多。汉代挽歌《薤露》唱“薤上露，何易晞”，露水是古人眼里最短暂的东西，曹操一开口就把它端上了酒宴。我们读过《生年不满百》，知道汉末人一想到人生短暂，常常转向及时行乐。曹操也说喝酒，“慨当以慷，忧思难忘。何以解忧？唯有杜康”，杜康是传说中最早酿酒的人，这里代指酒。可他借酒要浇的，是另一种愁。</p>
+            
+            
+            
+            <p>这愁是什么，他借两首《诗经》来回答。“青青子衿，悠悠我心”出自《郑风·子衿》，原诗是女子思念穿青色衣领的恋人，青衿后来成了读书人的代称。曹操把情诗借过来，后面接一句“但为君故，沉吟至今”：为了你们，我一直低声吟咏到如今。这个“君”是天下所有尚未来投的贤士。“呦呦鹿鸣，食野之苹。我有嘉宾，鼓瑟吹笙”出自《小雅·鹿鸣》，我们在先秦卷里读过，那是宴请嘉宾的诗。前一首写思慕，后一首写款待，一个说我在想你，一个说你来了我便这样待你。借古人的成句说自己的话，严丝合缝，这是曹操的手段。</p>
+            
+            
+            
+            <p>可贤才还没有来。“明明如月，何时可掇？忧从中来，不可断绝。”贤才像天上的明月，什么时候才能摘到手里？忧愁从心底涌出，怎么也断不了。于是他想象贤士们“越陌度阡，枉用相存”，穿过纵横的田间小路，屈尊前来探望；“契阔谈讌，心念旧恩”，久别重逢，设宴畅谈，念着往日的情谊。上一段月还在天上，这一段人已到了眼前，求贤的心在想象与现实之间来回拉扯，一刻也不得安宁。</p>
+            
+            
+            
+            <p>“月明星稀，乌鹊南飞。绕树三匝，何枝可依？”月光明亮，星星稀疏，乌鹊向南飞去，绕着树飞了一圈又一圈，不知哪根树枝可以栖身。这四句是眼前的夜景，也是乱世士人的写照：天下纷乱，群雄并起，有才的人像这些乌鹊一样盘旋徘徊，不知该投奔谁。曹操替他们问出这一句，答案已经藏在问题里了：来我这里。</p>
+            
+            
+            
+            <p>最后四句是收束，也是宣言。“山不厌高，海不厌深”化用《管子》“海不辞水，故能成其大；山不辞土石，故能成其高”，山不嫌土石多，海不嫌水多，所以能成其高深。“周公吐哺，天下归心”，周公礼贤下士，吃一顿饭几次吐出口中的食物起身接待来客，于是天下人心都归向他。曹操以周公自比，气魄极大，却也透出一丝焦虑：天下还没有归心，所以他还在宴席上反复吟唱。</p>
+            
+            
+            
+            <p>八百多年后，苏轼泛舟赤壁，在《前赤壁赋》里借客人之口吟出“月明星稀，乌鹊南飞”，接着叹道：“固一世之雄也，而今安在哉？”那位横槊赋诗的英雄早已不在了，他求贤的歌声却还在江上回荡。</p>
             
         </section>
         
 
-        <nav class="page-nav poem-nav" aria-label="诗歌导航">
-            <a class="nav-back" href="/gift/wei-jin/">← 返回魏晋目录</a>
-            <a class="nav-next" href="/gift/wei-jin/yan-ge-xing.html">下一首：燕歌行·其一 →</a>
+        
+        <section class="poem-sources" aria-label="选文来源">
+            
+            <p><strong>底本</strong>《先秦汉魏晋南北朝诗》，逯钦立辑校，中华书局</p>
+            
+        </section>
+        
+
+        <nav class="pager" aria-label="上一首与下一首">
+            
+            <a class="pager-card prev" href="/gift/wei-jin/gui-sui-shou.html"><small>← 上一首</small><strong>龟虽寿</strong></a>
+            
+            
+            <a class="pager-card next" href="/gift/wei-jin/yan-ge-xing.html"><small>下一首 →</small><strong>燕歌行·其一</strong></a>
+            
         </nav>
     </article>
 </div>
@@ -219,9 +281,43 @@
     </main>
 
     
-    <footer id="gift">
-        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
-        <small>原文 · 注释 · 赏析</small>
+    <footer class="footer" id="gift">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="/gift/static/images/shanshui/seal-shi.png" alt="" width="40" height="40">
+                <div>
+                    <strong>诗三百</strong>
+                    <span>给妹妹的中国古代诗歌赏析书</span>
+                </div>
+            </div>
+            <ul class="footer-dynasties" aria-label="朝代索引">
+                
+                <li><a href="/gift/xian-qin/">先秦</a></li>
+                
+                <li><a href="/gift/liang-han/">两汉</a></li>
+                
+                <li><a href="/gift/wei-jin/">魏晋</a></li>
+                
+                <li><a href="/gift/nan-bei-chao/">南北朝</a></li>
+                
+                <li><a href="/gift/tang/">唐</a></li>
+                
+                <li><a href="/gift/wudai-shiguo/">五代十国</a></li>
+                
+                <li><a href="/gift/liang-song/">两宋</a></li>
+                
+                <li><a href="/gift/yuan/">元</a></li>
+                
+                <li><a href="/gift/ming-qing/">明清</a></li>
+                
+                <li><a href="/gift/jin-dai/">近代</a></li>
+                
+            </ul>
+            <div class="footer-meta">
+                <span>陈顶立　编选</span>
+                <small>原文 · 注释 · 赏析　共 141 首</small>
+            </div>
+        </div>
     </footer>
     
 </body>

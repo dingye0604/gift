@@ -3,59 +3,127 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>明月皎夜光 · 无名氏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f8f7f2">
+    <meta name="description" content="明月皎夜光，无名氏。明月皎夜光，促织鸣东壁。">
+    <title>明月皎夜光 · 无名氏 · 诗三百</title>
+    <link rel="icon" href="/gift/static/images/shanshui/seal-shi.png">
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
 <body class="reading-page poem-page-body">
     <a class="skip" href="#main-content">跳至正文</a>
+    <div class="progress" aria-hidden="true"></div>
 
     <header class="header">
-        <a class="brand" href="/gift/" aria-label="诗三百首页">
-            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
-        </a>
-        <nav aria-label="主导航">
-            <a class="current" href="/gift/#dynasties">读诗</a>
-            <a class="" href="/gift/about.html">关于</a>
-        </nav>
-        <span class="header-note">给妹妹的礼物</span>
+        <div class="header-inner">
+            <a class="brand" href="/gift/" aria-label="诗三百首页">
+                <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="" width="36" height="36">
+                <span class="brand-name">诗三百</span>
+            </a>
+            <nav class="main-nav" aria-label="主导航">
+                <a class="current" href="/gift/#dynasties">读诗</a>
+                <div class="nav-menu">
+                    <a class="nav-menu-trigger" href="/gift/#dynasties" aria-haspopup="true">朝代<span class="caret" aria-hidden="true"></span></a>
+                    <div class="nav-menu-panel">
+                        <ul>
+                            
+                            <li><a href="/gift/xian-qin/"><span>先秦</span><small>12 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-han/"><span>两汉</span><small>11 首</small></a></li>
+                            
+                            <li><a href="/gift/wei-jin/"><span>魏晋</span><small>10 首</small></a></li>
+                            
+                            <li><a href="/gift/nan-bei-chao/"><span>南北朝</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/tang/"><span>唐</span><small>55 首</small></a></li>
+                            
+                            <li><a href="/gift/wudai-shiguo/"><span>五代十国</span><small>7 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-song/"><span>两宋</span><small>23 首</small></a></li>
+                            
+                            <li><a href="/gift/yuan/"><span>元</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/ming-qing/"><span>明清</span><small>9 首</small></a></li>
+                            
+                            <li><a href="/gift/jin-dai/"><span>近代</span><small>4 首</small></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <a class="" href="/gift/about.html">关于</a>
+            </nav>
+            <span class="header-note">给妹妹的礼物</span>
+        </div>
     </header>
 
     <main id="main-content" tabindex="-1">
         
-<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
-    <a class="breadcrumb-link" href="/gift/liang-han/">← 返回两汉目录</a>
-    <p class="eyebrow">两汉 · 诗歌阅读</p>
-    <h1 id="poem-title">明月皎夜光</h1>
-    <div class="poem-meta" aria-label="作品信息">
-        <span>无名氏</span>
-        <span class="meta-sep">·</span><span>五言古诗</span>
-    </div>
+<section class="page-hero poem-hero" aria-labelledby="poem-title">
+    <nav class="crumbs reveal" style="--d:0" aria-label="位置">
+        <a href="/gift/">诗三百</a><span aria-hidden="true">/</span><a href="/gift/liang-han/">两汉</a>
+    </nav>
+    <h1 id="poem-title" class="reveal" style="--d:1">明月皎夜光</h1>
+    <p class="poem-meta reveal" style="--d:2">
+        <span class="author">无名氏</span>
+        <span class="chip">五言古诗</span>
+        <span class="chip">两汉</span>
+    </p>
+    <nav class="toc reveal" style="--d:3" aria-label="本页目录">
+        <a href="#original-title">原文</a>
+        <a href="#annotations-title">注释</a>
+        <a href="#appreciation-title">赏析</a>
+    </nav>
 </section>
 
 <div class="reading-shell">
     
 
 
-<aside class="river-sidebar" aria-label="诗歌之河侧景">
-    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
-        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
-    </a>
-    <div class="sidebar-caption" aria-hidden="true">
+<aside class="side-rail" aria-label="两汉导航">
+    <div class="rail-inner">
+        <a class="rail-art" href="/gift/" aria-label="回到诗歌之河首页">
+            <img src="/gift/static/images/shanshui/landscape-vertical.png" alt="" loading="lazy">
+            <span class="rail-art-caption">
+                <span>两汉</span>
+                <small>乐府与古诗的交响</small>
+            </span>
+        </a>
+
         
-        <span>乐府与古诗的交响</span>
+        <p class="rail-title">本朝诗目 <span>11</span></p>
+        <ol class="rail-list">
+            
+            <li><a href="/gift/liang-han/da-feng-ge.html">大风歌</a></li>
+            
+            <li><a href="/gift/liang-han/xing-xing-chong-xing-xing.html">行行重行行</a></li>
+            
+            <li><a href="/gift/liang-han/qing-qing-ling-shang-bai.html">青青陵上柏</a></li>
+            
+            <li><a href="/gift/liang-han/jin-ri-liang-yan-hui.html">今日良宴会</a></li>
+            
+            <li><a href="/gift/liang-han/she-jiang-cai-fu-rong.html">涉江采芙蓉</a></li>
+            
+            <li><a href="/gift/liang-han/ming-yue-jiao-ye-guang.html" class="active" aria-current="page">明月皎夜光</a></li>
+            
+            <li><a href="/gift/liang-han/ting-zhong-you-qi-shu.html">庭中有奇树</a></li>
+            
+            <li><a href="/gift/liang-han/tiao-tiao-qian-niu-xing.html">迢迢牵牛星</a></li>
+            
+            <li><a href="/gift/liang-han/sheng-nian-bu-man-bai.html">生年不满百</a></li>
+            
+            <li><a href="/gift/liang-han/shi-wu-cong-jun-zheng.html">十五从军征</a></li>
+            
+            <li><a href="/gift/liang-han/yin-ma-chang-cheng-ku-xing.html">饮马长城窟行</a></li>
+            
+        </ol>
         
-        <span>两汉</span>
     </div>
 </aside>
 
     <article class="reading-document poem-document">
-        <section class="document-section poem-original" aria-labelledby="original-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">原文</p>
-                <h2 id="original-title">诗句</h2>
-            </div>
+        <section class="poem-original reveal" style="--d:3" aria-labelledby="original-title">
+            <h2 id="original-title" class="section-label">原文</h2>
             <div class="poem-text">
                 
                 
@@ -95,93 +163,89 @@
 
         
         <section class="document-section poem-annotations" aria-labelledby="annotations-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">字词</p>
-                <h2 id="annotations-title">注释</h2>
-            </div>
-            <div class="annotation-list">
+            <h2 id="annotations-title" class="section-label">注释</h2>
+            <ol class="annotation-list">
                 
-                <p><span class="ann-num">1</span>促织：蟋蟀。</p>
+                <li><span class="ann-num">1</span><p>促织：蟋蟀。</p></li>
                 
-                <p><span class="ann-num">2</span>玉衡：北斗七星中的第五星。古人以斗柄所指的方位确定月份，玉衡指向孟冬方位，即已入初冬。孟冬：冬季的第一个月。</p>
+                <li><span class="ann-num">2</span><p>玉衡：北斗七星中的第五星。古人以斗柄所指的方位确定月份，玉衡指向孟冬方位，即已入初冬。孟冬：冬季的第一个月。</p></li>
                 
-                <p><span class="ann-num">3</span>历历：分明可数。</p>
+                <li><span class="ann-num">3</span><p>历历：分明可数。</p></li>
                 
-                <p><span class="ann-num">4</span>时节忽复易：季节忽然又变换了。易，改变。</p>
+                <li><span class="ann-num">4</span><p>时节忽复易：季节忽然又变换了。易，改变。</p></li>
                 
-                <p><span class="ann-num">5</span>玄鸟：燕子。逝安适：飞到哪里去了。适，往。</p>
+                <li><span class="ann-num">5</span><p>玄鸟：燕子。逝安适：飞到哪里去了。适，往。</p></li>
                 
-                <p><span class="ann-num">6</span>同门友：同学、同窗。</p>
+                <li><span class="ann-num">6</span><p>同门友：同学、同窗。</p></li>
                 
-                <p><span class="ann-num">7</span>六翮：鸟翅上的六根强羽，代指翅膀。高举振六翮，比喻仕途得意、青云直上。</p>
+                <li><span class="ann-num">7</span><p>六翮：鸟翅上的六根强羽，代指翅膀。高举振六翮，比喻仕途得意、青云直上。</p></li>
                 
-                <p><span class="ann-num">8</span>遗迹：行人留下的脚印。</p>
+                <li><span class="ann-num">8</span><p>遗迹：行人留下的脚印。</p></li>
                 
-                <p><span class="ann-num">9</span>南箕北有斗，牵牛不负轭：箕宿像簸箕而不能簸谷，斗宿像斗而不能舀酒，牵牛星叫牛却不拉车。语出《诗经·大东》。轭，驾车时套在牛马颈上的横木。</p>
+                <li><span class="ann-num">9</span><p>南箕北有斗，牵牛不负轭：箕宿像簸箕而不能簸谷，斗宿像斗而不能舀酒，牵牛星叫牛却不拉车。语出《诗经·大东》。轭，驾车时套在牛马颈上的横木。</p></li>
                 
-                <p><span class="ann-num">10</span>良：确实。盘石：大石。固：坚固。</p>
+                <li><span class="ann-num">10</span><p>良：确实。盘石：大石。固：坚固。</p></li>
                 
-            </div>
+            </ol>
         </section>
         
 
         
-        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">读后</p>
-                <h2 id="appreciation-title">赏析</h2>
-            </div>
-            <div class="appreciation-text">
-                
-                <p>《明月皎夜光》是古诗十九首的第七首，写一个秋夜里被旧友抛弃的人。</p>
-                
-                
-                
-                <p>前八句全是景。月光皎洁，蟋蟀在东墙下叫；北斗的玉衡星指向孟冬的方位，满天星斗历历分明；白露打湿了野草，季节忽然又换了一轮；秋蝉还在树间鸣叫，燕子却已经不知飞到哪里去了。</p>
-                
-                
-                
-                <p>这些句子看上去只是记时令，其实每一句都在催人。促织鸣，是秋；玉衡指孟冬，是秋将尽而冬已至；白露沾草，是寒气下来了；蝉鸣将歇，玄鸟南迁，是一年里最后一点生气也在退场。诗人一夜未眠，从月上看到星移，从秋看到冬，时间就在他头顶上一寸一寸地走。</p>
-                
-                
-                
-                <p>然后笔锋一转：“昔我同门友，高举振六翮。”从前一起读书的朋友，如今高高飞起，翅膀一振就上了天。“六翮”是鸟翅上的六根强羽，用来说人，就是仕途得意、平步青云。可是这位飞黄腾达的同窗，“不念携手好，弃我如遗迹”——不念当年携手的情分，把我像路边的脚印一样丢在身后。</p>
-                
-                
-                
-                <p>“遗迹”两个字下得极冷。脚印是走路时留在身后的东西，走过就忘了，连回头看都不必。人被旧友这样对待，比被敌人中伤还要难堪，因为你连被记恨的资格都没有，你只是被忘记了。</p>
-                
-                
-                
-                <p>末四句连用三个星名：“南箕北有斗，牵牛不负轭。”南方的箕宿，形状像簸箕而不能簸谷；北方的斗宿，形状像斗而不能舀酒；天河边的牵牛，名字叫牛却不拉车。这三个比喻出于《诗经·大东》，原诗借它们讽刺周王室有名无实、徒占其位。诗人把它们借过来，说的却是那位“同门友”：名分上是朋友，实际上一点朋友的事也不做。</p>
-                
-                
-                
-                <p>“良无盘石固，虚名复何益？”——交情本来就没有磐石那样坚固，空有一个朋友的名分，又有什么用处？</p>
-                
-                
-                
-                <p>《大东》的箕斗牵牛，怨的是天下；这首诗的箕斗牵牛，怨的是一个人。同一种写法，从西周到东汉，把国家大事缩小成了一桩私人的伤心事。可也正因为小，它才扎得深。</p>
-                
-                
-                
-                <p>天快亮了。星星还在原来的位置上，那个曾经一起读书的人，已经不在了。</p>
-                
-            </div>
-        </section>
-        
-
-        
-        <section class="document-section poem-sources" aria-label="选文来源">
+        <section class="document-section appreciation-section prose" aria-labelledby="appreciation-title">
+            <h2 id="appreciation-title" class="section-label">赏析</h2>
             
-            <p><strong>底本：</strong>《古诗十九首集释》，隋树森，中华书局（2020年版为候选）</p>
+            <p>《明月皎夜光》是古诗十九首的第七首，写一个秋夜里被旧友抛弃的人。</p>
+            
+            
+            
+            <p>前八句全是景。月光皎洁，蟋蟀在东墙下叫；北斗的玉衡星指向孟冬的方位，满天星斗历历分明；白露打湿了野草，季节忽然又换了一轮；秋蝉还在树间鸣叫，燕子却已经不知飞到哪里去了。</p>
+            
+            
+            
+            <p>这些句子看上去只是记时令，其实每一句都在催人。促织鸣，是秋；玉衡指孟冬，是秋将尽而冬已至；白露沾草，是寒气下来了；蝉鸣将歇，玄鸟南迁，是一年里最后一点生气也在退场。诗人一夜未眠，从月上看到星移，从秋看到冬，时间就在他头顶上一寸一寸地走。</p>
+            
+            
+            
+            <p>然后笔锋一转：“昔我同门友，高举振六翮。”从前一起读书的朋友，如今高高飞起，翅膀一振就上了天。“六翮”是鸟翅上的六根强羽，用来说人，就是仕途得意、平步青云。可是这位飞黄腾达的同窗，“不念携手好，弃我如遗迹”——不念当年携手的情分，把我像路边的脚印一样丢在身后。</p>
+            
+            
+            
+            <p>“遗迹”两个字下得极冷。脚印是走路时留在身后的东西，走过就忘了，连回头看都不必。人被旧友这样对待，比被敌人中伤还要难堪，因为你连被记恨的资格都没有，你只是被忘记了。</p>
+            
+            
+            
+            <p>末四句连用三个星名：“南箕北有斗，牵牛不负轭。”南方的箕宿，形状像簸箕而不能簸谷；北方的斗宿，形状像斗而不能舀酒；天河边的牵牛，名字叫牛却不拉车。这三个比喻出于《诗经·大东》，原诗借它们讽刺周王室有名无实、徒占其位。诗人把它们借过来，说的却是那位“同门友”：名分上是朋友，实际上一点朋友的事也不做。</p>
+            
+            
+            
+            <p>“良无盘石固，虚名复何益？”——交情本来就没有磐石那样坚固，空有一个朋友的名分，又有什么用处？</p>
+            
+            
+            
+            <p>《大东》的箕斗牵牛，怨的是天下；这首诗的箕斗牵牛，怨的是一个人。同一种写法，从西周到东汉，把国家大事缩小成了一桩私人的伤心事。可也正因为小，它才扎得深。</p>
+            
+            
+            
+            <p>天快亮了。星星还在原来的位置上，那个曾经一起读书的人，已经不在了。</p>
             
         </section>
         
 
-        <nav class="page-nav poem-nav" aria-label="诗歌导航">
-            <a class="nav-back" href="/gift/liang-han/">← 返回两汉目录</a>
-            <a class="nav-next" href="/gift/liang-han/ting-zhong-you-qi-shu.html">下一首：庭中有奇树 →</a>
+        
+        <section class="poem-sources" aria-label="选文来源">
+            
+            <p><strong>底本</strong>《古诗十九首集释》，隋树森，中华书局（2020年版为候选）</p>
+            
+        </section>
+        
+
+        <nav class="pager" aria-label="上一首与下一首">
+            
+            <a class="pager-card prev" href="/gift/liang-han/she-jiang-cai-fu-rong.html"><small>← 上一首</small><strong>涉江采芙蓉</strong></a>
+            
+            
+            <a class="pager-card next" href="/gift/liang-han/ting-zhong-you-qi-shu.html"><small>下一首 →</small><strong>庭中有奇树</strong></a>
+            
         </nav>
     </article>
 </div>
@@ -189,9 +253,43 @@
     </main>
 
     
-    <footer id="gift">
-        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
-        <small>原文 · 注释 · 赏析</small>
+    <footer class="footer" id="gift">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="/gift/static/images/shanshui/seal-shi.png" alt="" width="40" height="40">
+                <div>
+                    <strong>诗三百</strong>
+                    <span>给妹妹的中国古代诗歌赏析书</span>
+                </div>
+            </div>
+            <ul class="footer-dynasties" aria-label="朝代索引">
+                
+                <li><a href="/gift/xian-qin/">先秦</a></li>
+                
+                <li><a href="/gift/liang-han/">两汉</a></li>
+                
+                <li><a href="/gift/wei-jin/">魏晋</a></li>
+                
+                <li><a href="/gift/nan-bei-chao/">南北朝</a></li>
+                
+                <li><a href="/gift/tang/">唐</a></li>
+                
+                <li><a href="/gift/wudai-shiguo/">五代十国</a></li>
+                
+                <li><a href="/gift/liang-song/">两宋</a></li>
+                
+                <li><a href="/gift/yuan/">元</a></li>
+                
+                <li><a href="/gift/ming-qing/">明清</a></li>
+                
+                <li><a href="/gift/jin-dai/">近代</a></li>
+                
+            </ul>
+            <div class="footer-meta">
+                <span>陈顶立　编选</span>
+                <small>原文 · 注释 · 赏析　共 141 首</small>
+            </div>
+        </div>
     </footer>
     
 </body>

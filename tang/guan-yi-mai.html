@@ -3,59 +3,215 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>观刈麦 · 白居易</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f8f7f2">
+    <meta name="description" content="观刈麦，白居易。田家少闲月，五月人倍忙。">
+    <title>观刈麦 · 白居易 · 诗三百</title>
+    <link rel="icon" href="/gift/static/images/shanshui/seal-shi.png">
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
 <body class="reading-page poem-page-body">
     <a class="skip" href="#main-content">跳至正文</a>
+    <div class="progress" aria-hidden="true"></div>
 
     <header class="header">
-        <a class="brand" href="/gift/" aria-label="诗三百首页">
-            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
-        </a>
-        <nav aria-label="主导航">
-            <a class="current" href="/gift/#dynasties">读诗</a>
-            <a class="" href="/gift/about.html">关于</a>
-        </nav>
-        <span class="header-note">给妹妹的礼物</span>
+        <div class="header-inner">
+            <a class="brand" href="/gift/" aria-label="诗三百首页">
+                <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="" width="36" height="36">
+                <span class="brand-name">诗三百</span>
+            </a>
+            <nav class="main-nav" aria-label="主导航">
+                <a class="current" href="/gift/#dynasties">读诗</a>
+                <div class="nav-menu">
+                    <a class="nav-menu-trigger" href="/gift/#dynasties" aria-haspopup="true">朝代<span class="caret" aria-hidden="true"></span></a>
+                    <div class="nav-menu-panel">
+                        <ul>
+                            
+                            <li><a href="/gift/xian-qin/"><span>先秦</span><small>12 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-han/"><span>两汉</span><small>11 首</small></a></li>
+                            
+                            <li><a href="/gift/wei-jin/"><span>魏晋</span><small>10 首</small></a></li>
+                            
+                            <li><a href="/gift/nan-bei-chao/"><span>南北朝</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/tang/"><span>唐</span><small>55 首</small></a></li>
+                            
+                            <li><a href="/gift/wudai-shiguo/"><span>五代十国</span><small>7 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-song/"><span>两宋</span><small>23 首</small></a></li>
+                            
+                            <li><a href="/gift/yuan/"><span>元</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/ming-qing/"><span>明清</span><small>9 首</small></a></li>
+                            
+                            <li><a href="/gift/jin-dai/"><span>近代</span><small>4 首</small></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <a class="" href="/gift/about.html">关于</a>
+            </nav>
+            <span class="header-note">给妹妹的礼物</span>
+        </div>
     </header>
 
     <main id="main-content" tabindex="-1">
         
-<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
-    <a class="breadcrumb-link" href="/gift/tang/">← 返回唐目录</a>
-    <p class="eyebrow">唐 · 诗歌阅读</p>
-    <h1 id="poem-title">观刈麦</h1>
-    <div class="poem-meta" aria-label="作品信息">
-        <span>白居易</span>
-        <span class="meta-sep">·</span><span>五言古诗</span>
-    </div>
+<section class="page-hero poem-hero" aria-labelledby="poem-title">
+    <nav class="crumbs reveal" style="--d:0" aria-label="位置">
+        <a href="/gift/">诗三百</a><span aria-hidden="true">/</span><a href="/gift/tang/">唐</a>
+    </nav>
+    <h1 id="poem-title" class="reveal" style="--d:1">观刈麦</h1>
+    <p class="poem-meta reveal" style="--d:2">
+        <span class="author">白居易</span>
+        <span class="chip">五言古诗</span>
+        <span class="chip">唐</span>
+    </p>
+    <nav class="toc reveal" style="--d:3" aria-label="本页目录">
+        <a href="#original-title">原文</a>
+        <a href="#annotations-title">注释</a>
+        <a href="#appreciation-title">赏析</a>
+    </nav>
 </section>
 
 <div class="reading-shell">
     
 
 
-<aside class="river-sidebar" aria-label="诗歌之河侧景">
-    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
-        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
-    </a>
-    <div class="sidebar-caption" aria-hidden="true">
+<aside class="side-rail" aria-label="唐导航">
+    <div class="rail-inner">
+        <a class="rail-art" href="/gift/" aria-label="回到诗歌之河首页">
+            <img src="/gift/static/images/shanshui/landscape-vertical.png" alt="" loading="lazy">
+            <span class="rail-art-caption">
+                <span>唐</span>
+                <small>中国诗歌的黄金时代</small>
+            </span>
+        </a>
+
         
-        <span>中国诗歌的黄金时代</span>
+        <p class="rail-title">本朝诗目 <span>55</span></p>
+        <ol class="rail-list">
+            
+            <li><a href="/gift/tang/song-du-shao-fu-zhi-ren-shu-zhou.html">送杜少府之任蜀州</a></li>
+            
+            <li><a href="/gift/tang/shang-li-yong.html">上李邕</a></li>
+            
+            <li><a href="/gift/tang/du-jing-men-song-bie.html">渡荆门送别</a></li>
+            
+            <li><a href="/gift/tang/jing-ye-si.html">静夜思</a></li>
+            
+            <li><a href="/gift/tang/huang-he-lou-song-meng-hao-ran-zhi-guang-ling.html">黄鹤楼送孟浩然之广陵</a></li>
+            
+            <li><a href="/gift/tang/nan-ling-bie-er-tong-ru-jing.html">南陵别儿童入京</a></li>
+            
+            <li><a href="/gift/tang/xing-lu-nan.html">行路难·其一</a></li>
+            
+            <li><a href="/gift/tang/xia-ke-xing.html">侠客行</a></li>
+            
+            <li><a href="/gift/tang/jiang-jin-jiu.html">将进酒</a></li>
+            
+            <li><a href="/gift/tang/song-you-ren.html">送友人</a></li>
+            
+            <li><a href="/gift/tang/ba-jiu-wen-yue.html">把酒问月</a></li>
+            
+            <li><a href="/gift/tang/chang-xiang-si-qi-yi.html">长相思·其一</a></li>
+            
+            <li><a href="/gift/tang/chang-xiang-si-qi-er.html">长相思·其二</a></li>
+            
+            <li><a href="/gift/tang/zao-fa-bai-di-cheng.html">早发白帝城</a></li>
+            
+            <li><a href="/gift/tang/lin-lu-ge.html">临路歌</a></li>
+            
+            <li><a href="/gift/tang/wang-yue.html">望岳</a></li>
+            
+            <li><a href="/gift/tang/bing-che-xing.html">兵车行</a></li>
+            
+            <li><a href="/gift/tang/yin-zhong-ba-xian-ge.html">饮中八仙歌</a></li>
+            
+            <li><a href="/gift/tang/chun-wang.html">春望</a></li>
+            
+            <li><a href="/gift/tang/mao-wu-wei-qiu-feng-suo-po-ge.html">茅屋为秋风所破歌</a></li>
+            
+            <li><a href="/gift/tang/yue-ye.html">月夜</a></li>
+            
+            <li><a href="/gift/tang/zeng-wei-ba-chu-shi.html">赠卫八处士</a></li>
+            
+            <li><a href="/gift/tang/chun-ye-xi-yu.html">春夜喜雨</a></li>
+            
+            <li><a href="/gift/tang/shu-xiang.html">蜀相</a></li>
+            
+            <li><a href="/gift/tang/wen-guan-jun-shou-he-nan-he-bei.html">闻官军收河南河北</a></li>
+            
+            <li><a href="/gift/tang/lv-ye-shu-huai.html">旅夜书怀</a></li>
+            
+            <li><a href="/gift/tang/deng-yue-yang-lou.html">登岳阳楼</a></li>
+            
+            <li><a href="/gift/tang/deng-gao.html">登高</a></li>
+            
+            <li><a href="/gift/tang/jiang-nan-feng-li-gui-nian.html">江南逢李龟年</a></li>
+            
+            <li><a href="/gift/tang/chun-ri-yi-li-bai.html">春日忆李白</a></li>
+            
+            <li><a href="/gift/tang/meng-li-bai-qi-yi.html">梦李白·其一</a></li>
+            
+            <li><a href="/gift/tang/yong-huai-gu-ji-qi-yi.html">咏怀古迹·其一</a></li>
+            
+            <li><a href="/gift/tang/you-cheng-wu-lang.html">又呈吴郎</a></li>
+            
+            <li><a href="/gift/tang/shao-nian-xing-si-shou.html">少年行四首</a></li>
+            
+            <li><a href="/gift/tang/xiang-si.html">相思</a></li>
+            
+            <li><a href="/gift/tang/niao-ming-jian.html">鸟鸣涧</a></li>
+            
+            <li><a href="/gift/tang/zhong-nan-bie-ye.html">终南别业</a></li>
+            
+            <li><a href="/gift/tang/shan-ju-qiu-ming.html">山居秋暝</a></li>
+            
+            <li><a href="/gift/tang/shi-zhi-sai-shang.html">使至塞上</a></li>
+            
+            <li><a href="/gift/tang/song-yuan-er-shi-an-xi.html">送元二使安西</a></li>
+            
+            <li><a href="/gift/tang/xin-yi-wu.html">辛夷坞</a></li>
+            
+            <li><a href="/gift/tang/fu-de-gu-yuan-cao-song-bie.html">赋得古原草送别</a></li>
+            
+            <li><a href="/gift/tang/guan-yi-mai.html" class="active" aria-current="page">观刈麦</a></li>
+            
+            <li><a href="/gift/tang/mai-tan-weng.html">卖炭翁</a></li>
+            
+            <li><a href="/gift/tang/pi-pa-xing.html">琵琶行</a></li>
+            
+            <li><a href="/gift/tang/wen-liu-shi-jiu.html">问刘十九</a></li>
+            
+            <li><a href="/gift/tang/meng-wei-zhi.html">梦微之</a></li>
+            
+            <li><a href="/gift/tang/yi-jiang-nan-san-shou.html">忆江南三首</a></li>
+            
+            <li><a href="/gift/tang/chang-xiang-si-bian-shui-liu.html">长相思·汴水流</a></li>
+            
+            <li><a href="/gift/tang/shang-shan-zao-xing.html">商山早行</a></li>
+            
+            <li><a href="/gift/tang/yan-men-tai-shou-xing.html">雁门太守行</a></li>
+            
+            <li><a href="/gift/tang/jin-se.html">锦瑟</a></li>
+            
+            <li><a href="/gift/tang/ye-yu-ji-bei.html">夜雨寄北</a></li>
+            
+            <li><a href="/gift/tang/bo-qin-huai.html">泊秦淮</a></li>
+            
+            <li><a href="/gift/tang/chi-bi.html">赤壁</a></li>
+            
+        </ol>
         
-        <span>唐</span>
     </div>
 </aside>
 
     <article class="reading-document poem-document">
-        <section class="document-section poem-original" aria-labelledby="original-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">原文</p>
-                <h2 id="original-title">诗句</h2>
-            </div>
+        <section class="poem-original reveal" style="--d:3" aria-labelledby="original-title">
+            <h2 id="original-title" class="section-label">原文</h2>
             <div class="poem-text">
                 
                 
@@ -115,83 +271,79 @@
 
         
         <section class="document-section poem-annotations" aria-labelledby="annotations-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">字词</p>
-                <h2 id="annotations-title">注释</h2>
-            </div>
-            <div class="annotation-list">
+            <h2 id="annotations-title" class="section-label">注释</h2>
+            <ol class="annotation-list">
                 
-                <p><span class="ann-num">1</span>覆陇黄：麦子覆盖田垄，一片金黄。覆，覆盖；陇，田垄。</p>
+                <li><span class="ann-num">1</span><p>覆陇黄：麦子覆盖田垄，一片金黄。覆，覆盖；陇，田垄。</p></li>
                 
-                <p><span class="ann-num">2</span>荷箪食：挑着竹器装的饭食。荷（hè），挑；箪（dān），圆形竹器。</p>
+                <li><span class="ann-num">2</span><p>荷箪食：挑着竹器装的饭食。荷（hè），挑；箪（dān），圆形竹器。</p></li>
                 
-                <p><span class="ann-num">3</span>携壶浆：提着壶里的汤水。浆，汤水或米汤。</p>
+                <li><span class="ann-num">3</span><p>携壶浆：提着壶里的汤水。浆，汤水或米汤。</p></li>
                 
-                <p><span class="ann-num">4</span>饷田：到田里去送饭。饷（xiǎng），给人送食物。</p>
+                <li><span class="ann-num">4</span><p>饷田：到田里去送饭。饷（xiǎng），给人送食物。</p></li>
                 
-                <p><span class="ann-num">5</span>灼：烤灼，烈日照在背上如火烤一般。</p>
+                <li><span class="ann-num">5</span><p>灼：烤灼，烈日照在背上如火烤一般。</p></li>
                 
-                <p><span class="ann-num">6</span>但惜夏日长：只担心夏天太短，天黑了就干不成活。不是不热，是顾不上热——农人的艰辛在这种反常逻辑中呈现。</p>
+                <li><span class="ann-num">6</span><p>但惜夏日长：只担心夏天太短，天黑了就干不成活。不是不热，是顾不上热——农人的艰辛在这种反常逻辑中呈现。</p></li>
                 
-                <p><span class="ann-num">7</span>秉遗穗：拿着别人收割后遗漏的麦穗。秉（bǐng），持、拿；遗穗，掉落的麦穗。</p>
+                <li><span class="ann-num">7</span><p>秉遗穗：拿着别人收割后遗漏的麦穗。秉（bǐng），持、拿；遗穗，掉落的麦穗。</p></li>
                 
-                <p><span class="ann-num">8</span>悬敝筐：臂上挂着破旧的竹筐。敝（bì），破旧。</p>
+                <li><span class="ann-num">8</span><p>悬敝筐：臂上挂着破旧的竹筐。敝（bì），破旧。</p></li>
                 
-                <p><span class="ann-num">9</span>家田输税尽：家里的田地因为交税都卖光了。输税，缴纳赋税。</p>
+                <li><span class="ann-num">9</span><p>家田输税尽：家里的田地因为交税都卖光了。输税，缴纳赋税。</p></li>
                 
-                <p><span class="ann-num">10</span>吏禄三百石：县尉的年俸禄是三百石粮食。石（dàn），容量单位。</p>
+                <li><span class="ann-num">10</span><p>吏禄三百石：县尉的年俸禄是三百石粮食。石（dàn），容量单位。</p></li>
                 
-                <p><span class="ann-num">11</span>岁晏有余粮：年底还有剩余的粮食。晏（yàn），晚、末。白居易对比自己不劳而获与农人的劳而不获，发自真心地愧疚。</p>
+                <li><span class="ann-num">11</span><p>岁晏有余粮：年底还有剩余的粮食。晏（yàn），晚、末。白居易对比自己不劳而获与农人的劳而不获，发自真心地愧疚。</p></li>
                 
-            </div>
+            </ol>
         </section>
         
 
         
-        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">读后</p>
-                <h2 id="appreciation-title">赏析</h2>
-            </div>
-            <div class="appreciation-text">
-                
-                <p>“刈”是割。观刈麦，便是站在田边看人割麦。这是白居易早年的名篇之一，也是写农人辛苦而最不自欺的一首——悯农的诗很多，这一首难得处在于：诗人把自己也写了进去。诗作于元和元年，白居易三十多岁，正做着盩厔县尉，一个管理治安赋税的小官。</p>
-                
-                
-                
-                <p>田家少闲月，五月人倍忙——庄户人家一年到头没有闲月，五月尤其倍忙。夜来南风起，小麦覆陇黄——夜里一阵南风，第二天田垄里的麦子便全黄了。麦熟要抢收一场雨就能让一年的辛苦泡汤。那一片金黄看着喜人，其实是催命符。</p>
-                
-                
-                
-                <p>妇姑荷箪食，童稚携壶浆，相随饷田去，丁壮在南冈——婆媳两个挑着竹筐里的饭，小娃娃提着水壶，一家老小往田头送饭——壮劳力都在南边山冈上。没有一个闲人。足蒸暑土气，背灼炎天光——脚下踩着蒸腾的暑气，背上烤着毒烈的日头。力尽不知热，但惜夏日长——力气都使尽了，反倒不觉着热，只怕天黑得太早。这两句是全诗的眼：并非不觉热，只是热到顾不上；也并非不惜力，只是更怕活干不完。白居易不替他们解释，只把这种反常写出来，读者自会心惊。</p>
-                
-                
-                
-                <p>复有贫妇人，抱子在其旁，右手秉遗穗，左臂悬敝筐——田里还有一个抱孩子的穷妇人，一手捡着别人收割后落下的麦穗，臂上挂一只破筐。听她跟旁人说话，听见的人都要为她心酸：家田输税尽，拾此充饥肠——自家的田地，早为了交税卖光了，如今只能靠捡这两穗麦子糊口。同一片田里，一边是抢收的忙人，一边是拾穗的穷人，白居易一句话不评，对照自己就出来了。</p>
-                
-                
-                
-                <p>诗到这里本可以收住。可白居易没有停，他忽然掉转笔头，问起自己：今我何功德？曾不事农桑。吏禄三百石，岁晏有余粮。念此私自愧，尽日不能忘——我不种地、不养蚕，凭什么一年拿三百石俸禄、到年底还有余粮？这么一想，他惭愧了一整天。</p>
-                
-                
-                
-                <p>这一问，把诗从“看别人”变成了“照自己”。后来他主张“文章合为时而著，歌诗合为事而作”，写诗的笔先要伸向自己的良心——这首诗就是最好的注脚。同类的还有他的《卖炭翁》，把身上衣裳还单薄的老人写成了千古的痛。写《氓》的女子说“自我徂尔，三岁食贫”，穷苦人的日子中国的诗人写了一代又一代。可贵的不在写，而在写了之后，肯回过头来看看自己碗里的饭。</p>
-                
-            </div>
-        </section>
-        
-
-        
-        <section class="document-section poem-sources" aria-label="选文来源">
+        <section class="document-section appreciation-section prose" aria-labelledby="appreciation-title">
+            <h2 id="appreciation-title" class="section-label">赏析</h2>
             
-            <p><strong>底本：</strong>《白居易集笺校》，朱金城笺校，上海古籍出版社</p>
+            <p>“刈”是割。观刈麦，便是站在田边看人割麦。这是白居易早年的名篇之一，也是写农人辛苦而最不自欺的一首——悯农的诗很多，这一首难得处在于：诗人把自己也写了进去。诗作于元和元年，白居易三十多岁，正做着盩厔县尉，一个管理治安赋税的小官。</p>
+            
+            
+            
+            <p>田家少闲月，五月人倍忙——庄户人家一年到头没有闲月，五月尤其倍忙。夜来南风起，小麦覆陇黄——夜里一阵南风，第二天田垄里的麦子便全黄了。麦熟要抢收一场雨就能让一年的辛苦泡汤。那一片金黄看着喜人，其实是催命符。</p>
+            
+            
+            
+            <p>妇姑荷箪食，童稚携壶浆，相随饷田去，丁壮在南冈——婆媳两个挑着竹筐里的饭，小娃娃提着水壶，一家老小往田头送饭——壮劳力都在南边山冈上。没有一个闲人。足蒸暑土气，背灼炎天光——脚下踩着蒸腾的暑气，背上烤着毒烈的日头。力尽不知热，但惜夏日长——力气都使尽了，反倒不觉着热，只怕天黑得太早。这两句是全诗的眼：并非不觉热，只是热到顾不上；也并非不惜力，只是更怕活干不完。白居易不替他们解释，只把这种反常写出来，读者自会心惊。</p>
+            
+            
+            
+            <p>复有贫妇人，抱子在其旁，右手秉遗穗，左臂悬敝筐——田里还有一个抱孩子的穷妇人，一手捡着别人收割后落下的麦穗，臂上挂一只破筐。听她跟旁人说话，听见的人都要为她心酸：家田输税尽，拾此充饥肠——自家的田地，早为了交税卖光了，如今只能靠捡这两穗麦子糊口。同一片田里，一边是抢收的忙人，一边是拾穗的穷人，白居易一句话不评，对照自己就出来了。</p>
+            
+            
+            
+            <p>诗到这里本可以收住。可白居易没有停，他忽然掉转笔头，问起自己：今我何功德？曾不事农桑。吏禄三百石，岁晏有余粮。念此私自愧，尽日不能忘——我不种地、不养蚕，凭什么一年拿三百石俸禄、到年底还有余粮？这么一想，他惭愧了一整天。</p>
+            
+            
+            
+            <p>这一问，把诗从“看别人”变成了“照自己”。后来他主张“文章合为时而著，歌诗合为事而作”，写诗的笔先要伸向自己的良心——这首诗就是最好的注脚。同类的还有他的《卖炭翁》，把身上衣裳还单薄的老人写成了千古的痛。写《氓》的女子说“自我徂尔，三岁食贫”，穷苦人的日子中国的诗人写了一代又一代。可贵的不在写，而在写了之后，肯回过头来看看自己碗里的饭。</p>
             
         </section>
         
 
-        <nav class="page-nav poem-nav" aria-label="诗歌导航">
-            <a class="nav-back" href="/gift/tang/">← 返回唐目录</a>
-            <a class="nav-next" href="/gift/tang/mai-tan-weng.html">下一首：卖炭翁 →</a>
+        
+        <section class="poem-sources" aria-label="选文来源">
+            
+            <p><strong>底本</strong>《白居易集笺校》，朱金城笺校，上海古籍出版社</p>
+            
+        </section>
+        
+
+        <nav class="pager" aria-label="上一首与下一首">
+            
+            <a class="pager-card prev" href="/gift/tang/fu-de-gu-yuan-cao-song-bie.html"><small>← 上一首</small><strong>赋得古原草送别</strong></a>
+            
+            
+            <a class="pager-card next" href="/gift/tang/mai-tan-weng.html"><small>下一首 →</small><strong>卖炭翁</strong></a>
+            
         </nav>
     </article>
 </div>
@@ -199,9 +351,43 @@
     </main>
 
     
-    <footer id="gift">
-        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
-        <small>原文 · 注释 · 赏析</small>
+    <footer class="footer" id="gift">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="/gift/static/images/shanshui/seal-shi.png" alt="" width="40" height="40">
+                <div>
+                    <strong>诗三百</strong>
+                    <span>给妹妹的中国古代诗歌赏析书</span>
+                </div>
+            </div>
+            <ul class="footer-dynasties" aria-label="朝代索引">
+                
+                <li><a href="/gift/xian-qin/">先秦</a></li>
+                
+                <li><a href="/gift/liang-han/">两汉</a></li>
+                
+                <li><a href="/gift/wei-jin/">魏晋</a></li>
+                
+                <li><a href="/gift/nan-bei-chao/">南北朝</a></li>
+                
+                <li><a href="/gift/tang/">唐</a></li>
+                
+                <li><a href="/gift/wudai-shiguo/">五代十国</a></li>
+                
+                <li><a href="/gift/liang-song/">两宋</a></li>
+                
+                <li><a href="/gift/yuan/">元</a></li>
+                
+                <li><a href="/gift/ming-qing/">明清</a></li>
+                
+                <li><a href="/gift/jin-dai/">近代</a></li>
+                
+            </ul>
+            <div class="footer-meta">
+                <span>陈顶立　编选</span>
+                <small>原文 · 注释 · 赏析　共 141 首</small>
+            </div>
+        </div>
     </footer>
     
 </body>

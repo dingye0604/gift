@@ -3,59 +3,125 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>观沧海 · 曹操</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f8f7f2">
+    <meta name="description" content="观沧海，曹操。东临碣石，以观沧海。">
+    <title>观沧海 · 曹操 · 诗三百</title>
+    <link rel="icon" href="/gift/static/images/shanshui/seal-shi.png">
     <link rel="stylesheet" href="/gift/static/style.css">
     
 </head>
 <body class="reading-page poem-page-body">
     <a class="skip" href="#main-content">跳至正文</a>
+    <div class="progress" aria-hidden="true"></div>
 
     <header class="header">
-        <a class="brand" href="/gift/" aria-label="诗三百首页">
-            <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="诗字阴文印">
-        </a>
-        <nav aria-label="主导航">
-            <a class="current" href="/gift/#dynasties">读诗</a>
-            <a class="" href="/gift/about.html">关于</a>
-        </nav>
-        <span class="header-note">给妹妹的礼物</span>
+        <div class="header-inner">
+            <a class="brand" href="/gift/" aria-label="诗三百首页">
+                <img class="seal-image" src="/gift/static/images/shanshui/seal-shi.png" alt="" width="36" height="36">
+                <span class="brand-name">诗三百</span>
+            </a>
+            <nav class="main-nav" aria-label="主导航">
+                <a class="current" href="/gift/#dynasties">读诗</a>
+                <div class="nav-menu">
+                    <a class="nav-menu-trigger" href="/gift/#dynasties" aria-haspopup="true">朝代<span class="caret" aria-hidden="true"></span></a>
+                    <div class="nav-menu-panel">
+                        <ul>
+                            
+                            <li><a href="/gift/xian-qin/"><span>先秦</span><small>12 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-han/"><span>两汉</span><small>11 首</small></a></li>
+                            
+                            <li><a href="/gift/wei-jin/"><span>魏晋</span><small>10 首</small></a></li>
+                            
+                            <li><a href="/gift/nan-bei-chao/"><span>南北朝</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/tang/"><span>唐</span><small>55 首</small></a></li>
+                            
+                            <li><a href="/gift/wudai-shiguo/"><span>五代十国</span><small>7 首</small></a></li>
+                            
+                            <li><a href="/gift/liang-song/"><span>两宋</span><small>23 首</small></a></li>
+                            
+                            <li><a href="/gift/yuan/"><span>元</span><small>5 首</small></a></li>
+                            
+                            <li><a href="/gift/ming-qing/"><span>明清</span><small>9 首</small></a></li>
+                            
+                            <li><a href="/gift/jin-dai/"><span>近代</span><small>4 首</small></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <a class="" href="/gift/about.html">关于</a>
+            </nav>
+            <span class="header-note">给妹妹的礼物</span>
+        </div>
     </header>
 
     <main id="main-content" tabindex="-1">
         
-<section class="page-hero poem-page-hero" aria-labelledby="poem-title">
-    <a class="breadcrumb-link" href="/gift/wei-jin/">← 返回魏晋目录</a>
-    <p class="eyebrow">魏晋 · 诗歌阅读</p>
-    <h1 id="poem-title">观沧海</h1>
-    <div class="poem-meta" aria-label="作品信息">
-        <span>曹操</span>
-        <span class="meta-sep">·</span><span>四言古诗</span>
-    </div>
+<section class="page-hero poem-hero" aria-labelledby="poem-title">
+    <nav class="crumbs reveal" style="--d:0" aria-label="位置">
+        <a href="/gift/">诗三百</a><span aria-hidden="true">/</span><a href="/gift/wei-jin/">魏晋</a>
+    </nav>
+    <h1 id="poem-title" class="reveal" style="--d:1">观沧海</h1>
+    <p class="poem-meta reveal" style="--d:2">
+        <span class="author">曹操</span>
+        <span class="chip">四言古诗</span>
+        <span class="chip">魏晋</span>
+    </p>
+    <nav class="toc reveal" style="--d:3" aria-label="本页目录">
+        <a href="#original-title">原文</a>
+        <a href="#annotations-title">注释</a>
+        <a href="#appreciation-title">赏析</a>
+    </nav>
 </section>
 
 <div class="reading-shell">
     
 
 
-<aside class="river-sidebar" aria-label="诗歌之河侧景">
-    <a class="sidebar-landscape-link" href="/gift/" aria-label="回到诗歌之河首页">
-        <img class="sidebar-landscape" src="/gift/static/images/shanshui/landscape-vertical.png" alt="">
-    </a>
-    <div class="sidebar-caption" aria-hidden="true">
+<aside class="side-rail" aria-label="魏晋导航">
+    <div class="rail-inner">
+        <a class="rail-art" href="/gift/" aria-label="回到诗歌之河首页">
+            <img src="/gift/static/images/shanshui/landscape-vertical.png" alt="" loading="lazy">
+            <span class="rail-art-caption">
+                <span>魏晋</span>
+                <small>文学的自觉时代</small>
+            </span>
+        </a>
+
         
-        <span>文学的自觉时代</span>
+        <p class="rail-title">本朝诗目 <span>10</span></p>
+        <ol class="rail-list">
+            
+            <li><a href="/gift/wei-jin/hao-li-xing.html">蒿里行</a></li>
+            
+            <li><a href="/gift/wei-jin/guan-cang-hai.html" class="active" aria-current="page">观沧海</a></li>
+            
+            <li><a href="/gift/wei-jin/gui-sui-shou.html">龟虽寿</a></li>
+            
+            <li><a href="/gift/wei-jin/duan-ge-xing.html">短歌行·其一</a></li>
+            
+            <li><a href="/gift/wei-jin/yan-ge-xing.html">燕歌行·其一</a></li>
+            
+            <li><a href="/gift/wei-jin/yan-ge-xing-qi-er.html">燕歌行·其二</a></li>
+            
+            <li><a href="/gift/wei-jin/bai-ma-pian.html">白马篇</a></li>
+            
+            <li><a href="/gift/wei-jin/ye-tian-huang-que-xing.html">野田黄雀行</a></li>
+            
+            <li><a href="/gift/wei-jin/gui-yuan-tian-ju.html">归园田居·其一</a></li>
+            
+            <li><a href="/gift/wei-jin/yin-jiu-qi-wu.html">饮酒·其五</a></li>
+            
+        </ol>
         
-        <span>魏晋</span>
     </div>
 </aside>
 
     <article class="reading-document poem-document">
-        <section class="document-section poem-original" aria-labelledby="original-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">原文</p>
-                <h2 id="original-title">诗句</h2>
-            </div>
+        <section class="poem-original reveal" style="--d:3" aria-labelledby="original-title">
+            <h2 id="original-title" class="section-label">原文</h2>
             <div class="poem-text">
                 
                 
@@ -91,71 +157,67 @@
 
         
         <section class="document-section poem-annotations" aria-labelledby="annotations-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">字词</p>
-                <h2 id="annotations-title">注释</h2>
-            </div>
-            <div class="annotation-list">
+            <h2 id="annotations-title" class="section-label">注释</h2>
+            <ol class="annotation-list">
                 
-                <p><span class="ann-num">1</span>临：登上，指由高处朝下看。临碣石，指登上碣石山。</p>
+                <li><span class="ann-num">1</span><p>临：登上，指由高处朝下看。临碣石，指登上碣石山。</p></li>
                 
-                <p><span class="ann-num">2</span>澹澹：澹澹（dàn dàn），水波荡漾的样子。形容大海水势浩瀚、波光起伏。</p>
+                <li><span class="ann-num">2</span><p>澹澹：澹澹（dàn dàn），水波荡漾的样子。形容大海水势浩瀚、波光起伏。</p></li>
                 
-                <p><span class="ann-num">3</span>竦峙：高高耸立。竦（sǒng），通“耸”；峙（zhì），直立。形容海中岛屿巍峨挺拔的样子。</p>
+                <li><span class="ann-num">3</span><p>竦峙：高高耸立。竦（sǒng），通“耸”；峙（zhì），直立。形容海中岛屿巍峨挺拔的样子。</p></li>
                 
-                <p><span class="ann-num">4</span>萧瑟：形容秋风吹过树木发出的声音。</p>
+                <li><span class="ann-num">4</span><p>萧瑟：形容秋风吹过树木发出的声音。</p></li>
                 
-                <p><span class="ann-num">5</span>星汉：天上的银河。汉，指天河。</p>
+                <li><span class="ann-num">5</span><p>星汉：天上的银河。汉，指天河。</p></li>
                 
-            </div>
+            </ol>
         </section>
         
 
         
-        <section class="document-section appreciation-section" aria-labelledby="appreciation-title">
-            <div class="content-section-heading">
-                <p class="section-kicker">读后</p>
-                <h2 id="appreciation-title">赏析</h2>
-            </div>
-            <div class="appreciation-text">
-                
-                <p>《观沧海》是中国诗里最早着力写海的名篇之一。写它的时候曹操五十三岁，北征乌桓大胜，班师途中登上碣石山。</p>
-                
-                
-                
-                <p>碣石是秦皇汉武都到过的地方。秦始皇在这里刻石纪功，汉武帝东巡海上也来过这里。曹操来的时候，身后跟着一支刚打完仗的军队。“东临碣石，以观沧海”，八个字只交代一“临”一“观”，不铺陈，不设问，干净得像一道军令。</p>
-                
-                
-                
-                <p>接下来四句是眼前景。“水何澹澹，山岛竦峙”，水波荡漾，山岛高耸，一动一静，视线先荡开去，再定下来。“树木丛生，百草丰茂”，岛上草木长得壮盛。要留意时令，下文既有“秋风萧瑟”，此刻正是深秋。宋玉《九辩》一开口就是“悲哉秋之为气也，萧瑟兮草木摇落而变衰”，此后写秋的人多半顺着这条道走，曹操偏在深秋看见一片丰茂，看见“洪波涌起”。同一阵秋风，宋玉听出的是悲，曹操听出的是力气。</p>
-                
-                
-                
-                <p>再往下，格局就变了。“日月之行，若出其中；星汉灿烂，若出其里”，日月的运行、银河的光辉，仿佛都从这片海里升起，又沉落回去。前六句还是眼见的实景，到这里忽然放大，海成了一只能把日月星辰吞吐进去的巨器。全诗没有一个“我”字，可这双眼睛始终是曹操的。他站在碣石山上，看的其实不是海，是自己能装下多大的天地。</p>
-                
-                
-                
-                <p>末句“幸甚至哉，歌以咏志”是乐府合乐时加的套语，《步出夏门行》每章结尾都缀着这八个字，不过放在这里也算相称。</p>
-                
-                
-                
-                <p>汉末诗坛通行五言，曹操偏用四言。四言的节奏是二二，一顿一顿，沉稳，正合写这种气魄。一千七百多年后，毛泽东在北戴河填词，还写“往事越千年，魏武挥鞭，东临碣石有遗篇”。萧瑟秋风依旧，沧海洪波仍在，只是换了人间。</p>
-                
-            </div>
-        </section>
-        
-
-        
-        <section class="document-section poem-sources" aria-label="选文来源">
+        <section class="document-section appreciation-section prose" aria-labelledby="appreciation-title">
+            <h2 id="appreciation-title" class="section-label">赏析</h2>
             
-            <p><strong>底本：</strong>《先秦汉魏晋南北朝诗》，逯钦立辑校，中华书局</p>
+            <p>《观沧海》是中国诗里最早着力写海的名篇之一。写它的时候曹操五十三岁，北征乌桓大胜，班师途中登上碣石山。</p>
+            
+            
+            
+            <p>碣石是秦皇汉武都到过的地方。秦始皇在这里刻石纪功，汉武帝东巡海上也来过这里。曹操来的时候，身后跟着一支刚打完仗的军队。“东临碣石，以观沧海”，八个字只交代一“临”一“观”，不铺陈，不设问，干净得像一道军令。</p>
+            
+            
+            
+            <p>接下来四句是眼前景。“水何澹澹，山岛竦峙”，水波荡漾，山岛高耸，一动一静，视线先荡开去，再定下来。“树木丛生，百草丰茂”，岛上草木长得壮盛。要留意时令，下文既有“秋风萧瑟”，此刻正是深秋。宋玉《九辩》一开口就是“悲哉秋之为气也，萧瑟兮草木摇落而变衰”，此后写秋的人多半顺着这条道走，曹操偏在深秋看见一片丰茂，看见“洪波涌起”。同一阵秋风，宋玉听出的是悲，曹操听出的是力气。</p>
+            
+            
+            
+            <p>再往下，格局就变了。“日月之行，若出其中；星汉灿烂，若出其里”，日月的运行、银河的光辉，仿佛都从这片海里升起，又沉落回去。前六句还是眼见的实景，到这里忽然放大，海成了一只能把日月星辰吞吐进去的巨器。全诗没有一个“我”字，可这双眼睛始终是曹操的。他站在碣石山上，看的其实不是海，是自己能装下多大的天地。</p>
+            
+            
+            
+            <p>末句“幸甚至哉，歌以咏志”是乐府合乐时加的套语，《步出夏门行》每章结尾都缀着这八个字，不过放在这里也算相称。</p>
+            
+            
+            
+            <p>汉末诗坛通行五言，曹操偏用四言。四言的节奏是二二，一顿一顿，沉稳，正合写这种气魄。一千七百多年后，毛泽东在北戴河填词，还写“往事越千年，魏武挥鞭，东临碣石有遗篇”。萧瑟秋风依旧，沧海洪波仍在，只是换了人间。</p>
             
         </section>
         
 
-        <nav class="page-nav poem-nav" aria-label="诗歌导航">
-            <a class="nav-back" href="/gift/wei-jin/">← 返回魏晋目录</a>
-            <a class="nav-next" href="/gift/wei-jin/gui-sui-shou.html">下一首：龟虽寿 →</a>
+        
+        <section class="poem-sources" aria-label="选文来源">
+            
+            <p><strong>底本</strong>《先秦汉魏晋南北朝诗》，逯钦立辑校，中华书局</p>
+            
+        </section>
+        
+
+        <nav class="pager" aria-label="上一首与下一首">
+            
+            <a class="pager-card prev" href="/gift/wei-jin/hao-li-xing.html"><small>← 上一首</small><strong>蒿里行</strong></a>
+            
+            
+            <a class="pager-card next" href="/gift/wei-jin/gui-sui-shou.html"><small>下一首 →</small><strong>龟虽寿</strong></a>
+            
         </nav>
     </article>
 </div>
@@ -163,9 +225,43 @@
     </main>
 
     
-    <footer id="gift">
-        <div><span>给妹妹的中国古代诗歌赏析书</span><span>陈顶立　编选</span></div>
-        <small>原文 · 注释 · 赏析</small>
+    <footer class="footer" id="gift">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="/gift/static/images/shanshui/seal-shi.png" alt="" width="40" height="40">
+                <div>
+                    <strong>诗三百</strong>
+                    <span>给妹妹的中国古代诗歌赏析书</span>
+                </div>
+            </div>
+            <ul class="footer-dynasties" aria-label="朝代索引">
+                
+                <li><a href="/gift/xian-qin/">先秦</a></li>
+                
+                <li><a href="/gift/liang-han/">两汉</a></li>
+                
+                <li><a href="/gift/wei-jin/">魏晋</a></li>
+                
+                <li><a href="/gift/nan-bei-chao/">南北朝</a></li>
+                
+                <li><a href="/gift/tang/">唐</a></li>
+                
+                <li><a href="/gift/wudai-shiguo/">五代十国</a></li>
+                
+                <li><a href="/gift/liang-song/">两宋</a></li>
+                
+                <li><a href="/gift/yuan/">元</a></li>
+                
+                <li><a href="/gift/ming-qing/">明清</a></li>
+                
+                <li><a href="/gift/jin-dai/">近代</a></li>
+                
+            </ul>
+            <div class="footer-meta">
+                <span>陈顶立　编选</span>
+                <small>原文 · 注释 · 赏析　共 141 首</small>
+            </div>
+        </div>
     </footer>
     
 </body>
